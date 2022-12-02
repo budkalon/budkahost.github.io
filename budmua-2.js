@@ -198,175 +198,176 @@ if (titipe) {
 		});
 	})(jQuery);
 }
-$('a[href*="#"]')
-	.not('[href="#"]')
-	.not('[href="#0"]')
-	.not('.allow')
-	.not('.footklik')
-	.click(function(event) {
-		if (
-			location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-			location.hostname == this.hostname
-		) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if (target.length) {
-				event.preventDefault();
-				$('html, body').animate({
-					scrollTop: target.offset().top
-				}, 1000, function() {
-					var $target = $(target);
-					$target.focus();
-					if ($target.is(":focus")) {
-						return false;
-					} else {
-						$target.attr('tabindex', '-1');
+$(function() {
+	$('a[href*="#"]')
+		.not('[href="#"]')
+		.not('[href="#0"]')
+		.not('.allow')
+		.not('.footklik')
+		.click(function(event) {
+			if (
+				location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+				location.hostname == this.hostname
+			) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					event.preventDefault();
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 1000, function() {
+						var $target = $(target);
 						$target.focus();
-					};
-				});
+						if ($target.is(":focus")) {
+							return false;
+						} else {
+							$target.attr('tabindex', '-1');
+							$target.focus();
+						};
+					});
+				}
 			}
+		});
+	al.sr.t0.click(function() {
+		al.sr.rc.prop('checked', $(this).prop('checked'));
+	});
+
+	al.sr.rc.click(function() {
+		if (!$(this).prop('checked')) {
+			al.sr.t0.prop('checked', false);
+		}
+		if ($(al.sr.rcp + ":not(:checked)").length == 0) {
+			al.sr.t0.prop('checked', true);
 		}
 	});
-al.sr.t0.click(function() {
-	al.sr.rc.prop('checked', $(this).prop('checked'));
-});
+	al.sr.scfr.submit(function() {
+		var bib = al.sr.bsc,
+			bih = al.sr.bcr;
+		if ($(al.sr.cb + ':not(:checked)').length == 0) {
+			var snlb = al.sr.lbn;
+		} else if ($(al.sr.cb + ':checked').length == 0) {
+			var snlb = al.sr.lbn;
+		} else {
+			var drtn = [];
+			$.each($(al.sr.rcp + ":checked"), function() {
+				drtn.push($(this).val());
+			});
+			var snlb = drtn.join("|");
+		}
 
-al.sr.rc.click(function() {
-	if (!$(this).prop('checked')) {
-		al.sr.t0.prop('checked', false);
+		//budInputanHidden.val(senaraiLabel);
+		bib.attr('name', '');
+		bih.attr('name', 'q');
+		var wara = bib.val().replace(RegExp(al.sr.rgxlbl), '') + " " + snlb;
+		bih.val("" == bib.val() ? "" : wara);
+	});
+	var prtlc = al.gl.lc.split('label%3A'),
+		arlb = [],
+		sklb = '';
+	for (let i = 1; i < prtlc.length; i++) {
+		var lbt1 = prtlc[i].split('&'),
+			lbt2 = lbt1[0].split('%7C'),
+			tgllb = decodeURI(lbt2[0]);
+		//	$('#jokol').append(tagPelabelan);
+		arlb.push(tgllb);
 	}
-	if ($(al.sr.rcp + ":not(:checked)").length == 0) {
-		al.sr.t0.prop('checked', true);
+	for (let i = 0; i < arlb.length; i++) {
+		var arlbl1 = i < arlb.length - 1 ? (i < arlb.length - 2 ? ', ' : (arlb.length == 2 ? ' dan ' : ', dan ')) : '';
+		sklb += arlb[i] + arlbl1;
 	}
-});
-al.sr.scfr.submit(function() {
-	var bib = al.sr.bsc,
-		bih = al.sr.bcr;
-	if ($(al.sr.cb + ':not(:checked)').length == 0) {
-		var snlb = al.sr.lbn;
-	} else if ($(al.sr.cb + ':checked').length == 0) {
-		var snlb = al.sr.lbn;
-	} else {
-		var drtn = [];
-		$.each($(al.sr.rcp + ":checked"), function() {
-			drtn.push($(this).val());
+	//$('#jokol').append(rangkaPelabelan);
+	var sus = al.sr.nvms.text().includes('label:note') ? true : false;
+	var edtmss = '<span class="idom">' + al.sr.nvms.text().replace(RegExp(/((\slabel:\w*)|(label:\w*))/g), '').replace(RegExp(/\|*/g), '').replace(RegExp(/\+*/g), '') + '</span>' + (!sus ? ' yang berlabel ' + sklb.replace('dll', 'lainnya') : '');
+	al.sr.nvms.html(edtmss);
+
+	al.cmn.bd.each(function() {
+		var skkm = $(this).html().replace(/\[link\](.*?)\[\/link\]/ig, "<a target='_blank' href='$1' title='tautan' rel='nofollow' data-allow='true'>$1<\/a>");
+		skkm = skkm.replace(/\[toref\](.*?)\[\/toref\]/ig, "<a data-href='$1' title='Referensi komentar' rel='nofollow' data-allow='true' class='" + al.cmn.trf + "'>$1<\/a>");
+		skkm = skkm.replace(/\_\_(.*?)\_\_/ig, "<strong>$1<\/strong>");
+		skkm = skkm.replace(/\*\*(.*?)\*\*/ig, "<em>$1<\/em>");
+		skkm = skkm.replace(/\[img\](.*?)\[\/img\]/ig, "<span style='text-align:center;'><a href='$1' data-allow='true' class='allow' target='_blank' rel='nofollow'><img title='Gambar referensi' class='cm-image' src='$1' alt='Memuat...' \/><\/a><\/span>");
+		skkm = skkm.replace(/\[youtube\](.*?)\[\/youtube\]/ig, "<span class='cm-youtube'><iframe frameborder='0' allow='autoplay; encrypted-media' allowfullscreen src='http://www.youtube.com/embed/$1'><\/iframe><\/span>");
+		skkm = skkm.replace(/\/((w|s|h)[0-9]+\-(c|p|cc)|(w|s|h)[0-9]+(|\-(c|p|cc)))/ig, "/s400-c");
+		skkm = skkm.replace(/\[h\](.*?)\[\/h\]/ig, "<strong class='comh1'>$1<\/strong>");
+		skkm = skkm.replace(/\[hh\](.*?)\[\/hh\]/ig, "<strong class='comh2'>$1<\/strong>");
+		skkm = skkm.replace(/\[hhh\](.*?)\[\/hhh\]/ig, "<strong class='comh3'>$1<\/strong>");
+		$(this).html(skkm);
+		if ($(this).has('a.' + al.cmn.trf)) {
+			$(this).append('<div class="refkom"></div><div style="display:none" class="' + al.cmn.cff + ' bitter"><div class="' + al.cmn.cls + ' bit-6"><span class="material-symbols-outlined">close</span></div></div>');
+		}
+	});
+	$(al.cmn.bdp + ':has(a:not([data-allow="true"]))').each(function() {
+		$(this).parent().parent().addClass(al.cmn.spm);
+		$(this).html(al.cmn.kcp[0]);
+	});
+	$(al.cmn.bdp + ' a.toref').on('click', function() {
+		$(this).toggleClass('torefopen');
+		var cnmrf = $(this).attr('data-href'),
+			cnmsrc = (cnmrf.includes(al.gl.ad) ? '' : al.gl.ad) + cnmrf,
+			cmnrfID = cnmrf.split('#'),
+			cntrf = $(this).parent().find(al.cmn.rkm),
+			kaComref = $(this).parent().find('div.' + al.cmn.cff).children('.' + al.cmn.cfr);
+		cntrf.empty();
+		cntrf.next().css('display', 'none');
+		kaComref.remove();
+		if (isEmpty(cntrf)) {
+			$.get(cnmsrc, {}, function(data) {
+				cntrf.html($(data).find('#' + cmnrfID[1] + ' .comup').html());
+				$(al.cmn.rkm + ' .comment-footer').remove();
+				$(al.cmn.rkm + ' a.' + al.cmn.trf).unwrap();
+				cntrf.next().css('display', 'block');
+				cntrf.next().append('<div class="' + al.cmn.cfr + ' bit-6"><a target="_blank" href="' + cnmrf + '" data-allow="true"><span class="material-symbols-outlined">login</span></a></div>');
+				//wadahRefkomnya.append('<div class="comreflink">kunjungi: ');
+				$(al.cmn.rkm + ' ' + al.cmn.bdp).each(function() {
+					var skkr = $(this).html().replace(/\[link\](.*?)\[\/link\]/ig, "<em>$1<\/em>");
+					skkr = skkr.replace(/\[toref\](.*?)\[\/toref\]/ig, "<em>$1<\/em>");
+					skkr = skkr.replace(/\_\_(.*?)\_\_/ig, "<strong>$1<\/strong>");
+					skkr = skkr.replace(/\[img\](.*?)\[\/img\]/ig, "<span style='text-align:center;'><a data-allow='true' href='$1' class='allow' target='_blank' rel='nofollow'><img title='Gambar referensi' class='cm-image' src='$1' alt='Memuat...' \/><\/a><\/span>");
+					skkr = skkr.replace(/\[youtube\](.*?)\[\/youtube\]/ig, "<span class='cm-youtube'><iframe frameborder='0' allow='autoplay; encrypted-media' allowfullscreen src='http://www.youtube.com/embed/$1'><\/iframe><\/span>");
+					skkr = skkr.replace(/\/((w|s|h)[0-9]+\-(c|p|cc)|(w|s|h)[0-9]+(|\-(c|p|cc)))/ig, "/s400-c");
+					skkr = skkr.replace(/\[h\](.*?)\[\/h\]/ig, "<strong class='comh1'>$1<\/strong>");
+					skkr = skkr.replace(/\[hh\](.*?)\[\/hh\]/ig, "<strong class='comh2'>$1<\/strong>");
+					skkr = skkr.replace(/\[hhh\](.*?)\[\/hhh\]/ig, "<strong class='comh3'>$1<\/strong>");
+					$(this).html(skkr);
+				});
+				$(al.cmn.rkm + ' ' + al.cmn.bdp + ':has(a:not([data-allow="true"]))').each(function() {
+					$(this).parent().addClass(al.cmn.spm);
+					$(this).html(al.cmn.kcp[0]);
+				});
+			}, "html");
+			cntrf.html('<div class="comref-loading"><span class="material-symbols-outlined">hourglass_top</span></div>');
+		}
+		return false;
+	});
+
+	$('.' + al.cmn.cls).each(function() {
+		$(this).on('click', function() {
+			var kaRefkomDariA = $(this).parent().parent().find(al.cmn.rkm);
+			kaRefkomDariA.empty();
+			$(this).parent().css('display', 'none');
+			$(this).next().remove();
+			return false;
 		});
-		var snlb = drtn.join("|");
-	}
-
-	//budInputanHidden.val(senaraiLabel);
-	bib.attr('name', '');
-	bih.attr('name', 'q');
-	var wara = bib.val().replace(RegExp(al.sr.rgxlbl), '') + " " + snlb;
-	bih.val("" == bib.val() ? "" : wara);
-});
-var prtlc = al.gl.lc.split('label%3A'),
-	arlb = [],
-	sklb = '';
-for (let i = 1; i < prtlc.length; i++) {
-	var lbt1 = prtlc[i].split('&'),
-		lbt2 = lbt1[0].split('%7C'),
-		tgllb = decodeURI(lbt2[0]);
-	//	$('#jokol').append(tagPelabelan);
-	arlb.push(tgllb);
-}
-for (let i = 0; i < arlb.length; i++) {
-	var arlbl1 = i < arlb.length - 1 ? (i < arlb.length - 2 ? ', ' : (arlb.length == 2 ? ' dan ' : ', dan ')) : '';
-	sklb += arlb[i] + arlbl1;
-}
-//$('#jokol').append(rangkaPelabelan);
-var sus = al.sr.nvms.text().includes('label:note') ? true : false;
-var edtmss = '<span class="idom">' + al.sr.nvms.text().replace(RegExp(/((\slabel:\w*)|(label:\w*))/g), '').replace(RegExp(/\|*/g), '').replace(RegExp(/\+*/g), '') + '</span>' + (!sus ? ' yang berlabel ' + sklb.replace('dll', 'lainnya') : '');
-al.sr.nvms.html(edtmss);
-
-al.cmn.bd.each(function() {
-	var skkm = $(this).html().replace(/\[link\](.*?)\[\/link\]/ig, "<a target='_blank' href='$1' title='tautan' rel='nofollow' data-allow='true'>$1<\/a>");
-	skkm = skkm.replace(/\[toref\](.*?)\[\/toref\]/ig, "<a data-href='$1' title='Referensi komentar' rel='nofollow' data-allow='true' class='" + al.cmn.trf + "'>$1<\/a>");
-	skkm = skkm.replace(/\_\_(.*?)\_\_/ig, "<strong>$1<\/strong>");
-	skkm = skkm.replace(/\*\*(.*?)\*\*/ig, "<em>$1<\/em>");
-	skkm = skkm.replace(/\[img\](.*?)\[\/img\]/ig, "<span style='text-align:center;'><a href='$1' data-allow='true' class='allow' target='_blank' rel='nofollow'><img title='Gambar referensi' class='cm-image' src='$1' alt='Memuat...' \/><\/a><\/span>");
-	skkm = skkm.replace(/\[youtube\](.*?)\[\/youtube\]/ig, "<span class='cm-youtube'><iframe frameborder='0' allow='autoplay; encrypted-media' allowfullscreen src='http://www.youtube.com/embed/$1'><\/iframe><\/span>");
-	skkm = skkm.replace(/\/((w|s|h)[0-9]+\-(c|p|cc)|(w|s|h)[0-9]+(|\-(c|p|cc)))/ig, "/s400-c");
-	skkm = skkm.replace(/\[h\](.*?)\[\/h\]/ig, "<strong class='comh1'>$1<\/strong>");
-	skkm = skkm.replace(/\[hh\](.*?)\[\/hh\]/ig, "<strong class='comh2'>$1<\/strong>");
-	skkm = skkm.replace(/\[hhh\](.*?)\[\/hhh\]/ig, "<strong class='comh3'>$1<\/strong>");
-	$(this).html(skkm);
-	if ($(this).has('a.' + al.cmn.trf)) {
-		$(this).append('<div class="refkom"></div><div style="display:none" class="' + al.cmn.cff + ' bitter"><div class="' + al.cmn.cls + ' bit-6"><span class="material-symbols-outlined">close</span></div></div>');
-	}
-});
-$(al.cmn.bdp + ':has(a:not([data-allow="true"]))').each(function() {
-	$(this).parent().parent().addClass(al.cmn.spm);
-	$(this).html(al.cmn.kcp[0]);
-});
-$(al.cmn.bdp + ' a.toref').on('click', function() {
-	$(this).toggleClass('torefopen');
-	var cnmrf = $(this).attr('data-href'),
-		cnmsrc = (cnmrf.includes(al.gl.ad) ? '' : al.gl.ad) + cnmrf,
-		cmnrfID = cnmrf.split('#'),
-		cntrf = $(this).parent().find(al.cmn.rkm),
-		kaComref = $(this).parent().find('div.' + al.cmn.cff).children('.' + al.cmn.cfr);
-	cntrf.empty();
-	cntrf.next().css('display', 'none');
-	kaComref.remove();
-	if (isEmpty(cntrf)) {
-		$.get(cnmsrc, {}, function(data) {
-			cntrf.html($(data).find('#' + cmnrfID[1] + ' .comup').html());
-			$(al.cmn.rkm + ' .comment-footer').remove();
-			$(al.cmn.rkm + ' a.' + al.cmn.trf).unwrap();
-			cntrf.next().css('display', 'block');
-			cntrf.next().append('<div class="' + al.cmn.cfr + ' bit-6"><a target="_blank" href="' + cnmrf + '" data-allow="true"><span class="material-symbols-outlined">login</span></a></div>');
-			//wadahRefkomnya.append('<div class="comreflink">kunjungi: ');
-			$(al.cmn.rkm + ' ' + al.cmn.bdp).each(function() {
-				var skkr = $(this).html().replace(/\[link\](.*?)\[\/link\]/ig, "<em>$1<\/em>");
-				skkr = skkr.replace(/\[toref\](.*?)\[\/toref\]/ig, "<em>$1<\/em>");
-				skkr = skkr.replace(/\_\_(.*?)\_\_/ig, "<strong>$1<\/strong>");
-				skkr = skkr.replace(/\[img\](.*?)\[\/img\]/ig, "<span style='text-align:center;'><a data-allow='true' href='$1' class='allow' target='_blank' rel='nofollow'><img title='Gambar referensi' class='cm-image' src='$1' alt='Memuat...' \/><\/a><\/span>");
-				skkr = skkr.replace(/\[youtube\](.*?)\[\/youtube\]/ig, "<span class='cm-youtube'><iframe frameborder='0' allow='autoplay; encrypted-media' allowfullscreen src='http://www.youtube.com/embed/$1'><\/iframe><\/span>");
-				skkr = skkr.replace(/\/((w|s|h)[0-9]+\-(c|p|cc)|(w|s|h)[0-9]+(|\-(c|p|cc)))/ig, "/s400-c");
-				skkr = skkr.replace(/\[h\](.*?)\[\/h\]/ig, "<strong class='comh1'>$1<\/strong>");
-				skkr = skkr.replace(/\[hh\](.*?)\[\/hh\]/ig, "<strong class='comh2'>$1<\/strong>");
-				skkr = skkr.replace(/\[hhh\](.*?)\[\/hhh\]/ig, "<strong class='comh3'>$1<\/strong>");
-				$(this).html(skkr);
-			});
-			$(al.cmn.rkm + ' ' + al.cmn.bdp + ':has(a:not([data-allow="true"]))').each(function() {
-				$(this).parent().addClass(al.cmn.spm);
-				$(this).html(al.cmn.kcp[0]);
-			});
-		}, "html");
-		cntrf.html('<div class="comref-loading"><span class="material-symbols-outlined">hourglass_top</span></div>');
-	}
-	return false;
-});
-
-$('.' + al.cmn.cls).each(function() {
-	$(this).on('click', function() {
-		var kaRefkomDariA = $(this).parent().parent().find(al.cmn.rkm);
-		kaRefkomDariA.empty();
-		$(this).parent().css('display', 'none');
-		$(this).next().remove();
+	});
+	$('.' + al.cmn.rpc).on('click', function() {
+		var cntrf = $(this).attr('data-trigger'),
+			nkrpl = $('#' + cntrf);
+		$(this).toggleClass(al.cmn.rpcls);
+		nkrpl.slideToggle(500);
+		nkrpl.next().fadeToggle(500);
+		nkrpl.prev().toggleClass(al.cmn.rpcls);
+		return false;
+	});
+	$('.' + al.cmn.hdr).on('click', function() {
+		$(this).prev().slideToggle(500);
+		$(this).fadeToggle(500);
+		$(this).prev().prev().toggleClass(al.cmn.rpcls);
+		return false;
+	});
+	$('.' + al.cmn.rpc).hover(function() {
+		var cntrf = $(this).attr('data-trigger'),
+			nkrpl = $('#' + cntrf);
+		nkrpl.toggleClass('humover', 500);
 		return false;
 	});
 });
-$('.' + al.cmn.rpc).on('click', function() {
-	var cntrf = $(this).attr('data-trigger'),
-		nkrpl = $('#' + cntrf);
-	$(this).toggleClass(al.cmn.rpcls);
-	nkrpl.slideToggle(500);
-	nkrpl.next().fadeToggle(500);
-	nkrpl.prev().toggleClass(al.cmn.rpcls);
-	return false;
-});
-$('.' + al.cmn.hdr).on('click', function() {
-	$(this).prev().slideToggle(500);
-	$(this).fadeToggle(500);
-	$(this).prev().prev().toggleClass(al.cmn.rpcls);
-	return false;
-});
-$('.' + al.cmn.rpc).hover(function() {
-	var cntrf = $(this).attr('data-trigger'),
-		nkrpl = $('#' + cntrf);
-	nkrpl.toggleClass('humover', 500);
-	return false;
-});
-$(function() {});
