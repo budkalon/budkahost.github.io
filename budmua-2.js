@@ -294,7 +294,7 @@ $(function() {
 		skkm = skkm.replace(/\[hhh\](.*?)\[\/hhh\]/ig, "<strong class='comh comh3'>$1<\/strong>");
 		$(this).html(skkm);
 		if ($(this).has('a.' + al.cmn.trf)) {
-			$(this).append('<div class="refkom"></div><div style="display:none" class="' + al.cmn.cff + ' bitter"><div class="' + al.cmn.cls + ' bit-6"><span class="material-symbols-outlined">close</span></div></div>');
+			$(this).append('<div class="refkom"></div><div style="display:none" class="' + al.cmn.cff + ' bitter"><div class="' + al.cmn.cls + ' bit-6"><i class="fa-solid fa-xmark"></i></div></div>');
 		}
 		$(this).children('.comh').each(function(index) {
 			var cidx = index + 1,
@@ -324,7 +324,7 @@ $(function() {
 				$(al.cmn.rkm + ' .comment-footer').remove();
 				$(al.cmn.rkm + ' a.' + al.cmn.trf).unwrap();
 				cntrf.next().css('display', 'block');
-				cntrf.next().append('<div class="' + al.cmn.cfr + ' bit-6"><a target="_blank" href="' + cnmrf + '" data-allow="true"><span class="material-symbols-outlined">login</span></a></div>');
+				cntrf.next().append('<div class="' + al.cmn.cfr + ' bit-6"><a target="_blank" href="' + cnmrf + '" data-allow="true"><i class="fa-solid fa-up-right-from-square"></i></a></div>');
 				//wadahRefkomnya.append('<div class="comreflink">kunjungi: ');
 				$(al.cmn.rkm + ' ' + al.cmn.bdp).each(function() {
 					var skkr = $(this).html().replace(/\[link\](.*?)\[\/link\]/ig, "<em>$1<\/em>");
@@ -343,7 +343,7 @@ $(function() {
 					$(this).html(al.cmn.kcp[0]);
 				});
 			}, "html");
-			cntrf.html('<div class="comref-loading"><span class="material-symbols-outlined">hourglass_top</span></div>');
+			cntrf.html('<div class="comref-loading"><i class="fa-solid fa-sync fa-spin"></i></div>');
 		}
 		return false;
 	});
