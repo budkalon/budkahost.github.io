@@ -1360,6 +1360,8 @@ div#posnya-relatedan li > a > div {
 }
 .comref-loading {
     padding: 25px;
+    text-align: center;
+    font-size: 32pt;
 }
 .comment:target > div > .comup > * {
     background: var(--col5);
