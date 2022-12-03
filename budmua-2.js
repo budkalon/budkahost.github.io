@@ -105,7 +105,8 @@ var al = {
 		'cfr': 'comreflink',
 		'rpcls': 'repcomclosed',
 		'rpc': 'repcom',
-		'hdr': 'hiddenrep'
+		'hdr': 'hiddenrep',
+		'imgsz': 800
 	}
 };
 
@@ -287,7 +288,7 @@ $(function() {
 		skkm = skkm.replace(/\*\*(.*?)\*\*/ig, "<em>$1<\/em>");
 		skkm = skkm.replace(/\[img\](.*?)\[\/img\]/ig, "<span style='text-align:center;'><a href='$1' data-allow='true' class='allow' target='_blank' rel='nofollow'><img title='Gambar referensi' class='cm-image' src='$1' alt='Memuat...' \/><\/a><\/span>");
 		skkm = skkm.replace(/\[youtube\](.*?)\[\/youtube\]/ig, "<span class='cm-youtube'><iframe frameborder='0' allow='autoplay; encrypted-media' allowfullscreen src='http://www.youtube.com/embed/$1'><\/iframe><\/span>");
-		skkm = skkm.replace(/\/((w|s|h)[0-9]+\-(c|p|cc)|(w|s|h)[0-9]+(|\-(c|p|cc)))/ig, "/s400-c");
+		skkm = skkm.replace(/\/((w|s|h)[0-9]+\-(c|p|cc)|(w|s|h)[0-9]+(|\-(c|p|cc)))/ig, ("/s" + al.cmn.imgsz + "-c"));
 		skkm = skkm.replace(/\[h\](.*?)\[\/h\]/ig, "<strong class='comh1'>$1<\/strong>");
 		skkm = skkm.replace(/\[hh\](.*?)\[\/hh\]/ig, "<strong class='comh2'>$1<\/strong>");
 		skkm = skkm.replace(/\[hhh\](.*?)\[\/hhh\]/ig, "<strong class='comh3'>$1<\/strong>");
@@ -324,7 +325,7 @@ $(function() {
 					skkr = skkr.replace(/\_\_(.*?)\_\_/ig, "<strong>$1<\/strong>");
 					skkr = skkr.replace(/\[img\](.*?)\[\/img\]/ig, "<span style='text-align:center;'><a data-allow='true' href='$1' class='allow' target='_blank' rel='nofollow'><img title='Gambar referensi' class='cm-image' src='$1' alt='Memuat...' \/><\/a><\/span>");
 					skkr = skkr.replace(/\[youtube\](.*?)\[\/youtube\]/ig, "<span class='cm-youtube'><iframe frameborder='0' allow='autoplay; encrypted-media' allowfullscreen src='http://www.youtube.com/embed/$1'><\/iframe><\/span>");
-					skkr = skkr.replace(/\/((w|s|h)[0-9]+\-(c|p|cc)|(w|s|h)[0-9]+(|\-(c|p|cc)))/ig, "/s400-c");
+					skkr = skkr.replace(/\/((w|s|h)[0-9]+\-(c|p|cc)|(w|s|h)[0-9]+(|\-(c|p|cc)))/ig, ("/s" + al.cmn.imgsz + "-c"));
 					skkr = skkr.replace(/\[h\](.*?)\[\/h\]/ig, "<strong class='comh1'>$1<\/strong>");
 					skkr = skkr.replace(/\[hh\](.*?)\[\/hh\]/ig, "<strong class='comh2'>$1<\/strong>");
 					skkr = skkr.replace(/\[hhh\](.*?)\[\/hhh\]/ig, "<strong class='comh3'>$1<\/strong>");
