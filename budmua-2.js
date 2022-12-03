@@ -296,17 +296,17 @@ $(function() {
 		if ($(this).has('a.' + al.cmn.trf)) {
 			$(this).append('<div class="refkom"></div><div style="display:none" class="' + al.cmn.cff + ' bitter"><div class="' + al.cmn.cls + ' bit-6"><span class="material-symbols-outlined">close</span></div></div>');
 		}
+		$this.children('.comh').each(function(index) {
+			var cidx = index + 1,
+				idpar = $(this).parent().parent().attr('id'),
+				hcon = $(this).html(),
+				hconp = hcon.split(' ');
+			$(this).attr('id', idpar + '-h-' + cidx);
+		});
 	});
 	$(al.cmn.bdp + ':has(a:not([data-allow="true"]))').each(function() {
 		$(this).parent().parent().addClass(al.cmn.spm);
 		$(this).html(al.cmn.kcp[0]);
-	});
-	$(al.cmn.bdp + ' .comh').each(function(index) {
-		var cidx = index + 1,
-			idpar = $(this).parent().parent().attr('id'),
-			hcon = $(this).html(),
-			hconp = hcon.split(' ');
-		$(this).attr('id', idpar + hconp[0] + '-' + cidx);
 	});
 	$(al.cmn.bdp + ' a.toref').on('click', function() {
 		$(this).toggleClass('torefopen');
