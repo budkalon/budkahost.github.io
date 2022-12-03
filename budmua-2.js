@@ -147,7 +147,7 @@ if (titipe) {
 			animate_scroll(tar, 110);
 			$(tar).addClass('infoc');
 			$('a.' + al.ps.clc).not($(tar)).removeClass('infoc');
-			console.log(jar + ' => ' + tar);
+//			console.log(jar + ' => ' + tar);
 		});
 		if ($('#' + al.ps.fID).is(':empty')) {
 			$('#' + al.ps.fID).prev().remove();
@@ -289,9 +289,9 @@ $(function() {
 		skkm = skkm.replace(/\[img\](.*?)\[\/img\]/ig, "<span style='text-align:center;'><a href='$1' data-allow='true' class='allow' target='_blank' rel='nofollow'><img title='Gambar referensi' class='cm-image' src='$1' alt='Memuat...' \/><\/a><\/span>");
 		skkm = skkm.replace(/\[youtube\](.*?)\[\/youtube\]/ig, "<span class='cm-youtube'><iframe frameborder='0' allow='autoplay; encrypted-media' allowfullscreen src='http://www.youtube.com/embed/$1'><\/iframe><\/span>");
 		skkm = skkm.replace(/\/((w|s|h)[0-9]+\-(c|p|cc)|(w|s|h)[0-9]+(|\-(c|p|cc)))/ig, ("/s" + al.cmn.imgsz + "-c"));
-		skkm = skkm.replace(/\[h\](.*?)\[\/h\]/ig, "<strong class='comh1'>$1<\/strong>");
-		skkm = skkm.replace(/\[hh\](.*?)\[\/hh\]/ig, "<strong class='comh2'>$1<\/strong>");
-		skkm = skkm.replace(/\[hhh\](.*?)\[\/hhh\]/ig, "<strong class='comh3'>$1<\/strong>");
+		skkm = skkm.replace(/\[h\](.*?)\[\/h\]/ig, "<strong class='comh comh1'>$1<\/strong>");
+		skkm = skkm.replace(/\[hh\](.*?)\[\/hh\]/ig, "<strong class='comh comh2'>$1<\/strong>");
+		skkm = skkm.replace(/\[hhh\](.*?)\[\/hhh\]/ig, "<strong class='comh comh3'>$1<\/strong>");
 		$(this).html(skkm);
 		if ($(this).has('a.' + al.cmn.trf)) {
 			$(this).append('<div class="refkom"></div><div style="display:none" class="' + al.cmn.cff + ' bitter"><div class="' + al.cmn.cls + ' bit-6"><span class="material-symbols-outlined">close</span></div></div>');
@@ -300,6 +300,11 @@ $(function() {
 	$(al.cmn.bdp + ':has(a:not([data-allow="true"]))').each(function() {
 		$(this).parent().parent().addClass(al.cmn.spm);
 		$(this).html(al.cmn.kcp[0]);
+	});
+	$(al.cmn.bdp + ' .comh').each(function() {
+		var hcon = $(this).html(),
+			hconp = hcon.split(' ');
+		$(this).attr('id', hconp[0])
 	});
 	$(al.cmn.bdp + ' a.toref').on('click', function() {
 		$(this).toggleClass('torefopen');
