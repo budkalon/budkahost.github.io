@@ -296,7 +296,7 @@ $(function() {
 		if ($(this).has('a.' + al.cmn.trf)) {
 			$(this).append('<div class="refkom"></div><div style="display:none" class="' + al.cmn.cff + ' bitter"><div class="' + al.cmn.cls + ' bit-6"><span class="material-symbols-outlined">close</span></div></div>');
 		}
-		$this.children('.comh').each(function(index) {
+		$(this).children('.comh').each(function(index) {
 			var cidx = index + 1,
 				idpar = $(this).parent().parent().attr('id'),
 				hcon = $(this).html(),
