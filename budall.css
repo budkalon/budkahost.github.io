@@ -1,5 +1,9 @@
 @charset "utf-8";
-/* CSS Document */ :root {
+/* CSS Document */ 
+html {
+    scroll-behavior: smooth;
+}
+:root {
 	--acn1: #fa7267;
 	--acn2: #fcb8b3;
 	--acn3: #f7d3b9;
@@ -1135,19 +1139,13 @@ a#to-top {
 }
 
 
-@media screen and (max-width:800px){
+@media screen and (max-width:800px) and (min-width:600px){
 	#outer-wrapper {
 		width: 600px;
 	}
 }
 
 @media screen and (max-width:600px){
-	#outer-wrapper {
-		width: 400px;
-	}
-}
-
-@media screen and (max-width:400px){
 	#outer-wrapper {
 		width: 100%;
 	}
