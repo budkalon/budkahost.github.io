@@ -306,7 +306,7 @@ $(function() {
 			idpar = $(this).parent().parent().attr('id'),
 			hcon = $(this).html(),
 			hconp = hcon.split(' ');
-		$(this).attr('id', idpar + hconp[0] + '-' + cidx)
+		$(this).attr('id', idpar + hconp[0] + '-' + cidx);
 	});
 	$(al.cmn.bdp + ' a.toref').on('click', function() {
 		$(this).toggleClass('torefopen');
