@@ -1133,3 +1133,22 @@ a#to-top {
 	font-size: 24pt;
 	border-radius: var(--bor);
 }
+
+
+@media screen and (max-width:800px){
+	#outer-wrapper {
+		width: 600px;
+	}
+}
+
+@media screen and (max-width:600px){
+	#outer-wrapper {
+		width: 400px;
+	}
+}
+
+@media screen and (max-width:400px){
+	#outer-wrapper {
+		width: 100%;
+	}
+}
