@@ -301,10 +301,12 @@ $(function() {
 		$(this).parent().parent().addClass(al.cmn.spm);
 		$(this).html(al.cmn.kcp[0]);
 	});
-	$(al.cmn.bdp + ' .comh').each(function() {
-		var hcon = $(this).html(),
+	$(al.cmn.bdp + ' .comh').each(function(index) {
+		var cidx = index + 1,
+			idpar = $(this).parent().parent().attr('id'),
+			hcon = $(this).html(),
 			hconp = hcon.split(' ');
-		$(this).attr('id', hconp[0])
+		$(this).attr('id', idpar + hconp[0] + '-' + cidx)
 	});
 	$(al.cmn.bdp + ' a.toref').on('click', function() {
 		$(this).toggleClass('torefopen');
