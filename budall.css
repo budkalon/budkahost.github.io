@@ -54,7 +54,7 @@ table {
 body {
 	background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMXlA3g3oOWJJKKTAjI7FElcAPyQ9eDmQ5smPtByFdEZW3XC6PvAOf1V-zDoCXwlFSZ1sFsWfCDEefDVPGUxOpVFkedVga1LN-vui__6KaknGXnJW2vkotuCx1piSbeUMXDNdX3Ugv96suq0IPhKME9PMxMGSuV6qBh2_N41IC8I3vgDizCUpbGd-uwA/s200/turing.jpg) var(--col1) repeat;
 	color: var(--col6);
-	font-size: 12pt;
+	font-size: 11pt;
 	line-height: 1.5em;
 	font-family: "Lato", sans-serif;
 }
@@ -635,10 +635,10 @@ article {
 	margin-right: 10px;
 }
 div#partikeltama {
-	padding: 25px;
-	background: var(--col2);
+	padding: 150px 0 0 0;
+	background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiKNBU_C1dF0xDWOxjSED-KjqTh7npK-ClY8UOfhqN_60vCfmENHp8QUKBkwnJW5JoyKmHmWqaVyhJ5NNGO0OE4YSHTd-gRLMORET_ztdyyo_O9iJPbLDalpxqnhSASuJ8kJ9HS-ajEr8AChH462XjhkixUQRzjsawBojZNpHQ7VRsIz2PkWc1pPktWg/w800-h400-p-k-no-nu/TSS_001.jpg) center center no-repeat;
 	margin-bottom: 50px;
-	border-radius: var(--bor);
+	border-radius: 0 0 var(--bor) var(--bor);
 	display: flex;
 	flex-direction: column-reverse;
 	flex-wrap: wrap;
@@ -647,6 +647,8 @@ div#partikeltama {
 	align-items: flex-start;
 	font-size: 1.2em;
 	line-height: 1.6em;
+	background-size: cover;
+	overflow: hidden;
 }
 .post-item h1.post-title.entry-title {
 	color: var(--acn1);
@@ -923,7 +925,7 @@ div#posnya-relatedan li > a > div {
 	top: -25px;
 }
 .comcon {
-	width: 700px;
+	width: 650px;
 }
 .is-replied > .comcon {
 	width: 700px;
@@ -1103,10 +1105,10 @@ div#posnya-relatedan li > a > div {
 	width: 100%;
 	color: var(--col8);
 }
-div#blog-pager a {
+div#blog-pager span {
 	display: block;
 	background: var(--col3);
-	border-radius: var(--bor);
+	/* border-radius: var(--bor); */
 }
 #footer-wrapper {
 	background: var(--col1);
@@ -1147,8 +1149,6 @@ a#to-top {
     position: absolute;
     left: -30px;
 }
-
-::before {}
 
 .right.comcon:last-child::after {
     width: 10px;
@@ -1247,4 +1247,18 @@ div#budbread-crumb i[class*=fa-] {
 
 .bit-8.sum-jurnal {
     padding: 0 25px 25px;
+}
+
+.sum-gambar {
+    padding: 0 0 35px 25px;
+}
+
+div#blog-pager a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bitter.partikel-bawah h1 {
+    font-size: 3em;
 }
