@@ -638,10 +638,10 @@ article {
 	margin-right: 10px;
 }
 div#partikeltama {
-	padding: 25px;
-	background: var(--col2);
+	padding: 150px 0 0 0;
+	background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiKNBU_C1dF0xDWOxjSED-KjqTh7npK-ClY8UOfhqN_60vCfmENHp8QUKBkwnJW5JoyKmHmWqaVyhJ5NNGO0OE4YSHTd-gRLMORET_ztdyyo_O9iJPbLDalpxqnhSASuJ8kJ9HS-ajEr8AChH462XjhkixUQRzjsawBojZNpHQ7VRsIz2PkWc1pPktWg/w800-h400-p-k-no-nu/TSS_001.jpg) center center no-repeat;
 	margin-bottom: 50px;
-	border-radius: var(--bor);
+	border-radius: 0 0 var(--bor) var(--bor);
 	display: flex;
 	flex-direction: column-reverse;
 	flex-wrap: wrap;
@@ -650,6 +650,8 @@ div#partikeltama {
 	align-items: flex-start;
 	font-size: 1.2em;
 	line-height: 1.6em;
+	background-size: cover;
+	overflow: hidden;
 }
 .post-item h1.post-title.entry-title {
 	color: var(--acn1);
@@ -1223,4 +1225,31 @@ div#budbread-crumb i[class*=fa-] {
 	#outer-wrapper {
 		width: 100%;
 	}
+}
+
+
+.bitter.partikel-bawah {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 25px;
+    background: var(--col2);
+}
+
+.partilabel a {
+    margin-right: 15px;
+}
+
+#bud-kategori #above-wrapper {
+    margin-bottom: -10px;
+    position: relative;
+    border-radius: var(--bor) var(--bor) 0 0;
+}
+
+.bit-8.sum-jurnal {
+    padding: 0 25px 25px;
 }
