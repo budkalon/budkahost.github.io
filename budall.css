@@ -1142,6 +1142,58 @@ a#to-top {
 	font-size: 24pt;
 	border-radius: var(--bor);
 }
+.right.comcon::before {
+    width: 0px;
+    height: 100%;
+    border-left: 5px solid var(--col5);
+    content: '';
+    position: absolute;
+    left: -30px;
+}
+
+::before {}
+
+.right.comcon:last-child::after {
+    width: 10px;
+    height: 100%;
+    /* content: ''; */
+    position: absolute;
+    left: -30px;
+    top: 165px;
+    background: var(--col8);
+}
+
+.replies .comment:last-child::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background: var(--col1);
+    top: 30px;
+    left: -33px;
+    z-index: 10;
+}
+
+.hiddenrep::before {
+    content: '';
+    width: 10px;
+    height: calc(100% + 5px);
+    background: var(--col1);
+    position: absolute;
+    left: -50px;
+    top: 20px;
+}
+
+.hiddenrep::after {
+    content: '';
+    width: 45px;
+    height: 5px;
+    background: var(--col5);
+    position: absolute;
+    left: -45px;
+    top: 20px;
+    /* border-radius: 100%; */
+}
 
 
 @media screen and (max-width:800px) and (min-width:600px){
