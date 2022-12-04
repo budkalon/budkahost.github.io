@@ -872,6 +872,7 @@ div#posnya-relatedan li > a > div {
 	align-content: flex-start;
 	justify-content: flex-start;
 	align-items: flex-start;
+	position: relative;
 }
 #comment-editor {
 	border-radius: var(--bor);
@@ -921,24 +922,26 @@ div#posnya-relatedan li > a > div {
 	width: 20px;
 	position: absolute;
 	left: -30px;
-	border-bottom: 5px solid var(--col3);
+	border-bottom: 5px solid var(--col5);
 	top: -25px;
 }
 .comcon {
 	width: 650px;
 }
 .is-replied > .comcon {
-	width: 680px;
-	border-left: 5px solid var(--col3);
-	margin-left: -30px;
-	padding-left: 25px;
+	width: 700px;
+	/* border-left: 5px solid var(--col3); */
+	/* margin-left: -30px; */
+	/* padding-left: 25px; */
 	z-index: 1;
-	margin-right: 30px;
+	/* margin-right: 30px; */
 	margin-bottom: 15px;
+	position: relative;
 }
 .comup {
 	min-height: 120px;
-	padding: 0 15px 15px;
+	padding: 0 0 15px 15px;
+	z-index: 9999;
 }
 .comdeleted {
 	background: var(--col3);
@@ -977,25 +980,25 @@ div#posnya-relatedan li > a > div {
 	float: right;
 }
 .replies1 .comcon, .replies1 .comcon comup {
-	width: 630px;
+	width: 650px;
 }
 .replies2 .comcon, .replies2 .comcon comup {
-	width: 580px;
+	width: 600px;
 }
 .replies3 .comcon, .replies3 .comcon comup {
-	width: 530px;
+	width: 550px;
 }
 .replies4 .comcon, .replies4 .comcon comup {
-	width: 480px;
+	width: 500px;
 }
 .replies5 .comcon, .replies5 .comcon comup {
-	width: 430px;
+	width: 450px;
 }
 .replies6 .comcon, .replies6 .comcon comup {
-	width: 380px;
+	width: 400px;
 }
 .replies7 .comcon, .replies7 .comcon comup {
-	width: 380px;
+	width: 350px;
 }
 #bud-comment-form {
 	margin: 20px 0 20px;
@@ -1004,13 +1007,13 @@ div#posnya-relatedan li > a > div {
 	padding: 15px;
 	background: var(--col3);
 	border-radius: 0 0 var(--bor) var(--bor);
-	max-width: 685px;
+	/* max-width: 685px; */
 }
 #bud-comment-form .commsg {
 	padding: 25px 25px 0;
 	background: var(--col3);
 	border-radius: var(--bor) var(--bor) 0 0;
-	max-width: 685px;
+	/* max-width: 685px; */
 	color: var(--col7);
 }
 .commsg ol {
@@ -1076,6 +1079,8 @@ div#posnya-relatedan li > a > div {
 	color: var(--acn1);
 	font-weight: 700;
 	cursor: pointer;
+	width: calc(100% - 15px);
+	position: relative;
 }
 .repcomclosed.comup > .comment-footer {
 	border-radius: 0;
