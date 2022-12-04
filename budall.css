@@ -1196,6 +1196,23 @@ a#to-top {
 }
 
 
+.reply #bud-comment-form {
+    margin-left: 15px;
+}
+
+div#post-infohead i[class*=fa-] {
+    margin-right: 10px;
+}
+
+div#budbread-crumb i[class*=fa-] {
+    margin: 0 10px;
+}
+
+.left.prodedesc [class*=fa-] {
+    margin-right: 10px;
+}
+
+
 @media screen and (max-width:800px) and (min-width:600px){
 	#outer-wrapper {
 		width: 600px;
