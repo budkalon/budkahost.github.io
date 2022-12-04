@@ -1,8 +1,5 @@
 @charset "utf-8";
 /* CSS Document */ 
-html {
-    scroll-behavior: smooth;
-}
 :root {
 	--acn1: #fa7267;
 	--acn2: #fcb8b3;
@@ -638,10 +635,10 @@ article {
 	margin-right: 10px;
 }
 div#partikeltama {
-	padding: 150px 0 0 0;
-	background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiKNBU_C1dF0xDWOxjSED-KjqTh7npK-ClY8UOfhqN_60vCfmENHp8QUKBkwnJW5JoyKmHmWqaVyhJ5NNGO0OE4YSHTd-gRLMORET_ztdyyo_O9iJPbLDalpxqnhSASuJ8kJ9HS-ajEr8AChH462XjhkixUQRzjsawBojZNpHQ7VRsIz2PkWc1pPktWg/w800-h400-p-k-no-nu/TSS_001.jpg) center center no-repeat;
+	padding: 25px;
+	background: var(--col2);
 	margin-bottom: 50px;
-	border-radius: 0 0 var(--bor) var(--bor);
+	border-radius: var(--bor);
 	display: flex;
 	flex-direction: column-reverse;
 	flex-wrap: wrap;
@@ -650,8 +647,6 @@ div#partikeltama {
 	align-items: flex-start;
 	font-size: 1.2em;
 	line-height: 1.6em;
-	background-size: cover;
-	overflow: hidden;
 }
 .post-item h1.post-title.entry-title {
 	color: var(--acn1);
@@ -928,7 +923,7 @@ div#posnya-relatedan li > a > div {
 	top: -25px;
 }
 .comcon {
-	width: 650px;
+	width: 700px;
 }
 .is-replied > .comcon {
 	width: 700px;
@@ -1152,6 +1147,8 @@ a#to-top {
     position: absolute;
     left: -30px;
 }
+
+::before {}
 
 .right.comcon:last-child::after {
     width: 10px;
