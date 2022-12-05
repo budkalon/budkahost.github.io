@@ -185,7 +185,7 @@ if (titipe) {
 							skrl += '</ul>';
 							al.rl.kn.html(skrl);
 						} else {
-							al.rl.kn.html('<div>Tidak ada pos terkait dengan "' + al.rl.rf.attr(al.rl.rfatr) + '".</div>');
+							al.rl.kn.html('<div>Tidak ada pos terkait kategori "' + al.rl.rf.attr(al.rl.rfatr) + '".</div>');
 						}
 					},
 					error: function() {
@@ -278,11 +278,11 @@ $(function() {
 	}
 	//$('#jokol').append(rangkaPelabelan);
 	var sus = al.sr.nvms.text().includes('label:note') ? true : false;
-	var edtmss = '<span class="idom">' + al.sr.nvms.text().replace(RegExp(/((\slabel:\w*)|(label:\w*))/g), '').replace(RegExp(/\|*/g), '').replace(RegExp(/\+*/g), '') + '</span>' + (!sus ? ' yang berlabel ' + sklb.replace('dll', 'lainnya') : '');
+	var edtmss = '<span class="idom">' + al.sr.nvms.text().replace(RegExp(/((\slabel:\w*)|(label:\w*))/g), '').replace(RegExp(/\|*/g), '').replace(RegExp(/\+*/g), '') + '</span>' + (!sus ? ' dalam kategori ' + sklb.replace('dll', 'lainnya') : '');
 	al.sr.nvms.html(edtmss);
 
 	al.cmn.bd.each(function() {
-		var skkm = $(this).html().replace(/\[link\](.*?)\[\/link\]/ig, "<a target='_blank' href='$1' title='tautan' rel='nofollow' data-allow='true'>$1<\/a>");
+		var skkm = $(this).html().replace(/\[tawut\](.*?)\[\/tawut\]/ig, "<a target='_blank' href='$1' title='tautan' rel='nofollow' data-allow='true'>$1<\/a>");
 		skkm = skkm.replace(/\[toref\](.*?)\[\/toref\]/ig, "<a data-href='$1' title='Referensi komentar' rel='nofollow' data-allow='true' class='" + al.cmn.trf + "'>$1<\/a>");
 		skkm = skkm.replace(/\_\_(.*?)\_\_/ig, "<strong>$1<\/strong>");
 		skkm = skkm.replace(/\*\*(.*?)\*\*/ig, "<em>$1<\/em>");
@@ -327,7 +327,7 @@ $(function() {
 				cntrf.next().append('<div class="' + al.cmn.cfr + ' bit-6"><a target="_blank" href="' + cnmrf + '" data-allow="true"><i class="fa-solid fa-up-right-from-square"></i></a></div>');
 				//wadahRefkomnya.append('<div class="comreflink">kunjungi: ');
 				$(al.cmn.rkm + ' ' + al.cmn.bdp).each(function() {
-					var skkr = $(this).html().replace(/\[link\](.*?)\[\/link\]/ig, "<em>$1<\/em>");
+					var skkr = $(this).html().replace(/\[tawut\](.*?)\[\/tawut\]/ig, "<em>$1<\/em>");
 					skkr = skkr.replace(/\[toref\](.*?)\[\/toref\]/ig, "<em>$1<\/em>");
 					skkr = skkr.replace(/\_\_(.*?)\_\_/ig, "<strong>$1<\/strong>");
 					skkr = skkr.replace(/\[img\](.*?)\[\/img\]/ig, "<span style='text-align:center;'><a data-allow='true' href='$1' class='allow' target='_blank' rel='nofollow'><img title='Gambar referensi' class='cm-image' src='$1' alt='Memuat...' \/><\/a><\/span>");
@@ -350,8 +350,8 @@ $(function() {
 
 	$('.' + al.cmn.cls).each(function() {
 		$(this).on('click', function() {
-			var kaRefkomDariA = $(this).parent().parent().find(al.cmn.rkm);
-			kaRefkomDariA.empty();
+			var rffr = $(this).parent().parent().find(al.cmn.rkm);
+			rffr.empty();
 			$(this).parent().css('display', 'none');
 			$(this).next().remove();
 			return false;
