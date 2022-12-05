@@ -526,6 +526,12 @@ button.bud-search-search-button span, span.bud-search-filter label span, label[f
 	padding: 15px;
 	border-radius: var(--bor2);
 }
+div#master-note {
+    padding: 25px;
+    margin-bottom: 50px;
+    background: var(--col2);
+    border-radius: var(--bor);
+}
 .blog-posts.hfeed {
 	background: var(--col1);
 	padding: 25px;
@@ -1257,7 +1263,6 @@ div#budbread-crumb i[class*=fa-] {
 	background: var(--col3);
 	margin-top: 20px;
 	border-radius: var(--bor);
-	max-width: 685px;
 }
 #b-undo {
 	margin-bottom: 25px;
