@@ -576,6 +576,13 @@ article.multi-post {
 	border-radius: var(--bor2);
 	overflow: hidden;
 }
+.multi-post h2.post-title {
+    font-size: 2em;
+    color: var(--acn2);
+}
+.multi-post h2.post-title a {
+    color: var(--acn2);
+}
 article.multi-post:last-child {
 	margin-bottom: 0;
 }
