@@ -772,6 +772,9 @@ article {
     color: var(--col7);
 	font-family: monospace;
 }
+.post pre code {
+	background: none;
+}
 .post strong {
     font-weight: 700;
     color: var(--col7);
