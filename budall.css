@@ -367,7 +367,7 @@ nav ul {
 .bit-12 {
 	width: 100%;
 }
-span.catatan {
+span.info {
 	padding: 25px;
 	margin: 20px 0;
 	display: block;
@@ -375,12 +375,30 @@ span.catatan {
 	border-radius: var(--bor);
 }
 
+.btn-group {
+    padding: 15px 0;
+}
+
 /*main section*/
 #outer-wrapper {
 	width: 800px;
 	margin: 80px auto 100px;
 }
-
+.btn-group a {
+    display: inline-block;
+    padding: 10px 25px;
+    background: var(--col5);
+    color: var(--col8);
+}
+.btn-group a:first-child {
+    border-radius: var(--bor) 0 0 var(--bor);
+}
+.btn-group a:last-child {
+    border-radius: 0 var(--bor) var(--bor) 0;
+}
+.btn-group a:only-child {
+    border-radius: var(--bor);
+}
 /*=========================header*/
 #above-wrapper {
 	background: var(--col1);
