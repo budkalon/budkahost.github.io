@@ -711,18 +711,21 @@ article {
 	height: 350px;
 }
 .postmark {
-	position: absolute;
-	top: 0;
-	left: 0;
-	font-size: 24pt;
-	line-height: 45px;
-	background: var(--acn1);
-	height: 50px;
-	width: 50px;
-	display: block;
-	text-align: center;
-	border-radius: 0 0 var(--bor) 0;
-	color: var(--col1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14pt;
+    line-height: 50px;
+    background: var(--acn1);
+    height: 50px;
+    width: 50px;
+    display: block;
+    text-align: center;
+    border-radius: 0 0 var(--bor) 0;
+    color: var(--col1);
+}
+.postmark a {
+    display: block;
 }
 .postaright {
 	width: 550px;
