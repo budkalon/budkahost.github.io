@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */ 
+/*=========================global variable*/
 :root {
 	--acn1: #fa7267;
 	--acn2: #fcb8b3;
@@ -26,6 +27,8 @@
 	outline: none;
 	outline-offset: -2px;
 }
+
+/*=========================global class*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, .section, .widget {
 	margin: 0;
 	padding: 0;
@@ -371,13 +374,14 @@ span.catatan {
 	background: var(--col2);
 	border-radius: var(--bor);
 }
-.comment-author {
-	text-transform: capitalize;
-}
+
+/*main section*/
 #outer-wrapper {
 	width: 800px;
 	margin: 80px auto 100px;
 }
+
+/*=========================header*/
 #above-wrapper {
 	background: var(--col1);
 	padding: 25px;
@@ -387,6 +391,11 @@ span.catatan {
 	position: sticky;
 	top: -10px;
 	z-index: 9999;
+}
+#bud-kategori #above-wrapper {
+    margin-bottom: -10px;
+    position: relative;
+    border-radius: var(--bor) var(--bor) 0 0;
 }
 div#navbar {
 	display: flex;
@@ -478,7 +487,10 @@ input.belabel + label {
 input.belabel:checked + label {
 	color: var(--col2);
 	font-weight: 700;
-	background: var(--acn1);
+	background: var(--col6);
+}
+input.belabel:checked + label [class*=fa-]::before {
+    content: '\f14a';
 }
 button.bud-search-search-button span, span.bud-search-filter label span, label[for="pencaren"] span {
 	width: auto;
@@ -490,6 +502,8 @@ button.bud-search-search-button span, span.bud-search-filter label span, label[f
 	color: var(--col5);
 	font-variation-settings: "FILL"0, "wght"700, "GRAD"0, "opsz"48;
 }
+
+/*=========================post*/
 .post-filter-message {
 	padding: 25px;
 	margin-bottom: 20px;
@@ -633,6 +647,33 @@ article {
 	margin-top: 20px;
 	border-radius: var(--bor);
 	margin-right: 10px;
+}
+.bitter.partikel-bawah {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 25px;
+    background: var(--col2);
+}
+
+.partilabel a {
+    margin-right: 15px;
+}
+
+.bitter.partikel-bawah h1 {
+    font-size: 3em;
+}
+
+.bit-8.sum-jurnal {
+    padding: 0 25px 25px;
+}
+
+.sum-gambar {
+    padding: 0 0 35px 25px;
 }
 div#partikeltama {
 	padding: 150px 0 0 0;
@@ -864,6 +905,50 @@ div#posnya-relatedan li > a > div {
 	height: 20px;
 	margin-right: 10px;
 }
+#blog-pager {
+	background: var(--col1);
+	border-radius: 0 0 var(--bor) var(--bor);
+	margin: 0 0 50px;
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: center;
+	justify-content: space-evenly;
+	align-items: center;
+}
+#blog-pager span {
+	font-size: 32pt;
+	padding: 25px;
+	width: 100%;
+	color: var(--col8);
+}
+div#blog-pager span {
+	display: block;
+	background: var(--col3);
+	/* border-radius: var(--bor); */
+}
+div#blog-pager a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+div#post-infohead i[class*=fa-] {
+    margin-right: 10px;
+}
+
+div#budbread-crumb i[class*=fa-] {
+    margin: 0 10px;
+}
+
+.left.prodedesc [class*=fa-] {
+    margin-right: 10px;
+}
+
+/*=========================comment*/
+.comment-author {
+	text-transform: capitalize;
+}
 .comment {
 	display: flex;
 	flex-direction: row;
@@ -1087,60 +1172,6 @@ div#posnya-relatedan li > a > div {
 .replies.humover > .comment > div > .repcom {
 	background: var(--col4);
 }
-#blog-pager {
-	background: var(--col1);
-	border-radius: 0 0 var(--bor) var(--bor);
-	margin: 0 0 50px;
-	display: flex;
-	width: 100%;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-content: center;
-	justify-content: space-evenly;
-	align-items: center;
-}
-#blog-pager span {
-	font-size: 32pt;
-	padding: 25px;
-	width: 100%;
-	color: var(--col8);
-}
-div#blog-pager span {
-	display: block;
-	background: var(--col3);
-	/* border-radius: var(--bor); */
-}
-#footer-wrapper {
-	background: var(--col1);
-	padding: 25px;
-	border-radius: var(--bor);
-	font-size: 10pt;
-}
-#footer-wrapper .right {
-	text-align: right;
-}
-#a-undo, #b-undo {
-	padding: 15px 25px;
-	font-weight: 700;
-	color: var(--acn2) !important;
-	background: var(--col3);
-	margin-top: 20px;
-	border-radius: var(--bor);
-	max-width: 685px;
-}
-#b-undo {
-	margin-bottom: 25px;
-}
-a#to-top {
-	position: fixed;
-	right: 20px;
-	bottom: 20px;
-	padding: 25px 10px;
-	background: var(--acn1);
-	color: var(--col1);
-	font-size: 24pt;
-	border-radius: var(--bor);
-}
 .is-replied .right.comcon::before {
     width: 0px;
     height: 100%;
@@ -1196,19 +1227,39 @@ a#to-top {
 .reply #bud-comment-form {
     margin-left: 15px;
 }
-
-div#post-infohead i[class*=fa-] {
-    margin-right: 10px;
+/*=========================footer*/
+#footer-wrapper {
+	background: var(--col1);
+	padding: 25px;
+	border-radius: var(--bor);
+	font-size: 10pt;
+}
+#footer-wrapper .right {
+	text-align: right;
+}
+#a-undo, #b-undo {
+	padding: 15px 25px;
+	font-weight: 700;
+	color: var(--acn2) !important;
+	background: var(--col3);
+	margin-top: 20px;
+	border-radius: var(--bor);
+	max-width: 685px;
+}
+#b-undo {
+	margin-bottom: 25px;
 }
 
-div#budbread-crumb i[class*=fa-] {
-    margin: 0 10px;
+a#to-top {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	padding: 25px 10px;
+	background: var(--acn1);
+	color: var(--col1);
+	font-size: 24pt;
+	border-radius: var(--bor);
 }
-
-.left.prodedesc [class*=fa-] {
-    margin-right: 10px;
-}
-
 
 @media screen and (max-width:800px) and (min-width:600px){
 	#outer-wrapper {
@@ -1220,45 +1271,4 @@ div#budbread-crumb i[class*=fa-] {
 	#outer-wrapper {
 		width: 100%;
 	}
-}
-
-
-.bitter.partikel-bawah {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 25px;
-    background: var(--col2);
-}
-
-.partilabel a {
-    margin-right: 15px;
-}
-
-#bud-kategori #above-wrapper {
-    margin-bottom: -10px;
-    position: relative;
-    border-radius: var(--bor) var(--bor) 0 0;
-}
-
-.bit-8.sum-jurnal {
-    padding: 0 25px 25px;
-}
-
-.sum-gambar {
-    padding: 0 0 35px 25px;
-}
-
-div#blog-pager a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.bitter.partikel-bawah h1 {
-    font-size: 3em;
 }
