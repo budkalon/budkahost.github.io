@@ -435,6 +435,10 @@ span.info.gagal::before {
     background: var(--acn1);
     color: var(--col8);
 }
+.btn-group a:hover {
+    background: var(--acn2);
+    color: var(--col1);
+}
 .btn-group a:first-child {
     border-radius: var(--bor) 0 0 var(--bor);
 }
@@ -1182,6 +1186,48 @@ div#budbread-crumb i[class*=fa-] {
 
 .left.prodedesc [class*=fa-] {
     margin-right: 10px;
+}
+form#budkontak-form {
+    background: var(--col2);
+    padding: 25px;
+    border-radius: var(--bor);
+}
+span.input-label {
+    display: block;
+    font-weight: bold;
+    margin: 20px 5px 10px;
+    color: var(--acn2);
+    width: 100%;
+}
+#budkontak-form input, #budkontak-form textarea {
+    width: 100%;
+}
+.kon-sub {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.kon-sub label {
+    padding: 10px 15px;
+    background: var(--col3);
+    border-radius: var(--bor);
+    font-size: 10pt;
+}
+input:checked + label.icon-radio-input {
+    color: var(--col1);
+    background: var(--acn1);
+    font-weight: 700;
+}
+#budkontak-form textarea {
+    min-height: 200px;
+    max-width: 100%;
+    max-height: 250px;
+}
+.kont-sub {
+    margin: 20px 0;
 }
 
 /*=========================comment*/
