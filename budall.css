@@ -63,7 +63,12 @@ body {
 }
 a, a:visited {
 	text-decoration: none;
-	color: var(--col8);
+}
+a {
+	color: var(--acn2);
+}
+a:visited {
+	color: var(--acn1);
 }
 h1, h2, h3, h4, h5, h6, h7, .comh1, .comh2, .comh3 {
 	font-family: "Varela Round", sans-serif;
@@ -71,6 +76,9 @@ h1, h2, h3, h4, h5, h6, h7, .comh1, .comh2, .comh3 {
 }
 h1, h2, h3 {
 	color: var(--acn2);
+}
+h4, h5, h6, h7 {
+	color: var(--col7);
 }
 h1 {
 	font-family: 'Arvo', serif;
