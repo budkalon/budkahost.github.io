@@ -423,10 +423,15 @@ span.info::before {
 
 #bud-home #above-wrapper {
     margin-bottom: 0;
-    /* background: none; */
     vertical-align: middle;
     position: relative;
     border-radius: 0;
+    overflow: initial;
+}
+#bud-home div#budsearch {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
 }
 
 #bud-home #content-wrapper {
@@ -453,6 +458,9 @@ section#index-wrapper {
 
 #index-wrapper h1.post-title.entry-title {
     font-size: 3.2em;
+}
+p#blog-summary {
+    margin: 0;
 }
 /*=========================header*/
 #above-wrapper {
