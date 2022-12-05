@@ -428,7 +428,16 @@ span.info.gagal::before {
     padding: 0;
     display: flex;
     margin: 0;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
 }
+.post-filter-message .btn-group {
+    justify-content: flex-end;
+}
+
 .btn-group a {
     display: inline-block;
     padding: 10px 25px;
@@ -503,6 +512,9 @@ section#index-wrapper {
 
 #index-wrapper h1.post-title.entry-title {
     font-size: 3.2em;
+}
+section#index-wrapper .btn-group {
+    margin-top: 15px;
 }
 p#blog-summary {
     margin: 0;
@@ -639,7 +651,7 @@ button.bud-search-search-button span, span.bud-search-filter label span, label[f
 	position: relative;
 }
 .post-filter-message .mss {
-	padding: 15px 0;
+	/*padding: 15px 0;*/
 	color: var(--col7);
 }
 .post-filter-message .view {
