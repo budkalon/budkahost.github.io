@@ -759,6 +759,10 @@ div#partikeltama {
 	border-radius: 0 var(--bor) 0 0 !important;
 	padding-left: 10px !important;
 }
+div#budshort .kopian {
+    padding-left: 10px;
+    font-size: 9pt;
+}
 #bud-lampiran {
 	margin: 0 0 20px;
 	border-radius: var(--bor);
@@ -812,6 +816,9 @@ div#bud-lampiran ul {
 }
 .poscat:nth-child(2) {
 	padding-top: 0;
+}
+.poscat i[class*=fa-] {
+    margin-right: 10px;
 }
 div#posnya-relatedan h4 {
 	margin-bottom: 15px;
@@ -899,6 +906,9 @@ div#posnya-relatedan li > a > div {
 }
 .prodelink.bitter > span:nth-child(2) {
 	margin-right: 35px;
+}
+.prodelink a {
+    margin-right: 5px;
 }
 .prodelink.bitter img {
 	width: 20px;
@@ -1062,6 +1072,9 @@ div#budbread-crumb i[class*=fa-] {
 	font-weight: 700;
 	color: var(--acn2);
 	float: right;
+}
+.comment-footer i[class*=fa-] {
+    margin-right: 10px;
 }
 .replies1 .comcon, .replies1 .comcon comup {
 	width: 650px;
