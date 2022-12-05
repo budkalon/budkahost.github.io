@@ -425,7 +425,7 @@ span.info.gagal::before {
 }
 
 .btn-group {
-    padding: 15px 0 0;
+    padding: 0;
     display: flex;
     margin: 0;
 }
