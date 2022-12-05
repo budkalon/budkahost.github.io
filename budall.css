@@ -733,7 +733,7 @@ article {
 	padding: 15px 25px;
 	height: 200px;
 }
-.post-item .post-body {
+.post-item .post-body, [id*=bud-laman-] .post-body {
 	padding-right: 200px;
 }
 .post-body figure {
