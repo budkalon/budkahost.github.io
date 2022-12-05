@@ -763,6 +763,15 @@ article {
     border-radius: var(--bor2);
     font-family: monospace;
 }
+.post pre {
+    overflow: auto;
+    word-break: break-word;
+    background: var(--col2);
+    padding: 15px;
+    border-radius: var(--bor);
+    color: var(--col7);
+	font-family: monospace;
+}
 .post strong {
     font-weight: 700;
     color: var(--col7);
