@@ -68,10 +68,10 @@ body {
 a, a:visited {
 	text-decoration: none;
 }
-a {
+a, a:visited {
 	color: var(--acn2);
 }
-a:visited {
+a:hover {
 	color: var(--acn1);
 }
 h1, h2, h3, h4, h5, h6, h7, .comh1, .comh2, .comh3 {
@@ -739,6 +739,7 @@ article {
 
 .postmark a {
     display: block;
+	color: var(--col8);
 }
 .postaright {
 	width: 550px;
