@@ -753,6 +753,20 @@ article {
     padding: 0 25px 0 0;
     border-radius: var(--bor);
 }
+.post li {
+    line-height: 1.75em;
+}
+.post code {
+    background: var(--col3);
+    color: var(--col7);
+    padding: 2px 5px;
+    border-radius: var(--bor2);
+    font-family: monospace;
+}
+.post strong {
+    font-weight: 700;
+    color: var(--col7);
+}
 .post-body table caption {
     text-align: left;
     font-size: 10pt;
