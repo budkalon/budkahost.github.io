@@ -168,7 +168,7 @@ if (titipe) {
 							tnw = al.gl.lc.split('#'),
 							tnww = tnw[0].split('?');
 						if (typeof entry !== "undefined") {
-							skrl = '<h4><span class="material-symbols-outlined">apps</span> Pos sejenis</h4><ul class="bitter">';
+							skrl = '<h4><i class="fa-solid fa-layer-group"></i> Pos sejenis</h4><ul class="bitter">';
 							for (var i = 0; i < entry.length; i++) {
 								for (var j = 0; j < entry[i].link.length; j++) {
 									if (entry[i].link[j].rel == "alternate") {
