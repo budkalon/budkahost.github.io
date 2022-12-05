@@ -425,7 +425,7 @@ span.info.gagal::before {
 }
 
 .btn-group {
-    padding: 0;
+    padding: 15px 0 0;
     display: flex;
     margin: 0;
     justify-content: flex-start;
@@ -435,6 +435,7 @@ span.info.gagal::before {
     align-content: center;
 }
 .post-filter-message .btn-group {
+	padding: 0;
     justify-content: flex-end;
 }
 
