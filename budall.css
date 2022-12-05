@@ -1447,6 +1447,9 @@ input:checked + label.icon-radio-input {
 	text-align: center;
 	border-radius: 0 0 var(--bor) var(--bor);
 }
+.comreflink a {
+    color: var(--col1);
+}
 .comref-loading {
 	padding: 25px;
 	text-align: center;

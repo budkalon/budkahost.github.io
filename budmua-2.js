@@ -294,7 +294,7 @@ $(function() {
 		skkm = skkm.replace(/\[hhh\](.*?)\[\/hhh\]/ig, "<strong class='comh comh3'>$1<\/strong>");
 		$(this).html(skkm);
 		if ($(this).has('a.' + al.cmn.trf)) {
-			$(this).append('<div class="refkom"></div><div style="display:none" class="' + al.cmn.cff + ' bitter"><div class="' + al.cmn.cls + ' bit-6"><i class="fa-solid fa-xmark"></i></div></div>');
+			$(this).append('<div class="refkom"></div><div style="display:none" class="' + al.cmn.cff + ' bitter"><div class="' + al.cmn.cls + ' bit-6"><i class="fa-regular fa-rectangle-xmark"></i></div></div>');
 		}
 		$(this).children('.comh').each(function(index) {
 			var cidx = index + 1,
