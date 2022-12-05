@@ -409,6 +409,51 @@ span.info::before {
 	width: 800px;
 	margin: 80px auto 100px;
 }
+
+
+#bud-home div#outer-wrapper {
+    /* width: 1000px; */
+    /* min-height: 800px; */
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqnaXwN76ktjOvm8Rt_dQv8Zz4Ew-nsGXtsG61cr72-WZiim4rYjYap_B4ZQJFRf1K5ae0ZGtGKv0UJupqCk6_LdnAjDdyzpLEsh_WQncJsVST8ERNQe_ak3uvNfKcqF2GX6LDdogv_Ng8-7kaxW45LHBcYejDEi17csNNNL6mcObjxGg7AfQQYCmIfQ/s1200/CHANNEL%20COVER.jpg) no-repeat center center;
+    background-size: cover;
+    border-radius: var(--bor);
+    overflow: hidden;
+    position: relative;
+}
+
+#bud-home #above-wrapper {
+    margin-bottom: 0;
+    /* background: none; */
+    vertical-align: middle;
+    position: relative;
+    border-radius: 0;
+}
+
+#bud-home #content-wrapper {
+    padding: 50px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+section#index-wrapper {
+    width: 450px;
+    background: var(--col2);
+    padding: 25px;
+    border-radius: var(--bor);
+}
+
+#bud-home #footer-wrapper {
+    border-radius: 0;
+}
+
+#index-wrapper h1.post-title.entry-title {
+    font-size: 3.2em;
+}
 /*=========================header*/
 #above-wrapper {
 	background: var(--col1);
@@ -530,6 +575,7 @@ button.bud-search-search-button span, span.bud-search-filter label span, label[f
 	color: var(--col5);
 	font-variation-settings: "FILL"0, "wght"700, "GRAD"0, "opsz"48;
 }
+
 
 /*=========================post*/
 .post-filter-message {
