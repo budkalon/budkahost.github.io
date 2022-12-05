@@ -58,7 +58,7 @@ body {
 	background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMXlA3g3oOWJJKKTAjI7FElcAPyQ9eDmQ5smPtByFdEZW3XC6PvAOf1V-zDoCXwlFSZ1sFsWfCDEefDVPGUxOpVFkedVga1LN-vui__6KaknGXnJW2vkotuCx1piSbeUMXDNdX3Ugv96suq0IPhKME9PMxMGSuV6qBh2_N41IC8I3vgDizCUpbGd-uwA/s200/turing.jpg) var(--col1) repeat;
 	color: var(--col6);
 	font-size: 11pt;
-	line-height: 1.5em;
+	line-height: 1.75em;
 	font-family: "Lato", sans-serif;
 }
 a, a:visited {
