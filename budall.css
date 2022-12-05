@@ -724,6 +724,7 @@ article {
     border-radius: 0 0 var(--bor) 0;
     color: var(--col1);
 }
+
 .postmark a {
     display: block;
 }
