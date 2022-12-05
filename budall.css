@@ -413,7 +413,9 @@ span.info.gagal::before {
 }
 
 .btn-group {
-    padding: 15px 0;
+    padding: 15px 0 0;
+    display: flex;
+    margin: 0;
 }
 .btn-group a {
     display: inline-block;
