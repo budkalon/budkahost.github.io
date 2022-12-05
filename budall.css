@@ -13,6 +13,10 @@
 	--col6: #87a4b7;
 	--col7: #b7c8d4;
 	--col8: #e7edf1;
+	--ylw0: #443c1e;
+	--ylw1: #715c10;
+	--red0: #583030;
+	--grn0: #3b5428;
 	--bor: 10px;
 	--bor2: 5px;
 }
@@ -396,7 +400,7 @@ span.info::before {
     font-size: 16pt;
 }
 span.info.bahaya {
-    background: #443c1e;
+    background: var(--ylw0);
 }
 span.info.bahaya::before {
     content: '\f071';
@@ -408,13 +412,13 @@ span.info.catatan::before {
     content: '\f059';
 }
 span.info.sukses {
-    background: #3b5428;
+    background: var(--grn0);
 }
 span.info.sukses::before {
     content: '\f058';
 }
 span.info.gagal {
-    background: #583030;
+    background: var(--red0);
 }
 span.info.gagal::before {
     content: '\f057';
@@ -786,6 +790,10 @@ article {
 .post strong {
     font-weight: 700;
     color: var(--col7);
+}
+.post mark {
+    background: #715c10;
+    color: var(--col8);
 }
 .post-body table caption {
     text-align: left;
