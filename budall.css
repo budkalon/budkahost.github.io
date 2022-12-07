@@ -727,7 +727,6 @@ span.info.gagal::before {
   padding: 0;
 }
 .bud-search-search-button {
-  width: 100%;
   height: 100%;
   border-radius: 0;
 }
@@ -746,7 +745,7 @@ span.info.gagal::before {
 #label-filtered:checked + div {
   height: auto;
 }
-.belabel label {
+.belabel + label {
   padding: 15px;
   display: inline-block;
   width: 100%;
