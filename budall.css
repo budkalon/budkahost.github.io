@@ -870,10 +870,10 @@ article.multi-post .post-footer {
   left: 0;
   height: 45px;
 }
-article.post-item .blowimg {
+article.post-item .post-thumbnail.blowimg {
   margin: -25px 0 10px -25px;
 }
-article.post-item .blowimg img {
+article.post-item .post-thumbnail.blowimg img {
   border-radius: var(--bor) var(--bor) 0 0;
 }
 article.post-item h1.post-title.entry-title {
