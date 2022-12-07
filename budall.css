@@ -870,17 +870,17 @@ article.multi-post .post-footer {
   left: 0;
   height: 45px;
 }
-article .post-item .blowimg {
+article.post-item .blowimg {
   margin: -25px 0 10px -25px;
 }
-article .post-item .blowimg img {
+article.post-item .blowimg img {
   border-radius: var(--bor) var(--bor) 0 0;
 }
-article .post-item h1.post-title.entry-title {
+article.post-item h1.post-title.entry-title {
   color: var(--acn1);
   text-transform: capitalize;
 }
-article .post-item .post-footer {
+article.post-item .post-footer {
   background: var(--col2);
   padding: 25px;
   margin: 40px 0;
@@ -1512,42 +1512,42 @@ article .post-item .post-footer {
   margin: 25px 0;
   border-radius: var(--bor);
 }
-.comment-body img .comh1,
-.comment-body img .comh2,
-.comment-body img .comh3 {
+.comment-body .comh1,
+.comment-body .comh2,
+.comment-body .comh3 {
   color: var(--col8);
 }
-.comment-body img .comh1 {
+.comment-body .comh1 {
   font-size: 1.6em;
 }
-.comment-body img .comh2 {
+.comment-body .comh2 {
   font-size: 1.2em;
 }
-.comment-body img .refkom {
+.comment-body .refkom {
   background: var(--col4);
   margin: 25px 0 0;
   border-radius: var(--bor) var(--bor) 0 0;
   padding-top: 15px;
 }
-.comment-body img .refkom * {
+.comment-body .refkom * {
   background: none;
   color: var(--col7);
 }
-.comment-body img .refkom:empty {
+.comment-body .refkom:empty {
   padding: 0;
   margin: 0;
 }
-.comment-body img .refkom .comref-footer {
+.comment-body .refkom .comref-footer {
   background: var(--acn2);
   color: var(--col3);
   font-weight: 700;
   text-align: center;
   border-radius: 0 0 var(--bor) var(--bor);
 }
-.comment-body img .refkom .comref-footer a {
+.comment-body .refkom .comref-footer a {
   color: var(--col1);
 }
-.comment-body img .comref-loading {
+.comment-body .comref-loading {
   padding: 25px;
   text-align: center;
   font-size: 32pt;
