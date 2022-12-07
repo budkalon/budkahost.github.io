@@ -1,6 +1,10 @@
 @charset "utf-8";
 /*global variable==========================================*/
 @fa: e("[class*=fa-]");
+@bor_atas: var(--bor) var(--bor) 0 0;
+@bor_bawah: 0 0 var(--bor) var(--bor);
+@bor_kanan: 0 var(--bor) var(--bor) 0;
+@bor_kiri: var(--bor) 0 0 var(--bor);
 :root {
     --acn1: #fa7267;
     --acn2: #fcb8b3;
@@ -19,6 +23,10 @@
     --grn0: #3b5428;
     --bor: 10px;
     --bor2: 5px;
+    --wxl: 1000px;
+    --wl: 800px;
+    --ws: 600px;
+    --wxs: 400px;
 }
 * {
     -webkit-box-sizing: border-box;
@@ -160,7 +168,7 @@ textarea {
     width: 200px;
     margin: 1px 0;
     padding: 15px 25px;
-    font: normal normal 10pt / normal "lato", sans-serif;
+    font: normal normal 11pt / normal "lato", sans-serif;
     color: var(--col8);
     line-height: normal;
     background-color: var(--col3);
@@ -520,10 +528,10 @@ span.info {
             color: var(--col1);
         }
         &:first-child {
-            border-radius: var(--bor) 0 0 var(--bor);
+            border-radius: @bor_kiri;
         }
         &:last-child {
-            border-radius: 0 var(--bor) var(--bor) 0;
+            border-radius: @bor_kanan;
         }
         &:only-child {
             border-radius: var(--bor);
@@ -532,7 +540,7 @@ span.info {
 }
 /*main section==========================================*/
 #outer-wrapper {
-    width: 800px;
+    width: var(--wl);
     margin: 80px auto 100px;
     #bud-home & {
         background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqnaXwN76ktjOvm8Rt_dQv8Zz4Ew-nsGXtsG61cr72-WZiim4rYjYap_B4ZQJFRf1K5ae0ZGtGKv0UJupqCk6_LdnAjDdyzpLEsh_WQncJsVST8ERNQe_ak3uvNfKcqF2GX6LDdogv_Ng8-7kaxW45LHBcYejDEi17csNNNL6mcObjxGg7AfQQYCmIfQ/s1200/CHANNEL%20COVER.jpg)
@@ -562,7 +570,7 @@ span.info {
     #bud-kategori & {
         margin-bottom: -10px;
         position: relative;
-        border-radius: var(--bor) var(--bor) 0 0;
+        border-radius: @bor_atas;
     }
 }
 #bud-home {
@@ -582,7 +590,7 @@ span.info {
         align-items: flex-end;
     }
     #index-wrapper {
-        width: 450px;
+        width: calc(var(--ws) + 50px);
         background: var(--col2);
         padding: 25px;
         border-radius: var(--bor);
@@ -729,7 +737,7 @@ span.info {
 .blog-posts.hfeed {
     background: var(--col1);
     padding: 25px;
-    border-radius: var(--bor) var(--bor) 0 0;
+    border-radius: @bor_atas;
     &.bud-nonext {
         margin-bottom: 50px;
         border-radius: var(--bor);
@@ -772,7 +780,7 @@ article {
         &.postarama {
             height: 350px;
             margin: -25px -25px 25px;
-            border-radius: var(--bor) var(--bor) 0 0;
+            border-radius: @bor_atas;
             .postaleft {
                 width: 350px;
                 height: 350px;
@@ -788,14 +796,14 @@ article {
                     display: block;
                 }
             }
-            .post-thumbnail.blowimg,
-            .post-thumbnail.blowimg img {
+            .blowimg,
+            .blowimg img {
                 width: 350px;
                 height: 350px;
             }
         }
-        .post-thumbnail.blowimg,
-        .post-thumbnail.blowimg img {
+        .blowimg,
+        .blowimg img {
             height: 200px;
             width: 200px;
         }
@@ -811,10 +819,10 @@ article {
     }
 
     &.post-item {
-        .post-thumbnail.blowimg {
+        .blowimg {
             margin: -25px 0 10px -25px;
             img {
-                border-radius: var(--bor) var(--bor) 0 0;
+                border-radius: @bor_atas;
             }
         }
         h1.post-title.entry-title {
@@ -962,7 +970,7 @@ article {
     background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiKNBU_C1dF0xDWOxjSED-KjqTh7npK-ClY8UOfhqN_60vCfmENHp8QUKBkwnJW5JoyKmHmWqaVyhJ5NNGO0OE4YSHTd-gRLMORET_ztdyyo_O9iJPbLDalpxqnhSASuJ8kJ9HS-ajEr8AChH462XjhkixUQRzjsawBojZNpHQ7VRsIz2PkWc1pPktWg/w800-h400-p-k-no-nu/TSS_001.jpg)
         center center no-repeat;
     margin-bottom: 50px;
-    border-radius: 0 0 var(--bor) var(--bor);
+    border-radius: @bor_bawah;
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: wrap;
@@ -1150,7 +1158,7 @@ article {
 .author-profile {
     margin: -25px;
     background: var(--col3);
-    border-radius: 0 0 var(--bor) var(--bor);
+    border-radius: @bor_bawah;
     overflow: hidden;
     padding: 25px;
     > div {
@@ -1200,7 +1208,7 @@ article {
 }
 #blog-pager {
     background: var(--col1);
-    border-radius: 0 0 var(--bor) var(--bor);
+    border-radius: @bor_bawah;
     margin: 0 0 50px;
     display: flex;
     width: 100%;
@@ -1300,7 +1308,7 @@ article {
 .comment-avatar {
     width: 50px;
     height: 50px;
-    border-radius: var(--bor) var(--bor) 0 0;
+    border-radius: @bor_atas;
     overflow: hidden;
 }
 .repcom {
@@ -1312,7 +1320,7 @@ article {
     z-index: 15 !important;
     background: var(--col3);
     position: relative;
-    border-radius: 0 0 var(--bor) var(--bor);
+    border-radius: @bor_bawah;
     vertical-align: middle;
     color: var(--col5);
     &.replied {
@@ -1355,7 +1363,7 @@ article {
     &deleted {
         background: var(--col3);
         padding: 35px 15px 0;
-        border-radius: var(--bor) var(--bor) 0 0;
+        border-radius: @bor_atas;
         min-height: 90px;
         vertical-align: middle;
         color: var(--col5);
@@ -1363,7 +1371,7 @@ article {
     &ment-header {
         background: var(--col3);
         padding: 10px 15px 0;
-        border-radius: var(--bor) var(--bor) 0 0;
+        border-radius: @bor_atas;
     }
     &ment-author a {
         color: var(--acn2);
@@ -1377,7 +1385,7 @@ article {
     &ment-footer {
         background: var(--col3);
         padding: 0 15px 10px;
-        border-radius: 0 0 var(--bor) var(--bor);
+        border-radius: @bor_bawah;
         font-size: 8pt;
         margin: 0;
 
@@ -1419,12 +1427,12 @@ each(range(8), {
     .bud-comment-editor-wrapper {
         padding: 15px;
         background: var(--col3);
-        border-radius: 0 0 var(--bor) var(--bor);
+        border-radius: @bor_bawah;
     }
     .commsg {
         padding: 25px 25px 0;
         background: var(--col3);
-        border-radius: var(--bor) var(--bor) 0 0;
+        border-radius: @bor_atas;
         color: var(--col7);
         ol {
             list-style: auto;
@@ -1463,7 +1471,7 @@ each(range(8), {
     .refkom {
         background: var(--col4);
         margin: 25px 0 0;
-        border-radius: var(--bor) var(--bor) 0 0;
+        border-radius: @bor_atas;
         padding-top: 15px;
         * {
             background: none;
@@ -1479,7 +1487,7 @@ each(range(8), {
         color: var(--col3);
         font-weight: 700;
         text-align: center;
-        border-radius: 0 0 var(--bor) var(--bor);
+        border-radius: @bor_bawah;
         a {
             color: var(--col1);
         }
@@ -1501,7 +1509,7 @@ each(range(8), {
     padding: 20px;
     background: var(--col2);
     margin: 0 15px;
-    border-radius: 0 0 var(--bor) var(--bor);
+    border-radius: @bor_bawah;
     margin-top: -15px;
     color: var(--acn1);
     font-weight: 700;
@@ -1527,7 +1535,6 @@ each(range(8), {
         position: absolute;
         left: -45px;
         top: 20px;
-        /* border-radius: 100%; */
     }
 }
 .replies {
@@ -1557,7 +1564,6 @@ each(range(8), {
     &:last-child::after {
         width: 10px;
         height: 100%;
-        /* content: ''; */
         position: absolute;
         left: -30px;
         top: 165px;
@@ -1583,9 +1589,15 @@ each(range(8), {
     font-size: 24pt;
     border-radius: var(--bor);
 }
-@media screen and (max-width: 800px) and (min-width: 600px) {
+@media screen and (max-width: var(--wxl)) {
     #outer-wrapper {
-        width: 600px;
+        width: var(--wl);
+    }
+}
+
+@media screen and (max-width: var(--wl)) and (min-width: var(--ws)) {
+    #outer-wrapper {
+        width: var(--ws);
     }
 }
 

@@ -18,6 +18,10 @@
   --grn0: #3b5428;
   --bor: 10px;
   --bor2: 5px;
+  --wxl: 1000px;
+  --wl: 800px;
+  --ws: 600px;
+  --wxs: 400px;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -161,7 +165,7 @@ textarea {
   width: 200px;
   margin: 1px 0;
   padding: 15px 25px;
-  font: normal normal 10pt / normal "lato", sans-serif;
+  font: normal normal 11pt / normal "lato", sans-serif;
   color: var(--col8);
   line-height: normal;
   background-color: var(--col3);
@@ -601,7 +605,7 @@ span.info.gagal::before {
 }
 /*main section==========================================*/
 #outer-wrapper {
-  width: 800px;
+  width: var(--wl);
   margin: 80px auto 100px;
 }
 #bud-home #outer-wrapper {
@@ -649,7 +653,7 @@ span.info.gagal::before {
   align-items: flex-end;
 }
 #bud-home #index-wrapper {
-  width: 450px;
+  width: calc(var(--ws) + 50px);
   background: var(--col2);
   padding: 25px;
   border-radius: var(--bor);
@@ -851,13 +855,13 @@ article.multi-post.postarama .post-footer {
 article.multi-post.postarama .post-footer > div > span {
   display: block;
 }
-article.multi-post.postarama .post-thumbnail.blowimg,
-article.multi-post.postarama .post-thumbnail.blowimg img {
+article.multi-post.postarama .blowimg,
+article.multi-post.postarama .blowimg img {
   width: 350px;
   height: 350px;
 }
-article.multi-post .post-thumbnail.blowimg,
-article.multi-post .post-thumbnail.blowimg img {
+article.multi-post .blowimg,
+article.multi-post .blowimg img {
   height: 200px;
   width: 200px;
 }
@@ -870,10 +874,10 @@ article.multi-post .post-footer {
   left: 0;
   height: 45px;
 }
-article.post-item .post-thumbnail.blowimg {
+article.post-item .blowimg {
   margin: -25px 0 10px -25px;
 }
-article.post-item .post-thumbnail.blowimg img {
+article.post-item .blowimg img {
   border-radius: var(--bor) var(--bor) 0 0;
 }
 article.post-item h1.post-title.entry-title {
@@ -1588,7 +1592,6 @@ article.post-item .post-footer {
   position: absolute;
   left: -45px;
   top: 20px;
-  /* border-radius: 100%; */
 }
 .replies.humover > .comment > div > .repcom {
   background: var(--col4);
@@ -1614,7 +1617,6 @@ article.post-item .post-footer {
 .right.comcon:last-child::after {
   width: 10px;
   height: 100%;
-  /* content: ''; */
   position: absolute;
   left: -30px;
   top: 165px;
@@ -1639,9 +1641,14 @@ article.post-item .post-footer {
   font-size: 24pt;
   border-radius: var(--bor);
 }
-@media screen and (max-width: 800px) and (min-width: 600px) {
+@media screen and (max-width: var(--wxl)) {
   #outer-wrapper {
-    width: 600px;
+    width: var(--wl);
+  }
+}
+@media screen and (max-width: var(--wl)) and (min-width: var(--ws)) {
+  #outer-wrapper {
+    width: var(--ws);
   }
 }
 @media screen and (max-width: 600px) {
