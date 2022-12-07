@@ -245,6 +245,7 @@ body {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 a,
 a:visited {
@@ -1537,14 +1538,17 @@ article.post-item .post-footer {
   padding: 0;
   margin: 0;
 }
-.comment-body .refkom .comref-footer {
+.comment-body .comref-footer {
   background: var(--acn2);
   color: var(--col3);
   font-weight: 700;
   text-align: center;
   border-radius: 0 0 var(--bor) var(--bor);
 }
-.comment-body .refkom .comref-footer a {
+.comment-body .comref-footer a {
+  color: var(--col1);
+}
+.comment-body .comref-footer .comreflink a {
   color: var(--col1);
 }
 .comment-body .comref-loading {

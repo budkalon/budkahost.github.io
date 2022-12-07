@@ -245,6 +245,7 @@ body {
 }
 a {
     text-decoration: none;
+    cursor: pointer;
     &,
     &:visited {
         color: var(--acn2);
@@ -443,7 +444,7 @@ nav {
 }
 each(range(12), {
   .bit-@{value} {
-    width: (100% / @value);
+    width: (100% * (@value/12));
   }
 });
 each(range(12), {
@@ -810,8 +811,8 @@ article {
         }
     }
 
-    .post-item {
-        .blowimg {
+    &.post-item {
+        .post-thumbnail.blowimg {
             margin: -25px 0 10px -25px;
             img {
                 border-radius: var(--bor) var(--bor) 0 0;
@@ -1442,11 +1443,13 @@ each(range(8), {
     }
 }
 
-.comment-body img {
-    max-width: 100%;
-    display: block;
-    margin: 25px 0;
-    border-radius: var(--bor);
+.comment-body {
+    img {
+        max-width: 100%;
+        display: block;
+        margin: 25px 0;
+        border-radius: var(--bor);
+    }
     .comh1,
     .comh2,
     .comh3 {
@@ -1471,15 +1474,18 @@ each(range(8), {
             padding: 0;
             margin: 0;
         }
-        .comref-footer {
-            background: var(--acn2);
-            color: var(--col3);
-            font-weight: 700;
-            text-align: center;
-            border-radius: 0 0 var(--bor) var(--bor);
-            a {
-                color: var(--col1);
-            }
+    }
+    .comref-footer {
+        background: var(--acn2);
+        color: var(--col3);
+        font-weight: 700;
+        text-align: center;
+        border-radius: 0 0 var(--bor) var(--bor);
+        a {
+            color: var(--col1);
+        }
+        .comreflink a {
+            color: var(--col1);
         }
     }
     .comref-loading {
