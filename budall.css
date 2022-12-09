@@ -799,6 +799,9 @@ span.spacing {
   background: var(--col3);
   border-radius: var(--bor);
 }
+#master-note p {
+  padding-right: 200px;
+}
 .blog-posts.hfeed {
   background: var(--col1);
   padding: 25px;
