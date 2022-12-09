@@ -603,6 +603,11 @@ span.info.gagal::before {
 .btn-group a:only-child {
   border-radius: var(--bor);
 }
+span.spacing {
+  display: inline-block;
+  width: 0.25em;
+  height: 1em;
+}
 /*main section==========================================*/
 #outer-wrapper {
   width: var(--wl);
@@ -631,11 +636,6 @@ span.info.gagal::before {
   position: relative;
   border-radius: 0;
   overflow: initial;
-}
-#bud-kategori #above-wrapper {
-  margin-bottom: -10px;
-  position: relative;
-  border-radius: var(--bor) var(--bor) 0 0;
 }
 #bud-home #budsearch {
   position: absolute;
@@ -789,6 +789,14 @@ span.info.gagal::before {
   padding: 25px;
   margin-bottom: 50px;
   background: var(--col2);
+  border-radius: var(--bor);
+  position: relative;
+}
+#master-note .master-bread {
+  position: absolute;
+  top: -25px;
+  padding: 10px 25px;
+  background: var(--col3);
   border-radius: var(--bor);
 }
 .blog-posts.hfeed {

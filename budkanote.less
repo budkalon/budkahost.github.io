@@ -538,6 +538,11 @@ span.info {
         }
     }
 }
+span.spacing {
+    display: inline-block;
+    width: 0.25em;
+    height: 1em;
+}
 /*main section==========================================*/
 #outer-wrapper {
     width: var(--wl);
@@ -566,11 +571,6 @@ span.info {
         position: relative;
         border-radius: 0;
         overflow: initial;
-    }
-    #bud-kategori & {
-        margin-bottom: -10px;
-        position: relative;
-        border-radius: @bor_atas;
     }
 }
 #bud-home {
@@ -733,6 +733,14 @@ span.info {
     margin-bottom: 50px;
     background: var(--col2);
     border-radius: var(--bor);
+	position: relative;
+	.master-bread {
+		position: absolute;
+		top: -25px;
+		padding: 10px 25px;
+		background: var(--col3);
+		border-radius: var(--bor);
+	}
 }
 .blog-posts.hfeed {
     background: var(--col1);
