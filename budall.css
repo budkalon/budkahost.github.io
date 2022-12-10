@@ -803,17 +803,22 @@ span.spacing {
 #master-note p {
   padding-right: 200px;
 }
-.blog-posts.hfeed {
+.laman-kategori .blog-posts.hfeed {
   background: var(--col1);
   padding: 25px;
   border-radius: var(--bor) var(--bor) 0 0;
 }
-.blog-posts.hfeed.bud-nonext {
+.laman-kategori .blog-posts.hfeed.bud-nonext {
   margin-bottom: 50px;
   border-radius: var(--bor);
 }
 article {
   position: relative;
+}
+.bud-single article {
+  background: var(--col1);
+  padding: 25px;
+  border-radius: var(--bor) var(--bor) 0 0;
 }
 article .posta {
   float: left;

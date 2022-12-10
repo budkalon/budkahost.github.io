@@ -546,7 +546,7 @@ span.spacing {
 }
 /*main section==========================================*/
 #outer-wrapper {
-    width: var(--wl);
+    width: var(--wxl);
     margin: 80px auto 100px;
     #bud-home & {
         background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqnaXwN76ktjOvm8Rt_dQv8Zz4Ew-nsGXtsG61cr72-WZiim4rYjYap_B4ZQJFRf1K5ae0ZGtGKv0UJupqCk6_LdnAjDdyzpLEsh_WQncJsVST8ERNQe_ak3uvNfKcqF2GX6LDdogv_Ng8-7kaxW45LHBcYejDEi17csNNNL6mcObjxGg7AfQQYCmIfQ/s1200/CHANNEL%20COVER.jpg)
@@ -746,18 +746,25 @@ span.spacing {
 		padding-right: 200px;
 	}
 }
-.blog-posts.hfeed {
-    background: var(--col1);
-    padding: 25px;
-    border-radius: @bor_atas;
-    &.bud-nonext {
-        margin-bottom: 50px;
-        border-radius: var(--bor);
-    }
+.laman-kategori {
+	.blog-posts.hfeed {
+		background: var(--col1);
+		padding: 25px;
+		border-radius: @bor_atas;
+		&.bud-nonext {
+			margin-bottom: 50px;
+			border-radius: var(--bor);
+		}
+	}
 }
 
 article {
     position: relative;
+	.bud-single & {
+		background: var(--col1);
+		padding: 25px;
+		border-radius: @bor_atas;
+	}
     .posta {
         float: left;
         position: relative;
