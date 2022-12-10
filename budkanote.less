@@ -183,6 +183,14 @@ input[type="submit"],
 input[type="reset"] {
     cursor: pointer;
 }
+button,
+input[type="submit"],
+input[type="reset"] {
+	&:hover, &:hover * {
+		background: var(--acn1);
+		color: var(--col1);
+	}
+}
 strong,
 b {
     font-weight: bold;
@@ -574,6 +582,23 @@ span.spacing {
         overflow: initial;
     }
 }
+#content-wrapper {
+	margin-bottom: 50px;
+    border-radius: var(--bor);
+}
+.laman-kategori {
+	#bud-main {
+		display: flex;
+	}
+	#Label1 {
+		width: 300px;
+		padding-right: 15px;
+	}
+	#Blog1 {
+		width: 700px;
+	}
+}
+
 #bud-home {
     #budsearch {
         position: absolute;
@@ -742,8 +767,18 @@ span.spacing {
 		background: var(--col3);
 		border-radius: var(--bor);
 	}
-	p {
-		padding-right: 200px;
+	h1 {
+		font-size: 2.5em;
+		color: var(--acn1);
+    	padding-top: 15px;
+	}
+	.btn-group.lin-ver {
+		flex-direction: column;
+		align-items: stretch;
+		a {
+			margin-bottom: 15px;
+			border-radius: var(--bor);
+		}
 	}
 }
 .laman-kategori {
@@ -776,7 +811,7 @@ article {
         display: block;
     }
     .postaright {
-        width: 550px;
+        width: 450px;
         padding: 15px 25px;
         height: 200px;
     }
@@ -787,7 +822,7 @@ article {
         border-radius: var(--bor2);
         overflow: hidden;
         h2.post-title {
-            font-size: 2em;
+            font-size: 1.5em;
             color: var(--acn2);
             a {
                 color: var(--acn2);
@@ -805,7 +840,7 @@ article {
                 height: 350px;
             }
             .postaright {
-                width: 450px;
+                width: 350px;
                 height: 350px;
             }
             .post-footer {
@@ -844,6 +879,11 @@ article {
                 border-radius: @bor_atas;
             }
         }
+		&.single-post {
+			h1.post-title.entry-title {
+				padding: 0 100px;
+			}
+		}
         h1.post-title.entry-title {
             color: var(--acn1);
             text-transform: capitalize;
@@ -855,6 +895,15 @@ article {
             border-radius: var(--bor);
         }
     }
+	&.post-static_page {
+		border-radius: var(--bor);
+		h1.post-title.entry-title {
+			padding: 50px 100px 0;
+		}
+		.post-body {
+			padding: 0 300px 0 100px;
+		}
+	}
 }
 .postmark {
     position: absolute;
@@ -877,7 +926,7 @@ article {
 .post-body {
     .post-item &,
     [id*="bud-laman-"] & {
-        padding-right: 200px;
+        padding: 0 300px 0 100px;
     }
 }
 .post {
@@ -970,13 +1019,12 @@ article {
     }
 }
 #budbread-crumb {
-    margin-top: -70px;
     margin-bottom: 25px;
     display: inline-block;
     position: absolute;
     background: var(--col1);
     padding: 15px 25px;
-    top: 15px;
+    top: -25px;
     border-radius: var(--bor);
     color: var(--acn2) !important;
     a {
@@ -1022,7 +1070,7 @@ article {
     }
 }
 .post-infohead {
-    padding: 15px 0 25px;
+    padding: 15px 100px 25px;
     * {
         color: var(--acn2) !important;
     }
@@ -1195,10 +1243,15 @@ article {
         }
     }
     .prodesc {
-        width: 550px;
-        margin: 0;
-        padding: 0 25px;
-        height: 150px;
+        width: 750px;
+		margin: 0;
+		padding: 0 25px;
+		height: 150px;
+		display: flex;
+		flex-direction: column;
+		align-content: flex-start;
+		justify-content: center;
+		align-items: stretch;
     }
     .prodename {
         font-size: 1.5em;
@@ -1228,7 +1281,7 @@ article {
 #blog-pager {
     background: var(--col1);
     border-radius: @bor_bawah;
-    margin: 0 0 50px;
+    margin: 0;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -1287,6 +1340,10 @@ article {
             background: var(--col3);
             border-radius: var(--bor);
             font-size: 10pt;
+			&:hover {
+				background: var(--acn2);
+				color: var(--col1);
+			}
         }
         input:checked + label.icon-radio-input {
             color: var(--col1);
@@ -1366,9 +1423,9 @@ article {
 
 .com {
     &con {
-        width: 700px;
+        width: 900px;
         .is-replied > & {
-            width: 700px;
+            width: 900px;
             z-index: 1;
             margin-bottom: 15px;
             position: relative;
@@ -1438,7 +1495,7 @@ article {
 }
 each(range(8), {
   .replies@{value} .comcon, .replies@{value} .comcon .comup {
-    width: (700px - (@value * 50px));
+    width: (900px - (@value * 50px));
   }
 });
 #bud-comment-form {
