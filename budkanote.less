@@ -781,17 +781,6 @@ span.spacing {
 		}
 	}
 }
-.laman-kategori {
-	.blog-posts.hfeed {
-		background: var(--col1);
-		padding: 25px;
-		border-radius: @bor_atas;
-		&.bud-nonext {
-			margin-bottom: 50px;
-			border-radius: var(--bor);
-		}
-	}
-}
 
 article {
     position: relative;
@@ -894,6 +883,59 @@ article {
             margin: 40px 0;
             border-radius: var(--bor);
         }
+		&[data-template=gambar] {
+			display: flex;
+    		padding: 0;
+			background: none;
+			border-radius: 0;
+			.gambar-gambar {
+				width: 550px;
+				border-radius: var(--bor);
+				.blowimg {
+					margin: 0;
+					overflow: hidden;
+					background: var(--col1);
+					 img {
+						width: 550px;
+					}
+				}
+				#budbread-crumb {
+					left: 25px;
+				}
+				h1.post-title.entry-title {
+					padding: 15px 25px 0;
+					background: var(--col1);
+					font-size: 2.5em;
+				}
+				.post-infohead {
+					padding: 15px 25px 25px;
+					background: var(--col1);
+					border-radius: 0 0 var(--bor) var(--bor);
+				}
+			}
+			.informasi-gambar {
+				width: 435px;
+				margin-left: 15px;
+				background: var(--col1);
+				border-radius: var(--bor);
+				.narasi-gambar {
+					padding: 25px;
+				}
+				.post-body {
+					padding: 0 50px 0 0;
+				}
+				#budkategori {
+					display: block;
+					margin-bottom: 10px;
+				}
+				.author-profile .prodesc {
+					width: 350px;
+					margin: 0;
+					padding: 15px 0;
+					height: auto;
+				}
+			}
+		}
     }
 	&.post-static_page {
 		border-radius: var(--bor);
@@ -905,6 +947,35 @@ article {
 		}
 	}
 }
+
+.laman-kategori {
+	.blog-posts.hfeed {
+		background: var(--col1);
+		padding: 25px;
+		border-radius: @bor_atas;
+		&.bud-nonext {
+			margin-bottom: 50px;
+			border-radius: var(--bor);
+		}
+	}
+}
+
+#bud-label, #bud-pencarian {
+	.blog-posts.hfeed {
+		background: var(--col1);
+		padding: 25px 35px;
+	}
+	article .postaright {
+		width: calc(100% - 200px);
+		padding: 15px 25px;
+		height: 200px;
+	}
+	.post-filter-message {
+		margin-bottom: 0;
+		border-radius: var(--bor) var(--bor) 0 0;
+	}
+}
+
 .postmark {
     position: absolute;
     top: 0;
