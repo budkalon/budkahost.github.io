@@ -180,6 +180,15 @@ input[type="submit"],
 input[type="reset"] {
   cursor: pointer;
 }
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover *,
+input[type="submit"]:hover *,
+input[type="reset"]:hover * {
+  background: var(--acn1);
+  color: var(--col1);
+}
 strong,
 b {
   font-weight: bold;
@@ -638,6 +647,20 @@ span.spacing {
   border-radius: 0;
   overflow: initial;
 }
+#content-wrapper {
+  margin-bottom: 50px;
+  border-radius: var(--bor);
+}
+.laman-kategori #bud-main {
+  display: flex;
+}
+.laman-kategori #Label1 {
+  width: 300px;
+  padding-right: 15px;
+}
+.laman-kategori #Blog1 {
+  width: 700px;
+}
 #bud-home #budsearch {
   position: absolute;
   width: 100%;
@@ -800,16 +823,17 @@ span.spacing {
   background: var(--col3);
   border-radius: var(--bor);
 }
-#master-note p {
-  padding-right: 200px;
+#master-note h1 {
+  font-size: 2.5em;
+  color: var(--acn1);
+  padding-top: 15px;
 }
-.laman-kategori .blog-posts.hfeed {
-  background: var(--col1);
-  padding: 25px;
-  border-radius: var(--bor) var(--bor) 0 0;
+#master-note .btn-group.lin-ver {
+  flex-direction: column;
+  align-items: stretch;
 }
-.laman-kategori .blog-posts.hfeed.bud-nonext {
-  margin-bottom: 50px;
+#master-note .btn-group.lin-ver a {
+  margin-bottom: 15px;
   border-radius: var(--bor);
 }
 article {
@@ -831,7 +855,7 @@ article .postaleft {
   display: block;
 }
 article .postaright {
-  width: 550px;
+  width: 450px;
   padding: 15px 25px;
   height: 200px;
 }
@@ -843,7 +867,7 @@ article.multi-post {
   overflow: hidden;
 }
 article.multi-post h2.post-title {
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--acn2);
 }
 article.multi-post h2.post-title a {
@@ -862,7 +886,7 @@ article.multi-post.postarama .postaleft {
   height: 350px;
 }
 article.multi-post.postarama .postaright {
-  width: 450px;
+  width: 350px;
   height: 350px;
 }
 article.multi-post.postarama .post-footer {
@@ -897,6 +921,9 @@ article.post-item .blowimg {
 article.post-item .blowimg img {
   border-radius: var(--bor) var(--bor) 0 0;
 }
+article.post-item.single-post h1.post-title.entry-title {
+  padding: 0 100px;
+}
 article.post-item h1.post-title.entry-title {
   color: var(--acn1);
   text-transform: capitalize;
@@ -906,6 +933,126 @@ article.post-item .post-footer {
   padding: 25px;
   margin: 40px 0;
   border-radius: var(--bor);
+}
+article.post-item[data-template=gambar] {
+  display: flex;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+article.post-item[data-template=gambar] .bud-comments h2 {
+  font-size: 1.8em;
+}
+article.post-item[data-template=gambar] .gambar-gambar {
+  width: 550px;
+  border-radius: var(--bor);
+}
+article.post-item[data-template=gambar] .gambar-gambar .blowimg {
+  margin: 0;
+  overflow: hidden;
+  background: var(--col1);
+}
+article.post-item[data-template=gambar] .gambar-gambar .blowimg img {
+  width: 550px;
+}
+article.post-item[data-template=gambar] .gambar-gambar #budbread-crumb {
+  left: 25px;
+}
+article.post-item[data-template=gambar] .gambar-gambar h1.post-title.entry-title {
+  padding: 15px 25px 0;
+  background: var(--col1);
+  font-size: 2.5em;
+}
+article.post-item[data-template=gambar] .gambar-gambar .post-infohead {
+  padding: 15px 25px 25px;
+  background: var(--col1);
+  border-radius: 0 0 var(--bor) var(--bor);
+}
+article.post-item[data-template=gambar] .informasi-gambar {
+  width: 435px;
+  margin-left: 15px;
+  background: var(--col1);
+  border-radius: var(--bor);
+}
+article.post-item[data-template=gambar] .informasi-gambar .narasi-gambar {
+  padding: 25px;
+}
+article.post-item[data-template=gambar] .informasi-gambar .post-body {
+  padding: 0 50px 0 0;
+}
+article.post-item[data-template=gambar] .informasi-gambar #budkategori {
+  display: block;
+  margin-bottom: 10px;
+}
+article.post-item[data-template=gambar] .informasi-gambar .author-profile .prodesc {
+  width: 350px;
+  margin: 0;
+  padding: 15px 0;
+  height: auto;
+}
+article.post-item[data-template=gambar][data-orientasi=landscape] {
+  flex-direction: column;
+}
+article.post-item[data-template=gambar][data-orientasi=landscape] .gambar-gambar {
+  width: 1000px;
+}
+article.post-item[data-template=gambar][data-orientasi=landscape] .gambar-gambar img {
+  width: 1000px;
+}
+article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar {
+  margin: 15px 0;
+  width: 1000px;
+  display: flex;
+  background: none;
+}
+article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .narasi-gambar {
+  width: 550px;
+  background: var(--col1);
+  border-radius: var(--bor);
+}
+article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .komentar-gambar {
+  width: 435px;
+  margin-left: 15px;
+  border-radius: var(--bor);
+}
+article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .bud-comments {
+  padding: 25px;
+  background: var(--col1);
+  border-radius: var(--bor);
+}
+article.post-static_page {
+  border-radius: var(--bor);
+}
+article.post-static_page h1.post-title.entry-title {
+  padding: 50px 100px 0;
+}
+article.post-static_page .post-body {
+  padding: 0 300px 0 100px;
+}
+.laman-kategori .blog-posts.hfeed {
+  background: var(--col1);
+  padding: 25px;
+  border-radius: var(--bor) var(--bor) 0 0;
+}
+.laman-kategori .blog-posts.hfeed.bud-nonext {
+  margin-bottom: 50px;
+  border-radius: var(--bor);
+}
+#bud-label .blog-posts.hfeed,
+#bud-pencarian .blog-posts.hfeed {
+  background: var(--col1);
+  padding: 25px 35px;
+}
+#bud-label article .postaright,
+#bud-pencarian article .postaright {
+  width: calc(100% - 200px);
+  padding: 15px 25px;
+  height: 200px;
+}
+#bud-label .post-filter-message,
+#bud-pencarian .post-filter-message {
+  margin-bottom: 0;
+  border-radius: var(--bor) var(--bor) 0 0;
 }
 .postmark {
   position: absolute;
@@ -927,7 +1074,7 @@ article.post-item .post-footer {
 }
 .post-item .post-body,
 [id*="bud-laman-"] .post-body {
-  padding-right: 200px;
+  padding: 0 300px 0 100px;
 }
 .post figure {
   position: relative;
@@ -1017,13 +1164,12 @@ article.post-item .post-footer {
   font-weight: bold;
 }
 #budbread-crumb {
-  margin-top: -70px;
   margin-bottom: 25px;
   display: inline-block;
   position: absolute;
   background: var(--col1);
   padding: 15px 25px;
-  top: 15px;
+  top: -25px;
   border-radius: var(--bor);
   color: var(--acn2) !important;
 }
@@ -1067,7 +1213,7 @@ article.post-item .post-footer {
   margin-right: 15px;
 }
 .post-infohead {
-  padding: 15px 0 25px;
+  padding: 15px 100px 25px;
 }
 .post-infohead * {
   color: var(--acn2) !important;
@@ -1215,6 +1361,14 @@ article.post-item .post-footer {
   font-weight: 700;
   margin-bottom: 10px;
 }
+[data-template=gambar] #posnya-relatedan ul li {
+  width: 25%;
+  float: left;
+  background: none;
+}
+[data-template=gambar] #posnya-relatedan .relasum {
+  display: none;
+}
 .author-profile {
   margin: -25px;
   background: var(--col3);
@@ -1237,10 +1391,15 @@ article.post-item .post-footer {
   border-radius: 100%;
 }
 .author-profile .prodesc {
-  width: 550px;
+  width: 750px;
   margin: 0;
   padding: 0 25px;
   height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: stretch;
 }
 .author-profile .prodename {
   font-size: 1.5em;
@@ -1269,7 +1428,7 @@ article.post-item .post-footer {
 #blog-pager {
   background: var(--col1);
   border-radius: 0 0 var(--bor) var(--bor);
-  margin: 0 0 50px;
+  margin: 0;
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -1327,6 +1486,10 @@ article.post-item .post-footer {
   background: var(--col3);
   border-radius: var(--bor);
   font-size: 10pt;
+}
+#budkontak-form .kon-sub label:hover {
+  background: var(--acn2);
+  color: var(--col1);
 }
 #budkontak-form .kon-sub input:checked + label.icon-radio-input {
   color: var(--col1);
@@ -1401,10 +1564,10 @@ article.post-item .post-footer {
   top: -25px;
 }
 .comcon {
-  width: 700px;
+  width: 900px;
 }
 .is-replied > .comcon {
-  width: 700px;
+  width: 900px;
   z-index: 1;
   margin-bottom: 15px;
   position: relative;
@@ -1471,35 +1634,35 @@ article.post-item .post-footer {
 }
 .replies1 .comcon,
 .replies1 .comcon .comup {
-  width: 650px;
+  width: 850px;
 }
 .replies2 .comcon,
 .replies2 .comcon .comup {
-  width: 600px;
+  width: 800px;
 }
 .replies3 .comcon,
 .replies3 .comcon .comup {
-  width: 550px;
+  width: 750px;
 }
 .replies4 .comcon,
 .replies4 .comcon .comup {
-  width: 500px;
+  width: 700px;
 }
 .replies5 .comcon,
 .replies5 .comcon .comup {
-  width: 450px;
+  width: 650px;
 }
 .replies6 .comcon,
 .replies6 .comcon .comup {
-  width: 400px;
+  width: 600px;
 }
 .replies7 .comcon,
 .replies7 .comcon .comup {
-  width: 350px;
+  width: 550px;
 }
 .replies8 .comcon,
 .replies8 .comcon .comup {
-  width: 300px;
+  width: 500px;
 }
 #bud-comment-form {
   margin: 20px 0 20px;
@@ -1638,6 +1801,95 @@ article.post-item .post-footer {
   left: -30px;
   top: 165px;
   background: var(--col8);
+}
+article.post-item[data-template=gambar] .bud-comments {
+  padding: 0 25px;
+}
+article.post-item[data-template=gambar] .comment {
+  flex-direction: column;
+}
+article.post-item[data-template=gambar] .comimg {
+  width: 150px;
+  z-index: 8;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+article.post-item[data-template=gambar] .repcom {
+  width: 100px;
+  height: 50px;
+  border-radius: 0 var(--bor) var(--bor) 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+article.post-item[data-template=gambar] .replies {
+  padding-left: 10px;
+}
+article.post-item[data-template=gambar] .comcon {
+  width: 385px;
+}
+.is-replied > article.post-item[data-template=gambar] .comcon {
+  width: 385px;
+  margin-bottom: 0;
+}
+article.post-item[data-template=gambar] .comcon .replies1 .comcon,
+article.post-item[data-template=gambar] .comcon .replies1 .comcon .comup {
+  width: 375px;
+}
+article.post-item[data-template=gambar] .comcon .replies2 .comcon,
+article.post-item[data-template=gambar] .comcon .replies2 .comcon .comup {
+  width: 365px;
+}
+article.post-item[data-template=gambar] .comcon .replies3 .comcon,
+article.post-item[data-template=gambar] .comcon .replies3 .comcon .comup {
+  width: 355px;
+}
+article.post-item[data-template=gambar] .comcon .replies4 .comcon,
+article.post-item[data-template=gambar] .comcon .replies4 .comcon .comup {
+  width: 345px;
+}
+article.post-item[data-template=gambar] .comcon .replies5 .comcon,
+article.post-item[data-template=gambar] .comcon .replies5 .comcon .comup {
+  width: 335px;
+}
+article.post-item[data-template=gambar] .comcon .replies6 .comcon,
+article.post-item[data-template=gambar] .comcon .replies6 .comcon .comup {
+  width: 325px;
+}
+article.post-item[data-template=gambar] .comcon .replies7 .comcon,
+article.post-item[data-template=gambar] .comcon .replies7 .comcon .comup {
+  width: 315px;
+}
+article.post-item[data-template=gambar] .comcon .replies8 .comcon,
+article.post-item[data-template=gambar] .comcon .replies8 .comcon .comup {
+  width: 305px;
+}
+article.post-item[data-template=gambar] .comup {
+  padding: 0 0 15px 0;
+}
+article.post-item[data-template=gambar] .right.comcon::before {
+  content: none;
+}
+article.post-item[data-template=gambar] .is-replied > .right.comcon::before {
+  width: 0px;
+  height: calc(100% - 15px);
+  border-left: 5px solid var(--col5);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+article.post-item[data-template=gambar] .is-replied > .comcon {
+  margin-bottom: 0;
+}
+article.post-item[data-template=gambar] .replies .comment:last-child::after {
+  content: none;
 }
 #footer-wrapper {
   background: var(--col1);

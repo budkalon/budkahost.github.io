@@ -888,6 +888,9 @@ article {
     		padding: 0;
 			background: none;
 			border-radius: 0;
+			.bud-comments h2 {
+				font-size: 1.8em;
+			}
 			.gambar-gambar {
 				width: 550px;
 				border-radius: var(--bor);
@@ -933,6 +936,36 @@ article {
 					margin: 0;
 					padding: 15px 0;
 					height: auto;
+				}
+			}
+			&[data-orientasi=landscape] {
+				flex-direction: column;
+				.gambar-gambar {
+					width: 1000px;
+					img {
+						width: 1000px;
+					}
+				}
+				.informasi-gambar {
+					margin: 15px 0;
+					width: 1000px;
+					display: flex;
+					background: none;
+					.narasi-gambar {
+						width: 550px;
+						background: var(--col1);
+						border-radius: var(--bor);
+					}
+					.komentar-gambar {
+						width: 435px;
+						margin-left: 15px;
+						border-radius: var(--bor);
+					}
+					.bud-comments {
+						padding: 25px;
+						background: var(--col1);
+						border-radius: var(--bor);
+					}
 				}
 			}
 		}
@@ -1292,6 +1325,18 @@ article {
         font-weight: 700;
         margin-bottom: 10px;
     }
+}
+[data-template=gambar] {
+	#posnya-relatedan {
+		ul li {
+			width: 25%;
+			float: left;
+			background: none;
+		}
+		.relasum {
+			display: none;
+		}
+	} 
 }
 .author-profile {
     margin: -25px;
@@ -1749,7 +1794,7 @@ article {
 				padding-left: 10px;
 			}
 			.comcon {
-				width: 355px;
+				width: 385px;
 				.is-replied > & {
 					width: 385px;
 					margin-bottom: 0;
