@@ -50,7 +50,8 @@ function replyTo(id) {
 		$(this).css('visibility', 'visible');
 	});
 }
-var pumanjang = $('#papanjang').val();
+var pumanjang = $('#papanjang').val(),
+	panjudul = $('#panjangjud').val();
 fetch('https://api-ssl.bitly.com/v4/shorten', {
 		method: 'POST',
 		headers: {
@@ -59,14 +60,16 @@ fetch('https://api-ssl.bitly.com/v4/shorten', {
 		},
 		body: JSON.stringify({
 			"long_url": pumanjang,
-			"domain": "bit.ly"
+			"domain": "bit.ly",
+			"title": panjudul,
+			"tags": [ "blog" ]
 		})
 	})
 	.then((response) => response.json())
 	.then((json) => {
-		var pependek = json.id;
+		var pependek = json.link;
 		console.log(pependek);
-		$('#budpendekan').html('https://' + pependek);
+		$('#budpendekan').html(pependek);
 	});
 
 function onSubmit(token) {
