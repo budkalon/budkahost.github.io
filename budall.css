@@ -1146,6 +1146,9 @@ article.post-static_page .post-body {
 .postmark span.tandarasi > span:last-child {
   padding-right: 15px;
 }
+.postmark span.tandarasi:first-child {
+  padding-left: 15px;
+}
 .postmark a {
   display: block;
   color: var(--col8);
