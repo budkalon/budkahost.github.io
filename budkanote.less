@@ -801,6 +801,7 @@ article {
 		overflow: hidden;
 		img {
 			height: 100%;
+			border-radius: 0;
 		}
     }
     .postaright {
@@ -895,6 +896,14 @@ article {
 			.bud-comments h2 {
 				font-size: 1.8em;
 			}
+			#budshares {
+				#st-1 {
+					width: 60%;
+				}
+				#budshort {
+					width: 40%;
+				}
+			}
 			.gambar-gambar {
 				width: 550px;
 				border-radius: var(--bor);
@@ -940,6 +949,10 @@ article {
 					margin: 0;
 					padding: 15px 0;
 					height: auto;
+				}
+				.author-profile .prodelink > span:first-child {
+					display: block;
+					margin-bottom: 15px;
 				}
 			}
 			&[data-orientasi=landscape] {
@@ -1414,7 +1427,7 @@ article {
             float: left;
             margin-right: 10px;
             line-height: 14pt;
-            &:nth-child(2) {
+            &:first-child {
                 margin-right: 35px;
             }
         }
@@ -1854,6 +1867,11 @@ article {
 				left: 0;
 				top: 0;
 				z-index: 99;
+			}
+			[data-level="2"], [data-level="4"], [data-level="6"], [data-level="8"] {
+				&.is-replied > .right.comcon::before {
+					border-left-color: var(--col3);
+				}
 			}
 			.is-replied > .comcon {
 				margin-bottom: 0;
