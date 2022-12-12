@@ -853,6 +853,11 @@ article .postaleft {
   width: 200px;
   height: 200px;
   display: block;
+  overflow: hidden;
+}
+article .postaleft img {
+  height: 100%;
+  border-radius: 0;
 }
 article .postaright {
   width: 450px;
@@ -934,91 +939,151 @@ article.post-item .post-footer {
   margin: 40px 0;
   border-radius: var(--bor);
 }
-article.post-item[data-template=gambar] {
+article.post-item[data-template=gambar],
+article.post-item[data-template=video] {
   display: flex;
   padding: 0;
   background: none;
   border-radius: 0;
 }
-article.post-item[data-template=gambar] .bud-comments h2 {
+article.post-item[data-template=gambar] .bud-comments h2,
+article.post-item[data-template=video] .bud-comments h2 {
   font-size: 1.8em;
 }
-article.post-item[data-template=gambar] .gambar-gambar {
+article.post-item[data-template=gambar] #budshares #st-1,
+article.post-item[data-template=video] #budshares #st-1 {
+  width: 60%;
+}
+article.post-item[data-template=gambar] #budshares #budshort,
+article.post-item[data-template=video] #budshares #budshort {
+  width: 40%;
+}
+article.post-item[data-template=gambar] .gambar-gambar,
+article.post-item[data-template=video] .gambar-gambar {
   width: 550px;
   border-radius: var(--bor);
 }
-article.post-item[data-template=gambar] .gambar-gambar .blowimg {
+article.post-item[data-template=gambar] .gambar-gambar .blowimg,
+article.post-item[data-template=video] .gambar-gambar .blowimg {
   margin: 0;
   overflow: hidden;
   background: var(--col1);
 }
-article.post-item[data-template=gambar] .gambar-gambar .blowimg img {
+article.post-item[data-template=gambar] .gambar-gambar .blowimg img,
+article.post-item[data-template=video] .gambar-gambar .blowimg img {
   width: 550px;
 }
-article.post-item[data-template=gambar] .gambar-gambar #budbread-crumb {
+article.post-item[data-template=gambar] .gambar-gambar #budbread-crumb,
+article.post-item[data-template=video] .gambar-gambar #budbread-crumb {
   left: 25px;
 }
-article.post-item[data-template=gambar] .gambar-gambar h1.post-title.entry-title {
+article.post-item[data-template=gambar] .gambar-gambar h1.post-title.entry-title,
+article.post-item[data-template=video] .gambar-gambar h1.post-title.entry-title {
   padding: 15px 25px 0;
   background: var(--col1);
   font-size: 2.5em;
 }
-article.post-item[data-template=gambar] .gambar-gambar .post-infohead {
+article.post-item[data-template=gambar] .gambar-gambar .post-infohead,
+article.post-item[data-template=video] .gambar-gambar .post-infohead {
   padding: 15px 25px 25px;
   background: var(--col1);
   border-radius: 0 0 var(--bor) var(--bor);
 }
-article.post-item[data-template=gambar] .informasi-gambar {
+article.post-item[data-template=gambar] .informasi-gambar,
+article.post-item[data-template=video] .informasi-gambar {
   width: 435px;
   margin-left: 15px;
   background: var(--col1);
   border-radius: var(--bor);
 }
-article.post-item[data-template=gambar] .informasi-gambar .narasi-gambar {
+article.post-item[data-template=gambar] .informasi-gambar .narasi-gambar,
+article.post-item[data-template=video] .informasi-gambar .narasi-gambar {
   padding: 25px;
 }
-article.post-item[data-template=gambar] .informasi-gambar .post-body {
+article.post-item[data-template=gambar] .informasi-gambar .post-body,
+article.post-item[data-template=video] .informasi-gambar .post-body {
   padding: 0 50px 0 0;
 }
-article.post-item[data-template=gambar] .informasi-gambar #budkategori {
+article.post-item[data-template=gambar] .informasi-gambar #budkategori,
+article.post-item[data-template=video] .informasi-gambar #budkategori {
   display: block;
   margin-bottom: 10px;
 }
-article.post-item[data-template=gambar] .informasi-gambar .author-profile .prodesc {
+article.post-item[data-template=gambar] .informasi-gambar .author-profile .prodesc,
+article.post-item[data-template=video] .informasi-gambar .author-profile .prodesc {
   width: 350px;
   margin: 0;
   padding: 15px 0;
   height: auto;
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] {
+article.post-item[data-template=gambar] .informasi-gambar .author-profile .prodelink > span:first-child,
+article.post-item[data-template=video] .informasi-gambar .author-profile .prodelink > span:first-child {
+  display: block;
+  margin-bottom: 15px;
+}
+article.post-item[data-template=gambar][data-orientasi=landscape],
+article.post-item[data-template=video][data-orientasi=landscape] {
   flex-direction: column;
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .gambar-gambar {
+article.post-item[data-template=gambar][data-orientasi=landscape] .gambar-gambar,
+article.post-item[data-template=video][data-orientasi=landscape] .gambar-gambar {
   width: 1000px;
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .gambar-gambar img {
+article.post-item[data-template=gambar][data-orientasi=landscape] .gambar-gambar img,
+article.post-item[data-template=video][data-orientasi=landscape] .gambar-gambar img {
   width: 1000px;
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar {
+article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar,
+article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar {
   margin: 15px 0;
   width: 1000px;
   display: flex;
   background: none;
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .narasi-gambar {
+article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .narasi-gambar,
+article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar .narasi-gambar {
   width: 550px;
   background: var(--col1);
   border-radius: var(--bor);
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .komentar-gambar {
+article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .komentar-gambar,
+article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar .komentar-gambar {
   width: 435px;
   margin-left: 15px;
   border-radius: var(--bor);
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .bud-comments {
+article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .bud-comments,
+article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar .bud-comments {
   padding: 25px;
   background: var(--col1);
   border-radius: var(--bor);
+}
+article.post-item[data-template=video] {
+  margin-top: 80px;
+}
+article.post-item[data-template=video] #video-place {
+  margin: 0;
+  height: 562.5px;
+  border-radius: var(--bor) var(--bor) 0 0;
+  overflow: hidden;
+  background: black;
+}
+article.post-item[data-template=video] #video-place iframe {
+  width: 100%;
+  height: 100%;
+}
+article.post-item[data-template=video] .loading {
+  width: 100%;
+  height: 562.5px;
+  line-height: 562.5px;
+  text-align: center;
+  font-size: 48pt;
+  background: black;
+  color: var(--acn1);
+}
+article.post-item[data-template=video] .gambar-gambar #budbread-crumb {
+  left: 0;
+  top: -70px;
 }
 article.post-static_page {
   border-radius: var(--bor);
@@ -1264,6 +1329,9 @@ article.post-static_page .post-body {
   padding-left: 10px;
   font-size: 9pt;
 }
+#budshort #budpendekan {
+  font-size: 8pt;
+}
 #bud-lampiran {
   margin: 0 0 20px;
   border-radius: var(--bor);
@@ -1361,12 +1429,14 @@ article.post-static_page .post-body {
   font-weight: 700;
   margin-bottom: 10px;
 }
-[data-template=gambar] #posnya-relatedan ul li {
+[data-template=gambar] #posnya-relatedan ul li,
+[data-template=video] #posnya-relatedan ul li {
   width: 25%;
   float: left;
   background: none;
 }
-[data-template=gambar] #posnya-relatedan .relasum {
+[data-template=gambar] #posnya-relatedan .relasum,
+[data-template=video] #posnya-relatedan .relasum {
   display: none;
 }
 .author-profile {
@@ -1414,7 +1484,7 @@ article.post-static_page .post-body {
   margin-right: 10px;
   line-height: 14pt;
 }
-.author-profile .prodelink > span:nth-child(2) {
+.author-profile .prodelink > span:first-child {
   margin-right: 35px;
 }
 .author-profile .prodelink a {
@@ -1802,20 +1872,24 @@ article.post-static_page .post-body {
   top: 165px;
   background: var(--col8);
 }
-article.post-item[data-template=gambar] .bud-comments {
+article.post-item[data-template=gambar] .bud-comments,
+article.post-item[data-template=video] .bud-comments {
   padding: 0 25px;
 }
-article.post-item[data-template=gambar] .comment {
+article.post-item[data-template=gambar] .comment,
+article.post-item[data-template=video] .comment {
   flex-direction: column;
 }
-article.post-item[data-template=gambar] .comimg {
+article.post-item[data-template=gambar] .comimg,
+article.post-item[data-template=video] .comimg {
   width: 150px;
   z-index: 8;
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
 }
-article.post-item[data-template=gambar] .repcom {
+article.post-item[data-template=gambar] .repcom,
+article.post-item[data-template=video] .repcom {
   width: 100px;
   height: 50px;
   border-radius: 0 var(--bor) var(--bor) 0;
@@ -1827,55 +1901,77 @@ article.post-item[data-template=gambar] .repcom {
   justify-content: space-evenly;
   align-items: center;
 }
-article.post-item[data-template=gambar] .replies {
+article.post-item[data-template=gambar] .replies,
+article.post-item[data-template=video] .replies {
   padding-left: 10px;
 }
-article.post-item[data-template=gambar] .comcon {
+article.post-item[data-template=gambar] .comcon,
+article.post-item[data-template=video] .comcon {
   width: 385px;
 }
-.is-replied > article.post-item[data-template=gambar] .comcon {
+.is-replied > article.post-item[data-template=gambar] .comcon,
+.is-replied > article.post-item[data-template=video] .comcon {
   width: 385px;
   margin-bottom: 0;
 }
 article.post-item[data-template=gambar] .comcon .replies1 .comcon,
-article.post-item[data-template=gambar] .comcon .replies1 .comcon .comup {
+article.post-item[data-template=video] .comcon .replies1 .comcon,
+article.post-item[data-template=gambar] .comcon .replies1 .comcon .comup,
+article.post-item[data-template=video] .comcon .replies1 .comcon .comup {
   width: 375px;
 }
 article.post-item[data-template=gambar] .comcon .replies2 .comcon,
-article.post-item[data-template=gambar] .comcon .replies2 .comcon .comup {
+article.post-item[data-template=video] .comcon .replies2 .comcon,
+article.post-item[data-template=gambar] .comcon .replies2 .comcon .comup,
+article.post-item[data-template=video] .comcon .replies2 .comcon .comup {
   width: 365px;
 }
 article.post-item[data-template=gambar] .comcon .replies3 .comcon,
-article.post-item[data-template=gambar] .comcon .replies3 .comcon .comup {
+article.post-item[data-template=video] .comcon .replies3 .comcon,
+article.post-item[data-template=gambar] .comcon .replies3 .comcon .comup,
+article.post-item[data-template=video] .comcon .replies3 .comcon .comup {
   width: 355px;
 }
 article.post-item[data-template=gambar] .comcon .replies4 .comcon,
-article.post-item[data-template=gambar] .comcon .replies4 .comcon .comup {
+article.post-item[data-template=video] .comcon .replies4 .comcon,
+article.post-item[data-template=gambar] .comcon .replies4 .comcon .comup,
+article.post-item[data-template=video] .comcon .replies4 .comcon .comup {
   width: 345px;
 }
 article.post-item[data-template=gambar] .comcon .replies5 .comcon,
-article.post-item[data-template=gambar] .comcon .replies5 .comcon .comup {
+article.post-item[data-template=video] .comcon .replies5 .comcon,
+article.post-item[data-template=gambar] .comcon .replies5 .comcon .comup,
+article.post-item[data-template=video] .comcon .replies5 .comcon .comup {
   width: 335px;
 }
 article.post-item[data-template=gambar] .comcon .replies6 .comcon,
-article.post-item[data-template=gambar] .comcon .replies6 .comcon .comup {
+article.post-item[data-template=video] .comcon .replies6 .comcon,
+article.post-item[data-template=gambar] .comcon .replies6 .comcon .comup,
+article.post-item[data-template=video] .comcon .replies6 .comcon .comup {
   width: 325px;
 }
 article.post-item[data-template=gambar] .comcon .replies7 .comcon,
-article.post-item[data-template=gambar] .comcon .replies7 .comcon .comup {
+article.post-item[data-template=video] .comcon .replies7 .comcon,
+article.post-item[data-template=gambar] .comcon .replies7 .comcon .comup,
+article.post-item[data-template=video] .comcon .replies7 .comcon .comup {
   width: 315px;
 }
 article.post-item[data-template=gambar] .comcon .replies8 .comcon,
-article.post-item[data-template=gambar] .comcon .replies8 .comcon .comup {
+article.post-item[data-template=video] .comcon .replies8 .comcon,
+article.post-item[data-template=gambar] .comcon .replies8 .comcon .comup,
+article.post-item[data-template=video] .comcon .replies8 .comcon .comup {
   width: 305px;
 }
-article.post-item[data-template=gambar] .comup {
+article.post-item[data-template=gambar] .comup,
+article.post-item[data-template=video] .comup {
   padding: 0 0 15px 0;
 }
-article.post-item[data-template=gambar] .right.comcon::before {
+article.post-item[data-template=gambar] .right.comcon::before,
+article.post-item[data-template=video] .right.comcon::before {
   content: none;
 }
-article.post-item[data-template=gambar] .is-replied > .right.comcon::before {
+article.post-item[data-template=gambar] .is-replied > .right.comcon::before,
+article.post-item[data-template=video] .is-replied > .right.comcon::before {
   width: 0px;
   height: calc(100% - 15px);
   border-left: 5px solid var(--col5);
@@ -1885,10 +1981,22 @@ article.post-item[data-template=gambar] .is-replied > .right.comcon::before {
   top: 0;
   z-index: 99;
 }
-article.post-item[data-template=gambar] .is-replied > .comcon {
+article.post-item[data-template=gambar] [data-level="2"].is-replied > .right.comcon::before,
+article.post-item[data-template=video] [data-level="2"].is-replied > .right.comcon::before,
+article.post-item[data-template=gambar] [data-level="4"].is-replied > .right.comcon::before,
+article.post-item[data-template=video] [data-level="4"].is-replied > .right.comcon::before,
+article.post-item[data-template=gambar] [data-level="6"].is-replied > .right.comcon::before,
+article.post-item[data-template=video] [data-level="6"].is-replied > .right.comcon::before,
+article.post-item[data-template=gambar] [data-level="8"].is-replied > .right.comcon::before,
+article.post-item[data-template=video] [data-level="8"].is-replied > .right.comcon::before {
+  border-left-color: var(--col4);
+}
+article.post-item[data-template=gambar] .is-replied > .comcon,
+article.post-item[data-template=video] .is-replied > .comcon {
   margin-bottom: 0;
 }
-article.post-item[data-template=gambar] .replies .comment:last-child::after {
+article.post-item[data-template=gambar] .replies .comment:last-child::after,
+article.post-item[data-template=video] .replies .comment:last-child::after {
   content: none;
 }
 #footer-wrapper {
@@ -1909,6 +2017,7 @@ article.post-item[data-template=gambar] .replies .comment:last-child::after {
   color: var(--col1);
   font-size: 24pt;
   border-radius: var(--bor);
+  z-index: 9999;
 }
 @media screen and (max-width: var(--wxl)) {
   #outer-wrapper {
