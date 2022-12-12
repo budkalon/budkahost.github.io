@@ -1127,11 +1127,24 @@ article.post-static_page .post-body {
   line-height: 50px;
   background: var(--acn1);
   height: 50px;
-  width: 50px;
-  display: block;
+  width: auto;
+  display: flex;
   text-align: center;
   border-radius: 0 0 var(--bor) 0;
   color: var(--col1);
+}
+.postmark .tandagori {
+  width: 50px;
+}
+.postmark span.tandarasi {
+  color: var(--col8);
+  font-size: 0.75em;
+}
+.postmark span.tandarasi > span {
+  margin-right: -0.15em;
+}
+.postmark span.tandarasi > span:last-child {
+  padding-right: 15px;
 }
 .postmark a {
   display: block;
@@ -1989,7 +2002,7 @@ article.post-item[data-template=gambar] [data-level="6"].is-replied > .right.com
 article.post-item[data-template=video] [data-level="6"].is-replied > .right.comcon::before,
 article.post-item[data-template=gambar] [data-level="8"].is-replied > .right.comcon::before,
 article.post-item[data-template=video] [data-level="8"].is-replied > .right.comcon::before {
-  border-left-color: var(--col4);
+  border-left-color: var(--col3);
 }
 article.post-item[data-template=gambar] .is-replied > .comcon,
 article.post-item[data-template=video] .is-replied > .comcon {

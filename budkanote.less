@@ -1061,11 +1061,24 @@ article {
     line-height: 50px;
     background: var(--acn1);
     height: 50px;
-    width: 50px;
-    display: block;
+    width: auto;
+    display: flex;
     text-align: center;
     border-radius: 0 0 var(--bor) 0;
     color: var(--col1);
+	.tandagori {
+		width: 50px;
+	}
+	span.tandarasi {
+		color: var(--col8);
+		font-size: 0.75em;
+		> span {
+			margin-right: -0.15em;
+			&:last-child {
+				padding-right: 15px;
+			}
+		}
+	}
     a {
         display: block;
         color: var(--col8);
