@@ -75,7 +75,7 @@ function onSubmit(token) {
 var vidsal = $('#asalvid').html(),
 	vidcon = $('#video-place');
 vidcon.html(vidsal);
-vidsal.html('');
+vidsal.remove();
 const titipe = $('#tumipe').val();
 var al = {
 	'gl': {
