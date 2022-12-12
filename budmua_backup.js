@@ -50,6 +50,32 @@ function replyTo(id) {
 		$(this).css('visibility', 'visible');
 	});
 }
+var pumanjang = $('#papanjang').val();
+fetch('https://api-ssl.bitly.com/v4/shorten', {
+		method: 'POST',
+		headers: {
+			'Authorization': 'Bearer 0cfdbf7f35dd3347c9544014e683abfb2deee58f',
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			"long_url": pumanjang,
+			"domain": "bit.ly"
+		})
+	})
+	.then((response) => response.json())
+	.then((json) => {
+		var pependek = json.id;
+		console.log(pependek);
+		$('#budpendekan').html('https://' + pependek);
+	});
+
+function onSubmit(token) {
+	$('#budkontak-form').submit();
+}
+var vidsal = $('#asalvid').html(),
+	vidcon = $('#video-place');
+vidcon.html(vidsal);
+vidsal.html('');
 const titipe = $('#tumipe').val();
 var al = {
 	'gl': {
@@ -147,7 +173,7 @@ if (titipe) {
 			animate_scroll(tar, 110);
 			$(tar).addClass('infoc');
 			$('a.' + al.ps.clc).not($(tar)).removeClass('infoc');
-//			console.log(jar + ' => ' + tar);
+			//			console.log(jar + ' => ' + tar);
 		});
 		if ($('#' + al.ps.fID).is(':empty')) {
 			$('#' + al.ps.fID).prev().remove();

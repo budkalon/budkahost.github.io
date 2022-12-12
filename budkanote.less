@@ -883,7 +883,7 @@ article {
             margin: 40px 0;
             border-radius: var(--bor);
         }
-		&[data-template=gambar] {
+		&[data-template=gambar], &[data-template=video] {
 			display: flex;
     		padding: 0;
 			background: none;
@@ -967,6 +967,30 @@ article {
 						border-radius: var(--bor);
 					}
 				}
+			}
+		}
+		&[data-template=video] {
+			margin-top: 80px;
+			#video-place {
+				margin: 0;
+				height: 562.5px;
+				border-radius: var(--bor) var(--bor) 0 0;
+				overflow: hidden;
+				iframe {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.loading {
+				width: 100%;
+				height: 562.5px;
+				line-height: 562.5px;
+				text-align: center;
+				font-size: 36pt;
+			}
+			.gambar-gambar #budbread-crumb {
+				left: 0;
+    			top: -70px;
 			}
 		}
     }
@@ -1849,6 +1873,7 @@ article {
     color: var(--col1);
     font-size: 24pt;
     border-radius: var(--bor);
+	z-index: 9999;
 }
 @media screen and (max-width: var(--wxl)) {
     #outer-wrapper {
