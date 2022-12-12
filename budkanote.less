@@ -1717,6 +1717,75 @@ each(range(8), {
         background: var(--col8);
     }
 }
+article {
+    &.post-item {
+		&[data-template=gambar] {
+			.bud-comments {
+				padding: 0 25px;
+			}
+			.comment {
+				flex-direction: column;
+			}
+			.comimg {
+				width: 150px;
+				z-index: 8;
+				display: flex;
+				flex-direction: row;
+				margin-bottom: 10px;
+			}
+			.repcom {
+				width: 100px;
+				height: 50px;
+				border-radius: 0 var(--bor) var(--bor) 0;
+				overflow: hidden;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-content: center;
+				justify-content: space-evenly;
+				align-items: center;
+			}
+			.replies {
+				padding-left: 10px;
+			}
+			.comcon {
+				width: 355px;
+				.is-replied > & {
+					width: 385px;
+					margin-bottom: 0;
+				}
+				each(range(8), {
+				  .replies@{value} .comcon, .replies@{value} .comcon .comup {
+					width: (385px - (@value * 10px));
+				  }
+				});
+			}
+			.comup {
+				padding: 0 0 15px 0;
+			}
+			.right.comcon::before {
+				content: none;
+			}
+			.is-replied > .right.comcon::before {
+				width: 0px;
+				height: calc(100% - 15px);
+				border-left: 5px solid var(--col5);
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 99;
+			}
+			.is-replied > .comcon {
+				margin-bottom: 0;
+			}
+			.replies .comment:last-child::after {
+				content: none;
+			}
+			
+		}
+    }
+}
 #footer-wrapper {
     background: var(--col1);
     padding: 25px;
