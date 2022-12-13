@@ -568,11 +568,18 @@ span.spacing {
     height: 1em;
 }
 /*main section==========================================*/
-#bud-galat > a {
-    display: block;
-    width: 30vw;
-    margin: 0 auto;
-    padding-top: calc(50vh - 150px);
+#bud-galat {
+    .buderror {
+		width: 400px;
+		height: 350px;
+		padding: 35px;
+		background: var(--col1);
+		border-radius: var(--bor);
+		position: absolute;
+		top: calc(50vh - 175px);
+		left: calc(50vw - 200px);
+		font-size: 0.9em;
+	}
 }
 #outer-wrapper {
     width: var(--wxl);
