@@ -39,6 +39,10 @@
         outline-offset: -2px;
     }
 }
+::selection {
+  color: var(--col8);
+  background: var(--acn1);
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -2291,12 +2295,25 @@ article {
 			}
 		} 
 	}
+	#footer-wrapper > div {
+		width: 100%;
+		text-align: left!important;
+	}
 }
 
 @media screen and (max-width: 610px) {
     #outer-wrapper {
         width: var(--wxs);
     }
+	#navbar > * {
+		width: 100%;
+	}
+	span.bud-search-input {
+		width: calc(8/12 * 100%);
+	}
+	span.bud-search-search-button, span.bud-search-filter {
+		width: calc(2/12 * 100%);
+	}
 	article {
 		&.post-item {
 			&.single-post {
