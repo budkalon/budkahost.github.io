@@ -39,6 +39,21 @@
         outline-offset: -2px;
     }
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--col2); 
+  border-radius: 10px;
+  margin: 15px 0;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--acn2); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--acn1); 
+}
 html,
 body,
 div,
@@ -738,6 +753,9 @@ span.spacing {
     background: var(--col3);
     border-radius: var(--bor);
     position: relative;
+	&.no-result {
+		border-radius: var(--bor);
+	}
     .mss {
         color: var(--col7);
     }
@@ -985,6 +1003,9 @@ article {
 					}
 				}
 			}
+			.post-footer {
+				margin-bottom: 0;
+			}
 		}
 		&[data-template=video] {
 			margin-top: 80px;
@@ -1050,6 +1071,9 @@ article {
 	.post-filter-message {
 		margin-bottom: 0;
 		border-radius: var(--bor) var(--bor) 0 0;
+		&.no-result {
+			border-radius: var(--bor);
+		}
 	}
 }
 
@@ -1565,6 +1589,9 @@ article {
     height: 50px;
     border-radius: @bor_atas;
     overflow: hidden;
+	img {
+		border-radius: 0;
+	}
 }
 .repcom {
     width: 50px;
@@ -1685,8 +1712,8 @@ each(range(8), {
         border-radius: @bor_bawah;
     }
     .commsg {
-        padding: 25px 25px 0;
-        background: var(--col3);
+        padding: 25px;
+        background: var(--col2);
         border-radius: @bor_atas;
         color: var(--col7);
         ol {
@@ -1831,6 +1858,17 @@ article {
 			.bud-comments {
 				padding: 0 25px;
 			}
+			.comment-avatar {
+				border-radius: @bor_kiri;
+			}
+			.is-replied > div > div {
+				> .comment-header {
+					border-radius: 0 var(--bor) 0 0;
+				}
+				> .comment-footer {
+					border-radius: 0 0 var(--bor) 0;
+				}
+			}
 			.comment {
 				flex-direction: column;
 			}
@@ -1919,20 +1957,532 @@ article {
     border-radius: var(--bor);
 	z-index: 9999;
 }
-@media screen and (max-width: var(--wxl)) {
+@media screen and (max-width: 1010px) {
     #outer-wrapper {
         width: var(--wl);
     }
+	.laman-kategori {
+		 #bud-main {
+			flex-direction: column;
+		}
+		#Label1 {
+			width: 100%;
+			padding-right: 0;
+			#master-note {
+				padding: 25px;
+				margin-bottom: 50px;
+				background: var(--col2);
+				border-radius: var(--bor);
+				position: relative;
+			}
+			.btn-group.lin-ver {
+				flex-direction: row;
+				align-items: center;
+				a {
+					margin-bottom: 0;
+					border-radius: 0;
+					width: 33.333%;
+					&:first-child {
+						border-radius: @bor_kiri;
+					}
+					&:last-child {
+						border-radius: @bor_kanan;
+					}
+				}
+			}
+		}
+		#Blog1 {
+			width: 100%;
+		}
+		article {
+			&.multi-post {
+				&.postarama {
+					.postaright {
+						width: 450px;
+						height: 350px;
+					}
+				}
+				.postaright {
+					width: 550px;
+				}
+			}
+		}
+	}
+	article {
+		&.post-item, &[id*="bud-laman-"] {
+			.post-body {
+				padding: 0 200px 0 0;
+			}
+		}
+		&.post-item {
+			&.single-post {
+				h1.post-title.entry-title {
+					padding: 0;
+				}
+				.post-infohead {
+					padding: 15px 0 25px;
+				}
+				.author-profile .prodesc {
+					width: 550px;
+				}
+			} 
+			each(range(8), {
+			  .replies@{value} .comcon, .replies@{value} .comcon .comup {
+				width: (700px - (@value * 50px));
+			  }
+			});
+			&[data-template=gambar], &[data-template=video] {
+				flex-direction: column;
+				.gambar-gambar {
+					width: 100%;
+					#video-place, .loading {
+						height: calc(9/16 * 800px);
+					}
+					.blowimg img {
+						width: 100%;
+					}
+				}
+				.informasi-gambar {
+					width: 100%;
+					margin-left: 0;
+					margin-top: 15px;
+					.post-body {
+						padding: 0 200px 0 0;
+					}
+					#posnya-relatedan ul li {
+						width: 110px;
+					}
+					.author-profile .prodesc {
+						width: 550px;
+						padding: 0 15px;
+					}
+				}
+				[data-level="2"], [data-level="4"], [data-level="6"], [data-level="8"] {
+					&.is-replied > .right.comcon::before {
+						border-left-color: var(--col5);
+					}
+				}
+				&[data-orientasi=landscape] {
+					.gambar-gambar, .informasi-gambar {
+						width: 100%;
+					}
+					.informasi-gambar {
+						flex-direction: column;
+						.narasi-gambar {
+							width: 100%;
+						}
+						.komentar-gambar {
+							width: 100%;
+							margin-left: 0;
+							margin-top: 15px;
+						}
+					}
+				}
+				.comment {
+					flex-direction: row;
+				}
+				.replies {
+					padding-left: 0;
+					.repcom::before {
+						content: "";
+						width: 20px;
+						position: absolute;
+						left: -30px;
+						border-bottom: 5px solid var(--col5);
+						top: -25px;
+					}
+					.comment:last-child::after {
+						content: "";
+						position: absolute;
+						width: 10px;
+						height: calc(100% - 30px);
+						background: var(--col1);
+						top: 30px;
+						left: -33px;
+						z-index: 99;
+					}
+				}
+				.comimg {
+					width: 50px;
+					flex-direction: column;
+				}
+				.comment-avatar {
+					border-radius: @bor_atas;
+				}
+				.repcom {
+					width: 50px;
+					height: 70px;
+					border-radius: @bor_bawah;
+					display: block;
+					overflow: inherit;
+				}
+				.comup {
+					padding: 0 0 15px 10px;
+				}
+				.comcon {
+					width: 700px;
+					each(range(8), {
+					  .replies@{value} .comcon, .replies@{value} .comcon .comup {
+						width: (700px - (@value * 50px));
+					  }
+					});
+				}
+				.is-replied {
+					> .right.comcon::before {
+						height: calc(100% - 135px);
+						left: -30px;
+						top: 120px;
+					}
+					> div > div {
+						> .comment-header {
+							border-radius: @bor_atas;
+						}
+						> .comment-footer {
+							border-radius: @bor_bawah;
+						}
+					} 
+				} 
+			}
+		}
+	}
 }
-
-@media screen and (max-width: var(--wl)) and (min-width: var(--ws)) {
+@media screen and (max-width: 810px) {
     #outer-wrapper {
         width: var(--ws);
     }
+	article {
+		&.post-item, &[id*="bud-laman-"] { 
+			.post-body {
+				padding: 0;
+			}
+		}
+		&.post-item {
+			&.single-post {
+				&[data-template] {
+					#video-place, .loading {
+						height: calc(9/16 * 600px);
+					}
+				} 
+				#posnya-relatedan .relasum {
+					width: 400px;
+					height: 100px;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					align-content: center;
+					justify-content: flex-start;
+					align-items: baseline;
+					font-size: 14pt;
+					.summary {
+						display: none;
+					}
+				}
+				.author-profile .prodesc {
+					width: 350px;
+					height: auto;
+					.prodelink > span:first-child {
+						margin-bottom: 15px;
+					}
+				}
+				.comimg {
+					width: 30px;
+					.comment-avatar {
+						width: 30px;
+						height: 30px;
+						img {
+							width: 30px;
+						}
+					}
+				}
+				.repcom {
+					width: 30px;
+					height: 70px;
+				}
+				.comcon {
+					width: 520px;
+					each(range(8), {
+					  .replies@{value} .comcon, .replies@{value} .comcon .comup {
+						width: (520px - (@value * 30px));
+					  }
+					});
+				}
+				.is-replied .right.comcon::before {
+					content: none;
+				}
+				.is-replied > .right.comcon::before {
+					content: "";
+					height: calc(100% - 135px);
+					left: -17.5px;
+					top: 100px;
+				}
+				.replies {
+					.comment:last-child::after {
+						content: "";
+						position: absolute;
+						width: 10px;
+						height: calc(100% - 17.5px);
+						background: var(--col1);
+						top: 17.5px;
+						left: -23px;
+						z-index: 99;
+					}
+					.repcom::before {
+						content: "";
+						width: 15px;
+						position: absolute;
+						left: -15px;
+						border-bottom: 5px solid var(--col5);
+						top: -17.5px;
+					}
+				} 
+			}
+		}
+		.laman-kategori &, & {
+			&.multi-post {
+				height: 370px;
+				background: var(--col2);
+				margin-bottom: 25px;
+				border-radius: var(--bor2);
+				overflow: hidden;
+				.postaleft {
+					width: 550px;
+					height: 200px;
+					img {
+						height: auto;
+						width: 100%;
+						margin-top: -25%;
+					}
+				}
+				.postaright {
+					width: 550px;
+					height: 170px;
+				}
+				&.postarama {
+					height: 620px;
+					.postaleft {
+						width: 600px;
+						height: 350px;
+					}
+					.postaright {
+						width: 600px;
+						height: 270px;
+						font-size: 10.2pt;
+					}
+				}
+			}
+		}
+		#bud-label &, #bud-pencarian & {
+			&.multi-post .postaright {
+				width: 100%;
+				height: 170px;
+			}
+		} 
+	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 610px) {
     #outer-wrapper {
-        width: 100%;
+        width: var(--wxs);
     }
+	article {
+		&.post-item {
+			&.single-post {
+				&[data-template] {
+					#video-place, .loading {
+						height: calc(9/16 * 400px);
+					}
+					.post-infohead > span {
+						display: block;
+						padding: 10px 0;
+					}
+					#posnya-relatedan ul li {
+						width: 25%;
+						border-radius: 0;
+						&:first-child {
+							border-radius: @bor_kiri;
+						}
+						&:last-child {
+							border-radius: @bor_kanan;
+						}
+						img {
+							border-radius: 0;
+						}
+					}
+					.author-profile .prodesc {
+						width: 300px;
+						padding: 15px 15px 0;
+					}
+					.comimg {
+						width: 150px;
+						.comment-avatar {
+							border-radius: @bor_kiri;
+							width: 50px;
+							height: 50px;
+							img {
+								width: 50px;
+							}
+						}
+					}
+				} 
+				.is-replied > div > div {
+					> .comment-header {
+						border-radius: 0 var(--bor) 0 0;
+					}
+					> .comment-footer {
+						border-radius: 0 0 var(--bor) 0;
+					}
+				}
+				.comment {
+					flex-direction: column;
+				}
+				.comimg {
+					width: 150px;
+					z-index: 8;
+					display: flex;
+					flex-direction: row;
+					margin-bottom: 10px;
+				}
+				.repcom {
+					width: 100px;
+					height: 50px;
+					border-radius: 0 var(--bor) var(--bor) 0;
+					overflow: hidden;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					align-content: center;
+					justify-content: space-evenly;
+					align-items: center;
+				}
+				.replies {
+					padding-left: 10px;
+				}
+				.comcon {
+					width: 350px;
+					.is-replied > & {
+						width: 385px;
+						margin-bottom: 0;
+					}
+					each(range(8), {
+					  .replies@{value} .comcon, .replies@{value} .comcon .comup {
+						width: (350px - (@value * 10px));
+					  }
+					});
+				}
+				.comup {
+					padding: 0 0 15px 0;
+				}
+				.right.comcon::before {
+					content: none;
+				}
+				.is-replied > .right.comcon::before {
+					width: 0px;
+					height: calc(100% - 15px);
+					border-left: 5px solid var(--col5);
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 0;
+					z-index: 99;
+				}
+				[data-level="2"], [data-level="4"], [data-level="6"], [data-level="8"] {
+					&.is-replied > .right.comcon::before {
+						border-left-color: var(--col3);
+					}
+				}
+				.is-replied > .comcon {
+					margin-bottom: 0;
+				}
+				.replies .comment:last-child::after {
+					content: none;
+				}
+			}
+			&[data-template=gambar], &[data-template=video] {
+				.informasi-gambar .post-body {
+					padding: 0;
+				}
+			} 
+		}
+		.laman-kategori &, & {
+			&.multi-post {
+				height: 450px;
+				.postaleft {
+					width: 350px;
+    				height: 150px;
+					img {
+						height: auto;
+						width: 100%;
+						margin-top: -25%;
+					}
+				}
+				.postaright {
+					width: 350px;
+    				height: 300px;
+					h2.post-title {
+						font-size: 1.2em;
+					}
+					.post-footer {
+						font-size: 10pt;
+						line-height: 45px;
+						position: absolute;
+						width: 100%;
+						bottom: 90px;
+						left: 0;
+						height: 45px;
+						.multinfo {
+							padding: 0 25px;
+							width: 75%;
+							> span {
+								display: block;
+								line-height: 42px;
+							}
+						}
+						.jump-link {
+							width: 25%;
+							height: 140px;
+							line-height: 130px;
+						}
+					}
+				}
+				&.postarama {
+					height: 620px;
+					.postaleft {
+						width: 400px;
+    					height: 270px;
+					}
+					.postaright {
+						width: 400px;
+						height: 350px;
+						font-size: 11pt;
+					}
+					.post-footer {
+						height: 120px;
+						line-height: 20px;
+						bottom: 20px;
+					}
+				}
+			}
+		}
+		#bud-label &, #bud-pencarian & {
+			&.multi-post .postaright {
+				width: 100%;
+				height: 220px;
+				.post-footer {
+					bottom: 0;
+				}
+			}
+		} 
+	}
+	#bud-label, #bud-pencarian {
+		.post-filter-message {
+			display: flex;
+			flex-direction: column;
+			> div, > div a {
+				width: 100%;
+			}
+		}
+	} 
+	.laman-kategori #Label1 .btn-group.lin-ver a {
+		padding: 10px 15px;
+	}
 }
