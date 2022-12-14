@@ -665,6 +665,11 @@ span.spacing {
 			.budsorot-img {
 				margin-bottom: 15px;
 				position: relative;
+				img {
+					height: 100%;
+					border-radius: 0;
+					filter: brightness(0.5) grayscale(0.5);
+				}
 				a::before {
 					position: absolute;
 					content: '';
@@ -677,14 +682,14 @@ span.spacing {
 					mix-blend-mode: color;
 					z-index: 1;
 				}
-				&:hover a::before {
-					opacity: 0;
-				}
-				img {
-					height: 100%;
-					border-radius: 0;
-					filter: brightness(0.5) grayscale(0.5);
-				}
+				&:hover {
+					a::before {
+						opacity: 0;
+					}
+					img {
+						filter: brightness(1) grayscale(0);
+					}
+				} 
 			}
 			.budsorot-desc {
 				padding: 0 25px;
@@ -709,6 +714,10 @@ span.spacing {
 				width: 100px;
 				height: 100px;
 				position: relative;
+				img {
+					border-radius: 0;
+					filter: brightness(0.5) grayscale(0.5);
+				}
 				&::before {
 					position: absolute;
 					content: '';
@@ -721,12 +730,13 @@ span.spacing {
 					mix-blend-mode: color;
 					z-index: 1;
 				}
-				&:hover::before {
-					opacity: 0;
-				}
-				img {
-					border-radius: 0;
-					filter: brightness(0.5) grayscale(0.5);
+				&:hover {
+					&::before {
+						opacity: 0;
+					}
+					img {
+						filter: brightness(1) grayscale(0);
+					}
 				}
 			}
 			.budsorot-desc {

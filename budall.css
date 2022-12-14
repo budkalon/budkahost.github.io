@@ -732,6 +732,11 @@ span.spacing {
   margin-bottom: 15px;
   position: relative;
 }
+.laman-kategori #FeaturedPost1 article .budsorot-img img {
+  height: 100%;
+  border-radius: 0;
+  filter: brightness(0.5) grayscale(0.5);
+}
 .laman-kategori #FeaturedPost1 article .budsorot-img a::before {
   position: absolute;
   content: '';
@@ -747,10 +752,8 @@ span.spacing {
 .laman-kategori #FeaturedPost1 article .budsorot-img:hover a::before {
   opacity: 0;
 }
-.laman-kategori #FeaturedPost1 article .budsorot-img img {
-  height: 100%;
-  border-radius: 0;
-  filter: brightness(0.5) grayscale(0.5);
+.laman-kategori #FeaturedPost1 article .budsorot-img:hover img {
+  filter: brightness(1) grayscale(0);
 }
 .laman-kategori #FeaturedPost1 article .budsorot-desc {
   padding: 0 25px;
@@ -774,6 +777,10 @@ span.spacing {
   height: 100px;
   position: relative;
 }
+.laman-kategori #PopularPosts1 article .budsorot-img img {
+  border-radius: 0;
+  filter: brightness(0.5) grayscale(0.5);
+}
 .laman-kategori #PopularPosts1 article .budsorot-img::before {
   position: absolute;
   content: '';
@@ -789,9 +796,8 @@ span.spacing {
 .laman-kategori #PopularPosts1 article .budsorot-img:hover::before {
   opacity: 0;
 }
-.laman-kategori #PopularPosts1 article .budsorot-img img {
-  border-radius: 0;
-  filter: brightness(0.5) grayscale(0.5);
+.laman-kategori #PopularPosts1 article .budsorot-img:hover img {
+  filter: brightness(1) grayscale(0);
 }
 .laman-kategori #PopularPosts1 article .budsorot-desc {
   width: calc(100% - 100px);
