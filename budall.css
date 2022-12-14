@@ -696,6 +696,59 @@ span.spacing {
   margin-bottom: 50px;
   border-radius: var(--bor);
 }
+#bud-arsip #main-wrapper {
+  display: flex;
+}
+#bud-arsip #bud-aside {
+  width: 285px;
+  margin-right: 15px;
+}
+#bud-arsip #bud-aside #BlogArchive1 {
+  padding: 25px;
+  background: var(--col2);
+  border-radius: var(--bor);
+  list-style: none;
+}
+#bud-arsip #bud-aside #BlogArchive1 h1 {
+  font-size: 2.5em;
+  color: var(--acn1);
+}
+#bud-arsip #bud-aside #BlogArchive1 .badan-arsip {
+  margin-top: 25px;
+}
+#bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul {
+  margin: 0;
+}
+#bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li {
+  list-style: none;
+}
+#bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li a {
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background: var(--col3);
+  border-radius: var(--bor);
+  height: 45px;
+}
+#bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li a span.post-count {
+  padding-left: 15px;
+  color: var(--col8);
+  font-weight: 700;
+  float: right;
+}
+#bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li a:hover {
+  background: var(--acn1);
+  color: var(--col1);
+}
+#bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li.expanded > a {
+  background: var(--col4);
+}
+#bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul ul {
+  margin-left: 25px;
+}
+#bud-arsip #bud-main {
+  width: 700px;
+}
 .laman-kategori #main-wrapper {
   display: flex;
 }
@@ -2343,6 +2396,65 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
 @media screen and (max-width: 1010px) {
   #outer-wrapper {
     width: var(--wl);
+  }
+  #bud-arsip #main-wrapper {
+    flex-direction: column;
+  }
+  #bud-arsip #bud-aside {
+    width: 800px;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  #bud-arsip #bud-aside #BlogArchive1 {
+    padding: 25px;
+    background: var(--col2);
+    border-radius: var(--bor);
+    list-style: none;
+  }
+  #bud-arsip #bud-aside #BlogArchive1 h1 {
+    font-size: 2.5em;
+    color: var(--acn1);
+  }
+  #bud-arsip #bud-aside #BlogArchive1 .badan-arsip {
+    margin-top: 25px;
+  }
+  #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul {
+    margin: 0;
+  }
+  #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li[data-level="1"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 5px solid var(--col3);
+    padding-bottom: 15px;
+    margin-right: 0;
+  }
+  #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li[data-level="1"]:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li[data-level="1"] > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 70%;
+    margin: 0;
+    padding-left: 25px;
+  }
+  #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li[data-level="1"] li {
+    margin-right: 15px;
+  }
+  #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul ul {
+    margin-left: 0;
+  }
+  #bud-arsip #bud-main {
+    width: 700px;
   }
   .laman-kategori #main-wrapper {
     flex-direction: column;
