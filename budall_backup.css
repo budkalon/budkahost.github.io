@@ -2241,6 +2241,9 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   .laman-kategori article.multi-post .postaright {
     width: 550px;
   }
+  article.post-static_page .post-body {
+    padding: 0 200px 0 0;
+  }
   article.post-item .post-body,
   article[id*="bud-laman-"] .post-body {
     padding: 0 200px 0 0;
@@ -2472,6 +2475,9 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
 @media screen and (max-width: 810px) {
   #outer-wrapper {
     width: var(--ws);
+  }
+  article.post-static_page .post-body {
+    padding: 0;
   }
   article.post-item .post-body,
   article[id*="bud-laman-"] .post-body {
