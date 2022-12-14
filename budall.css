@@ -743,6 +743,10 @@ span.spacing {
 #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li.expanded > a {
   background: var(--col4);
 }
+#bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li.expanded > a:hover {
+  background: var(--acn1);
+  color: var(--col1);
+}
 #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul ul {
   margin-left: 25px;
 }
@@ -2432,6 +2436,9 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     padding-bottom: 15px;
     margin-right: 0;
   }
+  #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li[data-level="1"] > a {
+    width: 30%;
+  }
   #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li[data-level="1"]:last-child {
     border-bottom: 0;
     padding-bottom: 0;
@@ -2454,7 +2461,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     margin-left: 0;
   }
   #bud-arsip #bud-main {
-    width: 700px;
+    width: 100%;
   }
   .laman-kategori #main-wrapper {
     flex-direction: column;
@@ -2986,6 +2993,12 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   #bud-home #index-wrapper h1 {
     font-size: 2.6em;
+  }
+  #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li[data-level="1"] > a {
+    width: 45%;
+  }
+  #bud-arsip #bud-aside #BlogArchive1 .badan-arsip ul li[data-level="1"] > ul {
+    width: 55%;
   }
   .laman-kategori #FeaturedPost1 article {
     height: 100px;

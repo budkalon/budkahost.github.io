@@ -675,6 +675,10 @@ span.spacing {
 						}
 						&.expanded > a {
 							background: var(--col4);
+							&:hover {
+								background: var(--acn1);
+								color: var(--col1);
+							}
 						}
 					}
 					ul {
@@ -2313,6 +2317,9 @@ article {
 								border-bottom: 5px solid var(--col3);
 								padding-bottom: 15px;
 								margin-right: 0;
+								> a {
+									width: 30%;
+								}
 								&:last-child {
 									border-bottom: 0;
 									padding-bottom: 0;
@@ -2341,7 +2348,7 @@ article {
 			}
 		}
 		#bud-main {
-			width: 700px;
+			width: 100%;
 		}
 	}
 	.laman-kategori {
@@ -2787,6 +2794,26 @@ article {
 			width: 100%;
 			h1 {
 				font-size: 2.6em;
+			}
+		}
+	}
+	#bud-arsip {
+		#bud-aside {
+			#BlogArchive1 {
+				.badan-arsip {
+					ul {
+						li {
+							&[data-level="1"] {
+								> a {
+									width: 45%;
+								}
+								> ul {
+									width: 55%;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
