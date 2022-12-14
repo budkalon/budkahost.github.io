@@ -890,6 +890,9 @@ article {
             color: var(--acn2);
             a {
                 color: var(--acn2);
+				&:hover {
+					color: var(--acn1);
+				}
             }
         }
         &:last-child {
@@ -1142,6 +1145,7 @@ article {
     text-align: center;
     border-radius: 0 0 var(--bor) 0;
     color: var(--col1);
+	z-index: 2;
 	.tandagori {
 		width: 50px;
 	}
@@ -1156,6 +1160,11 @@ article {
 		}
 		&:first-child {
 			padding-left: 15px;
+		}
+	}
+	[data-kategori=video] &, [data-kategori=gambar] & {
+		& span.tandarasi {
+			min-width: 55px;
 		}
 	}
     a {
@@ -1333,9 +1342,14 @@ article {
     font-size: 12pt;
     padding-right: 0 !important;
     border-radius: var(--bor) 0 0 0;
+	overflow: hidden;
     a {
         display: block;
     }
+	&:hover a {
+		background: var(--acn1);
+		color: var(--col1);
+	}
     .postarama.multi-post & {
         line-height: 120px;
     }
@@ -1431,6 +1445,7 @@ article {
     ul {
         padding: 0;
         list-style: none;
+		margin: 0;
         li {
             height: 100px;
             width: 100%;
@@ -1471,6 +1486,16 @@ article {
 			width: 25%;
 			float: left;
 			background: none;
+			border-radius: 0;
+			&:first-child {
+				border-radius: @bor_kiri;
+			}
+			&:last-child {
+				border-radius: @bor_kanan;
+			}
+			img {
+				border-radius: 0;
+			}
 		}
 		.relasum {
 			display: none;
@@ -1564,14 +1589,23 @@ article {
 				line-height: 50px;
 				width: 100px;
 				text-align: center;
+				font-size: 16pt;
 			}
 			&#blog-pager-older-link {
-				right: 0;
+				right: -25px;
 				border-radius: var(--bor) 0 0 var(--bor);
+				&:hover {
+					right: 0;
+					background: var(--col4);
+				}
 			}
 			&#blog-pager-newer-link {
-				left: 0;
+				left: -25px;
 				border-radius: 0 var(--bor) var(--bor) 0;
+				&:hover {
+					left: 0;
+					background: var(--col4);
+				}
 			}
 			&#blog-home-link {
 				display: none;
@@ -1686,6 +1720,7 @@ article {
     color: var(--col5);
     &.replied {
         color: var(--acn2);
+		cursor: pointer;
     }
     .bigger {
         font-size: 18pt;
@@ -2035,6 +2070,10 @@ article {
     font-size: 24pt;
     border-radius: var(--bor);
 	z-index: 9999;
+	&:hover {
+		bottom: 35px;
+		background: var(--acn2);
+	}
 }
 @media screen and (max-width: 1010px) {
     #outer-wrapper {
