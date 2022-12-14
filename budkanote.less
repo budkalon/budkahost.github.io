@@ -276,7 +276,9 @@ label,
 button,
 input,
 .comment,
-#blog-pager * {
+#blog-pager *,
+#bud-searchform,
+#bud-searchform * {
 	-webkit-transition: all .3s ease 0s;
 	-o-transition: all .3s ease 0s;
 	transition: all .3s ease 0s;
@@ -847,9 +849,29 @@ article {
         height: 200px;
         display: block;
 		overflow: hidden;
+		position: relative;
+		> a:before {
+			position: absolute;
+			content: '';
+			display: block;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: rgba(34, 42, 53, 0.67);
+			mix-blend-mode: color;
+			z-index: 1;
+		}
+		&:hover > a:before {
+			display: none;
+		}
 		img {
 			height: 100%;
 			border-radius: 0;
+			filter: brightness(0.5) grayscale(0.5);
+		}
+		&:hover img {
+			filter: brightness(1) grayscale(0);
 		}
     }
     .postaright {
@@ -2039,6 +2061,7 @@ article {
 					margin-bottom: 0;
 					border-radius: 0;
 					width: 33.333%;
+					text-align: center;
 					&:first-child {
 						border-radius: @bor_kiri;
 					}

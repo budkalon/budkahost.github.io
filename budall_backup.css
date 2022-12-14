@@ -22,14 +22,14 @@
   --ws: 600px;
   --wxs: 400px;
 }
-#blog-pag * {
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-#blog-pag *:focus {
+*:focus {
   outline: none;
   outline-offset: -2px;
 }
@@ -274,7 +274,9 @@ label,
 button,
 input,
 .comment,
-#blog-pager * {
+#blog-pager *,
+#bud-searchform,
+#bud-searchform * {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -286,6 +288,7 @@ body {
   font-size: 11pt;
   line-height: 1.75em;
   font-family: "Lato", sans-serif;
+  background-attachment: fixed;
 }
 a {
   text-decoration: none;
@@ -899,10 +902,30 @@ article .postaleft {
   height: 200px;
   display: block;
   overflow: hidden;
+  position: relative;
+}
+article .postaleft > a:before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(34, 42, 53, 0.67);
+  mix-blend-mode: color;
+  z-index: 1;
+}
+article .postaleft:hover > a:before {
+  display: none;
 }
 article .postaleft img {
   height: 100%;
   border-radius: 0;
+  filter: brightness(0.5) grayscale(0.5);
+}
+article .postaleft:hover img {
+  filter: brightness(1) grayscale(0);
 }
 article .postaright {
   width: 450px;
@@ -2159,6 +2182,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     margin-bottom: 0;
     border-radius: 0;
     width: 33.333%;
+    text-align: center;
   }
   .laman-kategori #Label1 .btn-group.lin-ver a:first-child {
     border-radius: var(--bor) 0 0 var(--bor);
