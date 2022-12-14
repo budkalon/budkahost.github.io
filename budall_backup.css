@@ -739,6 +739,9 @@ span.spacing {
 #bud-home #footer-wrapper {
   border-radius: 0;
 }
+#bud-home #bud-footer {
+  display: none;
+}
 #navbar {
   display: flex;
   flex-direction: row;
@@ -2178,6 +2181,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   padding: 25px;
   border-radius: var(--bor);
   font-size: 10pt;
+  overflow: hidden;
 }
 #footer-wrapper .right {
   text-align: right;
