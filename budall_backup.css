@@ -719,13 +719,13 @@ span.spacing {
   border-radius: var(--bor);
   margin-bottom: 30px;
 }
-.laman-kategori #FeaturedPost1 h3 {
+.laman-kategori #FeaturedPost1 article h3 {
   font-size: 1.5em;
 }
-.laman-kategori #FeaturedPost1 .budsorot-img {
+.laman-kategori #FeaturedPost1 article .budsorot-img {
   margin: -25px -25px 15px;
 }
-.laman-kategori #FeaturedPost1 .budsorot-img img {
+.laman-kategori #FeaturedPost1 article .budsorot-img img {
   width: 100%;
   border-radius: 0;
 }
@@ -737,9 +737,23 @@ span.spacing {
   margin-bottom: 15px;
   height: 100px;
   font-size: 0.8em;
+  display: flex;
 }
 .laman-kategori #PopularPosts1 article h3 {
   font-size: 1.2em;
+}
+.laman-kategori #PopularPosts1 article .budsorot-img {
+  margin: -25px 0 -25px -25px;
+  width: 100px;
+  height: 100px;
+}
+.laman-kategori #PopularPosts1 article .budsorot-img img {
+  width: 100%;
+  border-radius: 0;
+}
+.laman-kategori #PopularPosts1 article .budsorot-desc {
+  width: 185px;
+  padding-left: 15px;
 }
 .laman-kategori #Blog1 {
   width: 700px;
