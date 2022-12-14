@@ -699,6 +699,9 @@ span.spacing {
 .laman-kategori #main-wrapper {
   display: flex;
 }
+.laman-kategori .budterbaru {
+  display: none;
+}
 .laman-kategori #Label1,
 .laman-kategori #FeaturedPost1,
 .laman-kategori PopularPosts1 {
@@ -715,7 +718,7 @@ span.spacing {
   flex-direction: column;
   overflow: hidden;
   border-radius: var(--bor);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .laman-kategori #FeaturedPost1 article h3 {
   font-size: 1.5em;
@@ -749,7 +752,6 @@ span.spacing {
   height: 100px;
 }
 .laman-kategori #PopularPosts1 article .budsorot-img img {
-  width: 100px;
   border-radius: 0;
 }
 .laman-kategori #PopularPosts1 article .budsorot-desc {
@@ -2294,6 +2296,9 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   .laman-kategori #main-wrapper {
     flex-direction: column;
   }
+  .laman-kategori .budterbaru {
+    display: block;
+  }
   .laman-kategori #Label1,
   .laman-kategori #FeaturedPost1,
   .laman-kategori #PopularPosts1 {
@@ -2329,7 +2334,6 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   .laman-kategori #FeaturedPost1 article {
     flex-direction: row;
-    margin-bottom: 30px;
     height: 160px;
   }
   .laman-kategori #FeaturedPost1 article .budsorot-img {
@@ -2357,7 +2361,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   .laman-kategori #PopularPosts1 article {
     padding: 0;
-    width: 390px;
+    width: 396px;
     margin-bottom: 10px;
     height: 50px;
     font-size: 0.8em;
@@ -2643,7 +2647,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     margin-top: 5px;
   }
   .laman-kategori #PopularPosts1 article {
-    width: 290px;
+    width: 296px;
   }
   article.post-static_page .post-body {
     padding: 0;
