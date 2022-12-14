@@ -1,4 +1,3 @@
-@charset "utf-8";
 /*global variable==========================================*/
 :root {
   --acn1: #fa7267;
@@ -23,14 +22,14 @@
   --ws: 600px;
   --wxs: 400px;
 }
-* {
+#blog-pag * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-*:focus {
+#blog-pag *:focus {
   outline: none;
   outline-offset: -2px;
 }
@@ -267,6 +266,19 @@ hr {
   border: none;
   background: none;
   border-top: 5px solid;
+}
+.anim,
+a,
+img,
+label,
+button,
+input,
+.comment,
+#blog-pager * {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
 }
 body {
   background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMXlA3g3oOWJJKKTAjI7FElcAPyQ9eDmQ5smPtByFdEZW3XC6PvAOf1V-zDoCXwlFSZ1sFsWfCDEefDVPGUxOpVFkedVga1LN-vui__6KaknGXnJW2vkotuCx1piSbeUMXDNdX3Ugv96suq0IPhKME9PMxMGSuV6qBh2_N41IC8I3vgDizCUpbGd-uwA/s200/turing.jpg) var(--col1) repeat;
@@ -1580,8 +1592,8 @@ article.post-static_page .post-body {
 #blog-pager span:hover {
   background: var(--col2);
 }
-bud-single #blog-pager span#blog-pager-newer-link,
-bud-single #blog-pager span#blog-pager-older-link {
+.bud-single #blog-pager span#blog-pager-newer-link,
+.bud-single #blog-pager span#blog-pager-older-link {
   position: fixed;
   z-index: 9999;
   top: calc(50vh - 50px);
@@ -1590,15 +1602,15 @@ bud-single #blog-pager span#blog-pager-older-link {
   width: 100px;
   text-align: center;
 }
-bud-single #blog-pager span#blog-pager-older-link {
+.bud-single #blog-pager span#blog-pager-older-link {
   right: 0;
   border-radius: var(--bor) 0 0 var(--bor);
 }
-bud-single #blog-pager span#blog-pager-newer-link {
+.bud-single #blog-pager span#blog-pager-newer-link {
   left: 0;
   border-radius: 0 var(--bor) var(--bor) 0;
 }
-bud-single #blog-pager span#blog-home-link {
+.bud-single #blog-pager span#blog-home-link {
   display: none;
 }
 #blog-pager span a {
