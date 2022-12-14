@@ -640,7 +640,6 @@ span.spacing {
 	#Label1, #FeaturedPost1, PopularPosts1 {
 		width: 300px;
 		padding-right: 15px;
-		overflow: hidden;
 	}
 	#FeaturedPost1 h4, #PopularPosts1 h4 {
 		margin-bottom: 15px;
@@ -659,7 +658,7 @@ span.spacing {
 			.budsorot-img {
 				margin-bottom: 15px;
 				img {
-					width: 100%;
+					height: 100%;
 					border-radius: 0;
 				}
 			}
@@ -2217,7 +2216,7 @@ article {
 					width: 240px;
 					height: 160px;
 					img {
-						width: 100%;
+						height: 100%;
 						border-radius: 0;
 					}
 				}
@@ -2253,7 +2252,7 @@ article {
 					width: 50px;
 					height: 50px;
 					img {
-						width: 100%;
+						height: 100%;
 						border-radius: 0;
 					}
 				}
@@ -2430,6 +2429,33 @@ article {
     #outer-wrapper {
         width: var(--ws);
     }
+	.laman-kategori {
+		#FeaturedPost1 {
+			article {
+				.budsorot-img {
+					width: 160px;
+					height: 160px;
+					overflow: hidden;
+					img {
+						height: 100%;
+						margin-left: -25%;
+					}
+				}
+				.budsorot-desc {
+					width: calc(100% - 160px);
+					padding: 15px 25px;
+					p {
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+		#PopularPosts1 {
+			article {
+				width: 290px;
+			}
+		}
+	}
 	article {
 		&.post-static_page {
 			.post-body {
@@ -2584,6 +2610,39 @@ article {
 			width: 100%;
 			h1 {
 				font-size: 2.6em;
+			}
+		}
+	}
+	.laman-kategori {
+		#FeaturedPost1 {
+			article {
+				height: 100px;
+				.budsorot-img {
+					width: 100px;
+					height: 100px;
+					img {
+						height: 100%;
+						margin-left: -25%;
+					}
+				}
+				.budsorot-desc {
+					width: calc(100% - 100px);
+					display: flex;
+					align-content: center;
+					align-items: center;
+					flex-wrap: wrap;
+					h4 {
+						padding: 10px 0;
+					}
+					p {
+						display: none;
+					}
+				}
+			}
+		}
+		#PopularPosts1 {
+			article {
+				width: 400px;
 			}
 		}
 	}
