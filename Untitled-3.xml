@@ -49,7 +49,7 @@
 			</b:if>
 			<b:if cond='data:blog.postImageThumbnailUrl'>
 				<meta expr:content='data:blog.postImageThumbnailUrl' name='twitter:image'/>
-			<b:else/>
+				<b:else/>
 				<!--<meta content='https://1.bp.blogspot.com/-CJiTyPodlOM/UXa5K4tfTSI/AAAAAAAABn4/dOnuT1j8hD8/s200/logo.png' name='twitter:image'/>-->
 			</b:if>
 			<b:comment>META FB TAG</b:comment>
@@ -98,16 +98,18 @@
 			<b:comment>TITLE</b:comment>
 			<b:comment>TITLE</b:comment>
 			<title>
-				<b:if cond='data:view.isHomepage or data:view.isMultipleItems'>
+				<b:if cond='data:view.isHomepage'>
 					<data:blog.title/> | Jeb adauba
-				<b:elseif cond='data:view.isSingleItem'/>
-					<data:blog.pageName/> | <data:blog.title/>
 				<b:elseif cond='data:view.isArchive'/>
 					<data:blog.pageName/> | <data:blog.title/>
 				<b:elseif cond='data:view.isSearch and !data:view.isLabelSearch'/>
 					Pencarian "<data:blog.searchQuery/>" |<data:blog.title/>
+				<b:elseif cond='data:blog.searchLabel == "note"'/>
+					Note | <data:blog.title/>
+				<b:elseif cond='data:blog.searchLabel in {"jurnal", "gambar", "video"}'/>
+					Kategori <data:blog.searchLabel/> | <data:blog.title/>
 				<b:elseif cond='data:view.isLabelSearch'/>
-					Label <data:blog.searchLabel/> ~<data:blog.title/>
+					Topik <data:blog.searchLabel/> ~ <data:blog.title/>
 				<b:else cond='data:view.isError'/>
 					404 ~ Halaman hilang dimakan zaman
 				</b:if>
@@ -156,22 +158,21 @@
 			</b:skin>
 			<b:if cond='data:view.isLayoutMode'>
 				<b:template-skin>
-/*<![CDATA[*/
-#bud-aside, #bud-main {
-float: left;
-}
-#bud-aside {
-width: 25%;
-}
-#bud-main {
-width:60%;
-}
-#bud-footer {
-float:none;
-width: 85%
-}
- /*]]>*/
-
+					/*<![CDATA[*/
+						#bud-aside, #bud-main {
+						float: left;
+						}
+						#bud-aside {
+						width: 25%;
+						}
+						#bud-main {
+						width:60%;
+						}
+						#bud-footer {
+						float:none;
+						width: 85%
+						}
+					/*]]>*/
 				</b:template-skin>
 			</b:if>
 			<style>
@@ -187,10 +188,10 @@ width: 85%
 									<b:if cond='data:posts.any'>
 										<b:if cond='data:view.isArchive or (data:view.isSearch and !data:blog.searchLabel and !data:blog.searchQuery)'>
 											<data:view.archive.rangeMessage/>
-											<b:elseif cond='data:view.isSearch and data:view.search.resultsMessage'/>
+										<b:elseif cond='data:view.isSearch and data:view.search.resultsMessage'/>
 											<data:view.search.resultsMessageHtml/>
 										</b:if>
-										<b:else/>
+									<b:else/>
 										<b:eval expr='data:view.isSearch ? data:messages.noResultsFound : data:messages.theresNothingHere'/>
 									</b:if>
 								</div>
@@ -200,7 +201,7 @@ width: 85%
 											<data:messages.viewAll/>
 										</a>
 									</div>
-									<b:else/>
+								<b:else/>
 									<div class='btn-group bit-6'>
 										<a href='javascript:history.back()'>
 											Kembali
@@ -246,8 +247,7 @@ width: 85%
 									<i class='fa-solid fa-pen-nib'/><span class='spacing'/><data:blog.searchLabel/>
 								</h1>
 								<p>Deretan tulisan, coretan, dan tayangan yang tak terlalu rapih dan berbobot.</p>
-								<div>Tag terkait:
-									<span class='spacing'/>
+								<div>Tag terkait:<span class='spacing'/>
 									<b:loop values='data:labels' var='label'>
 										<b:if cond='data:label.name in {"tutorial", "curhat", "artikel", "review", "misc"}'>
 											<a class='label-name' expr:href='data:label.url + "?max-results=6"' rel='tag'>
@@ -261,13 +261,10 @@ width: 85%
 									<a href='/search/label/note?max-results=6' rel='tag'>note</a><span class='spacing'/><i class='fa-solid fa-caret-right'/>
 								</div>
 								<h1 class='note-head'>
-									<i class='fa-solid fa-image'/>
-									<span class='spacing'/>
-									<data:blog.searchLabel/>
+									<i class='fa-solid fa-image'/><span class='spacing'/><data:blog.searchLabel/>
 								</h1>
 								<p>Deretan tulisan, coretan, dan tayangan yang tak terlalu rapih dan berbobot.</p>
-								<div>Tag terkait:
-									<span class='spacing'/>
+								<div>Tag terkait:<span class='spacing'/>
 									<b:loop values='data:labels' var='label'>
 										<b:if cond='data:label.name in {"coretan", "wip", "sketsa", "material"}'>
 											<a class='label-name' expr:href='data:label.url + "?max-results=6"' rel='tag'>
@@ -284,7 +281,7 @@ width: 85%
 									<i class='fa-solid fa-video'/><span class='spacing'/><data:blog.searchLabel/>
 								</h1>
 								<p>Deretan tulisan, coretan, dan tayangan yang tak terlalu rapih dan berbobot.</p>
-								<div>Tag terkait: <span class='spacing'/>
+								<div>Tag terkait:<span class='spacing'/>
 									<b:loop values='data:labels' var='label'>
 										<b:if cond='data:label.name in {"musik", "film", "animasi", "unjuk", "videsay", "random"}'>
 											<a class='label-name' expr:href='data:label.url + "?max-results=6"' rel='tag'>
@@ -410,21 +407,21 @@ width: 85%
                         </a>
 					</div>
 				</div>
-				<b:else/>
+			<b:else/>
 				<div id='outer-wrapper'>
 					<b:if cond='data:blog.searchLabel in {"jurnal", "gambar", "video", "note"}'>
 						<b:class name='laman-kategori'/>
 						<b:switch var='data:blog.searchLabel'>
 							<b:case value='note'/>
-							<b:attr name='data-kategori' value='note'/>
+								<b:attr name='data-kategori' value='note'/>
 							<b:case value='jurnal'/>
-							<b:attr name='data-kategori' value='jurnal'/>
+								<b:attr name='data-kategori' value='jurnal'/>
 							<b:case value='gambar'/>
-							<b:attr name='data-kategori' value='gambar'/>
+								<b:attr name='data-kategori' value='gambar'/>
 							<b:case value='video'/>
-							<b:attr name='data-kategori' value='video'/>
+								<b:attr name='data-kategori' value='video'/>
 							<b:default/>
-							<b:attr name='data-kategori' value='jurnal'/>
+								<b:attr name='data-kategori' value='jurnal'/>
 						</b:switch>
 					</b:if>
 					<section id='above-wrapper'>
@@ -497,19 +494,19 @@ width: 85%
 								<div class='bit-12' id='carimana'>
 									<input checked='' class='belabel turade' data-usul='k' id='r-car-0' type='checkbox' value='label:note'/>
 									<label for='r-car-0'>
-										<i class='fa-regular fa-square'/> semua
+										<i class='fa-regular fa-square'/>semua
 									</label>
 									<input checked='' class='belabel turade' data-usul='r' id='r-car-1' type='checkbox' value='label:jurnal'/>
 									<label for='r-car-1'>
-										<i class='fa-regular fa-square'/> Jurnal
+										<i class='fa-regular fa-square'/>Jurnal
 									</label>
 									<input checked='' class='belabel turade' data-usul='r' id='r-car-2' type='checkbox' value='label:gambar'/>
 									<label for='r-car-2'>
-										<i class='fa-regular fa-square'/> Gambar
+										<i class='fa-regular fa-square'/>Gambar
 									</label>
 									<input checked='' class='belabel turade' data-usul='r' id='r-car-3' type='checkbox' value='label:video'/>
 									<label for='r-car-3'>
-										<i class='fa-regular fa-square'/> Video
+										<i class='fa-regular fa-square'/>Video
 									</label>
 								</div>
 							</form>
@@ -571,7 +568,7 @@ width: 85%
 											</ul>
 										</b:includable>
 									</b:widget>
-									<b:widget id='FeaturedPost1' locked='false' title='' type='FeaturedPost' version='2' visible='true'>
+									<b:widget cond='data:blog.searchLabel in {"jurnal", "gambar", "video", "note"}' id='FeaturedPost1' locked='false' title='' type='FeaturedPost' version='2' visible='true'>
 										<b:widget-settings>
 											<b:widget-setting name='showSnippet'>true</b:widget-setting>
 											<b:widget-setting name='showPostTitle'>false</b:widget-setting>
@@ -580,14 +577,14 @@ width: 85%
 											<b:widget-setting name='useMostRecentPost'>false</b:widget-setting>
 										</b:widget-settings>
 										<b:includable id='main' var='this'>
-											<h3>Sorotan</h3>
+											<h4>Sorotan</h4>
 											<div class='widget-content'>
-                                              <b:loop values='data:posts filter (p => p.id != data:view.postId)' var='post'>
-												  <article class='post' role='article'>
-													<div class='budsorot-img'>
-													  <a expr:href='data:post.url'>
-														<b:if cond='data:post.featuredImage'>
-															<b:include data='{
+												<b:loop values='data:posts filter (p => p.id != data:view.postId)' var='post'>
+													<article class='post' role='article'>
+														<div class='budsorot-img'>
+															<a expr:href='data:post.url'>
+																<b:if cond='data:post.featuredImage'>
+																	<b:include data='{
 																			 image: data:post.featuredImage,
 																			 imageSizes: [285, 180],
 																			 imageRatio: "3:2",
@@ -596,24 +593,23 @@ width: 85%
 																				 (min-width: 801px) 180px,
 																				 285px"
 																			 }' name='responsiveImage'/>
-														  <b:else/>
-															<img src='https://placekitten.com/g/285/190'/>
-														</b:if>
-														</a>
-													</div>
-													<div class='budsorot-desc'>
-														<h4 class='budsorot-title'>
-															<a expr:href='data:post.url'>
-																<data:post.title/>
+																<b:else/>
+																	<img src='https://placekitten.com/g/285/190'/>
+																</b:if>
 															</a>
-														</h4>
-														<p class='budsorot-sum'>
-															<b:eval expr='snippet(data:post.snippets.long, {length: 180, links: false, linebreaks: false, ellipsis: true })'/>
-														</p>
-													</div>
-												  </article>
+														</div>
+														<div class='budsorot-desc'>
+															<h4 class='budsorot-title'>
+																<a expr:href='data:post.url'>
+																	<data:post.title/>
+																</a>
+															</h4>
+															<p class='budsorot-sum'>
+																<b:eval expr='snippet(data:post.snippets.long, {length: 180, links: false, linebreaks: false, ellipsis: true })'/>
+															</p>
+														</div>
+													</article>
 												</b:loop>
-												
 												<!--<b:include name='snippetedPosts'/>-->
 											</div>
 										</b:includable>
@@ -625,19 +621,19 @@ width: 85%
 										<b:includable id='bylineByName' var='byline'>
 											<b:switch var='data:byline.name'>
 												<b:case value='share'/>
-												<b:include cond='data:post.shareUrl' name='postShareButtons'/>
+													<b:include cond='data:post.shareUrl' name='postShareButtons'/>
 												<b:case value='comments'/>
-												<b:include cond='data:post.allowComments' name='postCommentsLink'/>
+													<b:include cond='data:post.allowComments' name='postCommentsLink'/>
 												<b:case value='location'/>
-												<b:include cond='data:post.location' name='postLocation'/>
+													<b:include cond='data:post.location' name='postLocation'/>
 												<b:case value='timestamp'/>
-												<b:include cond='not data:view.isPage' name='postTimestamp'/>
+													<b:include cond='not data:view.isPage' name='postTimestamp'/>
 												<b:case value='author'/>
-												<b:include name='postAuthor'/>
+													<b:include name='postAuthor'/>
 												<b:case value='labels'/>
-												<b:include cond='data:post.labels' name='postLabels'/>
+													<b:include cond='data:post.labels' name='postLabels'/>
 												<b:case value='icons'/>
-												<b:include cond='data:post.emailPostUrl' name='emailPostIcon'/>
+													<b:include cond='data:post.emailPostUrl' name='emailPostIcon'/>
 											</b:switch>
 										</b:includable>
 										<b:includable id='bylineRegion' var='regionItems'>
@@ -651,7 +647,7 @@ width: 85%
 													<b:message name='messages.numberOfComments'>
 														<b:param expr:value='data:post.numberOfComments' name='numComments'/>
 													</b:message>
-													<b:else/>
+												<b:else/>
 													<data:messages.postAComment/>
 												</b:if>
 											</a>
@@ -734,7 +730,7 @@ width: 85%
 																<data:post.author.name/>
 															</span>
 														</a>
-														<b:else/>
+													<b:else/>
 														<span>
 															<data:post.author.name/>
 														</span>
@@ -781,7 +777,13 @@ width: 85%
 											<div class='byline post-share-buttons goog-inline-block'>
 												<b:with value='data:sharingId ?: ((data:widget.instanceId ?: "sharing") + "-" + (data:regionName ?: "byline") + "-" + data:post.id)' var='sharingId'>
 													<!-- Note: 'sharingButtons' includable is from the default Sharing widget markup. -->
-													<b:include data='{                                                sharingId: data:sharingId,                                                originalUrl: data:post.url,                                                platforms: data:this.sharing.platforms,                                                shareUrl: data:post.shareUrl,                                                shareTitle: data:post.title,                                              }' name='sharingButtons'/>
+													<b:include data='{
+																	 sharingId: data:sharingId,
+																	 originalUrl: data:post.url,
+																	 platforms: data:this.sharing.platforms,
+																	 shareUrl: data:post.shareUrl,
+																	 shareTitle: data:post.title,
+																	 }' name='sharingButtons'/>
 												</b:with>
 											</div>
 										</b:includable>
@@ -859,7 +861,12 @@ width: 85%
 										<b:includable id='snippetedPostThumbnail'>
 											<div class='item-thumbnail'>
 												<a expr:href='data:post.url'>
-													<b:include data='{                         image: data:post.featuredImage,                         imageSizes: [72, 144],                         imageRatio: "1:1",                         sourceSizes: "72px"                        }' name='responsiveImage'/>
+													<b:include data='{
+																	 image: data:post.featuredImage,
+																	 imageSizes: [72, 144],
+																	 imageRatio: "1:1",
+																	 sourceSizes: "72px"
+																	 }' name='responsiveImage'/>
 												</a>
 											</div>
 										</b:includable>
@@ -883,7 +890,7 @@ width: 85%
 											</div>
 										</b:includable>
 									</b:widget>
-									<b:widget id='PopularPosts1' locked='false' title='' type='PopularPosts' version='2' visible='true'>
+									<b:widget cond='data:blog.searchLabel in {"jurnal", "gambar", "video", "note"}' id='PopularPosts1' locked='false' title='' type='PopularPosts' version='2' visible='true'>
 										<b:widget-settings>
 											<b:widget-setting name='numItemsToShow'>4</b:widget-setting>
 											<b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -891,15 +898,15 @@ width: 85%
 											<b:widget-setting name='timeRange'>LAST_MONTH</b:widget-setting>
 										</b:widget-settings>
 										<b:includable id='main' var='this'>
-											<h3>Sohor</h3>
+											<h4>Tersohor</h4>
 											<div class='widget-content'>
 												<div role='feed'>
 													<b:loop values='data:posts where (p => p.id != data:view.postId)' var='post'>
-													  <a expr:href='data:post.url'>
-														<article class='post' role='article'>
-													<div class='budsorot-img'>
-														<b:if cond='data:post.featuredImage'>
-															<b:include data='{
+														<a expr:href='data:post.url'>
+															<article class='post' role='article'>
+																<div class='budsorot-img'>
+																	<b:if cond='data:post.featuredImage'>
+																		<b:include data='{
 																			 image: data:post.featuredImage,
 																			 imageSizes: [80, 100],
 																			 imageRatio: "1:1",
@@ -908,20 +915,18 @@ width: 85%
 																				 (min-width: 801px) 100px,
 																				 200px"
 																			 }' name='responsiveImage'/>
-														  <b:else/>
-															<img src='https://placekitten.com/g/100/100'/>
-														</b:if>
-														
-													</div>
-													<div class='budsorot-desc'>
-														<h4 class='budsorot-title'>
-																<data:post.title/>
-														</h4>
-														<!--<p class='budsorot-sum'>
-															<b:eval expr='snippet(data:post.snippets.long, {length: 80, links: false, linebreaks: false, ellipsis: true })'/>
-														</p>-->
-													</div>
-												  </article></a>
+																	<b:else/>
+																		<img src='https://placekitten.com/g/100/100'/>
+																	</b:if>
+																</div>
+																<div class='budsorot-desc'>
+																	<h4 class='budsorot-title'>
+																		<data:post.title/>
+																	</h4>
+																	<!--<p class='budsorot-sum'><b:eval expr='snippet(data:post.snippets.long, {length: 80, links: false, linebreaks: false, ellipsis: true })'/></p>-->
+																</div>
+															</article>
+														</a>
 													</b:loop>
 												</div>
 											</div>
@@ -934,19 +939,19 @@ width: 85%
 										<b:includable id='bylineByName' var='byline'>
 											<b:switch var='data:byline.name'>
 												<b:case value='share'/>
-												<b:include cond='data:post.shareUrl' name='postShareButtons'/>
+													<b:include cond='data:post.shareUrl' name='postShareButtons'/>
 												<b:case value='comments'/>
-												<b:include cond='data:post.allowComments' name='postCommentsLink'/>
+													<b:include cond='data:post.allowComments' name='postCommentsLink'/>
 												<b:case value='location'/>
-												<b:include cond='data:post.location' name='postLocation'/>
+													<b:include cond='data:post.location' name='postLocation'/>
 												<b:case value='timestamp'/>
-												<b:include cond='not data:view.isPage' name='postTimestamp'/>
+													<b:include cond='not data:view.isPage' name='postTimestamp'/>
 												<b:case value='author'/>
-												<b:include name='postAuthor'/>
+													<b:include name='postAuthor'/>
 												<b:case value='labels'/>
-												<b:include cond='data:post.labels' name='postLabels'/>
+													<b:include cond='data:post.labels' name='postLabels'/>
 												<b:case value='icons'/>
-												<b:include cond='data:post.emailPostUrl' name='emailPostIcon'/>
+													<b:include cond='data:post.emailPostUrl' name='emailPostIcon'/>
 											</b:switch>
 										</b:includable>
 										<b:includable id='bylineRegion' var='regionItems'>
@@ -960,7 +965,7 @@ width: 85%
 													<b:message name='messages.numberOfComments'>
 														<b:param expr:value='data:post.numberOfComments' name='numComments'/>
 													</b:message>
-													<b:else/>
+												<b:else/>
 													<data:messages.postAComment/>
 												</b:if>
 											</a>
@@ -1043,7 +1048,7 @@ width: 85%
 																<data:post.author.name/>
 															</span>
 														</a>
-														<b:else/>
+													<b:else/>
 														<span>
 															<data:post.author.name/>
 														</span>
@@ -1090,7 +1095,13 @@ width: 85%
 											<div class='byline post-share-buttons goog-inline-block'>
 												<b:with value='data:sharingId ?: ((data:widget.instanceId ?: "sharing") + "-" + (data:regionName ?: "byline") + "-" + data:post.id)' var='sharingId'>
 													<!-- Note: 'sharingButtons' includable is from the default Sharing widget markup. -->
-													<b:include data='{                                                sharingId: data:sharingId,                                                originalUrl: data:post.url,                                                platforms: data:this.sharing.platforms,                                                shareUrl: data:post.shareUrl,                                                shareTitle: data:post.title,                                              }' name='sharingButtons'/>
+													<b:include data='{
+																	 sharingId: data:sharingId,
+																	 originalUrl: data:post.url,
+																	 platforms: data:this.sharing.platforms,
+																	 shareUrl: data:post.shareUrl,
+																	 shareTitle: data:post.title,
+																	 }' name='sharingButtons'/>
 												</b:with>
 											</div>
 										</b:includable>
@@ -1168,7 +1179,12 @@ width: 85%
 										<b:includable id='snippetedPostThumbnail'>
 											<div class='item-thumbnail'>
 												<a expr:href='data:post.url'>
-													<b:include data='{                         image: data:post.featuredImage,                         imageSizes: [72, 144],                         imageRatio: "1:1",                         sourceSizes: "72px"                        }' name='responsiveImage'/>
+													<b:include data='{
+																	 image: data:post.featuredImage,
+																	 imageSizes: [72, 144],
+																	 imageRatio: "1:1",
+																	 sourceSizes: "72px"
+																	 }' name='responsiveImage'/>
 												</a>
 											</div>
 										</b:includable>
@@ -1238,7 +1254,7 @@ width: 85%
 													</div>
 													<b:include cond='data:olderPageUrl or data:newerPageUrl' name='nextprev'/>
 												</b:if>
-												<b:else/>
+											<b:else/>
 												<section id='index-wrapper'>
 													<h1 class='post-title entry-title' itemprop='name'>
 														<data:blog.title/>
@@ -1278,23 +1294,23 @@ width: 85%
 													<span itemprop='itemListElement' itemscope='itemscope' itemtype='https://schema.org/ListItem'>
 														<b:switch var='data:kumategori.name'>
 															<b:case value='jurnal'/>
-															<b:loop values='data:post.labels where (l => l.name in ["tutorial", "curhat", "artikel", "review", "misc"])' var='kumategori2'>
-																<a expr:href='data:kumategori2.url + "?max-results=6"' rel='tag'>
-																	<data:kumategori2.name/>
-																</a>
-															</b:loop>
+																<b:loop values='data:post.labels where (l => l.name in ["tutorial", "curhat", "artikel", "review", "misc"])' var='kumategori2'>
+																	<a expr:href='data:kumategori2.url + "?max-results=6"' rel='tag'>
+																		<data:kumategori2.name/>
+																	</a>
+																</b:loop>
 															<b:case value='gambar'/>
-															<b:loop values='data:post.labels where (l => l.name in ["coretan", "ilustrasi", "wip", "sketsa", "galeri"])' var='kumategori2'>
-																<a expr:href='data:kumategori2.url + "?max-results=6"' rel='tag'>
-																	<data:kumategori2.name/>
-																</a>
-															</b:loop>
+																<b:loop values='data:post.labels where (l => l.name in ["coretan", "ilustrasi", "wip", "sketsa", "galeri"])' var='kumategori2'>
+																	<a expr:href='data:kumategori2.url + "?max-results=6"' rel='tag'>
+																		<data:kumategori2.name/>
+																	</a>
+																</b:loop>
 															<b:case value='video'/>
-															<b:loop values='data:post.labels where (l => l.name in ["tontonan", "musik", "random", "videsay", "unjuk"])' var='kumategori2'>
-																<a expr:href='data:kumategori2.url + "?max-results=6"' rel='tag'>
-																	<data:kumategori2.name/>
-																</a>
-															</b:loop>
+																<b:loop values='data:post.labels where (l => l.name in ["tontonan", "musik", "random", "videsay", "unjuk"])' var='kumategori2'>
+																	<a expr:href='data:kumategori2.url + "?max-results=6"' rel='tag'>
+																		<data:kumategori2.name/>
+																	</a>
+																</b:loop>
 														</b:switch>
 														<meta content='3' itemprop='position'/>
 													</span>
@@ -1307,7 +1323,20 @@ width: 85%
 											</div>
 										</b:includable>
 										<b:includable id='bud-comments' var='post'>
-											<b:with value='{            delete: "Hapus",            deleted: "Komentar telah dihapus",            reply: "Balas",            replyes: "balasan",            undo: "Batal balas",            katanya: "mengatakan...",            balasnya: "membalas...",            avtsize: "50",            nycomment: "Belum ada komentar",            kumomen: "komentar",            bundo: "Tambah komentar",            cacheImg: "noimg.jpg"            }' var='text'>
+											<b:with value='{
+														   delete: "Hapus",
+														   deleted: "Komentar telah dihapus",
+														   reply: "Balas",
+														   replyes: "balasan",
+														   undo: "Batal balas",
+														   katanya: "mengatakan...",
+														   balasnya: "membalas...",
+														   avtsize: "50",
+														   nycomment: "Belum ada komentar",
+														   kumomen: "komentar",
+														   bundo: "Tambah komentar",
+														   cacheImg: "noimg.jpg"
+														   }' var='text'>
 												<section class='bud-comments' expr:id='"bud-comments-" + data:post.id'>
 													<b:if cond='data:post.allowComments'>
 														<b:if cond='data:blog.pageId != "870175901349193307"'>
@@ -1318,25 +1347,17 @@ width: 85%
 																		<data:post.numComments/>
 																	</span>
 																	<data:text.kumomen/>
-																	<b:else/>
+																<b:else/>
 																	<data:text.nycomment/>
 																</b:if>
 															</h2>
 														</b:if>
 														<!--<b:if cond='data:post.comments.size > 0'>-->
 														<b:if cond='!data:post.allowComments'>
-															<span class='info'>
-										Komentar dinonaktifkan
-									</span>
-															<b:elseif cond='!data:post.allowNewComments'/>
-															<span class='info'>
-										Komentar untuk pos "
-																
-																<data:post.title/>" ditutup
-									
-															
-															</span>
-															<b:else/>
+															<span class='info'>Komentar dinonaktifkan</span>
+														<b:elseif cond='!data:post.allowNewComments'/>
+															<span class='info'>Komentar untuk pos "<data:post.title/>" ditutup</span>
+														<b:else/>
 															<b:include data='post' name='bud-comments-form'/>
 															<div id='commentin'/>
 															<a href='javascript:replyTo(0);' id='b-undo' style='display:none'>
@@ -1382,7 +1403,7 @@ width: 85%
 																	<i class='fa-solid fa-trash-can'/>
 																	<data:text.deleted/>
 																</div>
-																<b:else/>
+															<b:else/>
 																<header class='comment-header'>
 																	<strong class='comment-author'>
 																		<b:if cond='data:comment.authorUrl'>
@@ -1392,7 +1413,7 @@ width: 85%
 																					<i class='fa-solid fa-star'/>
 																				</b:if>
 																			</a>
-																			<b:else/>
+																		<b:else/>
 																			<data:comment.author/>
 																		</b:if>
 																		<data:text.katanya/>
@@ -1403,7 +1424,7 @@ width: 85%
 																</div>
 															</b:if>
 															<footer class='comment-footer'>
-																<a class='comment-url' expr:href='data:comment.url + (data:post.id == 870175901349193307 ? "#c" + data:comment.id : "")'>
+																<a class='comment-url' expr:href='data:comment.url  + (data:view.isPage ? "#c" + data:comment.id : "")'>
 																	<time class='timeago comment-published published' expr:datetime='data:comment.timestamp'>
 																		<i class='fa-regular fa-clock'/>
 																		<data:comment.timestamp/>
@@ -1434,9 +1455,7 @@ width: 85%
 																</b:loop>
 															</div>
 															<div class='hiddenrep' style='display:none;'>
-																<i class='fa-solid fa-up-down'/>
-																<data:numReplies0.size/> Balasan disembunyikan
-															
+																<i class='fa-solid fa-up-down'/><data:numReplies0.size/> Balasan disembunyikan
 															</div>
 														</b:if>
 													</div>
@@ -1469,7 +1488,7 @@ width: 85%
 																	<i class='fa-solid fa-trash-can'/>
 																	<data:text.deleted/>
 																</div>
-																<b:else/>
+															<b:else/>
 																<header class='comment-header'>
 																	<strong class='comment-author'>
 																		<b:if cond='data:reply1.authorUrl'>
@@ -1479,7 +1498,7 @@ width: 85%
 																					<i class='fa-solid fa-star'/>
 																				</b:if>
 																			</a>
-																			<b:else/>
+																		<b:else/>
 																			<data:reply1.author/>
 																		</b:if>
 																		<data:text.balasnya/>
@@ -1490,7 +1509,7 @@ width: 85%
 																</div>
 															</b:if>
 															<footer class='comment-footer'>
-																<a class='comment-url' expr:href='data:reply1.url + (data:post.id == 870175901349193307 ? "#c" + data:reply1.id : "")'>
+																<a class='comment-url' expr:href='data:reply1.url + (data:view.isPage ? "#c" + data:reply1.id : "")'>
 																	<time class='timeago comment-published published' expr:datetime='data:reply1.timestamp'>
 																		<i class='fa-solid fa-clock'/>
 																		<data:reply1.timestamp/>
@@ -1521,9 +1540,7 @@ width: 85%
 																</b:loop>
 															</div>
 															<div class='hiddenrep' style='display:none;'>
-																<i class='fa-solid fa-up-down'/>
-																<data:numReplies1.size/> Balasan disembunyikan
-																
+																<i class='fa-solid fa-up-down'/><data:numReplies1.size/> Balasan disembunyikan
 															</div>
 														</b:if>
 													</div>
@@ -1556,7 +1573,7 @@ width: 85%
 																	<i class='fa-solid fa-trash-can'/>
 																	<data:text.deleted/>
 																</div>
-																<b:else/>
+															<b:else/>
 																<header class='comment-header'>
 																	<strong class='comment-author'>
 																		<b:if cond='data:reply2.authorUrl'>
@@ -1566,7 +1583,7 @@ width: 85%
 																					<i class='fa-solid fa-star'/>
 																				</b:if>
 																			</a>
-																			<b:else/>
+																		<b:else/>
 																			<data:reply2.author/>
 																		</b:if>
 																		<data:text.balasnya/>
@@ -1577,7 +1594,7 @@ width: 85%
 																</div>
 															</b:if>
 															<footer class='comment-footer'>
-																<a class='comment-url' expr:href='data:reply2.url'>
+																<a class='comment-url' expr:href='data:reply2.url + (data:view.isPage ? "#c" + data:reply2.id : "")'>
 																	<time class='timeago comment-published published' expr:datetime='data:reply2.timestamp'>
 																		<i class='fa-solid fa-clock'/>
 																		<data:reply2.timestamp/>
@@ -1608,9 +1625,7 @@ width: 85%
 																</b:loop>
 															</div>
 															<div class='hiddenrep' style='display:none;'>
-																<i class='fa-solid fa-up-down'/>
-																<data:numReplies2.size/> Balasan disembunyikan
-																
+																<i class='fa-solid fa-up-down'/><data:numReplies2.size/> Balasan disembunyikan
 															</div>
 														</b:if>
 													</div>
@@ -1643,7 +1658,7 @@ width: 85%
 																	<i class='fa-solid fa-trash-can'/>
 																	<data:text.deleted/>
 																</div>
-																<b:else/>
+															<b:else/>
 																<header class='comment-header'>
 																	<strong class='comment-author'>
 																		<b:if cond='data:reply3.authorUrl'>
@@ -1653,7 +1668,7 @@ width: 85%
 																					<i class='fa-solid fa-star'/>
 																				</b:if>
 																			</a>
-																			<b:else/>
+																		<b:else/>
 																			<data:reply3.author/>
 																		</b:if>
 																		<data:text.balasnya/>
@@ -1664,7 +1679,7 @@ width: 85%
 																</div>
 															</b:if>
 															<footer class='comment-footer'>
-																<a class='comment-url' expr:href='data:reply3.url'>
+																<a class='comment-url' expr:href='data:reply3.url + (data:view.isPage ? "#c" + data:reply3.id : "")'>
 																	<time class='timeago comment-published published' expr:datetime='data:reply3.timestamp'>
 																		<i class='fa-solid fa-clock'/>
 																		<data:reply3.timestamp/>
@@ -1695,9 +1710,7 @@ width: 85%
 																</b:loop>
 															</div>
 															<div class='hiddenrep' style='display:none;'>
-																<i class='fa-solid fa-up-down'/>
-																<data:numReplies3.size/> Balasan disembunyikan
-																
+																<i class='fa-solid fa-up-down'/><data:numReplies3.size/> Balasan disembunyikan
 															</div>
 														</b:if>
 													</div>
@@ -1730,7 +1743,7 @@ width: 85%
 																	<i class='fa-solid fa-trash-can'/>
 																	<data:text.deleted/>
 																</div>
-																<b:else/>
+															<b:else/>
 																<header class='comment-header'>
 																	<strong class='comment-author'>
 																		<b:if cond='data:reply4.authorUrl'>
@@ -1740,7 +1753,7 @@ width: 85%
 																					<i class='fa-solid fa-star'/>
 																				</b:if>
 																			</a>
-																			<b:else/>
+																		<b:else/>
 																			<data:reply4.author/>
 																		</b:if>
 																		<data:text.balasnya/>
@@ -1751,7 +1764,7 @@ width: 85%
 																</div>
 															</b:if>
 															<footer class='comment-footer'>
-																<a class='comment-url' expr:href='data:reply4.url'>
+																<a class='comment-url' expr:href='data:reply4.url + (data:view.isPage ? "#c" + data:reply4.id : "")'>
 																	<time class='timeago comment-published published' expr:datetime='data:reply4.timestamp'>
 																		<i class='fa-solid fa-clock'/>
 																		<data:reply4.timestamp/>
@@ -1775,16 +1788,14 @@ width: 85%
 																</b:if>
 															</footer>
 														</div>
-														<b:if cond='data:numReplies4.size &gt; 0'>
+														<b:if cond='data:numReplies4.size > 0'>
 															<div class='comments replies replies5' expr:id='data:reply4.id'>
 																<b:loop values='data:numReplies4' var='reply'>
 																	<b:include data='reply' name='bud-comments-comment-reply5'/>
 																</b:loop>
 															</div>
 															<div class='hiddenrep' style='display:none;'>
-																<i class='fa-solid fa-up-down'/>
-																<data:numReplies4.size/> Balasan disembunyikan
-																
+																<i class='fa-solid fa-up-down'/><data:numReplies4.size/> Balasan disembunyikan
 															</div>
 														</b:if>
 													</div>
@@ -1796,14 +1807,14 @@ width: 85%
 												<b:with value='data:post.comments filter (i => i.inReplyTo == data:reply5.id)' var='numReplies5'>
 													<b:class cond='data:reply5.authorClass' name='is-author'/>
 													<b:class cond='data:reply5.isDeleted' name='is-deleted'/>
-													<b:if cond='data:numReplies5.size &gt; 0'>
+													<b:if cond='data:numReplies5.size > 0'>
 														<b:class name='is-replied'/>
 													</b:if>
 													<div class='left comimg'>
 														<figure class='comment-avatar' expr:style='"background: url(https://placekitten.com/g/" + data:text.avtsize + "/" + data:text.avtsize") no-repeat"'>
 															<img alt='' expr:src='resizeImage(data:reply5.authorAvatarSrc, data:text.avtsize)'/>
 														</figure>
-														<div expr:class='"repcom" + (data:numReplies5.size &gt; 0 ? " replied" : "")' expr:data-trigger='data:reply5.id'>
+														<div expr:class='"repcom" + (data:numReplies5.size > 0 ? " replied" : "")' expr:data-trigger='data:reply5.id'>
 															<span class='bigger'>
 																<data:numReplies5.size/>
 															</span>
@@ -1817,7 +1828,7 @@ width: 85%
 																	<i class='fa-solid fa-trash-can'/>
 																	<data:text.deleted/>
 																</div>
-																<b:else/>
+															<b:else/>
 																<header class='comment-header'>
 																	<strong class='comment-author'>
 																		<b:if cond='data:reply5.authorUrl'>
@@ -1827,7 +1838,7 @@ width: 85%
 																					<i class='fa-solid fa-star'/>
 																				</b:if>
 																			</a>
-																			<b:else/>
+																		<b:else/>
 																			<data:reply5.author/>
 																		</b:if>
 																		<data:text.balasnya/>
@@ -1838,7 +1849,7 @@ width: 85%
 																</div>
 															</b:if>
 															<footer class='comment-footer'>
-																<a class='comment-url' expr:href='data:reply5.url'>
+																<a class='comment-url' expr:href='data:reply5.url + (data:view.isPage ? "#c" + data:reply5.id : "")'>
 																	<time class='timeago comment-published published' expr:datetime='data:reply5.timestamp'>
 																		<i class='fa-solid fa-clock'/>
 																		<data:reply5.timestamp/>
@@ -1869,9 +1880,7 @@ width: 85%
 																</b:loop>
 															</div>
 															<div class='hiddenrep' style='display:none;'>
-																<i class='fa-solid fa-up-down'/>
-																<data:numReplies5.size/> Balasan disembunyikan
-																
+																<i class='fa-solid fa-up-down'/><data:numReplies5.size/> Balasan disembunyikan
 															</div>
 														</b:if>
 													</div>
@@ -1904,7 +1913,7 @@ width: 85%
 																	<i class='fa-solid fa-trash-can'/>
 																	<data:text.deleted/>
 																</div>
-																<b:else/>
+															<b:else/>
 																<header class='comment-header'>
 																	<strong class='comment-author'>
 																		<b:if cond='data:reply6.authorUrl'>
@@ -1914,7 +1923,7 @@ width: 85%
 																					<i class='fa-solid fa-star'/>
 																				</b:if>
 																			</a>
-																			<b:else/>
+																		<b:else/>
 																			<data:reply6.author/>
 																		</b:if>
 																		<data:text.balasnya/>
@@ -1925,7 +1934,7 @@ width: 85%
 																</div>
 															</b:if>
 															<footer class='comment-footer'>
-																<a class='comment-url' expr:href='data:reply6.url'>
+																<a class='comment-url' expr:href='data:reply6.url + (data:view.isPage ? "#c" + data:reply6.id : "")'>
 																	<time class='timeago comment-published published' expr:datetime='data:reply6.timestamp'>
 																		<i class='fa-solid fa-clock'/>
 																		<data:reply6.timestamp/>
@@ -1956,9 +1965,7 @@ width: 85%
 																</b:loop>
 															</div>
 															<div class='hiddenrep' style='display:none;'>
-																<i class='fa-solid fa-up-down'/>
-																<data:numReplies6.size/> Balasan disembunyikan
-																
+																<i class='fa-solid fa-up-down'/><data:numReplies6.size/> Balasan disembunyikan
 															</div>
 														</b:if>
 													</div>
@@ -1984,7 +1991,7 @@ width: 85%
 																<i class='fa-solid fa-trash-can'/>
 																<data:text.deleted/>
 															</div>
-															<b:else/>
+														<b:else/>
 															<header class='comment-header'>
 																<strong class='comment-author'>
 																	<b:if cond='data:reply7.authorUrl'>
@@ -1994,7 +2001,7 @@ width: 85%
 																				<i class='fa-solid fa-star'/>
 																			</b:if>
 																		</a>
-																		<b:else/>
+																	<b:else/>
 																		<data:reply7.author/>
 																	</b:if>
 																	<data:text.balasnya/>
@@ -2005,7 +2012,7 @@ width: 85%
 															</div>
 														</b:if>
 														<footer class='comment-footer'>
-															<a class='comment-url' expr:href='data:reply7.url'>
+															<a class='comment-url' expr:href='data:reply7.url + (data:view.isPage ? "#c" + data:reply7.id : "")'>
 																<time class='timeago comment-published published' expr:datetime='data:reply7.timestamp'>
 																	<i class='fa-solid fa-clock'/>
 																	<data:reply7.timestamp/>
@@ -2067,28 +2074,25 @@ width: 85%
 										</b:includable>
 										<b:includable id='bud-contact'>
 											<iframe id='hiddenkont' name='hiddenkont' onload='if(submitted){window.location="/p/terkirim.html";}' style='display:none;'/>
-											<p>Apabila kalian memiliki pertanyaan yang tidak ingin dibaca oleh umum, menemukan sebuah bug dalam blog ini dan ingin melaporkannya, atau ingin mengajak kerja sama (misalnya), silakan gunakan formulir di bawah ini untuk melakukannya. Jika kalian ingin menghubungi secara langsung bisa melalui laman 
-												
-												<a href='/p/tentang.html#medsos'>Tentang</a>.
-											
+											<p>Apabila kalian memiliki pertanyaan yang tidak ingin dibaca oleh umum, menemukan sebuah bug dalam blog ini dan ingin melaporkannya, atau ingin mengajak kerja sama (misalnya), silakan gunakan formulir di bawah ini untuk melakukannya. Jika kalian ingin menghubungi secara langsung bisa melalui laman <a href='/p/tentang.html#medsos'>Tentang</a>.
 											</p>
 											<p>Semua input yang masuk akan disaring, sehingga pesan berisi hal-hal berbau spam akan terabaikan.</p>
 											<form action='https://docs.google.com/forms/d/e/1FAIpQLSdfgEN7lePA2H9dkpAaOAAa11xF9X_Q0lVFXGs-nyoTNrDyDw/formResponse' id='budkontak-form' method='POST' onsubmit='submitted=true' target='hiddenkont'>
 												<div>
 													<label>
 														<span class='input-label'>Nama</span>
-														<input TYPE='text' name='entry.1486290192' placeholder='nama kamu' required=''/>
+														<input TYPE='text' name='entry.1486290192' placeholder='nama kamu' required='true'/>
 													</label>
 												</div>
 												<div>
 													<label>
 														<span class='input-label'>Email</span>
-														<input TYPE='email' name='entry.1746530554' placeholder='email kamu' required=''/>
+														<input TYPE='email' name='entry.1746530554' placeholder='email kamu' required='true'/>
 													</label>
 												</div>
 												<span class='input-label'>Subjek</span>
 												<div class='kon-sub'>
-													<input TYPE='radio' VALUE='tanya' class='hidden' id='entry.921133293_0' name='entry.921133293' required=''/>
+													<input TYPE='radio' VALUE='tanya' class='hidden' id='entry.921133293_0' name='entry.921133293' required='true'/>
 													<label class='icon-radio-input' for='entry.921133293_0'>pertanyaan</label>
 													<br/>
 													<input TYPE='radio' VALUE='bug' class='hidden' id='entry.921133293_1' name='entry.921133293'/>
@@ -2103,7 +2107,7 @@ width: 85%
 												<div>
 													<label>
 														<span class='input-label'>Pertanyaan</span>
-														<textarea name='entry.240843412' placeholder='Pesan kamu di sini...' required=''/>
+														<textarea name='entry.240843412' placeholder='Pesan kamu di sini...' required='true'/>
 													</label>
 												</div>
 												<button class='kont-sub g-recaptcha' data-action='submit' data-callback='onSubmit' data-sitekey='6Ld071gjAAAAAGzIJf_Z1NTc4Y1L0upZKdMonSJb'>Submit</button>
@@ -2113,11 +2117,11 @@ width: 85%
 											<div class='post-infohead bitter' id='post-infohead'>
 												<span class='post-author vcard fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
 													<b:if cond='data:post.authorProfileUrl'>
-														<a class='g-profile' expr:href='data:post.authorProfileUrl' rel='author' title='Author Profile'>
+														<a class='g-profile' expr:href='data:post.authorProfileUrl' rel='author' title='Profil penulis'>
 															<i class='fa-solid fa-user'/>
 															<data:post.author/>
 														</a>
-														<b:else/>
+													<b:else/>
 														<span class='g-profile'>
 															<i class='fa-solid fa-user'/>
 															<data:post.author/>
@@ -2125,7 +2129,7 @@ width: 85%
 													</b:if>
 												</span>
 												<span class='post-time'>
-													<a class='post-time-link' expr:href='data:post.url' rel='bookmark' title='Permanent Link'>
+													<a class='post-time-link' expr:href='data:post.url' rel='bookmark' title='Link permanen'>
 														<time class='timeago post-published published' expr:datetime='data:post.timestampISO8601'>
 															<i class='fa-solid fa-clock'/>
 															<b:eval expr='data:post.date format "dd MMM yyyy" '/>
@@ -2134,47 +2138,31 @@ width: 85%
 												</span>
 												<span class='post-comment-link'>
 													<i class='icon-comment'/>
-													<a expr:href='"#bud-comments-" + data:post.id'>
+													<a expr:href='"#bud-comments-" + data:post.id' expr:title='data:post.numComments > 0 ? (data:post.numComments + " komentar") : "Tambahkan komentar"'>
 														<i class='fa-solid fa-comment'/>
-														<b:if cond='data:post.numComments &gt; 0'>
+														<b:if cond='data:post.numComments > 0'>
 															<data:post.numComments/> Komentar
-																			
-															
-															<b:else/> Tambahkan komentar
-																		
-														
+														<b:else/>
+															Tambahkan komentar
 														</b:if>
 													</a>
 												</span>
 												<b:if cond='data:post.labels any (l => l.name == "jurnal")'>
 													<span class='post-reading-time'>
 														<i class='fa-solid fa-stopwatch'/>
-														<span class='etan'/> (
-														
-														<span class='etam'/>)
-																	</span>
+														<span class='etan'/> (<span class='etam'/>)</span>
 												</b:if>
 											</div>
 										</b:includable>
 										<b:includable id='budcommentmsg'>
 											<h4>Catatan:</h4>
 											<ol>
-												<li>Kamu harus mengikuti blog ini untuk bisa berkomentar. Silakan
-									
-													
-													<a expr:href='"https://www.blogger.com/follow.g?blogID=" + data:blog.blogId'>ikuti</a> blog ini terlebih dahulu apabila belum.
-								
-												
-												</li>
+												<li>Kamu harus mengikuti blog ini untuk bisa berkomentar. Silakan <a target='_blank' expr:href='"https://www.blogger.com/follow.g?blogID=" + data:blog.blogId'>ikuti</a> blog ini terlebih dahulu apabila belum.</li>
 												<li>Mohon berkomentar dengan sopan, jagalah ketertiban.</li>
 												<li>Berkomentralah sesuai topik.</li>
 												<li>Jangan mencantumkan link aktif.</li>
 												<li>Postingan yang berusia lebih dari 14 hari memiliki moderasi komentar otomatis.</li>
-												<li>Untuk pemformatan komentar, penyisipan gambar, dan lainnya, silakan kunjungi 
-													
-													<a href='/p/komentar.html#pemformatan'>laman komentar</a>.
-												
-												</li>
+												<li>Untuk pemformatan komentar, penyisipan gambar, dan lainnya, silakan kunjungi <a href='/p/komentar.html#pemformatan'>laman komentar</a>.</li>
 											</ol>
 										</b:includable>
 										<b:includable id='comment-form' var='post'>
@@ -2191,7 +2179,7 @@ width: 85%
 										<b:includable id='comment_picker' var='post'>
 											<b:if cond='data:post.showThreadedComments'>
 												<b:include data='post' name='bud-comments'/>
-												<b:else/>
+											<b:else/>
 												<b:include data='post' name='bud-comments'/>
 											</b:if>
 										</b:includable>
@@ -2216,7 +2204,7 @@ width: 85%
 														<b:include data='feedLinks' name='feedLinksBody'/>
 													</div>
 												</b:if>
-												<b:else/>
+											<b:else/>
 												<!--Post feed links -->
 												<div class='post-feeds'>
 													<b:loop values='data:posts' var='post'>
@@ -2230,12 +2218,7 @@ width: 85%
 												<data:feedLinksMsg/>
 												<b:loop values='data:links' var='f'>
 													<a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'>
-														<data:f.name/> (
-								
-														
-														<data:f.feedType/>)
-							
-													
+														<data:f.name/> (<data:f.feedType/>)
 													</a>
 												</b:loop>
 											</div>
@@ -2282,7 +2265,13 @@ width: 85%
 										</b:includable>
 										<b:includable id='post' var='post'>
 											<b:with expr:value='(data:postarama and (data:view.isHomepage or (data:view.isLabelSearch and data:blog.searchLabel in {"jurnal", "gambar", "video", "note"}))) ? "true" : "false"' var='postatama'>
-												<b:with value='{                   noTitle: "[Tak Berjudul]",                   noThumb: "[Tak bergambar]",                   noPost: "[Tak berkonten]",                   TitleLink: "Tautan",                   more: "Baca",                   }' var='tekpos'>
+												<b:with value='{
+															   noTitle: "[Tak Berjudul]",
+															   noThumb: "[Tak bergambar]",
+															   noPost: "[Tak berkonten]",
+															   TitleLink: "Tautan",
+															   more: "Baca",
+															   }' var='tekpos'>
 													<article expr:class='"post bitter post-" + data:blog.pageType' expr:id='"budpost-" + data:post.id' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
 														<b:if cond='data:view.isSingleItem'>
 															<script type='application/ld+json'>
@@ -2291,41 +2280,27 @@ width: 85%
 "@type": "BlogPosting",
 "mainEntityOfPage": {
 	"@type": "WebPage",
-	"@id": " 
-																<data:post.canonicalUrl/>",
-	"headline": "
-																<data:view.title.escaped/>",
-	
-																<b:if cond='data:blog.metaDescription'>
-		"description": "
-																	<data:blog.metaDescription.escaped/>",
-	
-																	<b:else/>
-		"description": "Kunjungi postingan 
-																	<data:view.title.escaped/> untuk membaca artikel selengkapnya melalui tautan di atas.",
-	
-																</b:if>
-	"datePublished": "
-																<data:post.timestampISO8601/>",
-	"dateModified": "
-																<data:post.lastUpdatedISO8601/>",
+	"@id": "<data:post.canonicalUrl/>",
+	"headline": "<data:view.title.escaped/>",
+	<b:if cond='data:blog.metaDescription'>
+		"description": "<data:blog.metaDescription.escaped/>",
+	<b:else/>
+		"description": "Kunjungi postingan <data:view.title.escaped/> untuk membaca artikel selengkapnya melalui tautan di atas.",
+	</b:if>
+	"datePublished": "<data:post.timestampISO8601/>",
+	"dateModified": "<data:post.lastUpdatedISO8601/>",
 	"image": { 
 		"@type": "ImageObject",
-		
-																<b:if cond='data:post.firstImageUrl'>
-			"url": "
-																	<b:eval expr='resizeImage(data:post.firstImageUrl,1280,"1280:720")'/>",
-		
-																	<b:else/>
+		<b:if cond='data:post.firstImageUrl'>
+			"url": "<b:eval expr='resizeImage(data:post.firstImageUrl,1280,"1280:720")'/>",
+		<b:else/>
 			"url": "https://4.bp.blogspot.com/-8kN5uucyxDI/XD6vAIw18dI/AAAAAAAA7kU/uTwzqq0EbvgGyzRaNuLpjzARZIKOWbVoACLcBGAs/s1280/no-thumbnail.jpg",
-		
-																</b:if>
+		</b:if>
 		"height": 720,
 		"width": 1280 },
 	"publisher": {
 		"@type": "Organization",
-		"name": "
-																<data:blog.title/>",
+		"name": "<data:blog.title/>",
 		"logo": {
 			"@type": "ImageObject",
 			"url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKsOHAlRoBk5X-dcOrtrTvTdfpWRWLZkAlf8jqRqBTfwSCf3qcZOXxbomQAMk9JpsH2l1n6geH5BYniUiqeOa0rQXp43XBSI_vsUmX-DirG5mUvKR_IHusXOqGG--NuM9nM_tP5bWZLGWG9YOLganaAYYK3lh3Us2NNfWExO9w6EcE4v72hjoVoyPWDw/w800-h480-p-k-no-nu/THUMB_SQ-HD.jpg",
@@ -2335,14 +2310,11 @@ width: 85%
 	}, 
 	"author": { 
 		"@type": "Person", 
-		"name": "
-																<data:post.author/>"
+		"name": "<data:post.author/>"
 		} 
 	}
 }
-									
-															
-															</script>
+</script>
 														</b:if>
 														<b:class expr:name='data:view.isMultipleItems ? "multi-post" : "single-post"'/>
 														<b:attr cond='data:post.labels any (l => l.name == "video")' name='data-orientasi' value='landscape'/>
@@ -2359,12 +2331,7 @@ width: 85%
 														<meta expr:content='data:blog.blogId' itemprop='blogId'/>
 														<meta expr:content='data:post.id' itemprop='postId'/>
 														<a expr:name='data:post.id'/>
-														<b:if cond='data:blog.searchLabel not in {"jurnal", "gambar", "video", "note"}'>
-															<b:attr cond='data:post.labels any (l => l.name == "jurnal")' name='data-template' value='jurnal'/>
-															<b:attr cond='data:post.labels any (l => l.name == "gambar")' name='data-template' value='gambar'/>
-															<b:attr cond='data:post.labels any (l => l.name == "video")' name='data-template' value='video'/>
-														</b:if>
-														<b:if cond='data:view.isMultipleItems'>
+														<b:if cond='data:view.isMultipleItems and (data:blog.searchLabel not in {"jurnal", "gambar", "video", "note"})'>
 															<b:attr cond='data:post.labels any (l => l.name == "jurnal")' name='data-kategori' value='jurnal'/>
 															<b:attr cond='data:post.labels any (l => l.name == "gambar")' name='data-kategori' value='gambar'/>
 															<b:attr cond='data:post.labels any (l => l.name == "video")' name='data-kategori' value='video'/>
@@ -2375,102 +2342,240 @@ width: 85%
 																	<b:if cond='data:view.isMultipleItems'>
 																		<a expr:href='data:post.link ? data:post.link : data:post.url'>
 																			<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,(data:postatama ? 350 : 200),"1:1") : ("https://placekitten.com/g/" + (data:postatama ? "350/350" : "200/200"))' var='postImage'>
-																				<b:include cond='!data:postatama' data='{         image: data:postImage,         imageSizes: [600,200],         imageRatio: "1:1",         sourceSizes: "          (min-width: 1001px) 200px,          (min-width: 801px) 600px          600px         ",         enhancedSourceset: data:postImage,         imageClass: "budthumb"}' name='responsiveImage'/>
-																				<b:include cond='data:postatama' data='{         image: data:postImage,         imageSizes: [600,350],         imageRatio: "1:1",         sourceSizes: "          (min-width: 1001px) 350px,          (min-width: 801px) 600px          600px         ",         enhancedSourceset: data:postImage,         imageClass: "budthumb"}' name='responsiveImage'/>
+																				<b:include cond='!data:postatama' data='{
+																														image: data:postImage,
+																														imageSizes: [600,200],
+																														imageRatio: "1:1",
+																														sourceSizes: 
+																															"(min-width: 1001px) 200px,
+																															(min-width: 801px) 600px,
+																															600px",
+																														enhancedSourceset: data:postImage,
+																														imageClass: "budthumb"
+																														}' name='responsiveImage'/>
+																				<b:include cond='data:postatama' data='{
+																													   image: data:postImage,
+																													   imageSizes: [600,350],
+																													   imageRatio: "1:1",
+																													   sourceSizes: 
+																														   "(min-width: 1001px) 350px,
+																														   (min-width: 801px) 600px,
+																														   600px",
+																													   enhancedSourceset: data:postImage,
+																													   imageClass: "budthumb"
+																													   }' name='responsiveImage'/>
 																			</b:with>
 																		</a>
-																		<b:else/>
+																	<b:else/>
 																		<b:if cond='!(data:post.labels any (l => l.name == "video"))'>
-																			<b:if cond='data:post.thumbnailUrl'>
 																				<div class='post-thumbnail blowimg'>
 																					<b:if cond='data:post.labels any (l => l.name == "jurnal")'>
 																						<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,1000,"4:1") : "https://placekitten.com/g/1000/250"' var='postImage'>
-																							<b:include data='{         image: data:postImage,         imageSizes: [1000, 800, 600, 400],         imageRatio: "4:1",         sourceSizes: "          (min-width: 1001px) 1000px,          (min-width: 801px) 800px,          (min-width: 601px) 600px,          (min-width: 401px) 400px,          800px         ",         enhancedSourceset: data:postImage,         imageClass: "budthumb"}' name='responsiveImage'/>
+																							<b:include data='{
+																											 image: data:postImage,
+																											 imageSizes: [1000, 800, 600, 400],
+																											 imageRatio: "4:1",
+																											 sourceSizes: 
+																											 	"(min-width: 1001px) 1000px,
+																												 (min-width: 801px) 800px,
+																												 (min-width: 601px) 600px,
+																												 (min-width: 401px) 400px,
+																												 800px",
+																											 enhancedSourceset: data:postImage,
+																											 imageClass: "budthumb"
+																											 }' name='responsiveImage'/>
 																						</b:with>
-																						<b:elseif cond='data:post.labels any (l => l.name == "gambar")'/>
+																					<b:elseif cond='data:post.labels any (l => l.name == "gambar")'/>
 																						<b:if cond='data:post.labels any (l => l.name == "1:2")'>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,800,"1:2") : "https://placekitten.com/g/800/1600"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [800, 600, 400],          imageRatio: "1:2",          sourceSizes: "           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [800, 600, 400],
+																												 imageRatio: "1:2",
+																												 sourceSizes: 
+																													 "(min-width: 801px) 800px,
+																													 (min-width: 601px) 600px,
+																													 (min-width: 401px) 400px,
+																													 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
-																							<b:elseif cond='data:post.labels any (l => l.name == "1:4")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "1:4")'/>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,800,"1:4") : "https://placekitten.com/g/800/3200"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [800, 600, 400],          imageRatio: "1:4",          sourceSizes: "           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [800, 600, 400],
+																												 imageRatio: "1:4",
+																												 sourceSizes: 
+																													 "(min-width: 801px) 800px,
+																													 (min-width: 601px) 600px,
+																													 (min-width: 401px) 400px,
+																												 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
-																							<b:elseif cond='data:post.labels any (l => l.name == "3:4")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "3:4")'/>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,800,"3:4") : "https://placekitten.com/g/800/1067"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [800, 600, 400],          imageRatio: "3:4",          sourceSizes: "           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [800, 600, 400],
+																												 imageRatio: "3:4",
+																												 sourceSizes: 
+																													 "(min-width: 801px) 800px,
+																													 (min-width: 601px) 600px,
+																													 (min-width: 401px) 400px,
+																													 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
-																							<b:elseif cond='data:post.labels any (l => l.name == "4:5")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "4:5")'/>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,800,"4:5") : "https://placekitten.com/g/800/1000"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [800, 600, 400],          imageRatio: "4:5",          sourceSizes: "           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [800, 600, 400],
+																												 imageRatio: "4:5",
+																												 sourceSizes: 
+																													 "(min-width: 801px) 800px,
+																													 (min-width: 601px) 600px,
+																													 (min-width: 401px) 400px,
+																													 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
-																							<b:elseif cond='data:post.labels any (l => l.name == "9:16")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "9:16")'/>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,800,"9:16") : "https://placekitten.com/g/800/1422"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [800, 600, 400],          imageRatio: "9:16",          sourceSizes: "           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [800, 600, 400],
+																												 imageRatio: "9:16",
+																												 sourceSizes: 
+																													 "(min-width: 801px) 800px,
+																													 (min-width: 601px) 600px,
+																													 (min-width: 401px) 400px,
+																													 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
-																							<b:elseif cond='data:post.labels any (l => l.name == "1:1")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "1:1")'/>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,800,"1:1") : "https://placekitten.com/g/800/800"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [800, 600, 400],          imageRatio: "1:1",          sourceSizes: "           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [800, 600, 400],
+																												 imageRatio: "1:1",
+																												 sourceSizes: 
+																												 "(min-width: 801px) 800px,
+																												 (min-width: 601px) 600px,
+																												 (min-width: 401px) 400px,
+																												 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
-																							<b:elseif cond='data:post.labels any (l => l.name == "16:9")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "16:9")'/>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,1000,"16:9") : "https://placekitten.com/g/1000/563"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [1000, 800, 600, 400],          imageRatio: "16:9",          sourceSizes: "           (min-width: 1001px) 1000px,           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [1000, 800, 600, 400],
+																												 imageRatio: "16:9",
+																												 sourceSizes: 
+																													 "(min-width: 1001px) 1000px,
+																													 (min-width: 801px) 800px,
+																													 (min-width: 601px) 600px,
+																													 (min-width: 401px) 400px,
+																													 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
-																							<b:elseif cond='data:post.labels any (l => l.name == "2:1")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "2:1")'/>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,1000,"2:1") : "https://placekitten.com/g/1000/500"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [1000, 800, 600, 400],          imageRatio: "2:1",          sourceSizes: "           (min-width: 1001px) 1000px,           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [1000, 800, 600, 400],
+																												 imageRatio: "2:1",
+																												 sourceSizes: 
+																													 "(min-width: 1001px) 1000px,
+																													 (min-width: 801px) 800px,
+																													 (min-width: 601px) 600px,
+																													 (min-width: 401px) 400px,
+																													 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
-																							<b:elseif cond='data:post.labels any (l => l.name == "4:1")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "4:1")'/>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,1000,"4:1") : "https://placekitten.com/g/1000/250"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [1000, 800, 600, 400],          imageRatio: "4:1",          sourceSizes: "           (min-width: 1001px) 1000px,           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [1000, 800, 600, 400],
+																												 imageRatio: "4:1",
+																												 sourceSizes: 
+																													 "(min-width: 1001px) 1000px,
+																													 (min-width: 801px) 800px,
+																													 (min-width: 601px) 600px,
+																													 (min-width: 401px) 400px,
+																													 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
-																							<b:elseif cond='data:post.labels any (l => l.name == "4:3")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "4:3")'/>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,1000,"4:3") : "https://placekitten.com/g/1000/750"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [1000, 800, 600, 400],          imageRatio: "4:3",          sourceSizes: "           (min-width: 1001px) 1000px,           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [1000, 800, 600, 400],
+																												 imageRatio: "4:3",
+																												 sourceSizes: 
+																													 "(min-width: 1001px) 1000px,
+																													 (min-width: 801px) 800px,
+																													 (min-width: 601px) 600px,
+																													 (min-width: 401px) 400px,
+																													 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
-																							<b:elseif cond='data:post.labels any (l => l.name == "5:4")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "5:4")'/>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,1000,"5:4") : "https://placekitten.com/g/1000/800"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [1000, 800, 600, 400],          imageRatio: "5:4",          sourceSizes: "           (min-width: 1001px) 1000px,           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [1000, 800, 600, 400],
+																												 imageRatio: "5:4",
+																												 sourceSizes: 
+																													 "(min-width: 1001px) 1000px,
+																													 (min-width: 801px) 800px,
+																													 (min-width: 601px) 600px,
+																													 (min-width: 401px) 400px,
+																													 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
-																							<b:else/>
+																						<b:else/>
 																							<b:with value='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl,1000,"4:1") : "https://placekitten.com/g/1000/250"' var='postImage'>
-																								<b:include data='{          image: data:postImage,          imageSizes: [1000, 800, 600, 400],          imageRatio: "4:1",          sourceSizes: "           (min-width: 1001px) 1000px,           (min-width: 801px) 800px,           (min-width: 601px) 600px,           (min-width: 401px) 400px,           800px          ",          enhancedSourceset: data:postImage,          imageClass: "budthumb"}' name='responsiveImage'/>
+																								<b:include data='{
+																												 image: data:postImage,
+																												 imageSizes: [1000, 800, 600, 400],
+																												 imageRatio: "4:1",
+																												 sourceSizes: 
+																													 "(min-width: 1001px) 1000px,
+																													 (min-width: 801px) 800px,
+																													 (min-width: 601px) 600px,
+																													 (min-width: 401px) 400px,
+																													 800px",
+																												 enhancedSourceset: data:postImage,
+																												 imageClass: "budthumb"
+																												 }' name='responsiveImage'/>
 																							</b:with>
 																						</b:if>
 																					</b:if>
 																				</div>
-																				<b:else/>
-																				<div class='no-post-thumbnail blowimg'>
-																					<img class='post-thumbnail' expr:alt='data:post.title' itemprop='image'>
-																						<b:if cond='data:post.labels any (l => l.name == "jurnal")'>
-																							<b:attr name='src' value='https://placekitten.com/g/1000/250'/>
-																							<b:elseif cond='data:post.labels any (l => l.name == "gambar")'/>
-																							<b:if cond='data:post.labels any (l => l.name == "16:9")'>
-																								<b:attr name='src' value='https://placekitten.com/g/1000/316'/>
-																								<b:elseif cond='data:post.labels any (l => l.name == "9:16")'/>
-																								<b:attr name='src' value='https://placekitten.com/g/1000/3167'/>
-																								<b:elseif cond='data:post.labels any (l => l.name == "4:5")'/>
-																								<b:attr name='src' value='https://placekitten.com/g/1000/1200'/>
-																								<b:elseif cond='data:post.labels any (l => l.name == "5:4")'/>
-																								<b:attr name='src' value='https://placekitten.com/g/1000/800'/>
-																								<b:elseif cond='data:post.labels any (l => l.name == "4:3")'/>
-																								<b:attr name='src' value='https://placekitten.com/g/1000/750'/>
-																								<b:elseif cond='data:post.labels any (l => l.name == "3:4")'/>
-																								<b:attr name='src' value='https://placekitten.com/g/1000/1333'/>
-																								<b:elseif cond='data:post.labels any (l => l.name == "3:5")'/>
-																								<b:attr name='src' value='https://placekitten.com/g/1000/1667'/>
-																								<b:elseif cond='data:post.labels any (l => l.name == "5:3")'/>
-																								<b:attr name='src' value='https://placekitten.com/g/1000/600'/>
-																								<b:else/>
-																								<b:attr name='src' value='https://placekitten.com/g/1000/450'/>
-																							</b:if>
-																							<b:else/>
-																							<b:attr name='src' value='https://placekitten.com/g/1000/250'/>
-																						</b:if>
-																					</img>
-																				</div>
-																			</b:if>
-																			<b:else/>
+																		<b:else/>
 																			<div id='video-place'>
 																				<div class='loading'>
 																					<i class='fa-solid fa-sync fa-spin'/>
@@ -2487,10 +2592,10 @@ width: 85%
 																				<a expr:href='data:post.link ? data:post.link : data:post.url'>
 																					<b:eval expr='snippet(data:post.title, {length: 25, links: false, linebreaks: false, ellipsis: true })'/>
 																				</a>
-																				<b:else/>
+																			<b:else/>
 																				<b:eval expr='snippet(data:post.title, {length: 25, links: false, linebreaks: false, ellipsis: true })'/>
 																			</b:if>
-																			<b:else/>
+																		<b:else/>
 																			<data:tekpos.noTitle/>
 																		</b:if>
 																	</h1>
@@ -2505,15 +2610,15 @@ width: 85%
 																						<a href='/search/label/jurnal?max-results=6' rel='tag' title='kategori jurnal'>
 																							<i class='fa-solid fa-pen-nib'/>
 																						</a>
-																						<b:elseif cond='data:post.labels any (l => l.name == "gambar")'/>
+																					<b:elseif cond='data:post.labels any (l => l.name == "gambar")'/>
 																						<a href='/search/label/gambar?max-results=6' rel='tag' title='kategori gambar'>
 																							<i class='fa-solid fa-image'/>
 																						</a>
-																						<b:elseif cond='data:post.labels any (l => l.name == "video")'/>
+																					<b:elseif cond='data:post.labels any (l => l.name == "video")'/>
 																						<a href='/search/label/video?max-results=6' rel='tag' title='kategori video'>
 																							<i class='fa-solid fa-video'/>
 																						</a>
-																						<b:else/>
+																					<b:else/>
 																						<a href='/search/label/note?max-results=6' rel='tag' title='tak berkategori'>
 																							<i class='fa-solid fa-note-sticky'/>
 																						</a>
@@ -2522,131 +2627,131 @@ width: 85%
 																			</b:if>
 																			<span class='tandarasi'>
 																				<b:if cond='data:post.labels any (l => l.name == "gambar")'>
-																					<b:loop values='data:post.labels where (l => l.name in ["1:2", "1:4", "3:4", "4:5", "9:16", "1:1", "16:9", "2:1", "4:1", "4:3", "5:4"])' var='rumasio'>
-																						<span>
+																					<b:loop values='data:post.labels where (l => l.name in ["1:2", "1:4", "3:4", "4:5", "9:16", "1:1", "16:9", "2:1", "4:1", "4:3", "5:4", "galeri"])' var='rumasio'>
+																						<span expr:title='"rasio " + data:rumasio.name'>
 																							<data:rumasio.name/>
 																						</span>
 																					</b:loop>
-																					<b:elseif cond='data:post.labels any (l => l.name == "video")'/>
+																				<b:elseif cond='data:post.labels any (l => l.name == "video")'/>
 																					<b:loop values='data:post.labels where (l => l.name in ["t0_1", "t0_2", "t0_3", "t0_4", "t0_5", "t0_6", "t0_7", "t0_8", "t0_9", "t0_0"])' var='relatedan'>
 																						<b:switch var='data:relatedan.name'>
 																							<b:case value='t0_1'/>
-																							<span>1</span>
+																								<span>1</span>
 																							<b:case value='t0_2'/>
-																							<span>2</span>
+																								<span>2</span>
 																							<b:case value='t0_3'/>
-																							<span>3</span>
+																								<span>3</span>
 																							<b:case value='t0_4'/>
-																							<span>4</span>
+																								<span>4</span>
 																							<b:case value='t0_5'/>
-																							<span>5</span>
+																								<span>5</span>
 																							<b:case value='t0_6'/>
-																							<span>6</span>
+																								<span>6</span>
 																							<b:case value='t0_7'/>
-																							<span>7</span>
+																								<span>7</span>
 																							<b:case value='t0_8'/>
-																							<span>8</span>
+																								<span>8</span>
 																							<b:case value='t0_9'/>
-																							<span>9</span>
+																								<span>9</span>
 																							<b:case value='t0_0'/>
-																							<span>0</span>
+																								<span>0</span>
 																						</b:switch>
 																					</b:loop>
 																					<b:loop values='data:post.labels where (l => l.name in ["t1_1", "t1_2", "t1_3", "t1_4", "t1_5", "t1_6", "t1_7", "t1_8", "t1_9", "t1_0"])' var='relatedan'>
 																						<b:switch var='data:relatedan.name'>
 																							<b:case value='t1_1'/>
-																							<span>1</span>
+																								<span>1</span>
 																							<b:case value='t1_2'/>
-																							<span>2</span>
+																								<span>2</span>
 																							<b:case value='t1_3'/>
-																							<span>3</span>
+																								<span>3</span>
 																							<b:case value='t1_4'/>
-																							<span>4</span>
+																								<span>4</span>
 																							<b:case value='t1_5'/>
-																							<span>5</span>
+																								<span>5</span>
 																							<b:case value='t1_6'/>
-																							<span>6</span>
+																								<span>6</span>
 																							<b:case value='t1_7'/>
-																							<span>7</span>
+																								<span>7</span>
 																							<b:case value='t1_8'/>
-																							<span>8</span>
+																								<span>8</span>
 																							<b:case value='t1_9'/>
-																							<span>9</span>
+																								<span>9</span>
 																							<b:case value='t1_0'/>
-																							<span>0</span>
+																								<span>0</span>
 																						</b:switch>
 																					</b:loop>
 																					<b:loop values='data:post.labels where (l => l.name in ["t2_1", "t2_2", "t2_3", "t2_4", "t2_5", "t2_6", "t2_7", "t2_8", "t2_9", "t2_0"])' var='relatedan'>
 																						<b:switch var='data:relatedan.name'>
 																							<b:case value='t2_1'/>
-																							<span>1</span>
+																								<span>1</span>
 																							<b:case value='t2_2'/>
-																							<span>2</span>
+																								<span>2</span>
 																							<b:case value='t2_3'/>
-																							<span>3</span>
+																								<span>3</span>
 																							<b:case value='t2_4'/>
-																							<span>4</span>
+																								<span>4</span>
 																							<b:case value='t2_5'/>
-																							<span>5</span>
+																								<span>5</span>
 																							<b:case value='t2_6'/>
-																							<span>6</span>
+																								<span>6</span>
 																							<b:case value='t2_7'/>
-																							<span>7</span>
+																								<span>7</span>
 																							<b:case value='t2_8'/>
-																							<span>8</span>
+																								<span>8</span>
 																							<b:case value='t2_9'/>
-																							<span>9</span>
+																								<span>9</span>
 																							<b:case value='t2_0'/>
-																							<span>0</span>
+																								<span>0</span>
 																						</b:switch>
 																					</b:loop>
 																					<span>:</span>
 																					<b:loop values='data:post.labels where (l => l.name in ["t3_1", "t3_2", "t3_3", "t3_4", "t3_5", "t3_6", "t3_7", "t3_8", "t3_9", "t3_0"])' var='relatedan'>
 																						<b:switch var='data:relatedan.name'>
 																							<b:case value='t3_1'/>
-																							<span>1</span>
+																								<span>1</span>
 																							<b:case value='t3_2'/>
-																							<span>2</span>
+																								<span>2</span>
 																							<b:case value='t3_3'/>
-																							<span>3</span>
+																								<span>3</span>
 																							<b:case value='t3_4'/>
-																							<span>4</span>
+																								<span>4</span>
 																							<b:case value='t3_5'/>
-																							<span>5</span>
+																								<span>5</span>
 																							<b:case value='t3_6'/>
-																							<span>6</span>
+																								<span>6</span>
 																							<b:case value='t3_7'/>
-																							<span>7</span>
+																								<span>7</span>
 																							<b:case value='t3_8'/>
-																							<span>8</span>
+																								<span>8</span>
 																							<b:case value='t3_9'/>
-																							<span>9</span>
+																								<span>9</span>
 																							<b:case value='t3_0'/>
-																							<span>0</span>
+																								<span>0</span>
 																						</b:switch>
 																					</b:loop>
 																					<b:loop values='data:post.labels where (l => l.name in ["t4_1", "t4_2", "t4_3", "t4_4", "t4_5", "t4_6", "t4_7", "t4_8", "t4_9", "t4_0"])' var='relatedan'>
 																						<b:switch var='data:relatedan.name'>
 																							<b:case value='t4_1'/>
-																							<span>1</span>
+																								<span>1</span>
 																							<b:case value='t4_2'/>
-																							<span>2</span>
+																								<span>2</span>
 																							<b:case value='t4_3'/>
-																							<span>3</span>
+																								<span>3</span>
 																							<b:case value='t4_4'/>
-																							<span>4</span>
+																								<span>4</span>
 																							<b:case value='t4_5'/>
-																							<span>5</span>
+																								<span>5</span>
 																							<b:case value='t4_6'/>
-																							<span>6</span>
+																								<span>6</span>
 																							<b:case value='t4_7'/>
-																							<span>7</span>
+																								<span>7</span>
 																							<b:case value='t4_8'/>
-																							<span>8</span>
+																								<span>8</span>
 																							<b:case value='t4_9'/>
-																							<span>9</span>
+																								<span>9</span>
 																							<b:case value='t4_0'/>
-																							<span>0</span>
+																								<span>0</span>
 																						</b:switch>
 																					</b:loop>
 																				</b:if>
@@ -2666,10 +2771,10 @@ width: 85%
 																					<a expr:href='data:post.link ? data:post.link : data:post.url'>
 																						<b:eval expr='snippet(data:post.title, {length: 25, links: false, linebreaks: false, ellipsis: true })'/>
 																					</a>
-																					<b:else/>
+																				<b:else/>
 																					<b:eval expr='snippet(data:post.title, {length: 25, links: false, linebreaks: false, ellipsis: true })'/>
 																				</b:if>
-																				<b:else/>
+																			<b:else/>
 																				<data:tekpos.noTitle/>
 																			</b:if>
 																		</b:tag>
@@ -2680,11 +2785,11 @@ width: 85%
 																		<div class='post-body entry-content' expr:id='"post-body-" + data:post.id' expr:itemprop='(data:blog.metaDescription ? "" : "description ") + "articleBody"'>
 																			<b:if cond='data:blog.pageId != "540736620804977043"'>
 																				<data:post.body/>
-																				<b:else/>
+																			<b:else/>
 																				<b:include name='bud-contact'/>
 																			</b:if>
 																		</div>
-																		<b:else/>
+																	<b:else/>
 																		<div class='entry-content' expr:id='"post-body-" + data:post.id'>
 																			<b:eval expr='snippet(data:post.body, {length: (data:postatama ? 280 : 180), links: false, linebreaks: false, ellipsis: true })'/>
 																		</div>
@@ -2705,7 +2810,7 @@ width: 85%
 																					</script>
 																				</div>
 																			</div>
-																			<b:else/>
+																		<b:else/>
 																			<b:if cond='!data:view.isPage'>
 																				<div class='multinfo bit-10'>
 																					<span class='post-labels'>
@@ -2713,22 +2818,19 @@ width: 85%
 																						<b:if cond='data:post.labels any (l => l.name == "jurnal")'>
 																							<b:loop values='data:post.labels where (l => l.name in ["tutorial", "curhat", "artikel", "review", "misc"])' var='kumategori2'>
 																								<a expr:href='data:kumategori2.url + "?max-results=6"' expr:title='"subkategori " + data:kumategori2.name' rel='tag'>
-                                                                                                      #
-																									<data:kumategori2.name/>
+                                                                                                      #<data:kumategori2.name/>
 																								</a>
 																							</b:loop>
-																							<b:elseif cond='data:post.labels any (l => l.name == "gambar")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "gambar")'/>
 																							<b:loop values='data:post.labels where (l => l.name in ["coretan", "ilustrasi", "wip", "sketsa", "galeri"])' var='kumategori2'>
 																								<a expr:href='data:kumategori2.url + "?max-results=6"' expr:title='"subkategori " + data:kumategori2.name' rel='tag'>
-                                                                                                      #
-																									<data:kumategori2.name/>
+                                                                                                      #<data:kumategori2.name/>
 																								</a>
 																							</b:loop>
-																							<b:elseif cond='data:post.labels any (l => l.name == "video")'/>
+																						<b:elseif cond='data:post.labels any (l => l.name == "video")'/>
 																							<b:loop values='data:post.labels where (l => l.name in ["tontonan", "musik", "random", "videsay", "unjuk"])' var='kumategori2'>
 																								<a expr:href='data:kumategori2.url + "?max-results=6"' expr:title='"subkategori " + data:kumategori2.name' rel='tag'>
-                                                                                                      #
-																									<data:kumategori2.name/>
+                                                                                                      #<data:kumategori2.name/>
 																								</a>
 																							</b:loop>
 																						</b:if>
@@ -2742,8 +2844,7 @@ width: 85%
 																													<b:if cond='data:label.name not in ["t4_1", "t4_2", "t4_3", "t4_4", "t4_5", "t4_6", "t4_7", "t4_8", "t4_9", "t4_0"]'>
 																														<b:if cond='data:gu &lt; (data:postatama ? 2 : 1)'>
 																															<a expr:href='data:label.url + "?max-results=6"' expr:title='"tagar " + data:label.name' rel='tag'> 
-							#
-																																<data:label.name/>
+																																#<data:label.name/>
 																															</a>
 																														</b:if>
 																													</b:if>
@@ -2759,22 +2860,21 @@ width: 85%
 																						<i class='fa-solid fa-clock'/>
 																						<a class='post-time-link' expr:href='data:post.url' rel='bookmark' title='Permanent Link'>
 																							<time class='timeago post-published published' expr:datetime='data:post.timestampISO8601'>
-																								<b:eval expr='data:post.date format "dd/MM/yyyy" '/>
+																								<b:eval expr='data:post.date format "dd/MM/yyyy"'/>
 																							</time>
 																						</a>
 																					</span>
 																					<span class='post-comment-link'>
 																						<i class='fa-solid fa-comment'/>
 																						<a expr:href='(data:view.isPost ? "" : data:post.url) + "#bud-comments-" + data:post.id'>
-																							<data:post.numComments/>
-																							<b:if cond='data:postatama'> Komentar</b:if>
+																							<data:post.numComments/><b:if cond='data:postatama'> Komentar</b:if>
 																						</a>
 																					</span>
 																				</div>
-																				<div class='jump-link bit-2'>
+																				<div class='jump-link bit-2'> 
 																					<a expr:href='data:post.url' expr:title='data:post.title'>
 																						<b:if cond='!data:postatama'>
-																							<data:tekpos.more/>
+																							<span><data:tekpos.more/></span>
 																						</b:if>
 																						<i class='fa-solid fa-arrow-right'/>
 																					</a>
@@ -2791,26 +2891,24 @@ width: 85%
 																								<data:kumategori.name/>
 																							</a>
 																							<span class='spacing'/>/
+																							
 																							<span class='spacing'/>
 																							<b:if cond='data:post.labels any (l => l.name == "jurnal")'>
 																								<b:loop values='data:post.labels where (l => l.name in ["tutorial", "curhat", "artikel", "review", "misc"])' var='kumategori2'>
 																									<a expr:href='data:kumategori2.url + "?max-results=6"' expr:title='"subkategori " + data:kumategori.name' rel='tag'>
-																		#
-																										<data:kumategori2.name/>
+																										#<data:kumategori2.name/>
 																									</a>
 																								</b:loop>
-																								<b:elseif cond='data:post.labels any (l => l.name == "gambar")'/>
+																							<b:elseif cond='data:post.labels any (l => l.name == "gambar")'/>
 																								<b:loop values='data:post.labels where (l => l.name in ["coretan", "ilustrasi", "wip", "sketsa", "galeri"])' var='kumategori2'>
 																									<a expr:href='data:kumategori2.url + "?max-results=6"' expr:title='"subkategori " + data:kumategori.name' rel='tag'>
-																		#
-																										<data:kumategori2.name/>
+																										#<data:kumategori2.name/>
 																									</a>
 																								</b:loop>
-																								<b:elseif cond='data:post.labels any (l => l.name == "video")'/>
+																							<b:elseif cond='data:post.labels any (l => l.name == "video")'/>
 																								<b:loop values='data:post.labels where (l => l.name in ["tontonan", "musik", "random", "videsay", "unjuk"])' var='kumategori2'>
 																									<a expr:href='data:kumategori2.url + "?max-results=6"' expr:title='"subkategori " + data:kumategori.name' rel='tag'>
-																		#
-																										<data:kumategori2.name/>
+																										#<data:kumategori2.name/>
 																									</a>
 																								</b:loop>
 																							</b:if>
@@ -2829,8 +2927,7 @@ width: 85%
 																											<b:if cond='data:label.name not in ["t3_1", "t3_2", "t3_3", "t3_4", "t3_5", "t3_6", "t3_7", "t3_8", "t3_9", "t3_0"]'>
 																												<b:if cond='data:label.name not in ["t4_1", "t4_2", "t4_3", "t4_4", "t4_5", "t4_6", "t4_7", "t4_8", "t4_9", "t4_0"]'>
 																													<a expr:href='data:label.url + "?max-results=6"' expr:title='"tagar " + data:label.name' rel='tag'> 
-							#
-																														<data:label.name/>
+																														#<data:label.name/>
 																													</a>
 																												</b:if>
 																											</b:if>
@@ -2846,8 +2943,6 @@ width: 85%
 																				<div id='bud-lampiran'>
 																					<h4>
 																						<i class='fa-solid fa-paperclip'/> Lampiran:
-															
-																					
 																					</h4>
 																					<ul>
 																						<b:loop index='o' values='data:post.enclosures' var='budlampiran'>
@@ -2857,22 +2952,21 @@ width: 85%
 																										<img class='bud-megathumb' expr:alt='data:post.title' expr:src='resizeImage(data:budlampiran.url, 170, "1:1")' height='170' width='170'/>
 																									</a>
 																									<b:class name='lam-img'/>
-																									<b:elseif cond='data:budlampiran.mimeType in {"video/mp4","video/x-msvideo","video/quicktime"}'/>
+																								<b:elseif cond='data:budlampiran.mimeType in {"video/mp4","video/x-msvideo","video/quicktime"}'/>
 																									<a expr:href='data:budlampiran.url' expr:title='"lampiran " + (data:o + 1) + " " + data:post.title' target='_blank'>
 																										<iframe class='embed-responsive-item' expr:src='data:budlampiran.url' style='border:0; width:170px; height:170px;display:block;'/>
 																									</a>
 																									<b:class name='lam-vid'/>
-																									<b:elseif cond='data:budlampiran.mimeType in {"audio/aac","audio/mpeg","audio/ogg"}'/>
+																								<b:elseif cond='data:budlampiran.mimeType in {"audio/aac","audio/mpeg","audio/ogg"}'/>
 																									<a expr:href='data:budlampiran.url' expr:title='"lampiran " + (data:o + 1) + " " + data:post.title' target='_blank'>
 																										<audio controls='controls'>
 																											<source expr:src='data:budlampiran.url' type='audio/mpeg'/>
 																										</audio>
 																									</a>
 																									<b:class name='lam-aud'/>
-																									<b:else/>
+																								<b:else/>
 																									<a expr:href='data:budlampiran.url' expr:title='"lampiran " + (data:o + 1) + " " + data:post.title' target='_blank'>
-																				lampiran-
-																										<b:eval expr='data:o + 1'/>
+																										lampiran-<b:eval expr='data:o + 1'/>
 																									</a>
 																									<b:class name='lam-gen'/>
 																								</b:if>
@@ -2980,8 +3074,8 @@ width: 85%
 										<b:includable id='threaded_comment_js' var='post'>
 											<script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
 											<script type='text/javascript'>
-						//<![CDATA[
-						//]]>
+												//<![CDATA[
+												//]]>
 											</script>
 										</b:includable>
 										<b:includable id='threaded_comments' var='post'>
@@ -3002,7 +3096,7 @@ width: 85%
 										<b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
 									</b:widget-settings>
 									<b:includable id='main' var='this'>
-										<h3>Topik</h3>
+										<h4>Topik</h4>
 										<b:include name='content'/>
 									</b:includable>
 									<b:includable id='cloud'>
@@ -3018,8 +3112,7 @@ width: 85%
 																			<span class='label-size'>
 																				<b:class expr:name='"label-size-" + data:label.cssSize'/>
 																				<a class='label-name' expr:href='data:label.url + "?max-results=6"' expr:title='"topik " + data:label.name'>
-        #
-																					<data:label.name/>
+																					#<data:label.name/>
 																					<span class='label-count'>
 																						<data:label.count/>
 																					</span>
@@ -3061,31 +3154,14 @@ width: 85%
 								</b:widget>
 							</b:section>
 							<div class='bit-6 left' itemscope='itemscope' itemtype='http://data-vocabulary.org/copyrightHolder'>
-								<a href='/'>
-									<data:blog.title/>
-								</a>
-					oleh
-					
-								
-								<a href='https://budkalon.crd.co/'>budkalon</a> diberdayakan oleh
-					
-								
-								<a href='https://blogger.com'>Blogger</a>
+								<a expr:title='data:blog.title' href='/'><data:blog.title/></a> oleh <a  title="Budkalon's Portfolio" href='https://budkalon.crd.co/' target='_blank'>budkalon</a> diberdayakan oleh <a title='Blogger' href='https://blogger.com' rel='nofollow' target='_blank'>Blogger</a>
 							</div>
 							<div class='bit-6 right'>
-								<b:tag cond='data:blog.url != "https://budkanote.blogspot.com/p/tentang.html"' href='/p/tentang.html' name='a'>Tentang</b:tag> |
-					
-								
-								<b:tag cond='data:blog.url != "https://budkanote.blogspot.com/p/kontak.html"' href='/p/kontak.html' name='a'>Kontak</b:tag> |
-					
-								
-								<b:tag cond='data:blog.url != "https://budkanote.blogspot.com/p/tanya.html"' href='/p/tanya.html' name='a'>Tanya</b:tag> |
-					
-								
-								<b:tag cond='data:blog.url != "https://budkanote.blogspot.com/p/kebijakan.html"' href='/p/kebijakan.html' name='a'>Kebijakan</b:tag> |
-					
-								
-								<a expr:href='"https://www.blogger.com/follow.g?blogID=" + data:blog.blogId' target='_blank'>ikuti</a>
+								<b:tag title='Halaman Tentang' cond='data:blog.url != "https://budkanote.blogspot.com/p/tentang.html"' href='/p/tentang.html' name='a'>Tentang</b:tag> |
+								<b:tag title='Halaman Kontak' cond='data:blog.url != "https://budkanote.blogspot.com/p/kontak.html"' href='/p/kontak.html' name='a'>Kontak</b:tag> |
+								<b:tag title='Halaman Tanya' cond='data:blog.url != "https://budkanote.blogspot.com/p/tanya.html"' href='/p/tanya.html' name='a'>Tanya</b:tag> |
+								<b:tag title='Halaman Kebijakan' cond='data:blog.url != "https://budkanote.blogspot.com/p/kebijakan.html"' href='/p/kebijakan.html' name='a'>Kebijakan</b:tag> |
+								<a title='Ikuti Blog ini!' expr:href='"https://www.blogger.com/follow.g?blogID=" + data:blog.blogId' target='_blank'>ikuti</a>
 							</div>
 						</footer>
 					</section>
@@ -3103,6 +3179,5 @@ width: 85%
 				//]]>
 			</script>
 		&lt;!--</body>--&gt;&lt;/body&gt;
-	
 	</b:with>
 </html>
