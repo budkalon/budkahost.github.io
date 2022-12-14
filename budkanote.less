@@ -639,13 +639,17 @@ span.spacing {
 	}
 	.budterbaru {
 		display: none;
+		margin-bottom: 15px;
 	}
 	#Label1, #FeaturedPost1, PopularPosts1 {
 		width: 300px;
 		padding-right: 15px;
 	}
-	#FeaturedPost1 h4, #PopularPosts1 h4 {
+	#FeaturedPost1 > h4, #PopularPosts1 > h4 {
 		margin-bottom: 15px;
+	}
+	#FeaturedPost1 article h4, #PopularPosts1 article h4 {
+		margin-bottom: 0;
 	}
 	#FeaturedPost1 {
 		article {
@@ -654,15 +658,32 @@ span.spacing {
 			flex-direction: column;
 			overflow: hidden;
 			border-radius: var(--bor);
-			margin-bottom: 10px;
+			margin-bottom: 25px;
 			h3 {
 				font-size: 1.5em;
 			}
 			.budsorot-img {
 				margin-bottom: 15px;
+				position: relative;
+				a::before {
+					position: absolute;
+					content: '';
+					display: block;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background: rgba(34, 42, 53, 0.67);
+					mix-blend-mode: color;
+					z-index: 1;
+				}
+				&:hover a::before {
+					opacity: 0;
+				}
 				img {
 					height: 100%;
 					border-radius: 0;
+					filter: brightness(0.5) grayscale(0.5);
 				}
 			}
 			.budsorot-desc {
@@ -687,13 +708,36 @@ span.spacing {
 				margin-right: 15px;
 				width: 100px;
 				height: 100px;
+				position: relative;
+				&::before {
+					position: absolute;
+					content: '';
+					display: block;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background: rgba(34, 42, 53, 0.67);
+					mix-blend-mode: color;
+					z-index: 1;
+				}
+				&:hover::before {
+					opacity: 0;
+				}
 				img {
 					border-radius: 0;
+					filter: brightness(0.5) grayscale(0.5);
 				}
 			}
 			.budsorot-desc {
 				width: calc(100% - 100px);
 				padding: 25px 0;
+				display: flex;
+				flex-wrap: nowrap;
+				align-content: flex-start;
+				align-items: flex-start;
+				flex-direction: column;
+				justify-content: center;
 			}
 		}
 	} 
@@ -2215,6 +2259,7 @@ article {
 			article {
 				flex-direction: row;
 				height: 160px;
+				margin-bottom: 10px;
 				.budsorot-img {
 					margin-bottom: 0;
 					width: 240px;
