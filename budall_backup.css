@@ -2241,6 +2241,9 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   .laman-kategori article.multi-post .postaright {
     width: 550px;
   }
+  article.post-static_page h1.post-title.entry-title {
+    padding: 50px 0;
+  }
   article.post-static_page .post-body {
     padding: 0 200px 0 0;
   }
@@ -2640,6 +2643,15 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   #navbar > * {
     width: 100%;
+  }
+  #bud-home #content-wrapper {
+    padding: 35px;
+  }
+  #bud-home #index-wrapper {
+    width: 100%;
+  }
+  #bud-home #index-wrapper h1 {
+    font-size: 2.6em;
   }
   span.bud-search-input {
     width: calc(8/12 * 100%);
