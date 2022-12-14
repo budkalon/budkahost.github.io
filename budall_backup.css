@@ -2345,7 +2345,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     width: calc(100% - 240px);
     padding: 15px 25px;
   }
-  .laman-kategori #PopularPosts1 > div {
+  .laman-kategori #PopularPosts1 > div > div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
