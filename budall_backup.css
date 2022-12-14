@@ -739,6 +739,7 @@ span.spacing {
   height: 100px;
   font-size: 0.8em;
   display: flex;
+  overflow: hidden;
 }
 .laman-kategori #PopularPosts1 article h3 {
   font-size: 1.2em;
@@ -749,7 +750,7 @@ span.spacing {
   height: 100px;
 }
 .laman-kategori #PopularPosts1 article .budsorot-img img {
-  width: 100%;
+  width: 100px;
   border-radius: 0;
 }
 .laman-kategori #PopularPosts1 article .budsorot-desc {
