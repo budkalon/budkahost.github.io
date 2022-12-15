@@ -30,6 +30,7 @@
 	--pad5: 5px;
 	--pad10: 10px;
 	--pad15: 15px;
+	--pad20: 20px;
 	--pad25: 25px;
 }
 * {
@@ -624,7 +625,7 @@ span.spacing {
     margin-bottom: calc(2 * var(--pad25));
     overflow: hidden;
     position: relative;
-    top: -10px;
+    top: calc(var(--pad10) * -1);
     z-index: 9999;
     #bud-home & {
         margin-bottom: 0;
@@ -635,7 +636,7 @@ span.spacing {
     }
 }
 #content-wrapper {
-	margin-bottom: 50px;
+	margin-bottom: calc(var(--pad25) * 2);
     border-radius: var(--bor);
 }
 #bud-arsip {
@@ -644,9 +645,9 @@ span.spacing {
 	}
 	#bud-aside {
 		width: 285px;
-		margin-right: 15px;
+		margin-right: var(--pad15);
 		#BlogArchive1 {
-			padding: 25px;
+			padding: var(--pad25);
 			background: var(--col2);
 			border-radius: var(--bor);
 			list-style: none;
@@ -655,7 +656,7 @@ span.spacing {
 				color: var(--acn1);
 			}
 			.badan-arsip {
-				margin-top: 25px;
+				margin-top: var(--pad25);
 				ul {
 					margin: 0;
 					li {
@@ -687,7 +688,7 @@ span.spacing {
 						}
 					}
 					ul {
-						margin-left: 25px;
+						margin-left: var(--pad25);
 					}
 				}
 			}
@@ -703,14 +704,14 @@ span.spacing {
 	}
 	.budterbaru {
 		display: none;
-		margin-bottom: 15px;
+		margin-bottom: var(--pad15);
 	}
 	#Label1, #FeaturedPost1, PopularPosts1 {
 		width: 300px;
-		padding-right: 15px;
+		padding-right: var(--pad15);
 	}
 	#FeaturedPost1 > h4, #PopularPosts1 > h4 {
-		margin-bottom: 15px;
+		margin-bottom: var(--pad15);
 	}
 	#FeaturedPost1 article h4, #PopularPosts1 article h4 {
 		margin-bottom: 0;
@@ -722,12 +723,12 @@ span.spacing {
 			flex-direction: column;
 			overflow: hidden;
 			border-radius: var(--bor);
-			margin-bottom: 25px;
+			margin-bottom: var(--pad25);
 			h3 {
 				font-size: 1.5em;
 			}
 			.budsorot-img {
-				margin-bottom: 15px;
+				margin-bottom: var(--pad15);
 				position: relative;
 				img {
 					height: 100%;
@@ -756,7 +757,7 @@ span.spacing {
 				} 
 			}
 			.budsorot-desc {
-				padding: 0 25px;
+				padding: 0 var(--pad25);
 			}
 		}
 	} 
@@ -765,7 +766,7 @@ span.spacing {
 			background: var(--col2);
 			width: 285px;
 			border-radius: var(--bor);
-			margin-bottom: 15px;
+			margin-bottom: var(--pad15);
 			height: 100px;
 			font-size: 0.8em;
 			display: flex;
@@ -774,7 +775,7 @@ span.spacing {
 				font-size: 1.2em;
 			}
 			.budsorot-img {
-				margin-right: 15px;
+				margin-right: var(--pad15);
 				width: 100px;
 				height: 100px;
 				position: relative;
@@ -805,7 +806,7 @@ span.spacing {
 			}
 			.budsorot-desc {
 				width: calc(100% - 100px);
-				padding: 25px 0;
+				padding: var(--pad25) 0;
 				display: flex;
 				flex-wrap: nowrap;
 				align-content: flex-start;
@@ -827,7 +828,7 @@ span.spacing {
         z-index: 999;
     }
     #content-wrapper {
-        padding: 50px;
+        padding: calc(var(--pad25) * 2);
         min-height: 600px;
         display: flex;
         flex-direction: row;
@@ -837,15 +838,15 @@ span.spacing {
         align-items: flex-end;
     }
     #index-wrapper {
-        width: calc(var(--wxs) + 50px);
+        width: calc(var(--wxs) + (var(--pad25) * 2));
         background: var(--col2);
-        padding: 25px;
+        padding: var(--pad25);
         border-radius: var(--bor);
         h1 {
             font-size: 3.2em;
         }
         .btn-group {
-            margin-top: 15px;
+            margin-top: var(--pad15);
         }
         #blog-summary {
             margin: 0;
@@ -877,7 +878,7 @@ span.spacing {
 }
 
 #budsearch {
-    margin: 15px -25px -25px;
+    margin: 15px calc(var(--pad25) * -1) calc(var(--pad25) * -1);
     overflow: hidden;
     input[type="checkbox"] {
         display: none;
@@ -906,7 +907,7 @@ span.spacing {
 #bud-search-input {
     width: 100%;
     border-radius: 0;
-    padding: 25px;
+    padding: var(--pad25);
     height: 100%;
 }
 .bud-search-filter label {
@@ -941,7 +942,7 @@ span.spacing {
 }
 .belabel {
     + label {
-        padding: 15px;
+        padding: var(--pad15);
         display: inline-block;
         width: 100%;
         text-align: center;
@@ -957,8 +958,8 @@ span.spacing {
     }
 }
 .post-filter-message {
-    padding: 25px;
-    margin-bottom: 20px;
+    padding: var(--pad25);
+    margin-bottom: var(--pad20);
     background: var(--col3);
     border-radius: var(--bor);
     position: relative;
@@ -982,28 +983,28 @@ span.spacing {
 }
 
 #master-note {
-    padding: 25px;
+    padding: var(--pad25);
     margin-bottom: 30px;
     background: var(--col2);
     border-radius: var(--bor);
 	position: relative;
 	.master-bread {
 		position: absolute;
-		top: -25px;
-		padding: 10px 25px;
+		top: calc(var(--pad25) * -1);
+		padding: var(--pad10) var(--pad25);
 		background: var(--col3);
 		border-radius: var(--bor);
 	}
 	h1 {
 		font-size: 2.5em;
 		color: var(--acn1);
-    	padding-top: 15px;
+    	padding-top: var(--pad15);
 	}
 	.btn-group.lin-ver {
 		flex-direction: column;
 		align-items: stretch;
 		a {
-			margin-bottom: 15px;
+			margin-bottom: var(--pad15);
 			border-radius: var(--bor);
 		}
 	}
@@ -1013,7 +1014,7 @@ article {
     position: relative;
 	.bud-single & {
 		background: var(--col1);
-		padding: 25px;
+		padding: var(--pad25);
 		border-radius: @bor_atas;
 	}
     .posta {
@@ -1053,13 +1054,13 @@ article {
     }
     .postaright {
         width: 450px;
-        padding: 15px 25px;
+        padding: var(--pad15) var(--pad25);
         height: 200px;
     }
     &.multi-post {
         height: 200px;
         background: var(--col2);
-        margin-bottom: 25px;
+        margin-bottom: var(--pad25);
         border-radius: var(--bor2);
         overflow: hidden;
         h2.post-title {
@@ -1077,7 +1078,7 @@ article {
         }
         &.postarama {
             height: 350px;
-            margin: -25px -25px 25px;
+            margin: calc(var(--pad25) * -1) calc(var(--pad25) * -1) var(--pad25);
             border-radius: @bor_atas;
             .postaleft {
                 width: 350px;
@@ -1118,7 +1119,7 @@ article {
 
     &.post-item {
         .blowimg {
-            margin: -25px 0 10px -25px;
+            margin: calc(var(--pad25) * -1) 0 var(--pad10) calc(var(--pad25) * -1);
             img {
                 border-radius: @bor_atas;
             }
@@ -1134,7 +1135,7 @@ article {
         }
         .post-footer {
             background: var(--col2);
-            padding: 25px;
+            padding: var(--pad25);
             margin: 40px 0;
             border-radius: var(--bor);
         }
@@ -1166,15 +1167,15 @@ article {
 					}
 				}
 				#budbread-crumb {
-					left: 25px;
+					left: var(--pad25);
 				}
 				h1.post-title.entry-title {
-					padding: 15px 25px 0;
+					padding: var(--pad15) var(--pad25) 0;
 					background: var(--col1);
 					font-size: 2.5em;
 				}
 				.post-infohead {
-					padding: 15px 25px 25px;
+					padding: var(--pad15) var(--pad25) var(--pad25);
 					background: var(--col1);
 					border-radius: 0 0 var(--bor) var(--bor);
 				}
@@ -1185,7 +1186,7 @@ article {
 				background: var(--col1);
 				border-radius: var(--bor);
 				.narasi-gambar {
-					padding: 25px;
+					padding: var(--pad25);
 				}
 				.post-body {
 					padding: 0 50px 0 0;
