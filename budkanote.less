@@ -26,6 +26,11 @@
     --wl: 800px;
     --ws: 600px;
     --wxs: 400px;
+    --wxxs: 300px;
+	--pad5: 5px;
+	--pad10: 10px;
+	--pad15: 15px;
+	--pad25: 25px;
 }
 * {
     -webkit-box-sizing: border-box;
@@ -183,9 +188,9 @@ select,
 textarea {
     display: inline-block;
     vertical-align: middle;
-    width: 200px;
+    width: 100%;
     margin: 1px 0;
-    padding: 15px 25px;
+    padding: var(--pad15) var(--pad25);
     font: normal normal 11pt / normal "lato", sans-serif;
     color: var(--col8);
     line-height: normal;
@@ -491,7 +496,7 @@ nav {
 [class*="bit-"],
 [class*="grid-"] {
     float: left;
-    padding: 10px;
+    padding: var(--pad10);
 }
 each(range(12), {
   .bit-@{value} {
@@ -504,8 +509,8 @@ each(range(12), {
   }
 });
 span.info {
-    padding: 25px 25px 25px 75px;
-    margin: 20px 0;
+    padding: var(--pad25) var(--pad25) var(--pad25) calc(3 * var(--pad25));
+    margin: var(--pad20) 0;
     display: block;
     background: var(--col2);
     border-radius: var(--bor);
@@ -515,11 +520,11 @@ span.info {
         font: var(--fa-font-solid);
         content: "\f05a";
         position: absolute;
-        left: 25px;
-        top: 25px;
-        width: 25px;
+        left: var(--pad25);
+        top: var(--pad25);
+        width: var(--pad25);
         text-align: center;
-        line-height: 25px;
+        line-height: var(--pad25);
         font-size: 16pt;
     }
     &.bahaya,
@@ -549,7 +554,7 @@ span.info {
     }
 }
 .btn-group {
-    padding: 15px 0 0;
+    padding: var(--pad15) 0 0;
     display: flex;
     margin: 0;
     justify-content: flex-start;
@@ -563,7 +568,7 @@ span.info {
     }
     a {
         display: inline-block;
-        padding: 10px 25px;
+        padding: var(--pad10) var(--pad25);
         background: var(--acn1);
         color: var(--col8);
         &:hover {
@@ -591,7 +596,7 @@ span.spacing {
     .buderror {
 		width: 400px;
 		height: 350px;
-		padding: 35px;
+		padding: calc(var(--pad25) + var(--pad10));
 		background: var(--col1);
 		border-radius: var(--bor);
 		position: absolute;
@@ -602,7 +607,7 @@ span.spacing {
 }
 #outer-wrapper {
     width: var(--wxl);
-    margin: 80px auto 100px;
+    margin: calc(3 * var(--pad25)) auto calc(4 * var(--pad25));
     #bud-home & {
         background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqnaXwN76ktjOvm8Rt_dQv8Zz4Ew-nsGXtsG61cr72-WZiim4rYjYap_B4ZQJFRf1K5ae0ZGtGKv0UJupqCk6_LdnAjDdyzpLEsh_WQncJsVST8ERNQe_ak3uvNfKcqF2GX6LDdogv_Ng8-7kaxW45LHBcYejDEi17csNNNL6mcObjxGg7AfQQYCmIfQ/s1200/CHANNEL%20COVER.jpg)
             no-repeat center center;
@@ -614,9 +619,9 @@ span.spacing {
 }
 #above-wrapper {
     background: var(--col1);
-    padding: 25px;
+    padding: var(--pad25);
     border-radius: var(--bor);
-    margin-bottom: 50px;
+    margin-bottom: calc(2 * var(--pad25));
     overflow: hidden;
     position: relative;
     top: -10px;
@@ -2780,6 +2785,9 @@ article {
 }
 
 @media screen and (max-width: 610px) {
+	body {
+		font-size: 9pt;
+	}
     #outer-wrapper {
         width: var(--wxs);
     }
@@ -3057,4 +3065,14 @@ article {
 	.laman-kategori #Label1 .btn-group.lin-ver a {
 		padding: 10px 15px;
 	}
+}
+
+
+@media screen and (max-width: 410px) {
+	body {
+		font-size: 9pt;
+	}
+    #outer-wrapper {
+        width: var(--wxxs);
+    }
 }
