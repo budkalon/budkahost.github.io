@@ -2003,6 +2003,7 @@ article.post-static_page .post-body {
   color: var(--col6);
   padding: 15px;
   margin: 0;
+  word-break: break-word;
 }
 .comment-footer {
   background: var(--col3);
@@ -3332,6 +3333,10 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     height: 580px;
     margin: -15px -15px 15px;
   }
+  .laman-kategori .laman-kategori article.multi-post,
+  .laman-kategori article.multi-post {
+    height: 400px;
+  }
   .laman-kategori .laman-kategori article.multi-post.postarama .postaleft,
   .laman-kategori article.multi-post.postarama .postaleft {
     width: 300px;
@@ -3351,10 +3356,6 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     height: 120px;
     line-height: 20px;
     bottom: 20px;
-  }
-  .laman-kategori .laman-kategori article.multi-post,
-  .laman-kategori article.multi-post {
-    height: 400px;
   }
   .laman-kategori .laman-kategori article.multi-post .postaleft,
   .laman-kategori article.multi-post .postaleft {
@@ -3543,6 +3544,16 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   .bud-single #to-top:hover {
     bottom: 0;
     background: var(--col5);
+  }
+  #bud-label .blog-posts.hfeed,
+  #bud-pencarian .blog-posts.hfeed,
+  #bud-arsip .blog-posts.hfeed {
+    padding: 15px;
+  }
+  #bud-label article .postaright,
+  #bud-pencarian article .postaright,
+  #bud-arsip article .postaright {
+    padding: 15px;
   }
   #footer-wrapper {
     padding: 15px;

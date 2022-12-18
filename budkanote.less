@@ -1956,6 +1956,7 @@ article {
         color: var(--col6);
         padding: 15px;
         margin: 0;
+		word-break: break-word;
     }
     &ment-footer {
         background: var(--col3);
@@ -3129,26 +3130,26 @@ article {
 				}
 			}
 			.laman-kategori &, & {
-				&.multi-post.postarama {
-					.postaleft {
-						width: 300px;
-						height: 270px;
-						img {
-							margin-top: 0;
-						}
-					}
-					.postaright {
-						width: 300px;
-						font-size: 10pt;
-						.post-footer {
-							height: 120px;
-							line-height: 20px;
-							bottom: 20px;
-						}
-					}
-				} 
-				&.multi-post {
+				&.multi-post{
 					height: 400px;
+					&.postarama {
+						.postaleft {
+							width: 300px;
+							height: 270px;
+							img {
+								margin-top: 0;
+							}
+						}
+						.postaright {
+							width: 300px;
+							font-size: 10pt;
+							.post-footer {
+								height: 120px;
+								line-height: 20px;
+								bottom: 20px;
+							}
+						}
+					} 
 					.postaleft {
 						width: 270px;
 						height: 150px;
@@ -3187,9 +3188,8 @@ article {
 							}
 						} 
 					}
-				} 
+				}
 			}
-			
 		}
 	}
 	.bud-single {
@@ -3314,6 +3314,14 @@ article {
 			}
 		}
 	}
+	#bud-label, #bud-pencarian, #bud-arsip {
+		.blog-posts.hfeed {
+			padding: 15px;
+		}
+		article .postaright {
+			padding: 15px;
+		}
+	} 
 	#footer-wrapper {
 		padding: 15px;
 		font-size: 8pt;
