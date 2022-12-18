@@ -1168,6 +1168,7 @@ article.post-item .blowimg {
 }
 article.post-item .blowimg img {
   border-radius: var(--bor) var(--bor) 0 0;
+  width: 100%;
 }
 article.post-item.single-post h1.post-title.entry-title {
   padding: 0 100px;
@@ -3403,6 +3404,137 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   .laman-kategori .laman-kategori article.multi-post .postaright .post-footer .jump-link span,
   .laman-kategori article.multi-post .postaright .post-footer .jump-link span {
     display: none;
+  }
+  .bud-single #above-wrapper {
+    margin-bottom: 65px;
+  }
+  .bud-single article {
+    padding: 15px;
+  }
+  .bud-single article.post-item .blowimg {
+    margin: -15px 0 10px -15px;
+    width: calc(100% + 30px);
+  }
+  .bud-single article.post-item .blowimg img {
+    border-radius: var(--bor) var(--bor) 0 0;
+    width: 100%;
+  }
+  .bud-single article.post-item.single-post h1.post-title.entry-title {
+    font-size: 2.5em;
+  }
+  .bud-single article.post-item.single-post[data-template] .post-infohead > span {
+    padding: 5px 0;
+  }
+  .bud-single article.post-item.single-post[data-template] #posnya-relatedan ul li {
+    display: inline-block;
+  }
+  .bud-single article.post-item.single-post[data-template] .author-profile {
+    margin: 0 -15px -15px;
+    padding: 15px;
+  }
+  .bud-single article.post-item.single-post[data-template] .author-profile .prodesc {
+    width: 240px;
+    padding: 15px 5px 15px;
+  }
+  .bud-single article.post-item.single-post .comcon {
+    width: 270px;
+  }
+  .bud-single article.post-item.single-post .comcon .replies1 .comcon,
+  .bud-single article.post-item.single-post .comcon .replies1 .comcon .comup {
+    width: 260px;
+  }
+  .bud-single article.post-item.single-post .comcon .replies2 .comcon,
+  .bud-single article.post-item.single-post .comcon .replies2 .comcon .comup {
+    width: 250px;
+  }
+  .bud-single article.post-item.single-post .comcon .replies3 .comcon,
+  .bud-single article.post-item.single-post .comcon .replies3 .comcon .comup {
+    width: 240px;
+  }
+  .bud-single article.post-item.single-post .comcon .replies4 .comcon,
+  .bud-single article.post-item.single-post .comcon .replies4 .comcon .comup {
+    width: 230px;
+  }
+  .bud-single article.post-item.single-post .comcon .replies5 .comcon,
+  .bud-single article.post-item.single-post .comcon .replies5 .comcon .comup {
+    width: 220px;
+  }
+  .bud-single article.post-item.single-post .comcon .replies6 .comcon,
+  .bud-single article.post-item.single-post .comcon .replies6 .comcon .comup {
+    width: 210px;
+  }
+  .bud-single article.post-item.single-post .comcon .replies7 .comcon,
+  .bud-single article.post-item.single-post .comcon .replies7 .comcon .comup {
+    width: 200px;
+  }
+  .bud-single article.post-item.single-post .comcon .replies8 .comcon,
+  .bud-single article.post-item.single-post .comcon .replies8 .comcon .comup {
+    width: 190px;
+  }
+  .bud-single article #budbread-crumb {
+    padding: 15px 10px;
+    top: -60px;
+    left: 0;
+    right: 0;
+    font-size: 8pt;
+  }
+  .bud-single article #budbread-crumb [class*="fa-"] {
+    margin: 0 3px;
+  }
+  .bud-single article #budshares {
+    margin: -15px -15px 10px;
+  }
+  .bud-single article #budshares > * {
+    width: 100%;
+  }
+  .bud-single article #budshares #st-1 .st-btnst-last {
+    border-radius: 0 var(--bor) 0 0 !important;
+  }
+  .bud-single article #budshort {
+    border-radius: 0;
+  }
+  .bud-single article #budkategori {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .bud-single article .smallhid {
+    display: none;
+  }
+  .bud-single #blog-pager span {
+    top: calc(100vh - 50px);
+    height: 50px;
+    padding: 0;
+    font-size: 18pt;
+    line-height: 50px;
+    border-radius: 0;
+    text-align: center;
+    width: 80px;
+  }
+  .bud-single #blog-pager span#blog-pager-older-link {
+    right: 0;
+    border-radius: 0;
+  }
+  .bud-single #blog-pager span#blog-pager-newer-link {
+    left: 0;
+    border-radius: 0;
+  }
+  .bud-single #to-top {
+    position: fixed;
+    right: 80px;
+    bottom: 0;
+    padding: 25px 10px;
+    background: var(--col4);
+    color: var(--acn2);
+    font-size: 24pt;
+    border-radius: 0;
+    z-index: 9999;
+    left: 80px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .bud-single #to-top:hover {
+    bottom: 0;
   }
   #footer-wrapper {
     padding: 15px;

@@ -1122,6 +1122,7 @@ article {
             margin: calc(var(--pad25) * -1) 0 var(--pad10) calc(var(--pad25) * -1);
             img {
                 border-radius: @bor_atas;
+				width: 100%;
             }
         }
 		&.single-post {
@@ -3189,6 +3190,118 @@ article {
 				} 
 			}
 			
+		}
+	}
+	.bud-single {
+		#above-wrapper {
+		  margin-bottom: 65px;
+		}
+		article {
+			padding: 15px;
+			&.post-item {
+				.blowimg {
+					margin: -15px 0 10px -15px;
+					width: calc(100% + 30px);
+					img {
+						border-radius: var(--bor) var(--bor) 0 0;
+						width: 100%;
+					}
+				}
+				&.single-post {
+					h1.post-title.entry-title {
+					  font-size: 2.5em;
+					}
+					&[data-template] {
+						.post-infohead > span {
+						  padding: 5px 0;
+						}
+						#posnya-relatedan ul li {
+						  display: inline-block;
+						}
+						.author-profile {
+						    margin: 0 -15px -15px;
+						    padding: 15px;
+							.prodesc {
+							    width: 240px;
+							    padding: 15px 5px 15px;
+							}
+						}
+					} 
+					 .comcon {
+					  width: 270px;
+						each(range(8), {
+						  .replies@{value} .comcon, .replies@{value} .comcon .comup {
+							width: (270px - (@value * 10px));
+						  }
+						});
+					}
+				} 
+			} 
+			#budbread-crumb {
+			  padding: 15px 10px;
+			  top: -60px;
+			  left: 0;
+			  right: 0;
+			  font-size: 8pt;
+				[class*="fa-"] {
+				  margin: 0 3px;
+				}
+			}
+			#budshares {
+				margin: -15px -15px 10px;
+				> * {
+				  width: 100%;
+				}
+				#st-1 .st-btnst-last {
+				  border-radius: 0 var(--bor) 0 0 !important;
+				}
+			} 
+			#budshort {
+			  border-radius: 0;
+			}
+			#budkategori {
+			  display: block;
+			  margin-bottom: 10px;
+			}
+			.smallhid {
+			  display: none;
+			}
+		}
+		#blog-pager span {
+		  top: calc(100vh - 50px);
+		  height: 50px;
+		  padding: 0;
+		  font-size: 18pt;
+		  line-height: 50px;
+		  border-radius: 0;
+		  text-align: center;
+		  width: 80px;
+			&#blog-pager-older-link {
+			  right: 0;
+			  border-radius: 0;
+			}
+			&#blog-pager-newer-link {
+			  left: 0;
+			  border-radius: 0;
+			}
+		}
+		#to-top {
+		  position: fixed;
+		  right: 80px;
+		  bottom: 0;
+		  padding: 25px 10px;
+		  background: var(--col4);
+		  color: var(--acn2);
+		  font-size: 24pt;
+		  border-radius: 0;
+		  z-index: 9999;
+		  left: 80px;
+		  height: 50px;
+		  line-height: 50px;
+		  text-align: center;
+			&:hover {
+			  bottom: 0;
+			}
 		}
 	}
 	#footer-wrapper {
