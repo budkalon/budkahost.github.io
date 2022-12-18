@@ -3436,6 +3436,9 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     width: 240px;
     padding: 15px 5px 15px;
   }
+  .bud-single article.post-item.single-post[data-template] .post-footer {
+    padding: 15px;
+  }
   .bud-single article.post-item.single-post .comcon {
     width: 270px;
   }
@@ -3504,7 +3507,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     padding: 0;
   }
   .bud-single #blog-pager span#blog-pager-newer-link,
-  .bud-single #blog-pager spanblog-pager-older-link {
+  .bud-single #blog-pager span#blog-pager-older-link {
     top: calc(100vh - 50px);
     height: 50px;
     padding: 0;
