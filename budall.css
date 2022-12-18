@@ -2984,7 +2984,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     text-align: left!important;
   }
 }
-@media screen and (max-width: 610px) and (min-width: 410px) {
+@media screen and (max-width: 610px) {
   body {
     font-size: 10pt;
   }
