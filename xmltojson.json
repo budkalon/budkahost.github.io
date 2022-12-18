@@ -1,0 +1,4781 @@
+{
+  "katareka": {
+    "data": {
+      "judul": "Warung Katareka",
+      "pencipta": {
+        "nama": "Dzulmar 'budkalon' Zetya",
+        "tautan": "https://budkalon.crd.co"
+      },
+      "pembaharuan": "Sunday, 11 Dec 2022, 12:31",
+      "tentang": "https://budkanote.blogspot.com/p/warung-katareka.html",
+      "senarai": {
+        "total": 9,
+        "nomina": 7,
+        "verba": 0,
+        "adjektiva": 1,
+        "lainnya": 1
+      }
+    },
+    "warung": {
+      "entri": [
+        {
+          "kode": "wk0001",
+          "lemma": "ciptabuana",
+          "kelas": "n",
+          "baku": false,
+          "topik": "sastra",
+          "penjelasan": "Hasil suatu kegiatan yang mengadakan bentuk dunia baru, biasanya digunakan sebagai latar cerita fiksi.",
+          "etimologi": "id &lt;strong&gt;cipta&lt;/strong&gt; \"membuat, me-reka\" + id &lt;strong&gt;buana&lt;/strong&gt; \"dunia\"",
+          "contoh": "&lt;strong&gt;Ciptabuana&lt;/strong&gt; kisah One Piece sangat menarik"
+        },
+        {
+          "kode": "wk0002",
+          "lemma": "latanusa",
+          "kelas": "n",
+          "baku": false,
+          "topik": "geografi",
+          "penjelasan": "Kepulauan; deretan pulau-pulau yang bergugusan pada area yang sangat luas."
+        },
+        {
+          "kode": "wk0003",
+          "lemma": "suralih",
+          "kelas": "adj",
+          "baku": false,
+          "topik": "psikologi",
+          "penjelasan": "peralihan."
+        },
+        {
+          "kode": "wk0004",
+          "lemma": "toraya",
+          "kelas": "n",
+          "baku": false,
+          "topik": "antropologi",
+          "penjelasan": "makhluk berukuran besar; raksasa."
+        },
+        {
+          "kode": "wk0005",
+          "lemma": "basareka",
+          "kelas": "n",
+          "baku": false,
+          "topik": "sastra",
+          "penjelasan": "bahasa buatan yang diciptakan sebagai sarana ekspresi, sandi, atau pembantu dalam sebuah ciptabuana atau bahasa multinasional."
+        },
+        {
+          "kode": "wk0006",
+          "lemma": "cakraistiwa",
+          "kelas": "n",
+          "baku": false,
+          "topik": "astronomi",
+          "penjelasan": "Area di sekitar lubang hitam, yang peristiwa di dalamnya takmampu menjangkau pengamat."
+        },
+        {
+          "kode": "wk0007",
+          "lemma": "pecakur",
+          "kelas": "n",
+          "baku": false,
+          "topik": "matematika",
+          "penjelasan": "matra. Jumlah sumbu dna sebagainya."
+        },
+        {
+          "kode": "wk0008",
+          "lemma": "angrum",
+          "kelas": "n",
+          "baku": false,
+          "topik": "psikologi",
+          "penjelasan": "Aroma yang biasa tercium ketika hujan datang."
+        },
+        {
+          "kode": "wk0009",
+          "lemma": "&lt;hV&gt;",
+          "kelas": "dll",
+          "baku": false,
+          "penjelasan": "sebuah sisipan untuk memperhalus makna sebuah kata",
+          "contoh": "tidak usah &lt;strong&gt;su&lt;hu&gt;ngkan&lt;/strong&gt;"
+        },
+        {
+          "kode": "wk0010"
+        },
+        {
+          "kode": "wk0011"
+        },
+        {
+          "kode": "wk0012"
+        },
+        {
+          "kode": "wk0013"
+        },
+        {
+          "kode": "wk0014"
+        },
+        {
+          "kode": "wk0015"
+        },
+        {
+          "kode": "wk0016"
+        },
+        {
+          "kode": "wk0017"
+        },
+        {
+          "kode": "wk0018"
+        },
+        {
+          "kode": "wk0019"
+        },
+        {
+          "kode": "wk0020"
+        },
+        {
+          "kode": "wk0021"
+        },
+        {
+          "kode": "wk0022"
+        },
+        {
+          "kode": "wk0023"
+        },
+        {
+          "kode": "wk0024"
+        },
+        {
+          "kode": "wk0025"
+        },
+        {
+          "kode": "wk0026"
+        },
+        {
+          "kode": "wk0027"
+        },
+        {
+          "kode": "wk0028"
+        },
+        {
+          "kode": "wk0029"
+        },
+        {
+          "kode": "wk0030"
+        },
+        {
+          "kode": "wk0031"
+        },
+        {
+          "kode": "wk0032"
+        },
+        {
+          "kode": "wk0033"
+        },
+        {
+          "kode": "wk0034"
+        },
+        {
+          "kode": "wk0035"
+        },
+        {
+          "kode": "wk0036"
+        },
+        {
+          "kode": "wk0037"
+        },
+        {
+          "kode": "wk0038"
+        },
+        {
+          "kode": "wk0039"
+        },
+        {
+          "kode": "wk0040"
+        },
+        {
+          "kode": "wk0041"
+        },
+        {
+          "kode": "wk0042"
+        },
+        {
+          "kode": "wk0043"
+        },
+        {
+          "kode": "wk0044"
+        },
+        {
+          "kode": "wk0045"
+        },
+        {
+          "kode": "wk0046"
+        },
+        {
+          "kode": "wk0047"
+        },
+        {
+          "kode": "wk0048"
+        },
+        {
+          "kode": "wk0049"
+        },
+        {
+          "kode": "wk0050"
+        },
+        {
+          "kode": "wk0051"
+        },
+        {
+          "kode": "wk0052"
+        },
+        {
+          "kode": "wk0053"
+        },
+        {
+          "kode": "wk0054"
+        },
+        {
+          "kode": "wk0055"
+        },
+        {
+          "kode": "wk0056"
+        },
+        {
+          "kode": "wk0057"
+        },
+        {
+          "kode": "wk0058"
+        },
+        {
+          "kode": "wk0059"
+        },
+        {
+          "kode": "wk0060"
+        },
+        {
+          "kode": "wk0061"
+        },
+        {
+          "kode": "wk0062"
+        },
+        {
+          "kode": "wk0063"
+        },
+        {
+          "kode": "wk0064"
+        },
+        {
+          "kode": "wk0065"
+        },
+        {
+          "kode": "wk0066"
+        },
+        {
+          "kode": "wk0067"
+        },
+        {
+          "kode": "wk0068"
+        },
+        {
+          "kode": "wk0069"
+        },
+        {
+          "kode": "wk0070"
+        },
+        {
+          "kode": "wk0071"
+        },
+        {
+          "kode": "wk0072"
+        },
+        {
+          "kode": "wk0073"
+        },
+        {
+          "kode": "wk0074"
+        },
+        {
+          "kode": "wk0075"
+        },
+        {
+          "kode": "wk0076"
+        },
+        {
+          "kode": "wk0077"
+        },
+        {
+          "kode": "wk0078"
+        },
+        {
+          "kode": "wk0079"
+        },
+        {
+          "kode": "wk0080"
+        },
+        {
+          "kode": "wk0081"
+        },
+        {
+          "kode": "wk0082"
+        },
+        {
+          "kode": "wk0083"
+        },
+        {
+          "kode": "wk0084"
+        },
+        {
+          "kode": "wk0085"
+        },
+        {
+          "kode": "wk0086"
+        },
+        {
+          "kode": "wk0087"
+        },
+        {
+          "kode": "wk0088"
+        },
+        {
+          "kode": "wk0089"
+        },
+        {
+          "kode": "wk0090"
+        },
+        {
+          "kode": "wk0091"
+        },
+        {
+          "kode": "wk0092"
+        },
+        {
+          "kode": "wk0093"
+        },
+        {
+          "kode": "wk0094"
+        },
+        {
+          "kode": "wk0095"
+        },
+        {
+          "kode": "wk0096"
+        },
+        {
+          "kode": "wk0097"
+        },
+        {
+          "kode": "wk0098"
+        },
+        {
+          "kode": "wk0099"
+        },
+        {
+          "kode": "wk0100"
+        },
+        {
+          "kode": "wk0101"
+        },
+        {
+          "kode": "wk0102"
+        },
+        {
+          "kode": "wk0103"
+        },
+        {
+          "kode": "wk0104"
+        },
+        {
+          "kode": "wk0105"
+        },
+        {
+          "kode": "wk0106"
+        },
+        {
+          "kode": "wk0107"
+        },
+        {
+          "kode": "wk0108"
+        },
+        {
+          "kode": "wk0109"
+        },
+        {
+          "kode": "wk0110"
+        },
+        {
+          "kode": "wk0111"
+        },
+        {
+          "kode": "wk0112"
+        },
+        {
+          "kode": "wk0113"
+        },
+        {
+          "kode": "wk0114"
+        },
+        {
+          "kode": "wk0115"
+        },
+        {
+          "kode": "wk0116"
+        },
+        {
+          "kode": "wk0117"
+        },
+        {
+          "kode": "wk0118"
+        },
+        {
+          "kode": "wk0119"
+        },
+        {
+          "kode": "wk0120"
+        },
+        {
+          "kode": "wk0121"
+        },
+        {
+          "kode": "wk0122"
+        },
+        {
+          "kode": "wk0123"
+        },
+        {
+          "kode": "wk0124"
+        },
+        {
+          "kode": "wk0125"
+        },
+        {
+          "kode": "wk0126"
+        },
+        {
+          "kode": "wk0127"
+        },
+        {
+          "kode": "wk0128"
+        },
+        {
+          "kode": "wk0129"
+        },
+        {
+          "kode": "wk0130"
+        },
+        {
+          "kode": "wk0131"
+        },
+        {
+          "kode": "wk0132"
+        },
+        {
+          "kode": "wk0133"
+        },
+        {
+          "kode": "wk0134"
+        },
+        {
+          "kode": "wk0135"
+        },
+        {
+          "kode": "wk0136"
+        },
+        {
+          "kode": "wk0137"
+        },
+        {
+          "kode": "wk0138"
+        },
+        {
+          "kode": "wk0139"
+        },
+        {
+          "kode": "wk0140"
+        },
+        {
+          "kode": "wk0141"
+        },
+        {
+          "kode": "wk0142"
+        },
+        {
+          "kode": "wk0143"
+        },
+        {
+          "kode": "wk0144"
+        },
+        {
+          "kode": "wk0145"
+        },
+        {
+          "kode": "wk0146"
+        },
+        {
+          "kode": "wk0147"
+        },
+        {
+          "kode": "wk0148"
+        },
+        {
+          "kode": "wk0149"
+        },
+        {
+          "kode": "wk0150"
+        },
+        {
+          "kode": "wk0151"
+        },
+        {
+          "kode": "wk0152"
+        },
+        {
+          "kode": "wk0153"
+        },
+        {
+          "kode": "wk0154"
+        },
+        {
+          "kode": "wk0155"
+        },
+        {
+          "kode": "wk0156"
+        },
+        {
+          "kode": "wk0157"
+        },
+        {
+          "kode": "wk0158"
+        },
+        {
+          "kode": "wk0159"
+        },
+        {
+          "kode": "wk0160"
+        },
+        {
+          "kode": "wk0161"
+        },
+        {
+          "kode": "wk0162"
+        },
+        {
+          "kode": "wk0163"
+        },
+        {
+          "kode": "wk0164"
+        },
+        {
+          "kode": "wk0165"
+        },
+        {
+          "kode": "wk0166"
+        },
+        {
+          "kode": "wk0167"
+        },
+        {
+          "kode": "wk0168"
+        },
+        {
+          "kode": "wk0169"
+        },
+        {
+          "kode": "wk0170"
+        },
+        {
+          "kode": "wk0171"
+        },
+        {
+          "kode": "wk0172"
+        },
+        {
+          "kode": "wk0173"
+        },
+        {
+          "kode": "wk0174"
+        },
+        {
+          "kode": "wk0175"
+        },
+        {
+          "kode": "wk0176"
+        },
+        {
+          "kode": "wk0177"
+        },
+        {
+          "kode": "wk0178"
+        },
+        {
+          "kode": "wk0179"
+        },
+        {
+          "kode": "wk0180"
+        },
+        {
+          "kode": "wk0181"
+        },
+        {
+          "kode": "wk0182"
+        },
+        {
+          "kode": "wk0183"
+        },
+        {
+          "kode": "wk0184"
+        },
+        {
+          "kode": "wk0185"
+        },
+        {
+          "kode": "wk0186"
+        },
+        {
+          "kode": "wk0187"
+        },
+        {
+          "kode": "wk0188"
+        },
+        {
+          "kode": "wk0189"
+        },
+        {
+          "kode": "wk0190"
+        },
+        {
+          "kode": "wk0191"
+        },
+        {
+          "kode": "wk0192"
+        },
+        {
+          "kode": "wk0193"
+        },
+        {
+          "kode": "wk0194"
+        },
+        {
+          "kode": "wk0195"
+        },
+        {
+          "kode": "wk0196"
+        },
+        {
+          "kode": "wk0197"
+        },
+        {
+          "kode": "wk0198"
+        },
+        {
+          "kode": "wk0199"
+        },
+        {
+          "kode": "wk0200"
+        },
+        {
+          "kode": "wk0201"
+        },
+        {
+          "kode": "wk0202"
+        },
+        {
+          "kode": "wk0203"
+        },
+        {
+          "kode": "wk0204"
+        },
+        {
+          "kode": "wk0205"
+        },
+        {
+          "kode": "wk0206"
+        },
+        {
+          "kode": "wk0207"
+        },
+        {
+          "kode": "wk0208"
+        },
+        {
+          "kode": "wk0209"
+        },
+        {
+          "kode": "wk0210"
+        },
+        {
+          "kode": "wk0211"
+        },
+        {
+          "kode": "wk0212"
+        },
+        {
+          "kode": "wk0213"
+        },
+        {
+          "kode": "wk0214"
+        },
+        {
+          "kode": "wk0215"
+        },
+        {
+          "kode": "wk0216"
+        },
+        {
+          "kode": "wk0217"
+        },
+        {
+          "kode": "wk0218"
+        },
+        {
+          "kode": "wk0219"
+        },
+        {
+          "kode": "wk0220"
+        },
+        {
+          "kode": "wk0221"
+        },
+        {
+          "kode": "wk0222"
+        },
+        {
+          "kode": "wk0223"
+        },
+        {
+          "kode": "wk0224"
+        },
+        {
+          "kode": "wk0225"
+        },
+        {
+          "kode": "wk0226"
+        },
+        {
+          "kode": "wk0227"
+        },
+        {
+          "kode": "wk0228"
+        },
+        {
+          "kode": "wk0229"
+        },
+        {
+          "kode": "wk0230"
+        },
+        {
+          "kode": "wk0231"
+        },
+        {
+          "kode": "wk0232"
+        },
+        {
+          "kode": "wk0233"
+        },
+        {
+          "kode": "wk0234"
+        },
+        {
+          "kode": "wk0235"
+        },
+        {
+          "kode": "wk0236"
+        },
+        {
+          "kode": "wk0237"
+        },
+        {
+          "kode": "wk0238"
+        },
+        {
+          "kode": "wk0239"
+        },
+        {
+          "kode": "wk0240"
+        },
+        {
+          "kode": "wk0241"
+        },
+        {
+          "kode": "wk0242"
+        },
+        {
+          "kode": "wk0243"
+        },
+        {
+          "kode": "wk0244"
+        },
+        {
+          "kode": "wk0245"
+        },
+        {
+          "kode": "wk0246"
+        },
+        {
+          "kode": "wk0247"
+        },
+        {
+          "kode": "wk0248"
+        },
+        {
+          "kode": "wk0249"
+        },
+        {
+          "kode": "wk0250"
+        },
+        {
+          "kode": "wk0251"
+        },
+        {
+          "kode": "wk0252"
+        },
+        {
+          "kode": "wk0253"
+        },
+        {
+          "kode": "wk0254"
+        },
+        {
+          "kode": "wk0255"
+        },
+        {
+          "kode": "wk0256"
+        },
+        {
+          "kode": "wk0257"
+        },
+        {
+          "kode": "wk0258"
+        },
+        {
+          "kode": "wk0259"
+        },
+        {
+          "kode": "wk0260"
+        },
+        {
+          "kode": "wk0261"
+        },
+        {
+          "kode": "wk0262"
+        },
+        {
+          "kode": "wk0263"
+        },
+        {
+          "kode": "wk0264"
+        },
+        {
+          "kode": "wk0265"
+        },
+        {
+          "kode": "wk0266"
+        },
+        {
+          "kode": "wk0267"
+        },
+        {
+          "kode": "wk0268"
+        },
+        {
+          "kode": "wk0269"
+        },
+        {
+          "kode": "wk0270"
+        },
+        {
+          "kode": "wk0271"
+        },
+        {
+          "kode": "wk0272"
+        },
+        {
+          "kode": "wk0273"
+        },
+        {
+          "kode": "wk0274"
+        },
+        {
+          "kode": "wk0275"
+        },
+        {
+          "kode": "wk0276"
+        },
+        {
+          "kode": "wk0277"
+        },
+        {
+          "kode": "wk0278"
+        },
+        {
+          "kode": "wk0279"
+        },
+        {
+          "kode": "wk0280"
+        },
+        {
+          "kode": "wk0281"
+        },
+        {
+          "kode": "wk0282"
+        },
+        {
+          "kode": "wk0283"
+        },
+        {
+          "kode": "wk0284"
+        },
+        {
+          "kode": "wk0285"
+        },
+        {
+          "kode": "wk0286"
+        },
+        {
+          "kode": "wk0287"
+        },
+        {
+          "kode": "wk0288"
+        },
+        {
+          "kode": "wk0289"
+        },
+        {
+          "kode": "wk0290"
+        },
+        {
+          "kode": "wk0291"
+        },
+        {
+          "kode": "wk0292"
+        },
+        {
+          "kode": "wk0293"
+        },
+        {
+          "kode": "wk0294"
+        },
+        {
+          "kode": "wk0295"
+        },
+        {
+          "kode": "wk0296"
+        },
+        {
+          "kode": "wk0297"
+        },
+        {
+          "kode": "wk0298"
+        },
+        {
+          "kode": "wk0299"
+        },
+        {
+          "kode": "wk0300"
+        },
+        {
+          "kode": "wk0301"
+        },
+        {
+          "kode": "wk0302"
+        },
+        {
+          "kode": "wk0303"
+        },
+        {
+          "kode": "wk0304"
+        },
+        {
+          "kode": "wk0305"
+        },
+        {
+          "kode": "wk0306"
+        },
+        {
+          "kode": "wk0307"
+        },
+        {
+          "kode": "wk0308"
+        },
+        {
+          "kode": "wk0309"
+        },
+        {
+          "kode": "wk0310"
+        },
+        {
+          "kode": "wk0311"
+        },
+        {
+          "kode": "wk0312"
+        },
+        {
+          "kode": "wk0313"
+        },
+        {
+          "kode": "wk0314"
+        },
+        {
+          "kode": "wk0315"
+        },
+        {
+          "kode": "wk0316"
+        },
+        {
+          "kode": "wk0317"
+        },
+        {
+          "kode": "wk0318"
+        },
+        {
+          "kode": "wk0319"
+        },
+        {
+          "kode": "wk0320"
+        },
+        {
+          "kode": "wk0321"
+        },
+        {
+          "kode": "wk0322"
+        },
+        {
+          "kode": "wk0323"
+        },
+        {
+          "kode": "wk0324"
+        },
+        {
+          "kode": "wk0325"
+        },
+        {
+          "kode": "wk0326"
+        },
+        {
+          "kode": "wk0327"
+        },
+        {
+          "kode": "wk0328"
+        },
+        {
+          "kode": "wk0329"
+        },
+        {
+          "kode": "wk0330"
+        },
+        {
+          "kode": "wk0331"
+        },
+        {
+          "kode": "wk0332"
+        },
+        {
+          "kode": "wk0333"
+        },
+        {
+          "kode": "wk0334"
+        },
+        {
+          "kode": "wk0335"
+        },
+        {
+          "kode": "wk0336"
+        },
+        {
+          "kode": "wk0337"
+        },
+        {
+          "kode": "wk0338"
+        },
+        {
+          "kode": "wk0339"
+        },
+        {
+          "kode": "wk0340"
+        },
+        {
+          "kode": "wk0341"
+        },
+        {
+          "kode": "wk0342"
+        },
+        {
+          "kode": "wk0343"
+        },
+        {
+          "kode": "wk0344"
+        },
+        {
+          "kode": "wk0345"
+        },
+        {
+          "kode": "wk0346"
+        },
+        {
+          "kode": "wk0347"
+        },
+        {
+          "kode": "wk0348"
+        },
+        {
+          "kode": "wk0349"
+        },
+        {
+          "kode": "wk0350"
+        },
+        {
+          "kode": "wk0351"
+        },
+        {
+          "kode": "wk0352"
+        },
+        {
+          "kode": "wk0353"
+        },
+        {
+          "kode": "wk0354"
+        },
+        {
+          "kode": "wk0355"
+        },
+        {
+          "kode": "wk0356"
+        },
+        {
+          "kode": "wk0357"
+        },
+        {
+          "kode": "wk0358"
+        },
+        {
+          "kode": "wk0359"
+        },
+        {
+          "kode": "wk0360"
+        },
+        {
+          "kode": "wk0361"
+        },
+        {
+          "kode": "wk0362"
+        },
+        {
+          "kode": "wk0363"
+        },
+        {
+          "kode": "wk0364"
+        },
+        {
+          "kode": "wk0365"
+        },
+        {
+          "kode": "wk0366"
+        },
+        {
+          "kode": "wk0367"
+        },
+        {
+          "kode": "wk0368"
+        },
+        {
+          "kode": "wk0369"
+        },
+        {
+          "kode": "wk0370"
+        },
+        {
+          "kode": "wk0371"
+        },
+        {
+          "kode": "wk0372"
+        },
+        {
+          "kode": "wk0373"
+        },
+        {
+          "kode": "wk0374"
+        },
+        {
+          "kode": "wk0375"
+        },
+        {
+          "kode": "wk0376"
+        },
+        {
+          "kode": "wk0377"
+        },
+        {
+          "kode": "wk0378"
+        },
+        {
+          "kode": "wk0379"
+        },
+        {
+          "kode": "wk0380"
+        },
+        {
+          "kode": "wk0381"
+        },
+        {
+          "kode": "wk0382"
+        },
+        {
+          "kode": "wk0383"
+        },
+        {
+          "kode": "wk0384"
+        },
+        {
+          "kode": "wk0385"
+        },
+        {
+          "kode": "wk0386"
+        },
+        {
+          "kode": "wk0387"
+        },
+        {
+          "kode": "wk0388"
+        },
+        {
+          "kode": "wk0389"
+        },
+        {
+          "kode": "wk0390"
+        },
+        {
+          "kode": "wk0391"
+        },
+        {
+          "kode": "wk0392"
+        },
+        {
+          "kode": "wk0393"
+        },
+        {
+          "kode": "wk0394"
+        },
+        {
+          "kode": "wk0395"
+        },
+        {
+          "kode": "wk0396"
+        },
+        {
+          "kode": "wk0397"
+        },
+        {
+          "kode": "wk0398"
+        },
+        {
+          "kode": "wk0399"
+        },
+        {
+          "kode": "wk0400"
+        },
+        {
+          "kode": "wk0401"
+        },
+        {
+          "kode": "wk0402"
+        },
+        {
+          "kode": "wk0403"
+        },
+        {
+          "kode": "wk0404"
+        },
+        {
+          "kode": "wk0405"
+        },
+        {
+          "kode": "wk0406"
+        },
+        {
+          "kode": "wk0407"
+        },
+        {
+          "kode": "wk0408"
+        },
+        {
+          "kode": "wk0409"
+        },
+        {
+          "kode": "wk0410"
+        },
+        {
+          "kode": "wk0411"
+        },
+        {
+          "kode": "wk0412"
+        },
+        {
+          "kode": "wk0413"
+        },
+        {
+          "kode": "wk0414"
+        },
+        {
+          "kode": "wk0415"
+        },
+        {
+          "kode": "wk0416"
+        },
+        {
+          "kode": "wk0417"
+        },
+        {
+          "kode": "wk0418"
+        },
+        {
+          "kode": "wk0419"
+        },
+        {
+          "kode": "wk0420"
+        },
+        {
+          "kode": "wk0421"
+        },
+        {
+          "kode": "wk0422"
+        },
+        {
+          "kode": "wk0423"
+        },
+        {
+          "kode": "wk0424"
+        },
+        {
+          "kode": "wk0425"
+        },
+        {
+          "kode": "wk0426"
+        },
+        {
+          "kode": "wk0427"
+        },
+        {
+          "kode": "wk0428"
+        },
+        {
+          "kode": "wk0429"
+        },
+        {
+          "kode": "wk0430"
+        },
+        {
+          "kode": "wk0431"
+        },
+        {
+          "kode": "wk0432"
+        },
+        {
+          "kode": "wk0433"
+        },
+        {
+          "kode": "wk0434"
+        },
+        {
+          "kode": "wk0435"
+        },
+        {
+          "kode": "wk0436"
+        },
+        {
+          "kode": "wk0437"
+        },
+        {
+          "kode": "wk0438"
+        },
+        {
+          "kode": "wk0439"
+        },
+        {
+          "kode": "wk0440"
+        },
+        {
+          "kode": "wk0441"
+        },
+        {
+          "kode": "wk0442"
+        },
+        {
+          "kode": "wk0443"
+        },
+        {
+          "kode": "wk0444"
+        },
+        {
+          "kode": "wk0445"
+        },
+        {
+          "kode": "wk0446"
+        },
+        {
+          "kode": "wk0447"
+        },
+        {
+          "kode": "wk0448"
+        },
+        {
+          "kode": "wk0449"
+        },
+        {
+          "kode": "wk0450"
+        },
+        {
+          "kode": "wk0451"
+        },
+        {
+          "kode": "wk0452"
+        },
+        {
+          "kode": "wk0453"
+        },
+        {
+          "kode": "wk0454"
+        },
+        {
+          "kode": "wk0455"
+        },
+        {
+          "kode": "wk0456"
+        },
+        {
+          "kode": "wk0457"
+        },
+        {
+          "kode": "wk0458"
+        },
+        {
+          "kode": "wk0459"
+        },
+        {
+          "kode": "wk0460"
+        },
+        {
+          "kode": "wk0461"
+        },
+        {
+          "kode": "wk0462"
+        },
+        {
+          "kode": "wk0463"
+        },
+        {
+          "kode": "wk0464"
+        },
+        {
+          "kode": "wk0465"
+        },
+        {
+          "kode": "wk0466"
+        },
+        {
+          "kode": "wk0467"
+        },
+        {
+          "kode": "wk0468"
+        },
+        {
+          "kode": "wk0469"
+        },
+        {
+          "kode": "wk0470"
+        },
+        {
+          "kode": "wk0471"
+        },
+        {
+          "kode": "wk0472"
+        },
+        {
+          "kode": "wk0473"
+        },
+        {
+          "kode": "wk0474"
+        },
+        {
+          "kode": "wk0475"
+        },
+        {
+          "kode": "wk0476"
+        },
+        {
+          "kode": "wk0477"
+        },
+        {
+          "kode": "wk0478"
+        },
+        {
+          "kode": "wk0479"
+        },
+        {
+          "kode": "wk0480"
+        },
+        {
+          "kode": "wk0481"
+        },
+        {
+          "kode": "wk0482"
+        },
+        {
+          "kode": "wk0483"
+        },
+        {
+          "kode": "wk0484"
+        },
+        {
+          "kode": "wk0485"
+        },
+        {
+          "kode": "wk0486"
+        },
+        {
+          "kode": "wk0487"
+        },
+        {
+          "kode": "wk0488"
+        },
+        {
+          "kode": "wk0489"
+        },
+        {
+          "kode": "wk0490"
+        },
+        {
+          "kode": "wk0491"
+        },
+        {
+          "kode": "wk0492"
+        },
+        {
+          "kode": "wk0493"
+        },
+        {
+          "kode": "wk0494"
+        },
+        {
+          "kode": "wk0495"
+        },
+        {
+          "kode": "wk0496"
+        },
+        {
+          "kode": "wk0497"
+        },
+        {
+          "kode": "wk0498"
+        },
+        {
+          "kode": "wk0499"
+        },
+        {
+          "kode": "wk0500"
+        },
+        {
+          "kode": "wk0501"
+        },
+        {
+          "kode": "wk0502"
+        },
+        {
+          "kode": "wk0503"
+        },
+        {
+          "kode": "wk0504"
+        },
+        {
+          "kode": "wk0505"
+        },
+        {
+          "kode": "wk0506"
+        },
+        {
+          "kode": "wk0507"
+        },
+        {
+          "kode": "wk0508"
+        },
+        {
+          "kode": "wk0509"
+        },
+        {
+          "kode": "wk0510"
+        },
+        {
+          "kode": "wk0511"
+        },
+        {
+          "kode": "wk0512"
+        },
+        {
+          "kode": "wk0513"
+        },
+        {
+          "kode": "wk0514"
+        },
+        {
+          "kode": "wk0515"
+        },
+        {
+          "kode": "wk0516"
+        },
+        {
+          "kode": "wk0517"
+        },
+        {
+          "kode": "wk0518"
+        },
+        {
+          "kode": "wk0519"
+        },
+        {
+          "kode": "wk0520"
+        },
+        {
+          "kode": "wk0521"
+        },
+        {
+          "kode": "wk0522"
+        },
+        {
+          "kode": "wk0523"
+        },
+        {
+          "kode": "wk0524"
+        },
+        {
+          "kode": "wk0525"
+        },
+        {
+          "kode": "wk0526"
+        },
+        {
+          "kode": "wk0527"
+        },
+        {
+          "kode": "wk0528"
+        },
+        {
+          "kode": "wk0529"
+        },
+        {
+          "kode": "wk0530"
+        },
+        {
+          "kode": "wk0531"
+        },
+        {
+          "kode": "wk0532"
+        },
+        {
+          "kode": "wk0533"
+        },
+        {
+          "kode": "wk0534"
+        },
+        {
+          "kode": "wk0535"
+        },
+        {
+          "kode": "wk0536"
+        },
+        {
+          "kode": "wk0537"
+        },
+        {
+          "kode": "wk0538"
+        },
+        {
+          "kode": "wk0539"
+        },
+        {
+          "kode": "wk0540"
+        },
+        {
+          "kode": "wk0541"
+        },
+        {
+          "kode": "wk0542"
+        },
+        {
+          "kode": "wk0543"
+        },
+        {
+          "kode": "wk0544"
+        },
+        {
+          "kode": "wk0545"
+        },
+        {
+          "kode": "wk0546"
+        },
+        {
+          "kode": "wk0547"
+        },
+        {
+          "kode": "wk0548"
+        },
+        {
+          "kode": "wk0549"
+        },
+        {
+          "kode": "wk0550"
+        },
+        {
+          "kode": "wk0551"
+        },
+        {
+          "kode": "wk0552"
+        },
+        {
+          "kode": "wk0553"
+        },
+        {
+          "kode": "wk0554"
+        },
+        {
+          "kode": "wk0555"
+        },
+        {
+          "kode": "wk0556"
+        },
+        {
+          "kode": "wk0557"
+        },
+        {
+          "kode": "wk0558"
+        },
+        {
+          "kode": "wk0559"
+        },
+        {
+          "kode": "wk0560"
+        },
+        {
+          "kode": "wk0561"
+        },
+        {
+          "kode": "wk0562"
+        },
+        {
+          "kode": "wk0563"
+        },
+        {
+          "kode": "wk0564"
+        },
+        {
+          "kode": "wk0565"
+        },
+        {
+          "kode": "wk0566"
+        },
+        {
+          "kode": "wk0567"
+        },
+        {
+          "kode": "wk0568"
+        },
+        {
+          "kode": "wk0569"
+        },
+        {
+          "kode": "wk0570"
+        },
+        {
+          "kode": "wk0571"
+        },
+        {
+          "kode": "wk0572"
+        },
+        {
+          "kode": "wk0573"
+        },
+        {
+          "kode": "wk0574"
+        },
+        {
+          "kode": "wk0575"
+        },
+        {
+          "kode": "wk0576"
+        },
+        {
+          "kode": "wk0577"
+        },
+        {
+          "kode": "wk0578"
+        },
+        {
+          "kode": "wk0579"
+        },
+        {
+          "kode": "wk0580"
+        },
+        {
+          "kode": "wk0581"
+        },
+        {
+          "kode": "wk0582"
+        },
+        {
+          "kode": "wk0583"
+        },
+        {
+          "kode": "wk0584"
+        },
+        {
+          "kode": "wk0585"
+        },
+        {
+          "kode": "wk0586"
+        },
+        {
+          "kode": "wk0587"
+        },
+        {
+          "kode": "wk0588"
+        },
+        {
+          "kode": "wk0589"
+        },
+        {
+          "kode": "wk0590"
+        },
+        {
+          "kode": "wk0591"
+        },
+        {
+          "kode": "wk0592"
+        },
+        {
+          "kode": "wk0593"
+        },
+        {
+          "kode": "wk0594"
+        },
+        {
+          "kode": "wk0595"
+        },
+        {
+          "kode": "wk0596"
+        },
+        {
+          "kode": "wk0597"
+        },
+        {
+          "kode": "wk0598"
+        },
+        {
+          "kode": "wk0599"
+        },
+        {
+          "kode": "wk0600"
+        },
+        {
+          "kode": "wk0601"
+        },
+        {
+          "kode": "wk0602"
+        },
+        {
+          "kode": "wk0603"
+        },
+        {
+          "kode": "wk0604"
+        },
+        {
+          "kode": "wk0605"
+        },
+        {
+          "kode": "wk0606"
+        },
+        {
+          "kode": "wk0607"
+        },
+        {
+          "kode": "wk0608"
+        },
+        {
+          "kode": "wk0609"
+        },
+        {
+          "kode": "wk0610"
+        },
+        {
+          "kode": "wk0611"
+        },
+        {
+          "kode": "wk0612"
+        },
+        {
+          "kode": "wk0613"
+        },
+        {
+          "kode": "wk0614"
+        },
+        {
+          "kode": "wk0615"
+        },
+        {
+          "kode": "wk0616"
+        },
+        {
+          "kode": "wk0617"
+        },
+        {
+          "kode": "wk0618"
+        },
+        {
+          "kode": "wk0619"
+        },
+        {
+          "kode": "wk0620"
+        },
+        {
+          "kode": "wk0621"
+        },
+        {
+          "kode": "wk0622"
+        },
+        {
+          "kode": "wk0623"
+        },
+        {
+          "kode": "wk0624"
+        },
+        {
+          "kode": "wk0625"
+        },
+        {
+          "kode": "wk0626"
+        },
+        {
+          "kode": "wk0627"
+        },
+        {
+          "kode": "wk0628"
+        },
+        {
+          "kode": "wk0629"
+        },
+        {
+          "kode": "wk0630"
+        },
+        {
+          "kode": "wk0631"
+        },
+        {
+          "kode": "wk0632"
+        },
+        {
+          "kode": "wk0633"
+        },
+        {
+          "kode": "wk0634"
+        },
+        {
+          "kode": "wk0635"
+        },
+        {
+          "kode": "wk0636"
+        },
+        {
+          "kode": "wk0637"
+        },
+        {
+          "kode": "wk0638"
+        },
+        {
+          "kode": "wk0639"
+        },
+        {
+          "kode": "wk0640"
+        },
+        {
+          "kode": "wk0641"
+        },
+        {
+          "kode": "wk0642"
+        },
+        {
+          "kode": "wk0643"
+        },
+        {
+          "kode": "wk0644"
+        },
+        {
+          "kode": "wk0645"
+        },
+        {
+          "kode": "wk0646"
+        },
+        {
+          "kode": "wk0647"
+        },
+        {
+          "kode": "wk0648"
+        },
+        {
+          "kode": "wk0649"
+        },
+        {
+          "kode": "wk0650"
+        },
+        {
+          "kode": "wk0651"
+        },
+        {
+          "kode": "wk0652"
+        },
+        {
+          "kode": "wk0653"
+        },
+        {
+          "kode": "wk0654"
+        },
+        {
+          "kode": "wk0655"
+        },
+        {
+          "kode": "wk0656"
+        },
+        {
+          "kode": "wk0657"
+        },
+        {
+          "kode": "wk0658"
+        },
+        {
+          "kode": "wk0659"
+        },
+        {
+          "kode": "wk0660"
+        },
+        {
+          "kode": "wk0661"
+        },
+        {
+          "kode": "wk0662"
+        },
+        {
+          "kode": "wk0663"
+        },
+        {
+          "kode": "wk0664"
+        },
+        {
+          "kode": "wk0665"
+        },
+        {
+          "kode": "wk0666"
+        },
+        {
+          "kode": "wk0667"
+        },
+        {
+          "kode": "wk0668"
+        },
+        {
+          "kode": "wk0669"
+        },
+        {
+          "kode": "wk0670"
+        },
+        {
+          "kode": "wk0671"
+        },
+        {
+          "kode": "wk0672"
+        },
+        {
+          "kode": "wk0673"
+        },
+        {
+          "kode": "wk0674"
+        },
+        {
+          "kode": "wk0675"
+        },
+        {
+          "kode": "wk0676"
+        },
+        {
+          "kode": "wk0677"
+        },
+        {
+          "kode": "wk0678"
+        },
+        {
+          "kode": "wk0679"
+        },
+        {
+          "kode": "wk0680"
+        },
+        {
+          "kode": "wk0681"
+        },
+        {
+          "kode": "wk0682"
+        },
+        {
+          "kode": "wk0683"
+        },
+        {
+          "kode": "wk0684"
+        },
+        {
+          "kode": "wk0685"
+        },
+        {
+          "kode": "wk0686"
+        },
+        {
+          "kode": "wk0687"
+        },
+        {
+          "kode": "wk0688"
+        },
+        {
+          "kode": "wk0689"
+        },
+        {
+          "kode": "wk0690"
+        },
+        {
+          "kode": "wk0691"
+        },
+        {
+          "kode": "wk0692"
+        },
+        {
+          "kode": "wk0693"
+        },
+        {
+          "kode": "wk0694"
+        },
+        {
+          "kode": "wk0695"
+        },
+        {
+          "kode": "wk0696"
+        },
+        {
+          "kode": "wk0697"
+        },
+        {
+          "kode": "wk0698"
+        },
+        {
+          "kode": "wk0699"
+        },
+        {
+          "kode": "wk0700"
+        },
+        {
+          "kode": "wk0701"
+        },
+        {
+          "kode": "wk0702"
+        },
+        {
+          "kode": "wk0703"
+        },
+        {
+          "kode": "wk0704"
+        },
+        {
+          "kode": "wk0705"
+        },
+        {
+          "kode": "wk0706"
+        },
+        {
+          "kode": "wk0707"
+        },
+        {
+          "kode": "wk0708"
+        },
+        {
+          "kode": "wk0709"
+        },
+        {
+          "kode": "wk0710"
+        },
+        {
+          "kode": "wk0711"
+        },
+        {
+          "kode": "wk0712"
+        },
+        {
+          "kode": "wk0713"
+        },
+        {
+          "kode": "wk0714"
+        },
+        {
+          "kode": "wk0715"
+        },
+        {
+          "kode": "wk0716"
+        },
+        {
+          "kode": "wk0717"
+        },
+        {
+          "kode": "wk0718"
+        },
+        {
+          "kode": "wk0719"
+        },
+        {
+          "kode": "wk0720"
+        },
+        {
+          "kode": "wk0721"
+        },
+        {
+          "kode": "wk0722"
+        },
+        {
+          "kode": "wk0723"
+        },
+        {
+          "kode": "wk0724"
+        },
+        {
+          "kode": "wk0725"
+        },
+        {
+          "kode": "wk0726"
+        },
+        {
+          "kode": "wk0727"
+        },
+        {
+          "kode": "wk0728"
+        },
+        {
+          "kode": "wk0729"
+        },
+        {
+          "kode": "wk0730"
+        },
+        {
+          "kode": "wk0731"
+        },
+        {
+          "kode": "wk0732"
+        },
+        {
+          "kode": "wk0733"
+        },
+        {
+          "kode": "wk0734"
+        },
+        {
+          "kode": "wk0735"
+        },
+        {
+          "kode": "wk0736"
+        },
+        {
+          "kode": "wk0737"
+        },
+        {
+          "kode": "wk0738"
+        },
+        {
+          "kode": "wk0739"
+        },
+        {
+          "kode": "wk0740"
+        },
+        {
+          "kode": "wk0741"
+        },
+        {
+          "kode": "wk0742"
+        },
+        {
+          "kode": "wk0743"
+        },
+        {
+          "kode": "wk0744"
+        },
+        {
+          "kode": "wk0745"
+        },
+        {
+          "kode": "wk0746"
+        },
+        {
+          "kode": "wk0747"
+        },
+        {
+          "kode": "wk0748"
+        },
+        {
+          "kode": "wk0749"
+        },
+        {
+          "kode": "wk0750"
+        },
+        {
+          "kode": "wk0751"
+        },
+        {
+          "kode": "wk0752"
+        },
+        {
+          "kode": "wk0753"
+        },
+        {
+          "kode": "wk0754"
+        },
+        {
+          "kode": "wk0755"
+        },
+        {
+          "kode": "wk0756"
+        },
+        {
+          "kode": "wk0757"
+        },
+        {
+          "kode": "wk0758"
+        },
+        {
+          "kode": "wk0759"
+        },
+        {
+          "kode": "wk0760"
+        },
+        {
+          "kode": "wk0761"
+        },
+        {
+          "kode": "wk0762"
+        },
+        {
+          "kode": "wk0763"
+        },
+        {
+          "kode": "wk0764"
+        },
+        {
+          "kode": "wk0765"
+        },
+        {
+          "kode": "wk0766"
+        },
+        {
+          "kode": "wk0767"
+        },
+        {
+          "kode": "wk0768"
+        },
+        {
+          "kode": "wk0769"
+        },
+        {
+          "kode": "wk0770"
+        },
+        {
+          "kode": "wk0771"
+        },
+        {
+          "kode": "wk0772"
+        },
+        {
+          "kode": "wk0773"
+        },
+        {
+          "kode": "wk0774"
+        },
+        {
+          "kode": "wk0775"
+        },
+        {
+          "kode": "wk0776"
+        },
+        {
+          "kode": "wk0777"
+        },
+        {
+          "kode": "wk0778"
+        },
+        {
+          "kode": "wk0779"
+        },
+        {
+          "kode": "wk0780"
+        },
+        {
+          "kode": "wk0781"
+        },
+        {
+          "kode": "wk0782"
+        },
+        {
+          "kode": "wk0783"
+        },
+        {
+          "kode": "wk0784"
+        },
+        {
+          "kode": "wk0785"
+        },
+        {
+          "kode": "wk0786"
+        },
+        {
+          "kode": "wk0787"
+        },
+        {
+          "kode": "wk0788"
+        },
+        {
+          "kode": "wk0789"
+        },
+        {
+          "kode": "wk0790"
+        },
+        {
+          "kode": "wk0791"
+        },
+        {
+          "kode": "wk0792"
+        },
+        {
+          "kode": "wk0793"
+        },
+        {
+          "kode": "wk0794"
+        },
+        {
+          "kode": "wk0795"
+        },
+        {
+          "kode": "wk0796"
+        },
+        {
+          "kode": "wk0797"
+        },
+        {
+          "kode": "wk0798"
+        },
+        {
+          "kode": "wk0799"
+        },
+        {
+          "kode": "wk0800"
+        },
+        {
+          "kode": "wk0801"
+        },
+        {
+          "kode": "wk0802"
+        },
+        {
+          "kode": "wk0803"
+        },
+        {
+          "kode": "wk0804"
+        },
+        {
+          "kode": "wk0805"
+        },
+        {
+          "kode": "wk0806"
+        },
+        {
+          "kode": "wk0807"
+        },
+        {
+          "kode": "wk0808"
+        },
+        {
+          "kode": "wk0809"
+        },
+        {
+          "kode": "wk0810"
+        },
+        {
+          "kode": "wk0811"
+        },
+        {
+          "kode": "wk0812"
+        },
+        {
+          "kode": "wk0813"
+        },
+        {
+          "kode": "wk0814"
+        },
+        {
+          "kode": "wk0815"
+        },
+        {
+          "kode": "wk0816"
+        },
+        {
+          "kode": "wk0817"
+        },
+        {
+          "kode": "wk0818"
+        },
+        {
+          "kode": "wk0819"
+        },
+        {
+          "kode": "wk0820"
+        },
+        {
+          "kode": "wk0821"
+        },
+        {
+          "kode": "wk0822"
+        },
+        {
+          "kode": "wk0823"
+        },
+        {
+          "kode": "wk0824"
+        },
+        {
+          "kode": "wk0825"
+        },
+        {
+          "kode": "wk0826"
+        },
+        {
+          "kode": "wk0827"
+        },
+        {
+          "kode": "wk0828"
+        },
+        {
+          "kode": "wk0829"
+        },
+        {
+          "kode": "wk0830"
+        },
+        {
+          "kode": "wk0831"
+        },
+        {
+          "kode": "wk0832"
+        },
+        {
+          "kode": "wk0833"
+        },
+        {
+          "kode": "wk0834"
+        },
+        {
+          "kode": "wk0835"
+        },
+        {
+          "kode": "wk0836"
+        },
+        {
+          "kode": "wk0837"
+        },
+        {
+          "kode": "wk0838"
+        },
+        {
+          "kode": "wk0839"
+        },
+        {
+          "kode": "wk0840"
+        },
+        {
+          "kode": "wk0841"
+        },
+        {
+          "kode": "wk0842"
+        },
+        {
+          "kode": "wk0843"
+        },
+        {
+          "kode": "wk0844"
+        },
+        {
+          "kode": "wk0845"
+        },
+        {
+          "kode": "wk0846"
+        },
+        {
+          "kode": "wk0847"
+        },
+        {
+          "kode": "wk0848"
+        },
+        {
+          "kode": "wk0849"
+        },
+        {
+          "kode": "wk0850"
+        },
+        {
+          "kode": "wk0851"
+        },
+        {
+          "kode": "wk0852"
+        },
+        {
+          "kode": "wk0853"
+        },
+        {
+          "kode": "wk0854"
+        },
+        {
+          "kode": "wk0855"
+        },
+        {
+          "kode": "wk0856"
+        },
+        {
+          "kode": "wk0857"
+        },
+        {
+          "kode": "wk0858"
+        },
+        {
+          "kode": "wk0859"
+        },
+        {
+          "kode": "wk0860"
+        },
+        {
+          "kode": "wk0861"
+        },
+        {
+          "kode": "wk0862"
+        },
+        {
+          "kode": "wk0863"
+        },
+        {
+          "kode": "wk0864"
+        },
+        {
+          "kode": "wk0865"
+        },
+        {
+          "kode": "wk0866"
+        },
+        {
+          "kode": "wk0867"
+        },
+        {
+          "kode": "wk0868"
+        },
+        {
+          "kode": "wk0869"
+        },
+        {
+          "kode": "wk0870"
+        },
+        {
+          "kode": "wk0871"
+        },
+        {
+          "kode": "wk0872"
+        },
+        {
+          "kode": "wk0873"
+        },
+        {
+          "kode": "wk0874"
+        },
+        {
+          "kode": "wk0875"
+        },
+        {
+          "kode": "wk0876"
+        },
+        {
+          "kode": "wk0877"
+        },
+        {
+          "kode": "wk0878"
+        },
+        {
+          "kode": "wk0879"
+        },
+        {
+          "kode": "wk0880"
+        },
+        {
+          "kode": "wk0881"
+        },
+        {
+          "kode": "wk0882"
+        },
+        {
+          "kode": "wk0883"
+        },
+        {
+          "kode": "wk0884"
+        },
+        {
+          "kode": "wk0885"
+        },
+        {
+          "kode": "wk0886"
+        },
+        {
+          "kode": "wk0887"
+        },
+        {
+          "kode": "wk0888"
+        },
+        {
+          "kode": "wk0889"
+        },
+        {
+          "kode": "wk0890"
+        },
+        {
+          "kode": "wk0891"
+        },
+        {
+          "kode": "wk0892"
+        },
+        {
+          "kode": "wk0893"
+        },
+        {
+          "kode": "wk0894"
+        },
+        {
+          "kode": "wk0895"
+        },
+        {
+          "kode": "wk0896"
+        },
+        {
+          "kode": "wk0897"
+        },
+        {
+          "kode": "wk0898"
+        },
+        {
+          "kode": "wk0899"
+        },
+        {
+          "kode": "wk0900"
+        },
+        {
+          "kode": "wk0901"
+        },
+        {
+          "kode": "wk0902"
+        },
+        {
+          "kode": "wk0903"
+        },
+        {
+          "kode": "wk0904"
+        },
+        {
+          "kode": "wk0905"
+        },
+        {
+          "kode": "wk0906"
+        },
+        {
+          "kode": "wk0907"
+        },
+        {
+          "kode": "wk0908"
+        },
+        {
+          "kode": "wk0909"
+        },
+        {
+          "kode": "wk0910"
+        },
+        {
+          "kode": "wk0911"
+        },
+        {
+          "kode": "wk0912"
+        },
+        {
+          "kode": "wk0913"
+        },
+        {
+          "kode": "wk0914"
+        },
+        {
+          "kode": "wk0915"
+        },
+        {
+          "kode": "wk0916"
+        },
+        {
+          "kode": "wk0917"
+        },
+        {
+          "kode": "wk0918"
+        },
+        {
+          "kode": "wk0919"
+        },
+        {
+          "kode": "wk0920"
+        },
+        {
+          "kode": "wk0921"
+        },
+        {
+          "kode": "wk0922"
+        },
+        {
+          "kode": "wk0923"
+        },
+        {
+          "kode": "wk0924"
+        },
+        {
+          "kode": "wk0925"
+        },
+        {
+          "kode": "wk0926"
+        },
+        {
+          "kode": "wk0927"
+        },
+        {
+          "kode": "wk0928"
+        },
+        {
+          "kode": "wk0929"
+        },
+        {
+          "kode": "wk0930"
+        },
+        {
+          "kode": "wk0931"
+        },
+        {
+          "kode": "wk0932"
+        },
+        {
+          "kode": "wk0933"
+        },
+        {
+          "kode": "wk0934"
+        },
+        {
+          "kode": "wk0935"
+        },
+        {
+          "kode": "wk0936"
+        },
+        {
+          "kode": "wk0937"
+        },
+        {
+          "kode": "wk0938"
+        },
+        {
+          "kode": "wk0939"
+        },
+        {
+          "kode": "wk0940"
+        },
+        {
+          "kode": "wk0941"
+        },
+        {
+          "kode": "wk0942"
+        },
+        {
+          "kode": "wk0943"
+        },
+        {
+          "kode": "wk0944"
+        },
+        {
+          "kode": "wk0945"
+        },
+        {
+          "kode": "wk0946"
+        },
+        {
+          "kode": "wk0947"
+        },
+        {
+          "kode": "wk0948"
+        },
+        {
+          "kode": "wk0949"
+        },
+        {
+          "kode": "wk0950"
+        },
+        {
+          "kode": "wk0951"
+        },
+        {
+          "kode": "wk0952"
+        },
+        {
+          "kode": "wk0953"
+        },
+        {
+          "kode": "wk0954"
+        },
+        {
+          "kode": "wk0955"
+        },
+        {
+          "kode": "wk0956"
+        },
+        {
+          "kode": "wk0957"
+        },
+        {
+          "kode": "wk0958"
+        },
+        {
+          "kode": "wk0959"
+        },
+        {
+          "kode": "wk0960"
+        },
+        {
+          "kode": "wk0961"
+        },
+        {
+          "kode": "wk0962"
+        },
+        {
+          "kode": "wk0963"
+        },
+        {
+          "kode": "wk0964"
+        },
+        {
+          "kode": "wk0965"
+        },
+        {
+          "kode": "wk0966"
+        },
+        {
+          "kode": "wk0967"
+        },
+        {
+          "kode": "wk0968"
+        },
+        {
+          "kode": "wk0969"
+        },
+        {
+          "kode": "wk0970"
+        },
+        {
+          "kode": "wk0971"
+        },
+        {
+          "kode": "wk0972"
+        },
+        {
+          "kode": "wk0973"
+        },
+        {
+          "kode": "wk0974"
+        },
+        {
+          "kode": "wk0975"
+        },
+        {
+          "kode": "wk0976"
+        },
+        {
+          "kode": "wk0977"
+        },
+        {
+          "kode": "wk0978"
+        },
+        {
+          "kode": "wk0979"
+        },
+        {
+          "kode": "wk0980"
+        },
+        {
+          "kode": "wk0981"
+        },
+        {
+          "kode": "wk0982"
+        },
+        {
+          "kode": "wk0983"
+        },
+        {
+          "kode": "wk0984"
+        },
+        {
+          "kode": "wk0985"
+        },
+        {
+          "kode": "wk0986"
+        },
+        {
+          "kode": "wk0987"
+        },
+        {
+          "kode": "wk0988"
+        },
+        {
+          "kode": "wk0989"
+        },
+        {
+          "kode": "wk0990"
+        },
+        {
+          "kode": "wk0991"
+        },
+        {
+          "kode": "wk0992"
+        },
+        {
+          "kode": "wk0993"
+        },
+        {
+          "kode": "wk0994"
+        },
+        {
+          "kode": "wk0995"
+        },
+        {
+          "kode": "wk0996"
+        },
+        {
+          "kode": "wk0997"
+        },
+        {
+          "kode": "wk0998"
+        },
+        {
+          "kode": "wk0999"
+        },
+        {
+          "kode": "wk1000"
+        },
+        {
+          "kode": "wk1001"
+        },
+        {
+          "kode": "wk1002"
+        },
+        {
+          "kode": "wk1003"
+        },
+        {
+          "kode": "wk1004"
+        },
+        {
+          "kode": "wk1005"
+        },
+        {
+          "kode": "wk1006"
+        },
+        {
+          "kode": "wk1007"
+        },
+        {
+          "kode": "wk1008"
+        },
+        {
+          "kode": "wk1009"
+        },
+        {
+          "kode": "wk1010"
+        },
+        {
+          "kode": "wk1011"
+        },
+        {
+          "kode": "wk1012"
+        },
+        {
+          "kode": "wk1013"
+        },
+        {
+          "kode": "wk1014"
+        },
+        {
+          "kode": "wk1015"
+        },
+        {
+          "kode": "wk1016"
+        },
+        {
+          "kode": "wk1017"
+        },
+        {
+          "kode": "wk1018"
+        },
+        {
+          "kode": "wk1019"
+        },
+        {
+          "kode": "wk1020"
+        },
+        {
+          "kode": "wk1021"
+        },
+        {
+          "kode": "wk1022"
+        },
+        {
+          "kode": "wk1023"
+        },
+        {
+          "kode": "wk1024"
+        },
+        {
+          "kode": "wk1025"
+        },
+        {
+          "kode": "wk1026"
+        },
+        {
+          "kode": "wk1027"
+        },
+        {
+          "kode": "wk1028"
+        },
+        {
+          "kode": "wk1029"
+        },
+        {
+          "kode": "wk1030"
+        },
+        {
+          "kode": "wk1031"
+        },
+        {
+          "kode": "wk1032"
+        },
+        {
+          "kode": "wk1033"
+        },
+        {
+          "kode": "wk1034"
+        },
+        {
+          "kode": "wk1035"
+        },
+        {
+          "kode": "wk1036"
+        },
+        {
+          "kode": "wk1037"
+        },
+        {
+          "kode": "wk1038"
+        },
+        {
+          "kode": "wk1039"
+        },
+        {
+          "kode": "wk1040"
+        },
+        {
+          "kode": "wk1041"
+        },
+        {
+          "kode": "wk1042"
+        },
+        {
+          "kode": "wk1043"
+        },
+        {
+          "kode": "wk1044"
+        },
+        {
+          "kode": "wk1045"
+        },
+        {
+          "kode": "wk1046"
+        },
+        {
+          "kode": "wk1047"
+        },
+        {
+          "kode": "wk1048"
+        },
+        {
+          "kode": "wk1049"
+        },
+        {
+          "kode": "wk1050"
+        },
+        {
+          "kode": "wk1051"
+        },
+        {
+          "kode": "wk1052"
+        },
+        {
+          "kode": "wk1053"
+        },
+        {
+          "kode": "wk1054"
+        },
+        {
+          "kode": "wk1055"
+        },
+        {
+          "kode": "wk1056"
+        },
+        {
+          "kode": "wk1057"
+        },
+        {
+          "kode": "wk1058"
+        },
+        {
+          "kode": "wk1059"
+        },
+        {
+          "kode": "wk1060"
+        },
+        {
+          "kode": "wk1061"
+        },
+        {
+          "kode": "wk1062"
+        },
+        {
+          "kode": "wk1063"
+        },
+        {
+          "kode": "wk1064"
+        },
+        {
+          "kode": "wk1065"
+        },
+        {
+          "kode": "wk1066"
+        },
+        {
+          "kode": "wk1067"
+        },
+        {
+          "kode": "wk1068"
+        },
+        {
+          "kode": "wk1069"
+        },
+        {
+          "kode": "wk1070"
+        },
+        {
+          "kode": "wk1071"
+        },
+        {
+          "kode": "wk1072"
+        },
+        {
+          "kode": "wk1073"
+        },
+        {
+          "kode": "wk1074"
+        },
+        {
+          "kode": "wk1075"
+        },
+        {
+          "kode": "wk1076"
+        },
+        {
+          "kode": "wk1077"
+        },
+        {
+          "kode": "wk1078"
+        },
+        {
+          "kode": "wk1079"
+        },
+        {
+          "kode": "wk1080"
+        },
+        {
+          "kode": "wk1081"
+        },
+        {
+          "kode": "wk1082"
+        },
+        {
+          "kode": "wk1083"
+        },
+        {
+          "kode": "wk1084"
+        },
+        {
+          "kode": "wk1085"
+        },
+        {
+          "kode": "wk1086"
+        },
+        {
+          "kode": "wk1087"
+        },
+        {
+          "kode": "wk1088"
+        },
+        {
+          "kode": "wk1089"
+        },
+        {
+          "kode": "wk1090"
+        },
+        {
+          "kode": "wk1091"
+        },
+        {
+          "kode": "wk1092"
+        },
+        {
+          "kode": "wk1093"
+        },
+        {
+          "kode": "wk1094"
+        },
+        {
+          "kode": "wk1095"
+        },
+        {
+          "kode": "wk1096"
+        },
+        {
+          "kode": "wk1097"
+        },
+        {
+          "kode": "wk1098"
+        },
+        {
+          "kode": "wk1099"
+        },
+        {
+          "kode": "wk1100"
+        },
+        {
+          "kode": "wk1101"
+        },
+        {
+          "kode": "wk1102"
+        },
+        {
+          "kode": "wk1103"
+        },
+        {
+          "kode": "wk1104"
+        },
+        {
+          "kode": "wk1105"
+        },
+        {
+          "kode": "wk1106"
+        },
+        {
+          "kode": "wk1107"
+        },
+        {
+          "kode": "wk1108"
+        },
+        {
+          "kode": "wk1109"
+        },
+        {
+          "kode": "wk1110"
+        },
+        {
+          "kode": "wk1111"
+        },
+        {
+          "kode": "wk1112"
+        },
+        {
+          "kode": "wk1113"
+        },
+        {
+          "kode": "wk1114"
+        },
+        {
+          "kode": "wk1115"
+        },
+        {
+          "kode": "wk1116"
+        },
+        {
+          "kode": "wk1117"
+        },
+        {
+          "kode": "wk1118"
+        },
+        {
+          "kode": "wk1119"
+        },
+        {
+          "kode": "wk1120"
+        },
+        {
+          "kode": "wk1121"
+        },
+        {
+          "kode": "wk1122"
+        },
+        {
+          "kode": "wk1123"
+        },
+        {
+          "kode": "wk1124"
+        },
+        {
+          "kode": "wk1125"
+        },
+        {
+          "kode": "wk1126"
+        },
+        {
+          "kode": "wk1127"
+        },
+        {
+          "kode": "wk1128"
+        },
+        {
+          "kode": "wk1129"
+        },
+        {
+          "kode": "wk1130"
+        },
+        {
+          "kode": "wk1131"
+        },
+        {
+          "kode": "wk1132"
+        },
+        {
+          "kode": "wk1133"
+        },
+        {
+          "kode": "wk1134"
+        },
+        {
+          "kode": "wk1135"
+        },
+        {
+          "kode": "wk1136"
+        },
+        {
+          "kode": "wk1137"
+        },
+        {
+          "kode": "wk1138"
+        },
+        {
+          "kode": "wk1139"
+        },
+        {
+          "kode": "wk1140"
+        },
+        {
+          "kode": "wk1141"
+        },
+        {
+          "kode": "wk1142"
+        },
+        {
+          "kode": "wk1143"
+        },
+        {
+          "kode": "wk1144"
+        },
+        {
+          "kode": "wk1145"
+        },
+        {
+          "kode": "wk1146"
+        },
+        {
+          "kode": "wk1147"
+        },
+        {
+          "kode": "wk1148"
+        },
+        {
+          "kode": "wk1149"
+        },
+        {
+          "kode": "wk1150"
+        },
+        {
+          "kode": "wk1151"
+        },
+        {
+          "kode": "wk1152"
+        },
+        {
+          "kode": "wk1153"
+        },
+        {
+          "kode": "wk1154"
+        },
+        {
+          "kode": "wk1155"
+        },
+        {
+          "kode": "wk1156"
+        },
+        {
+          "kode": "wk1157"
+        },
+        {
+          "kode": "wk1158"
+        },
+        {
+          "kode": "wk1159"
+        },
+        {
+          "kode": "wk1160"
+        },
+        {
+          "kode": "wk1161"
+        },
+        {
+          "kode": "wk1162"
+        },
+        {
+          "kode": "wk1163"
+        },
+        {
+          "kode": "wk1164"
+        },
+        {
+          "kode": "wk1165"
+        },
+        {
+          "kode": "wk1166"
+        },
+        {
+          "kode": "wk1167"
+        },
+        {
+          "kode": "wk1168"
+        },
+        {
+          "kode": "wk1169"
+        },
+        {
+          "kode": "wk1170"
+        },
+        {
+          "kode": "wk1171"
+        },
+        {
+          "kode": "wk1172"
+        },
+        {
+          "kode": "wk1173"
+        },
+        {
+          "kode": "wk1174"
+        },
+        {
+          "kode": "wk1175"
+        },
+        {
+          "kode": "wk1176"
+        },
+        {
+          "kode": "wk1177"
+        },
+        {
+          "kode": "wk1178"
+        },
+        {
+          "kode": "wk1179"
+        },
+        {
+          "kode": "wk1180"
+        },
+        {
+          "kode": "wk1181"
+        },
+        {
+          "kode": "wk1182"
+        },
+        {
+          "kode": "wk1183"
+        },
+        {
+          "kode": "wk1184"
+        },
+        {
+          "kode": "wk1185"
+        },
+        {
+          "kode": "wk1186"
+        },
+        {
+          "kode": "wk1187"
+        },
+        {
+          "kode": "wk1188"
+        },
+        {
+          "kode": "wk1189"
+        },
+        {
+          "kode": "wk1190"
+        },
+        {
+          "kode": "wk1191"
+        },
+        {
+          "kode": "wk1192"
+        },
+        {
+          "kode": "wk1193"
+        },
+        {
+          "kode": "wk1194"
+        },
+        {
+          "kode": "wk1195"
+        },
+        {
+          "kode": "wk1196"
+        },
+        {
+          "kode": "wk1197"
+        },
+        {
+          "kode": "wk1198"
+        },
+        {
+          "kode": "wk1199"
+        },
+        {
+          "kode": "wk1200"
+        },
+        {
+          "kode": "wk1201"
+        },
+        {
+          "kode": "wk1202"
+        },
+        {
+          "kode": "wk1203"
+        },
+        {
+          "kode": "wk1204"
+        },
+        {
+          "kode": "wk1205"
+        },
+        {
+          "kode": "wk1206"
+        },
+        {
+          "kode": "wk1207"
+        },
+        {
+          "kode": "wk1208"
+        },
+        {
+          "kode": "wk1209"
+        },
+        {
+          "kode": "wk1210"
+        },
+        {
+          "kode": "wk1211"
+        },
+        {
+          "kode": "wk1212"
+        },
+        {
+          "kode": "wk1213"
+        },
+        {
+          "kode": "wk1214"
+        },
+        {
+          "kode": "wk1215"
+        },
+        {
+          "kode": "wk1216"
+        },
+        {
+          "kode": "wk1217"
+        },
+        {
+          "kode": "wk1218"
+        },
+        {
+          "kode": "wk1219"
+        },
+        {
+          "kode": "wk1220"
+        },
+        {
+          "kode": "wk1221"
+        },
+        {
+          "kode": "wk1222"
+        },
+        {
+          "kode": "wk1223"
+        },
+        {
+          "kode": "wk1224"
+        },
+        {
+          "kode": "wk1225"
+        },
+        {
+          "kode": "wk1226"
+        },
+        {
+          "kode": "wk1227"
+        },
+        {
+          "kode": "wk1228"
+        },
+        {
+          "kode": "wk1229"
+        },
+        {
+          "kode": "wk1230"
+        },
+        {
+          "kode": "wk1231"
+        },
+        {
+          "kode": "wk1232"
+        },
+        {
+          "kode": "wk1233"
+        },
+        {
+          "kode": "wk1234"
+        },
+        {
+          "kode": "wk1235"
+        },
+        {
+          "kode": "wk1236"
+        },
+        {
+          "kode": "wk1237"
+        },
+        {
+          "kode": "wk1238"
+        },
+        {
+          "kode": "wk1239"
+        },
+        {
+          "kode": "wk1240"
+        },
+        {
+          "kode": "wk1241"
+        },
+        {
+          "kode": "wk1242"
+        },
+        {
+          "kode": "wk1243"
+        },
+        {
+          "kode": "wk1244"
+        },
+        {
+          "kode": "wk1245"
+        },
+        {
+          "kode": "wk1246"
+        },
+        {
+          "kode": "wk1247"
+        },
+        {
+          "kode": "wk1248"
+        },
+        {
+          "kode": "wk1249"
+        },
+        {
+          "kode": "wk1250"
+        },
+        {
+          "kode": "wk1251"
+        },
+        {
+          "kode": "wk1252"
+        },
+        {
+          "kode": "wk1253"
+        },
+        {
+          "kode": "wk1254"
+        },
+        {
+          "kode": "wk1255"
+        },
+        {
+          "kode": "wk1256"
+        },
+        {
+          "kode": "wk1257"
+        },
+        {
+          "kode": "wk1258"
+        },
+        {
+          "kode": "wk1259"
+        },
+        {
+          "kode": "wk1260"
+        },
+        {
+          "kode": "wk1261"
+        },
+        {
+          "kode": "wk1262"
+        },
+        {
+          "kode": "wk1263"
+        },
+        {
+          "kode": "wk1264"
+        },
+        {
+          "kode": "wk1265"
+        },
+        {
+          "kode": "wk1266"
+        },
+        {
+          "kode": "wk1267"
+        },
+        {
+          "kode": "wk1268"
+        },
+        {
+          "kode": "wk1269"
+        },
+        {
+          "kode": "wk1270"
+        },
+        {
+          "kode": "wk1271"
+        },
+        {
+          "kode": "wk1272"
+        },
+        {
+          "kode": "wk1273"
+        },
+        {
+          "kode": "wk1274"
+        },
+        {
+          "kode": "wk1275"
+        },
+        {
+          "kode": "wk1276"
+        },
+        {
+          "kode": "wk1277"
+        },
+        {
+          "kode": "wk1278"
+        },
+        {
+          "kode": "wk1279"
+        },
+        {
+          "kode": "wk1280"
+        },
+        {
+          "kode": "wk1281"
+        },
+        {
+          "kode": "wk1282"
+        },
+        {
+          "kode": "wk1283"
+        },
+        {
+          "kode": "wk1284"
+        },
+        {
+          "kode": "wk1285"
+        },
+        {
+          "kode": "wk1286"
+        },
+        {
+          "kode": "wk1287"
+        },
+        {
+          "kode": "wk1288"
+        },
+        {
+          "kode": "wk1289"
+        },
+        {
+          "kode": "wk1290"
+        },
+        {
+          "kode": "wk1291"
+        },
+        {
+          "kode": "wk1292"
+        },
+        {
+          "kode": "wk1293"
+        },
+        {
+          "kode": "wk1294"
+        },
+        {
+          "kode": "wk1295"
+        },
+        {
+          "kode": "wk1296"
+        },
+        {
+          "kode": "wk1297"
+        },
+        {
+          "kode": "wk1298"
+        },
+        {
+          "kode": "wk1299"
+        },
+        {
+          "kode": "wk1300"
+        },
+        {
+          "kode": "wk1301"
+        },
+        {
+          "kode": "wk1302"
+        },
+        {
+          "kode": "wk1303"
+        },
+        {
+          "kode": "wk1304"
+        },
+        {
+          "kode": "wk1305"
+        },
+        {
+          "kode": "wk1306"
+        },
+        {
+          "kode": "wk1307"
+        },
+        {
+          "kode": "wk1308"
+        },
+        {
+          "kode": "wk1309"
+        },
+        {
+          "kode": "wk1310"
+        },
+        {
+          "kode": "wk1311"
+        },
+        {
+          "kode": "wk1312"
+        },
+        {
+          "kode": "wk1313"
+        },
+        {
+          "kode": "wk1314"
+        },
+        {
+          "kode": "wk1315"
+        },
+        {
+          "kode": "wk1316"
+        },
+        {
+          "kode": "wk1317"
+        },
+        {
+          "kode": "wk1318"
+        },
+        {
+          "kode": "wk1319"
+        },
+        {
+          "kode": "wk1320"
+        },
+        {
+          "kode": "wk1321"
+        },
+        {
+          "kode": "wk1322"
+        },
+        {
+          "kode": "wk1323"
+        },
+        {
+          "kode": "wk1324"
+        },
+        {
+          "kode": "wk1325"
+        },
+        {
+          "kode": "wk1326"
+        },
+        {
+          "kode": "wk1327"
+        },
+        {
+          "kode": "wk1328"
+        },
+        {
+          "kode": "wk1329"
+        },
+        {
+          "kode": "wk1330"
+        },
+        {
+          "kode": "wk1331"
+        },
+        {
+          "kode": "wk1332"
+        },
+        {
+          "kode": "wk1333"
+        },
+        {
+          "kode": "wk1334"
+        },
+        {
+          "kode": "wk1335"
+        },
+        {
+          "kode": "wk1336"
+        },
+        {
+          "kode": "wk1337"
+        },
+        {
+          "kode": "wk1338"
+        },
+        {
+          "kode": "wk1339"
+        },
+        {
+          "kode": "wk1340"
+        },
+        {
+          "kode": "wk1341"
+        },
+        {
+          "kode": "wk1342"
+        },
+        {
+          "kode": "wk1343"
+        },
+        {
+          "kode": "wk1344"
+        },
+        {
+          "kode": "wk1345"
+        },
+        {
+          "kode": "wk1346"
+        },
+        {
+          "kode": "wk1347"
+        },
+        {
+          "kode": "wk1348"
+        },
+        {
+          "kode": "wk1349"
+        },
+        {
+          "kode": "wk1350"
+        },
+        {
+          "kode": "wk1351"
+        },
+        {
+          "kode": "wk1352"
+        },
+        {
+          "kode": "wk1353"
+        },
+        {
+          "kode": "wk1354"
+        },
+        {
+          "kode": "wk1355"
+        },
+        {
+          "kode": "wk1356"
+        },
+        {
+          "kode": "wk1357"
+        },
+        {
+          "kode": "wk1358"
+        },
+        {
+          "kode": "wk1359"
+        },
+        {
+          "kode": "wk1360"
+        },
+        {
+          "kode": "wk1361"
+        },
+        {
+          "kode": "wk1362"
+        },
+        {
+          "kode": "wk1363"
+        },
+        {
+          "kode": "wk1364"
+        },
+        {
+          "kode": "wk1365"
+        },
+        {
+          "kode": "wk1366"
+        },
+        {
+          "kode": "wk1367"
+        },
+        {
+          "kode": "wk1368"
+        },
+        {
+          "kode": "wk1369"
+        },
+        {
+          "kode": "wk1370"
+        },
+        {
+          "kode": "wk1371"
+        },
+        {
+          "kode": "wk1372"
+        },
+        {
+          "kode": "wk1373"
+        },
+        {
+          "kode": "wk1374"
+        },
+        {
+          "kode": "wk1375"
+        },
+        {
+          "kode": "wk1376"
+        },
+        {
+          "kode": "wk1377"
+        },
+        {
+          "kode": "wk1378"
+        },
+        {
+          "kode": "wk1379"
+        },
+        {
+          "kode": "wk1380"
+        },
+        {
+          "kode": "wk1381"
+        },
+        {
+          "kode": "wk1382"
+        },
+        {
+          "kode": "wk1383"
+        },
+        {
+          "kode": "wk1384"
+        },
+        {
+          "kode": "wk1385"
+        },
+        {
+          "kode": "wk1386"
+        },
+        {
+          "kode": "wk1387"
+        },
+        {
+          "kode": "wk1388"
+        },
+        {
+          "kode": "wk1389"
+        },
+        {
+          "kode": "wk1390"
+        },
+        {
+          "kode": "wk1391"
+        },
+        {
+          "kode": "wk1392"
+        },
+        {
+          "kode": "wk1393"
+        },
+        {
+          "kode": "wk1394"
+        },
+        {
+          "kode": "wk1395"
+        },
+        {
+          "kode": "wk1396"
+        },
+        {
+          "kode": "wk1397"
+        },
+        {
+          "kode": "wk1398"
+        },
+        {
+          "kode": "wk1399"
+        },
+        {
+          "kode": "wk1400"
+        },
+        {
+          "kode": "wk1401"
+        },
+        {
+          "kode": "wk1402"
+        },
+        {
+          "kode": "wk1403"
+        },
+        {
+          "kode": "wk1404"
+        },
+        {
+          "kode": "wk1405"
+        },
+        {
+          "kode": "wk1406"
+        },
+        {
+          "kode": "wk1407"
+        },
+        {
+          "kode": "wk1408"
+        },
+        {
+          "kode": "wk1409"
+        },
+        {
+          "kode": "wk1410"
+        },
+        {
+          "kode": "wk1411"
+        },
+        {
+          "kode": "wk1412"
+        },
+        {
+          "kode": "wk1413"
+        },
+        {
+          "kode": "wk1414"
+        },
+        {
+          "kode": "wk1415"
+        },
+        {
+          "kode": "wk1416"
+        },
+        {
+          "kode": "wk1417"
+        },
+        {
+          "kode": "wk1418"
+        },
+        {
+          "kode": "wk1419"
+        },
+        {
+          "kode": "wk1420"
+        },
+        {
+          "kode": "wk1421"
+        },
+        {
+          "kode": "wk1422"
+        },
+        {
+          "kode": "wk1423"
+        },
+        {
+          "kode": "wk1424"
+        },
+        {
+          "kode": "wk1425"
+        },
+        {
+          "kode": "wk1426"
+        },
+        {
+          "kode": "wk1427"
+        },
+        {
+          "kode": "wk1428"
+        },
+        {
+          "kode": "wk1429"
+        },
+        {
+          "kode": "wk1430"
+        },
+        {
+          "kode": "wk1431"
+        },
+        {
+          "kode": "wk1432"
+        },
+        {
+          "kode": "wk1433"
+        },
+        {
+          "kode": "wk1434"
+        },
+        {
+          "kode": "wk1435"
+        },
+        {
+          "kode": "wk1436"
+        },
+        {
+          "kode": "wk1437"
+        },
+        {
+          "kode": "wk1438"
+        },
+        {
+          "kode": "wk1439"
+        },
+        {
+          "kode": "wk1440"
+        },
+        {
+          "kode": "wk1441"
+        },
+        {
+          "kode": "wk1442"
+        },
+        {
+          "kode": "wk1443"
+        },
+        {
+          "kode": "wk1444"
+        },
+        {
+          "kode": "wk1445"
+        },
+        {
+          "kode": "wk1446"
+        },
+        {
+          "kode": "wk1447"
+        },
+        {
+          "kode": "wk1448"
+        },
+        {
+          "kode": "wk1449"
+        },
+        {
+          "kode": "wk1450"
+        },
+        {
+          "kode": "wk1451"
+        },
+        {
+          "kode": "wk1452"
+        },
+        {
+          "kode": "wk1453"
+        },
+        {
+          "kode": "wk1454"
+        },
+        {
+          "kode": "wk1455"
+        },
+        {
+          "kode": "wk1456"
+        },
+        {
+          "kode": "wk1457"
+        },
+        {
+          "kode": "wk1458"
+        },
+        {
+          "kode": "wk1459"
+        },
+        {
+          "kode": "wk1460"
+        },
+        {
+          "kode": "wk1461"
+        },
+        {
+          "kode": "wk1462"
+        },
+        {
+          "kode": "wk1463"
+        },
+        {
+          "kode": "wk1464"
+        },
+        {
+          "kode": "wk1465"
+        },
+        {
+          "kode": "wk1466"
+        },
+        {
+          "kode": "wk1467"
+        },
+        {
+          "kode": "wk1468"
+        },
+        {
+          "kode": "wk1469"
+        },
+        {
+          "kode": "wk1470"
+        },
+        {
+          "kode": "wk1471"
+        },
+        {
+          "kode": "wk1472"
+        },
+        {
+          "kode": "wk1473"
+        },
+        {
+          "kode": "wk1474"
+        },
+        {
+          "kode": "wk1475"
+        },
+        {
+          "kode": "wk1476"
+        },
+        {
+          "kode": "wk1477"
+        },
+        {
+          "kode": "wk1478"
+        },
+        {
+          "kode": "wk1479"
+        },
+        {
+          "kode": "wk1480"
+        },
+        {
+          "kode": "wk1481"
+        },
+        {
+          "kode": "wk1482"
+        },
+        {
+          "kode": "wk1483"
+        },
+        {
+          "kode": "wk1484"
+        },
+        {
+          "kode": "wk1485"
+        },
+        {
+          "kode": "wk1486"
+        },
+        {
+          "kode": "wk1487"
+        },
+        {
+          "kode": "wk1488"
+        },
+        {
+          "kode": "wk1489"
+        },
+        {
+          "kode": "wk1490"
+        },
+        {
+          "kode": "wk1491"
+        },
+        {
+          "kode": "wk1492"
+        },
+        {
+          "kode": "wk1493"
+        },
+        {
+          "kode": "wk1494"
+        },
+        {
+          "kode": "wk1495"
+        },
+        {
+          "kode": "wk1496"
+        },
+        {
+          "kode": "wk1497"
+        },
+        {
+          "kode": "wk1498"
+        },
+        {
+          "kode": "wk1499"
+        },
+        {
+          "kode": "wk1500"
+        },
+        {
+          "kode": "wk1501"
+        },
+        {
+          "kode": "wk1502"
+        },
+        {
+          "kode": "wk1503"
+        },
+        {
+          "kode": "wk1504"
+        },
+        {
+          "kode": "wk1505"
+        },
+        {
+          "kode": "wk1506"
+        },
+        {
+          "kode": "wk1507"
+        },
+        {
+          "kode": "wk1508"
+        },
+        {
+          "kode": "wk1509"
+        },
+        {
+          "kode": "wk1510"
+        },
+        {
+          "kode": "wk1511"
+        },
+        {
+          "kode": "wk1512"
+        },
+        {
+          "kode": "wk1513"
+        },
+        {
+          "kode": "wk1514"
+        },
+        {
+          "kode": "wk1515"
+        },
+        {
+          "kode": "wk1516"
+        },
+        {
+          "kode": "wk1517"
+        },
+        {
+          "kode": "wk1518"
+        },
+        {
+          "kode": "wk1519"
+        },
+        {
+          "kode": "wk1520"
+        },
+        {
+          "kode": "wk1521"
+        },
+        {
+          "kode": "wk1522"
+        },
+        {
+          "kode": "wk1523"
+        },
+        {
+          "kode": "wk1524"
+        },
+        {
+          "kode": "wk1525"
+        },
+        {
+          "kode": "wk1526"
+        },
+        {
+          "kode": "wk1527"
+        },
+        {
+          "kode": "wk1528"
+        },
+        {
+          "kode": "wk1529"
+        },
+        {
+          "kode": "wk1530"
+        },
+        {
+          "kode": "wk1531"
+        },
+        {
+          "kode": "wk1532"
+        },
+        {
+          "kode": "wk1533"
+        },
+        {
+          "kode": "wk1534"
+        },
+        {
+          "kode": "wk1535"
+        },
+        {
+          "kode": "wk1536"
+        },
+        {
+          "kode": "wk1537"
+        },
+        {
+          "kode": "wk1538"
+        },
+        {
+          "kode": "wk1539"
+        },
+        {
+          "kode": "wk1540"
+        },
+        {
+          "kode": "wk1541"
+        },
+        {
+          "kode": "wk1542"
+        },
+        {
+          "kode": "wk1543"
+        },
+        {
+          "kode": "wk1544"
+        },
+        {
+          "kode": "wk1545"
+        },
+        {
+          "kode": "wk1546"
+        },
+        {
+          "kode": "wk1547"
+        },
+        {
+          "kode": "wk1548"
+        },
+        {
+          "kode": "wk1549"
+        },
+        {
+          "kode": "wk1550"
+        },
+        {
+          "kode": "wk1551"
+        },
+        {
+          "kode": "wk1552"
+        },
+        {
+          "kode": "wk1553"
+        },
+        {
+          "kode": "wk1554"
+        },
+        {
+          "kode": "wk1555"
+        },
+        {
+          "kode": "wk1556"
+        },
+        {
+          "kode": "wk1557"
+        },
+        {
+          "kode": "wk1558"
+        },
+        {
+          "kode": "wk1559"
+        },
+        {
+          "kode": "wk1560"
+        },
+        {
+          "kode": "wk1561"
+        },
+        {
+          "kode": "wk1562"
+        },
+        {
+          "kode": "wk1563"
+        },
+        {
+          "kode": "wk1564"
+        },
+        {
+          "kode": "wk1565"
+        },
+        {
+          "kode": "wk1566"
+        },
+        {
+          "kode": "wk1567"
+        },
+        {
+          "kode": "wk1568"
+        },
+        {
+          "kode": "wk1569"
+        },
+        {
+          "kode": "wk1570"
+        }
+      ]
+    }
+  }
+}

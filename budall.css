@@ -2984,9 +2984,9 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     text-align: left!important;
   }
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 610px) and (min-width: 410px) {
   body {
-    font-size: 9pt;
+    font-size: 10pt;
   }
   #outer-wrapper {
     width: var(--wxs);
@@ -3287,5 +3287,130 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   #outer-wrapper {
     width: var(--wxxs);
+  }
+  #above-wrapper {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  #budsearch {
+    margin: 5px -15px -15px;
+    overflow: hidden;
+  }
+  #budsearch .bud-searchform span {
+    height: 50px;
+  }
+  #budsearch .bud-search-filter label {
+    line-height: 50px;
+  }
+  #budsearch .belabel + label {
+    padding: 15px 5px;
+  }
+  .laman-kategori #Label1 #master-note {
+    padding: 15px;
+    margin-bottom: 15px;
+    background: var(--col2);
+    border-radius: var(--bor);
+    position: relative;
+  }
+  .laman-kategori #Label1 .btn-group.lin-ver a {
+    padding: 5px 10px;
+  }
+  .laman-kategori #PopularPosts1 > div > div {
+    margin-bottom: 5px;
+  }
+  .laman-kategori #PopularPosts1 article {
+    width: 300px;
+  }
+  .laman-kategori .blog-posts.hfeed {
+    padding: 15px;
+  }
+  .laman-kategori article .postaright {
+    padding: 15px;
+  }
+  .laman-kategori article.multi-post.postarama {
+    height: 580px;
+    margin: -15px -15px 15px;
+  }
+  .laman-kategori .laman-kategori article.multi-post.postarama .postaleft,
+  .laman-kategori article.multi-post.postarama .postaleft {
+    width: 300px;
+    height: 270px;
+  }
+  .laman-kategori .laman-kategori article.multi-post.postarama .postaleft img,
+  .laman-kategori article.multi-post.postarama .postaleft img {
+    margin-top: 0;
+  }
+  .laman-kategori .laman-kategori article.multi-post.postarama .postaright,
+  .laman-kategori article.multi-post.postarama .postaright {
+    width: 300px;
+    font-size: 10pt;
+  }
+  .laman-kategori .laman-kategori article.multi-post.postarama .postaright .post-footer,
+  .laman-kategori article.multi-post.postarama .postaright .post-footer {
+    height: 120px;
+    line-height: 20px;
+    bottom: 20px;
+  }
+  .laman-kategori .laman-kategori article.multi-post,
+  .laman-kategori article.multi-post {
+    height: 400px;
+  }
+  .laman-kategori .laman-kategori article.multi-post .postaleft,
+  .laman-kategori article.multi-post .postaleft {
+    width: 270px;
+    height: 150px;
+  }
+  .laman-kategori .laman-kategori article.multi-post .postaleft .postmark,
+  .laman-kategori article.multi-post .postaleft .postmark {
+    position: absolute;
+    font-size: 10pt;
+    line-height: 30px;
+    height: 30px;
+  }
+  .laman-kategori .laman-kategori article.multi-post .postaleft .postmark span.tandagori,
+  .laman-kategori article.multi-post .postaleft .postmark span.tandagori {
+    width: 30px;
+  }
+  .laman-kategori .laman-kategori article.multi-post .postaleft .postmark span.tandarasi,
+  .laman-kategori article.multi-post .postaleft .postmark span.tandarasi {
+    min-width: 45px;
+  }
+  .laman-kategori .laman-kategori article.multi-post .postaleft img,
+  .laman-kategori article.multi-post .postaleft img {
+    margin-top: -15%;
+  }
+  .laman-kategori .laman-kategori article.multi-post .postaright,
+  .laman-kategori article.multi-post .postaright {
+    width: 270px;
+  }
+  .laman-kategori .laman-kategori article.multi-post .postaright .post-footer,
+  .laman-kategori article.multi-post .postaright .post-footer {
+    font-size: 9pt;
+  }
+  .laman-kategori .laman-kategori article.multi-post .postaright .post-footer .multinfo,
+  .laman-kategori article.multi-post .postaright .post-footer .multinfo {
+    padding: 0 15px;
+  }
+  .laman-kategori .laman-kategori article.multi-post .postaright .post-footer .multinfo > span,
+  .laman-kategori article.multi-post .postaright .post-footer .multinfo > span {
+    line-height: 30px;
+  }
+  .laman-kategori .laman-kategori article.multi-post .postaright .post-footer .jump-link,
+  .laman-kategori article.multi-post .postaright .post-footer .jump-link {
+    height: 100px;
+    line-height: 90px;
+  }
+  .laman-kategori .laman-kategori article.multi-post .postaright .post-footer .jump-link span,
+  .laman-kategori article.multi-post .postaright .post-footer .jump-link span {
+    display: none;
+  }
+  #footer-wrapper {
+    padding: 15px;
+    font-size: 8pt;
+  }
+  #footer-wrapper #bud-footer {
+    width: calc(100% + 30px) !important;
+    margin: -15px -15px 5px;
+    padding: 15px;
   }
 }

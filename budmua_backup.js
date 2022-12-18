@@ -1,4 +1,3 @@
-// JavaScript Document
 function perandom(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -50,37 +49,22 @@ function replyTo(id) {
 		$(this).css('visibility', 'visible');
 	});
 }
-var pumanjang = $('#papanjang').val(),
-	panjudul = $('#panjangjud').val();
-fetch('https://api-ssl.bitly.com/v4/shorten', {
-		method: 'POST',
-		headers: {
-			'Authorization': 'Bearer 0cfdbf7f35dd3347c9544014e683abfb2deee58f',
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify({
-			"long_url": pumanjang,
-			"domain": "bit.ly",
-			"title": panjudul,
-			"tags": [ "blog" ]
-		})
-	})
-	.then((response) => response.json())
-	.then((json) => {
-		var pependek = json.link;
-		console.log(pependek);
-		$('#budpendekan').html(pependek);
-	});
 
 function onSubmit(token) {
 	$('#budkontak-form').submit();
 }
-var vidsal = $('#asalvid').html(),
-	vidcon = $('#video-place');
-vidcon.html(vidsal);
-$('#asalvid').remove();
-const titipe = $('#tumipe').val();
+const ispost = $('#ispost').val(),
+	iskategori = $('#iskategori').val(),
+	pumanjang = $('#papanjang').val(),
+	panjudul = $('#panjangjud').val();
 var al = {
+	'kt': {
+		'ps': $('#ispost').val(),
+		'kt': $('#iskategori').val(),
+		'png': $('#papanjang').val(),
+		'pnj': $('#panjangjud').val(),
+		'pk': $('#budpendekan')
+	},
 	'gl': {
 		'lc': window.location.href,
 		'ad': 'https://budkanote.blogspot.com',
@@ -107,7 +91,9 @@ var al = {
 		'pft': 'ref',
 		'pff': 'cat',
 		'clc': 'footklik',
-		'skf': $('<hr><ol id="' + this.fID + '"></ol>')
+		'skf': $('<hr><ol id="' + this.fID + '"></ol>'),
+		'vds': $('#asalvid').html(),
+		'vdp': $('#video-place')
 	},
 	'sr': {
 		't0': $('#r-car-0'),
@@ -139,8 +125,28 @@ var al = {
 	}
 };
 
-if (titipe) {
+if (al.kt.ps == "true") {
 	(function($) {
+		al.ps.vdp.html(al.ps.vds);
+		$('#asalvid').remove();
+		fetch('https://api-ssl.bitly.com/v4/shorten', {
+				method: 'POST',
+				headers: {
+					'Authorization': 'Bearer 0cfdbf7f35dd3347c9544014e683abfb2deee58f',
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					"long_url": al.kt.png,
+					"domain": "bit.ly",
+					"title": al.kt.pnj,
+					"tags": ["blog"]
+				})
+			})
+			.then((response) => response.json())
+			.then((json) => {
+				var pependek = json.link;
+				al.kt.pk.html(pependek);
+			});
 		//ngitung kecap
 		var cntW = al.ps.pb.text().split(" ");
 		for (var i = 0; i < cntW.length; i++) {
@@ -225,6 +231,28 @@ if (titipe) {
 			error: function() {
 				al.rl.kn.html('');
 			}
+		});
+	})(jQuery);
+}
+if (al.kt.kt == "true") {
+	(function($) {
+		var $pager = $('#blog-pager'),
+			$posts = $('.blog-posts');
+		$pager.find('#blog-pager-newer-link').remove();
+		$pager.on("click", "#blog-pager-older-link a", function() {
+			$.get(this.href, {}, function(data) {
+				var source = $(data).find('.post').length ? $(data) : $('<div>Tidak ada pos lainnya.</div>'),
+					postama = '.postarama:not(:first)',
+					tumeks = $('.postarama:not(:first) .entry-content');
+				$posts.append(source.find('.blog-posts').html());
+				$pager.html(source.find('#blog-pager-older-link').length ? source.find('#blog-pager-older-link').clone() : '<span class="info">Pos terakhir</span>'); // Memperbaharui navigasi .entry-content
+				$('.postarama:not(:first) .entry-content').text(function(index, currentText) {
+					return currentText.substr(0, 180);
+				});
+				$posts.find(postama).removeClass('postarama');
+			}, "html");
+			$(this).replaceWith('<span><a><i class="fa-solid fa-sync fa-spin"></i></a></span>');
+			return false;
 		});
 	})(jQuery);
 }

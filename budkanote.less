@@ -2785,9 +2785,9 @@ article {
 	}
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 610px) and (min-width: 410px) {
 	body {
-		font-size: 9pt;
+		font-size: 10pt;
 	}
     #outer-wrapper {
         width: var(--wxs);
@@ -3076,4 +3076,128 @@ article {
     #outer-wrapper {
         width: var(--wxxs);
     }
+	#above-wrapper {
+		padding: 15px;
+		margin-bottom: 15px;
+	}
+	#budsearch {
+		margin: 5px -15px -15px;
+		overflow: hidden;
+		.bud-searchform span {
+			height: 50px;
+		}
+		.bud-search-filter label {
+			line-height: 50px;
+		}
+		.belabel + label {
+			padding: 15px 5px;
+		}
+	}
+	.laman-kategori {
+		#Label1 {
+			#master-note {
+				padding: 15px;
+				margin-bottom: 15px;
+				background: var(--col2);
+				border-radius: var(--bor);
+				position: relative;
+			}
+			.btn-group.lin-ver a {
+				padding: 5px 10px;
+			}
+		} 
+		#PopularPosts1 {
+			> div > div {
+				margin-bottom: 5px;
+			}
+			article {
+				width: 300px;
+			}
+		}
+		.blog-posts.hfeed {
+			padding: 15px;
+		}
+		article{
+			.postaright {
+				padding: 15px;
+			}
+			&.multi-post{
+				&.postarama {
+					height: 580px;
+					margin: -15px -15px 15px;
+				}
+			}
+			.laman-kategori &, & {
+				&.multi-post.postarama {
+					.postaleft {
+						width: 300px;
+						height: 270px;
+						img {
+							margin-top: 0;
+						}
+					}
+					.postaright {
+						width: 300px;
+						font-size: 10pt;
+						.post-footer {
+							height: 120px;
+							line-height: 20px;
+							bottom: 20px;
+						}
+					}
+				} 
+				&.multi-post {
+					height: 400px;
+					.postaleft {
+						width: 270px;
+						height: 150px;
+						.postmark {
+							position: absolute;
+							font-size: 10pt;
+							line-height: 30px;
+							height: 30px;
+							span.tandagori {
+								width: 30px;
+							}
+							span.tandarasi {
+								min-width: 45px;
+							}
+						}
+						img {
+							margin-top: -15%;
+						}
+					}
+					.postaright {
+						width: 270px;
+						.post-footer {
+							font-size: 9pt;
+							.multinfo {
+								padding: 0 15px;
+								> span {
+									line-height: 30px;
+								}
+							}
+							.jump-link {
+								height: 100px;
+								line-height: 90px;
+								span {
+									display: none;
+								}
+							}
+						} 
+					}
+				} 
+			}
+			
+		}
+	}
+	#footer-wrapper {
+		padding: 15px;
+		font-size: 8pt;
+		#bud-footer {
+			width: calc(100% + 30px) !important;
+			margin: -15px -15px 5px;
+			padding: 15px;
+		}
+	}
 }
