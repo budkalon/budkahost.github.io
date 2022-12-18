@@ -3500,7 +3500,11 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   .bud-single article .smallhid {
     display: none;
   }
-  .bud-single #blog-pager span {
+  .bud-single #blog-pager span a {
+    padding: 0;
+  }
+  .bud-single #blog-pager span#blog-pager-newer-link,
+  .bud-single #blog-pager spanblog-pager-older-link {
     top: calc(100vh - 50px);
     height: 50px;
     padding: 0;
@@ -3522,7 +3526,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     position: fixed;
     right: 80px;
     bottom: 0;
-    padding: 25px 10px;
+    padding: 0;
     background: var(--col4);
     color: var(--acn2);
     font-size: 24pt;
@@ -3535,6 +3539,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   .bud-single #to-top:hover {
     bottom: 0;
+    background: var(--col5);
   }
   #footer-wrapper {
     padding: 15px;
