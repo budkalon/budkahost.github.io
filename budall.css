@@ -1861,6 +1861,13 @@ article.post-static_page .post-body {
 #blog-pager span:hover {
   background: var(--col2);
 }
+#blog-pager span.info {
+  margin: 0;
+  font-size: 1.2em;
+  text-align: left;
+  border-radius: 0 0 var(--bor);
+  color: var(--acn2);
+}
 .bud-single #blog-pager span#blog-pager-newer-link,
 .bud-single #blog-pager span#blog-pager-older-link {
   position: fixed;
