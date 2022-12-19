@@ -3315,19 +3315,6 @@ article {
 						.post-footer {
 							padding: 15px;
 						}
-						.comments {
-							img {
-								width: 30px!important;
-							}
-						}
-						.comcon {
-						  width: 270px;
-							each(range(8), {
-							  .replies@{value} .comcon, .replies@{value} .comcon .comup {
-								width: (270px - (@value * 10px));
-							  }
-							});
-						} 
 						#budbread-crumb {
 						  padding: 15px 10px;
 						  top: -60px;
@@ -3359,6 +3346,19 @@ article {
 				&[data-template=gambar], &[data-template=video] {
 					
 				}
+				.comimg .comment-avatar {
+					img {
+						width: 50px!important;
+					}
+				}
+				.comcon {
+				  width: 270px;
+					each(range(8), {
+					  .replies@{value} .comcon, .replies@{value} .comcon .comup {
+						width: (270px - (@value * 10px));
+					  }
+					});
+				} 
 			}
 			.smallhid {
 			  display: none;
