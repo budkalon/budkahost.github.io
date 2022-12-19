@@ -173,7 +173,7 @@ if (al.kt.ps == "true") {
 				txf = $(this).text().replace(RegExp(/\—/g), ''),
 				ctf = $('<li><a class="' + al.ps.clc + '" href="#' + hsf + '" id="' + hcf + '">' + txf + '</a></li>');
 			sdrl.append(ctf);
-			$(this).html('<a class="' + al.ps.clc + '" href="#' + hcf + '" id="' + hsf + '">[' + (idx) + ']</a>');
+			$(this).html('<a class="' + al.ps.clc + '" href="#' + hcf + '" id="' + hsf + '"><sup>[' + (idx) + ']</sup></a>');
 		});
 		$('<hr>').insertBefore(sdrl);
 		$('a.' + al.ps.clc).on('click', function() {
@@ -245,7 +245,7 @@ if (al.kt.kt == "true") {
 					postama = '.postarama:not(:first)',
 					tumeks = $('.postarama:not(:first) .entry-content');
 				$posts.append(source.find('.blog-posts').html());
-				$pager.html(source.find('#blog-pager-older-link').length ? source.find('#blog-pager-older-link').clone() : '<span class="info">Pos terakhir</span>'); // Memperbaharui navigasi .entry-content
+				$pager.html(source.find('#blog-pager-older-link').length ? source.find('#blog-pager-older-link').clone() : '<span class="info">Pos terakhir</span>');
 				$('.postarama:not(:first) .entry-content').text(function(index, currentText) {
 					return currentText.substr(0, 180);
 				});
