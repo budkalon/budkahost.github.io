@@ -3335,7 +3335,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   article.post figure,
   article.post figure.spec {
-    width: 100%;
+    width: 100%!important;
   }
   article.post .postacol-2,
   article.post .postacol-3 {
