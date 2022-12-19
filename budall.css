@@ -1421,6 +1421,29 @@ article.post-static_page .post-body {
 .post figure {
   position: relative;
 }
+.post figure.spec {
+  margin: 15px 0 0;
+}
+.post figure.spec.kanan,
+.post figure.spec.kiri {
+  width: 300px;
+}
+.post figure.spec.kanan {
+  margin-left: 15px;
+}
+.post figure.spec.kiri {
+  margin-right: 15px;
+}
+.post figure.spec figcaption {
+  position: relative;
+  margin: 5px 0;
+  right: auto;
+  padding-top: 5px;
+  width: auto;
+}
+.post figure.spec.luas {
+  margin: 15px -300px 15px -100px;
+}
 .post img {
   border-radius: var(--bor);
 }
@@ -1435,7 +1458,11 @@ article.post-static_page .post-body {
   border-radius: var(--bor);
 }
 .post li {
-  line-height: 1.75em;
+  line-height: 2em;
+}
+.post li::marker {
+  font-weight: 700;
+  color: var(--col8);
 }
 .post code {
   background: var(--col3);
@@ -1475,15 +1502,19 @@ article.post-static_page .post-body {
 .post th {
   border-bottom: 5px solid var(--col3);
   text-align: left;
+  font-weight: 700;
+  color: var(--col8);
 }
 .post td {
   border-bottom: 3px solid var(--col2);
 }
 .post blockquote {
-  margin-left: 50px;
+  margin-left: 25px;
   color: var(--col7);
   line-height: 2.4em;
   position: relative;
+  padding-left: 25px;
+  border-left: 5px solid var(--col3);
 }
 .post blockquote::before {
   font: var(--fa-font-solid);
@@ -1493,6 +1524,21 @@ article.post-static_page .post-body {
   line-height: 52.5pt;
   font-size: 28pt;
   float: left;
+}
+.post .postacol-1,
+.post .postacol-2,
+.post .postacol-3 {
+  margin-right: -150px;
+  column-gap: 25px;
+}
+.post .postacol-1 {
+  column-count: 1;
+}
+.post .postacol-2 {
+  column-count: 2;
+}
+.post .postacol-3 {
+  column-count: 3;
 }
 .post hr {
   border-top: 5px solid var(--col3);
@@ -2804,6 +2850,9 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   article.post-item[data-template=video] .is-replied > div > div > .comment-footer {
     border-radius: 0 0 var(--bor) var(--bor);
   }
+  article.post figure.luas {
+    margin: 15px -200px 15px 0px;
+  }
 }
 @media screen and (max-width: 810px) {
   #outer-wrapper {
@@ -2980,6 +3029,25 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   #bud-arsip article.multi-post .postaright {
     width: 100%;
     height: 170px;
+  }
+  article.post figure.luas {
+    margin: 15px 0 15px 0;
+  }
+  article.post figure figcaption {
+    position: relative;
+    margin: 5px 0;
+    right: auto;
+    padding-top: 5px;
+    width: auto;
+  }
+  article.post .postacol-1,
+  article.post .postacol-2,
+  article.post .postacol-3 {
+    margin-right: 0;
+    column-gap: 15px;
+  }
+  article.post .postacol-3 {
+    column-count: 2;
   }
   #footer-wrapper > div {
     width: 100%;
@@ -3264,6 +3332,13 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   #bud-pencarian article.multi-post .postaright .post-footer,
   #bud-arsip article.multi-post .postaright .post-footer {
     bottom: 0;
+  }
+  article.post figure {
+    width: 100%;
+  }
+  article.post .postacol-2,
+  article.post .postacol-3 {
+    column-count: 1;
   }
   #bud-label .post-filter-message,
   #bud-pencarian .post-filter-message,

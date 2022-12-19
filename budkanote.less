@@ -1360,6 +1360,28 @@ article {
 .post {
     figure {
         position: relative;
+		&.spec {
+			margin: 15px 0 0;
+			&.kanan, &.kiri {
+				width: 300px;
+			}
+			&.kanan {
+				margin-left: 15px;
+			}
+			&.kiri {
+				margin-right: 15px;
+			}
+			figcaption {
+				position: relative;
+				margin: 5px 0;
+				right: auto;
+				padding-top: 5px;
+				width: auto;
+			}
+			&.luas {
+				margin: 15px -300px 15px -100px;
+			}
+		}
     }
     img {
         border-radius: var(--bor);
@@ -1375,7 +1397,11 @@ article {
         border-radius: var(--bor);
     }
     li {
-        line-height: 1.75em;
+        line-height: 2em;
+		&::marker {
+			font-weight: 700;
+			color: var(--col8);
+		}
     }
     code {
         background: var(--col3);
@@ -1415,15 +1441,19 @@ article {
     th {
         border-bottom: 5px solid var(--col3);
         text-align: left;
+		font-weight: 700;
+		color: var(--col8);
     }
     td {
         border-bottom: 3px solid var(--col2);
     }
     blockquote {
-        margin-left: 50px;
-        color: var(--col7);
-        line-height: 2.4em;
-        position: relative;
+        margin-left: 25px;
+		color: var(--col7);
+		line-height: 2.4em;
+		position: relative;
+		padding-left: 25px;
+		border-left: 5px solid var(--col3);
         &::before {
             font: var(--fa-font-solid);
             content: "\f10d";
@@ -1434,6 +1464,19 @@ article {
             float: left;
         }
     }
+	.postacol-1, .postacol-2, .postacol-3 {
+		margin-right: -150px;
+		column-gap: 25px;
+	}
+	.postacol-1 {
+		column-count: 1;
+	}
+	.postacol-2 {
+		column-count: 2;
+	}
+	.postacol-3 {
+		column-count: 3;
+	}
     hr {
         border-top: 5px solid var(--col3);
     }
@@ -2615,6 +2658,13 @@ article {
 				} 
 			}
 		}
+		&.post {
+			figure{
+				&.luas {
+					margin: 15px -200px 15px 0px;
+				}
+			}
+		}
 	}
 }
 @media screen and (max-width: 810px) {
@@ -2780,6 +2830,27 @@ article {
 				height: 170px;
 			}
 		} 
+		&.post {
+			figure{
+				&.luas {
+					margin: 15px 0 15px 0;
+				}
+				figcaption {
+					position: relative;
+					margin: 5px 0;
+					right: auto;
+					padding-top: 5px;
+					width: auto;
+				}
+			}
+			.postacol-1, .postacol-2, .postacol-3 {
+				margin-right: 0;
+				column-gap: 15px;
+			}
+			.postacol-3 {
+				column-count: 2;
+			}
+		}
 	}
 	#footer-wrapper > div {
 		width: 100%;
@@ -3055,6 +3126,14 @@ article {
 				}
 			}
 		} 
+		&.post {
+			figure{
+				width: 100%;
+			}
+			.postacol-2, .postacol-3 {
+				column-count: 1;
+			}
+		}
 	}
 	#bud-label, #bud-pencarian, #bud-arsip {
 		.post-filter-message {
