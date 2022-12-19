@@ -3495,92 +3495,95 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   .bud-single article {
     padding: 15px;
   }
-  .bud-single article.post-item .blowimg {
+  .bud-single article.post-item[data-template] .blowimg {
     margin: -15px 0 10px -15px;
     width: calc(100% + 30px);
   }
-  .bud-single article.post-item .blowimg img {
+  .bud-single article.post-item[data-template] .blowimg img {
     border-radius: var(--bor) var(--bor) 0 0;
     width: 100%;
   }
-  .bud-single article.post-item.single-post h1.post-title.entry-title {
+  .bud-single article.post-item[data-template].single-post h1.post-title.entry-title {
     font-size: 2.5em;
   }
-  .bud-single article.post-item.single-post[data-template] .post-infohead > span {
+  .bud-single article.post-item[data-template].single-post .post-infohead > span {
     padding: 5px 0;
   }
-  .bud-single article.post-item.single-post[data-template] #posnya-relatedan ul li {
+  .bud-single article.post-item[data-template].single-post #posnya-relatedan ul li {
     display: inline-block;
   }
-  .bud-single article.post-item.single-post[data-template] .author-profile {
+  .bud-single article.post-item[data-template].single-post .author-profile {
     margin: 0 -15px -15px;
     padding: 15px;
   }
-  .bud-single article.post-item.single-post[data-template] .author-profile .prodesc {
+  .bud-single article.post-item[data-template].single-post .author-profile .prodesc {
     width: 240px;
     padding: 15px 5px 15px;
   }
-  .bud-single article.post-item.single-post[data-template] .post-footer {
+  .bud-single article.post-item[data-template].single-post .post-footer {
     padding: 15px;
   }
-  .bud-single article.post-item.single-post .comcon {
+  .bud-single article.post-item[data-template].single-post .comments img {
+    width: 30px!important;
+  }
+  .bud-single article.post-item[data-template].single-post .comcon {
     width: 270px;
   }
-  .bud-single article.post-item.single-post .comcon .replies1 .comcon,
-  .bud-single article.post-item.single-post .comcon .replies1 .comcon .comup {
+  .bud-single article.post-item[data-template].single-post .comcon .replies1 .comcon,
+  .bud-single article.post-item[data-template].single-post .comcon .replies1 .comcon .comup {
     width: 260px;
   }
-  .bud-single article.post-item.single-post .comcon .replies2 .comcon,
-  .bud-single article.post-item.single-post .comcon .replies2 .comcon .comup {
+  .bud-single article.post-item[data-template].single-post .comcon .replies2 .comcon,
+  .bud-single article.post-item[data-template].single-post .comcon .replies2 .comcon .comup {
     width: 250px;
   }
-  .bud-single article.post-item.single-post .comcon .replies3 .comcon,
-  .bud-single article.post-item.single-post .comcon .replies3 .comcon .comup {
+  .bud-single article.post-item[data-template].single-post .comcon .replies3 .comcon,
+  .bud-single article.post-item[data-template].single-post .comcon .replies3 .comcon .comup {
     width: 240px;
   }
-  .bud-single article.post-item.single-post .comcon .replies4 .comcon,
-  .bud-single article.post-item.single-post .comcon .replies4 .comcon .comup {
+  .bud-single article.post-item[data-template].single-post .comcon .replies4 .comcon,
+  .bud-single article.post-item[data-template].single-post .comcon .replies4 .comcon .comup {
     width: 230px;
   }
-  .bud-single article.post-item.single-post .comcon .replies5 .comcon,
-  .bud-single article.post-item.single-post .comcon .replies5 .comcon .comup {
+  .bud-single article.post-item[data-template].single-post .comcon .replies5 .comcon,
+  .bud-single article.post-item[data-template].single-post .comcon .replies5 .comcon .comup {
     width: 220px;
   }
-  .bud-single article.post-item.single-post .comcon .replies6 .comcon,
-  .bud-single article.post-item.single-post .comcon .replies6 .comcon .comup {
+  .bud-single article.post-item[data-template].single-post .comcon .replies6 .comcon,
+  .bud-single article.post-item[data-template].single-post .comcon .replies6 .comcon .comup {
     width: 210px;
   }
-  .bud-single article.post-item.single-post .comcon .replies7 .comcon,
-  .bud-single article.post-item.single-post .comcon .replies7 .comcon .comup {
+  .bud-single article.post-item[data-template].single-post .comcon .replies7 .comcon,
+  .bud-single article.post-item[data-template].single-post .comcon .replies7 .comcon .comup {
     width: 200px;
   }
-  .bud-single article.post-item.single-post .comcon .replies8 .comcon,
-  .bud-single article.post-item.single-post .comcon .replies8 .comcon .comup {
+  .bud-single article.post-item[data-template].single-post .comcon .replies8 .comcon,
+  .bud-single article.post-item[data-template].single-post .comcon .replies8 .comcon .comup {
     width: 190px;
   }
-  .bud-single article #budbread-crumb {
+  .bud-single article.post-item[data-template].single-post #budbread-crumb {
     padding: 15px 10px;
     top: -60px;
     left: 0;
     right: 0;
     font-size: 8pt;
   }
-  .bud-single article #budbread-crumb [class*="fa-"] {
+  .bud-single article.post-item[data-template].single-post #budbread-crumb [class*="fa-"] {
     margin: 0 3px;
   }
-  .bud-single article #budshares {
+  .bud-single article.post-item[data-template].single-post #budshares {
     margin: -15px -15px 10px;
   }
-  .bud-single article #budshares > * {
+  .bud-single article.post-item[data-template].single-post #budshares > * {
     width: 100%;
   }
-  .bud-single article #budshares #st-1 .st-btnst-last {
+  .bud-single article.post-item[data-template].single-post #budshares #st-1 .st-btnst-last {
     border-radius: 0 var(--bor) 0 0 !important;
   }
-  .bud-single article #budshort {
+  .bud-single article.post-item[data-template].single-post #budshort {
     border-radius: 0;
   }
-  .bud-single article #budkategori {
+  .bud-single article.post-item[data-template].single-post #budkategori {
     display: block;
     margin-bottom: 10px;
   }
