@@ -3283,9 +3283,9 @@ article {
 		  margin-bottom: 65px;
 		}
 		article {
-			padding: 15px;
 			&.post-item {
-				&[data-template]{
+				&[data-template=jurnal] {
+					padding: 15px;
 					.blowimg {
 						margin: -15px 0 10px -15px;
 						width: calc(100% + 30px);
@@ -3355,6 +3355,9 @@ article {
 						  margin-bottom: 10px;
 						}	
 					} 
+				}
+				&[data-template=gambar], &[data-template=video] {
+					
 				}
 			}
 			.smallhid {
