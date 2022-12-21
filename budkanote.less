@@ -27,11 +27,11 @@
     --ws: 600px;
     --wxs: 400px;
     --wxxs: 300px;
-	--pad5: 5px;
-	--pad10: 10px;
-	--pad15: 15px;
-	--pad20: 20px;
-	--pad25: 25px;
+    --pad5: 5px;
+    --pad10: 10px;
+    --pad15: 15px;
+    --pad20: 20px;
+    --pad25: 25px;
 }
 * {
     -webkit-box-sizing: border-box;
@@ -45,23 +45,23 @@
     }
 }
 ::selection {
-  color: var(--col8);
-  background: var(--acn1);
+    color: var(--col8);
+    background: var(--acn1);
 }
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--col2); 
-  border-radius: 10px;
-  margin: 15px 0;
+    background: var(--col2);
+    border-radius: 10px;
+    margin: 15px 0;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--acn2); 
-  border-radius: 10px;
+    background: var(--acn2);
+    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--acn1); 
+    background: var(--acn1);
 }
 html,
 body,
@@ -210,10 +210,11 @@ input[type="reset"] {
 button,
 input[type="submit"],
 input[type="reset"] {
-	&:hover, &:hover * {
-		background: var(--acn1);
-		color: var(--col1);
-	}
+    &:hover,
+    &:hover * {
+        background: var(--acn1);
+        color: var(--col1);
+    }
 }
 strong,
 b {
@@ -285,10 +286,10 @@ input,
 #blog-pager *,
 #bud-searchform,
 #bud-searchform * {
-	-webkit-transition: all .3s ease 0s;
-	-o-transition: all .3s ease 0s;
-	transition: all .3s ease 0s;
-	-moz-transition: all .3s ease 0s
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
 }
 body {
     background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMXlA3g3oOWJJKKTAjI7FElcAPyQ9eDmQ5smPtByFdEZW3XC6PvAOf1V-zDoCXwlFSZ1sFsWfCDEefDVPGUxOpVFkedVga1LN-vui__6KaknGXnJW2vkotuCx1piSbeUMXDNdX3Ugv96suq0IPhKME9PMxMGSuV6qBh2_N41IC8I3vgDizCUpbGd-uwA/s200/turing.jpg)
@@ -297,7 +298,7 @@ body {
     font-size: 11pt;
     line-height: 1.75em;
     font-family: "Lato", sans-serif;
-	background-attachment: fixed;
+    background-attachment: fixed;
 }
 a {
     text-decoration: none;
@@ -323,7 +324,7 @@ h7,
     font-family: "Varela Round", sans-serif;
     line-height: 1.5em;
     font-weight: bold;
-	text-transform: capitalize;
+    text-transform: capitalize;
 }
 h1,
 h2,
@@ -595,16 +596,16 @@ span.spacing {
 /*main section==========================================*/
 #bud-galat {
     .buderror {
-		width: 400px;
-		height: 350px;
-		padding: calc(var(--pad25) + var(--pad10));
-		background: var(--col1);
-		border-radius: var(--bor);
-		position: absolute;
-		top: calc(50vh - 175px);
-		left: calc(50vw - 200px);
-		font-size: 0.9em;
-	}
+        width: 400px;
+        height: 350px;
+        padding: calc(var(--pad25) + var(--pad10));
+        background: var(--col1);
+        border-radius: var(--bor);
+        position: absolute;
+        top: calc(50vh - 175px);
+        left: calc(50vw - 200px);
+        font-size: 0.9em;
+    }
 }
 #outer-wrapper {
     width: var(--wxl);
@@ -636,189 +637,193 @@ span.spacing {
     }
 }
 #content-wrapper {
-	margin-bottom: calc(var(--pad25) * 2);
+    margin-bottom: calc(var(--pad25) * 2);
     border-radius: var(--bor);
 }
 #bud-arsip {
-	#main-wrapper {
-		display: flex;
-	}
-	#bud-aside {
-		width: 285px;
-		margin-right: var(--pad15);
-		#BlogArchive1 {
-			padding: var(--pad25);
-			background: var(--col2);
-			border-radius: var(--bor);
-			list-style: none;
-			h1 {
-				font-size: 2.5em;
-				color: var(--acn1);
-			}
-			.badan-arsip {
-				margin-top: var(--pad25);
-				ul {
-					margin: 0;
-					li {
-						list-style: none;
-						a {
-							display: block;
-							padding: 10px 15px;
-							margin-bottom: 10px;
-							background: var(--col3);
-							border-radius: var(--bor);
-							height: 45px;
-							span.post-count {
-								padding-left: 15px;
-								color: var(--col8);
-								font-weight: 700;
-								float: right;
-							}
-							&:hover {
-								background: var(--acn1);
-								color: var(--col1);
-							}
-						}
-						&.expanded > a {
-							background: var(--col4);
-							&:hover {
-								background: var(--acn1);
-								color: var(--col1);
-							}
-						}
-					}
-					ul {
-						margin-left: var(--pad25);
-					}
-				}
-			}
-		}
-	}
-	#bud-main {
-		width: 700px;
-	}
+    #main-wrapper {
+        display: flex;
+    }
+    #bud-aside {
+        width: 285px;
+        margin-right: var(--pad15);
+        #BlogArchive1 {
+            padding: var(--pad25);
+            background: var(--col2);
+            border-radius: var(--bor);
+            list-style: none;
+            h1 {
+                font-size: 2.5em;
+                color: var(--acn1);
+            }
+            .badan-arsip {
+                margin-top: var(--pad25);
+                ul {
+                    margin: 0;
+                    li {
+                        list-style: none;
+                        a {
+                            display: block;
+                            padding: 10px 15px;
+                            margin-bottom: 10px;
+                            background: var(--col3);
+                            border-radius: var(--bor);
+                            height: 45px;
+                            span.post-count {
+                                padding-left: 15px;
+                                color: var(--col8);
+                                font-weight: 700;
+                                float: right;
+                            }
+                            &:hover {
+                                background: var(--acn1);
+                                color: var(--col1);
+                            }
+                        }
+                        &.expanded > a {
+                            background: var(--col4);
+                            &:hover {
+                                background: var(--acn1);
+                                color: var(--col1);
+                            }
+                        }
+                    }
+                    ul {
+                        margin-left: var(--pad25);
+                    }
+                }
+            }
+        }
+    }
+    #bud-main {
+        width: 700px;
+    }
 }
 .laman-kategori {
-	#main-wrapper {
-		display: flex;
-	}
-	.budterbaru {
-		display: none;
-		margin-bottom: var(--pad15);
-	}
-	#Label1, #FeaturedPost1, PopularPosts1 {
-		width: 300px;
-		padding-right: var(--pad15);
-	}
-	#FeaturedPost1 > h4, #PopularPosts1 > h4 {
-		margin-bottom: var(--pad15);
-	}
-	#FeaturedPost1 article h4, #PopularPosts1 article h4 {
-		margin-bottom: 0;
-	}
-	#FeaturedPost1 {
-		article {
-			background: var(--col2);
-			display: flex;
-			flex-direction: column;
-			overflow: hidden;
-			border-radius: var(--bor);
-			margin-bottom: var(--pad25);
-			h3 {
-				font-size: 1.5em;
-			}
-			.budsorot-img {
-				margin-bottom: var(--pad15);
-				position: relative;
-				img {
-					height: 100%;
-					border-radius: 0;
-					filter: brightness(0.5) grayscale(0.5);
-				}
-				a::before {
-					position: absolute;
-					content: '';
-					display: block;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					background: rgba(34, 42, 53, 0.67);
-					mix-blend-mode: color;
-					z-index: 1;
-				}
-				&:hover {
-					a::before {
-						opacity: 0;
-					}
-					img {
-						filter: brightness(1) grayscale(0);
-					}
-				} 
-			}
-			.budsorot-desc {
-				padding: 0 var(--pad25);
-			}
-		}
-	} 
-	#PopularPosts1 {
-		article {
-			background: var(--col2);
-			width: 285px;
-			border-radius: var(--bor);
-			margin-bottom: var(--pad15);
-			height: 100px;
-			font-size: 0.8em;
-			display: flex;
-			overflow: hidden;
-			h3 {
-				font-size: 1.2em;
-			}
-			.budsorot-img {
-				margin-right: var(--pad15);
-				width: 100px;
-				height: 100px;
-				position: relative;
-				img {
-					border-radius: 0;
-					filter: brightness(0.5) grayscale(0.5);
-				}
-				&::before {
-					position: absolute;
-					content: '';
-					display: block;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					background: rgba(34, 42, 53, 0.67);
-					mix-blend-mode: color;
-					z-index: 1;
-				}
-				&:hover {
-					&::before {
-						opacity: 0;
-					}
-					img {
-						filter: brightness(1) grayscale(0);
-					}
-				}
-			}
-			.budsorot-desc {
-				width: calc(100% - 100px);
-				padding: var(--pad25) 0;
-				display: flex;
-				flex-wrap: nowrap;
-				align-content: flex-start;
-				align-items: flex-start;
-				flex-direction: column;
-				justify-content: center;
-			}
-		}
-	} 
-	#Blog1 {
-		width: 700px;
-	}
+    #main-wrapper {
+        display: flex;
+    }
+    .budterbaru {
+        display: none;
+        margin-bottom: var(--pad15);
+    }
+    #Label1,
+    #FeaturedPost1,
+    PopularPosts1 {
+        width: 300px;
+        padding-right: var(--pad15);
+    }
+    #FeaturedPost1 > h4,
+    #PopularPosts1 > h4 {
+        margin-bottom: var(--pad15);
+    }
+    #FeaturedPost1 article h4,
+    #PopularPosts1 article h4 {
+        margin-bottom: 0;
+    }
+    #FeaturedPost1 {
+        article {
+            background: var(--col2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: var(--bor);
+            margin-bottom: var(--pad25);
+            h3 {
+                font-size: 1.5em;
+            }
+            .budsorot-img {
+                margin-bottom: var(--pad15);
+                position: relative;
+                img {
+                    height: 100%;
+                    border-radius: 0;
+                    filter: brightness(0.5) grayscale(0.5);
+                }
+                a::before {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(34, 42, 53, 0.67);
+                    mix-blend-mode: color;
+                    z-index: 1;
+                }
+                &:hover {
+                    a::before {
+                        opacity: 0;
+                    }
+                    img {
+                        filter: brightness(1) grayscale(0);
+                    }
+                }
+            }
+            .budsorot-desc {
+                padding: 0 var(--pad25);
+            }
+        }
+    }
+    #PopularPosts1 {
+        article {
+            background: var(--col2);
+            width: 285px;
+            border-radius: var(--bor);
+            margin-bottom: var(--pad15);
+            height: 100px;
+            font-size: 0.8em;
+            display: flex;
+            overflow: hidden;
+            h3 {
+                font-size: 1.2em;
+            }
+            .budsorot-img {
+                margin-right: var(--pad15);
+                width: 100px;
+                height: 100px;
+                position: relative;
+                img {
+                    border-radius: 0;
+                    filter: brightness(0.5) grayscale(0.5);
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(34, 42, 53, 0.67);
+                    mix-blend-mode: color;
+                    z-index: 1;
+                }
+                &:hover {
+                    &::before {
+                        opacity: 0;
+                    }
+                    img {
+                        filter: brightness(1) grayscale(0);
+                    }
+                }
+            }
+            .budsorot-desc {
+                width: calc(100% - 100px);
+                padding: var(--pad25) 0;
+                display: flex;
+                flex-wrap: nowrap;
+                align-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+    #Blog1 {
+        width: 700px;
+    }
 }
 
 #bud-home {
@@ -855,9 +860,9 @@ span.spacing {
     #footer-wrapper {
         border-radius: 0;
     }
-	#bud-footer {
-		display: none;
-	}
+    #bud-footer {
+        display: none;
+    }
 }
 #navbar {
     display: flex;
@@ -963,9 +968,9 @@ span.spacing {
     background: var(--col3);
     border-radius: var(--bor);
     position: relative;
-	&.no-result {
-		border-radius: var(--bor);
-	}
+    &.no-result {
+        border-radius: var(--bor);
+    }
     .mss {
         color: var(--col7);
     }
@@ -987,36 +992,36 @@ span.spacing {
     margin-bottom: 30px;
     background: var(--col2);
     border-radius: var(--bor);
-	position: relative;
-	.master-bread {
-		position: absolute;
-		top: calc(var(--pad25) * -1);
-		padding: var(--pad10) var(--pad25);
-		background: var(--col3);
-		border-radius: var(--bor);
-	}
-	h1 {
-		font-size: 2.5em;
-		color: var(--acn1);
-    	padding-top: var(--pad15);
-	}
-	.btn-group.lin-ver {
-		flex-direction: column;
-		align-items: stretch;
-		a {
-			margin-bottom: var(--pad15);
-			border-radius: var(--bor);
-		}
-	}
+    position: relative;
+    .master-bread {
+        position: absolute;
+        top: calc(var(--pad25) * -1);
+        padding: var(--pad10) var(--pad25);
+        background: var(--col3);
+        border-radius: var(--bor);
+    }
+    h1 {
+        font-size: 2.5em;
+        color: var(--acn1);
+        padding-top: var(--pad15);
+    }
+    .btn-group.lin-ver {
+        flex-direction: column;
+        align-items: stretch;
+        a {
+            margin-bottom: var(--pad15);
+            border-radius: var(--bor);
+        }
+    }
 }
 
 article {
     position: relative;
-	.bud-single & {
-		background: var(--col1);
-		padding: var(--pad25);
-		border-radius: @bor_atas;
-	}
+    .bud-single & {
+        background: var(--col1);
+        padding: var(--pad25);
+        border-radius: @bor_atas;
+    }
     .posta {
         float: left;
         position: relative;
@@ -1026,31 +1031,31 @@ article {
         width: 200px;
         height: 200px;
         display: block;
-		overflow: hidden;
-		position: relative;
-		> a:before {
-			position: absolute;
-			content: '';
-			display: block;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			background: rgba(34, 42, 53, 0.67);
-			mix-blend-mode: color;
-			z-index: 1;
-		}
-		&:hover > a:before {
-			display: none;
-		}
-		img {
-			height: 100%;
-			border-radius: 0;
-			filter: brightness(0.5) grayscale(0.5);
-		}
-		&:hover img {
-			filter: brightness(1) grayscale(0);
-		}
+        overflow: hidden;
+        position: relative;
+        > a:before {
+            position: absolute;
+            content: "";
+            display: block;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(34, 42, 53, 0.67);
+            mix-blend-mode: color;
+            z-index: 1;
+        }
+        &:hover > a:before {
+            display: none;
+        }
+        img {
+            height: 100%;
+            border-radius: 0;
+            filter: brightness(0.5) grayscale(0.5);
+        }
+        &:hover img {
+            filter: brightness(1) grayscale(0);
+        }
     }
     .postaright {
         width: 450px;
@@ -1068,9 +1073,9 @@ article {
             color: var(--acn2);
             a {
                 color: var(--acn2);
-				&:hover {
-					color: var(--acn1);
-				}
+                &:hover {
+                    color: var(--acn1);
+                }
             }
         }
         &:last-child {
@@ -1119,17 +1124,18 @@ article {
 
     &.post-item {
         .blowimg {
-            margin: calc(var(--pad25) * -1) 0 var(--pad10) calc(var(--pad25) * -1);
+            margin: calc(var(--pad25) * -1) 0 var(--pad10)
+                calc(var(--pad25) * -1);
             img {
                 border-radius: @bor_atas;
-				width: calc(100% + 50px);
+                width: calc(100% + 50px);
             }
         }
-		&.single-post {
-			h1.post-title.entry-title {
-				padding: 0 100px;
-			}
-		}
+        &.single-post {
+            h1.post-title.entry-title {
+                padding: 0 100px;
+            }
+        }
         h1.post-title.entry-title {
             color: var(--acn1);
             text-transform: capitalize;
@@ -1139,179 +1145,182 @@ article {
             padding: var(--pad25);
             margin: 40px 0;
             border-radius: var(--bor);
-			hr {
-				border: 0!important;
-			}
+            hr {
+                border: 0 !important;
+            }
         }
-		&[data-template=gambar], &[data-template=video] {
-			display: flex;
-    		padding: 0;
-			background: none;
-			border-radius: 0;
-			.bud-comments h2 {
-				font-size: 1.8em;
-			}
-			#budshares {
-				#st-1 {
-					width: 60%;
-				}
-				#budshort {
-					width: 40%;
-				}
-			}
-			.gambar-gambar {
-				width: 550px;
-				border-radius: var(--bor);
-				.blowimg {
-					margin: 0;
-					overflow: hidden;
-					background: var(--col1);
-					 img {
-						width: 550px;
-					}
-				}
-				#budbread-crumb {
-					left: var(--pad25);
-				}
-				h1.post-title.entry-title {
-					padding: var(--pad15) var(--pad25) 0;
-					background: var(--col1);
-					font-size: 2.5em;
-				}
-				.post-infohead {
-					padding: var(--pad15) var(--pad25) var(--pad25);
-					background: var(--col1);
-					border-radius: 0 0 var(--bor) var(--bor);
-				}
-			}
-			.informasi-gambar {
-				width: 435px;
-				margin-left: 15px;
-				background: var(--col1);
-				border-radius: var(--bor);
-				.narasi-gambar {
-					padding: var(--pad25);
-				}
-				.post-body {
-					padding: 0 50px 0 0;
-				}
-				#budkategori {
-					display: block;
-					margin-bottom: 10px;
-				}
-				.author-profile .prodesc {
-					width: 350px;
-					margin: 0;
-					padding: 15px 0;
-					height: auto;
-				}
-				.author-profile .prodelink > span:first-child {
-					display: block;
-					margin-bottom: 15px;
-				}
-			}
-			&[data-orientasi=landscape] {
-				flex-direction: column;
-				.gambar-gambar {
-					width: 1000px;
-					img {
-						width: 1000px;
-					}
-				}
-				.informasi-gambar {
-					margin: 15px 0;
-					width: 1000px;
-					display: flex;
-					background: none;
-					.narasi-gambar {
-						width: 550px;
-						background: var(--col1);
-						border-radius: var(--bor);
-					}
-					.komentar-gambar {
-						width: 435px;
-						margin-left: 15px;
-						border-radius: var(--bor);
-					}
-					.bud-comments {
-						padding: 25px;
-						background: var(--col1);
-						border-radius: var(--bor);
-					}
-				}
-			}
-			.post-footer {
-				margin-bottom: 0;
-			}
-		}
-		&[data-template=video] {
-			margin-top: 80px;
-			#video-place {
-				margin: 0;
-				height: 562.5px;
-				border-radius: var(--bor) var(--bor) 0 0;
-				overflow: hidden;
-				background: black;
-				iframe {
-					width: 100%;
-					height: 100%;
-				}
-			}
-			.loading {
-				width: 100%;
-				height: 562.5px;
-				line-height: 562.5px;
-				text-align: center;
-				font-size: 48pt;
-				background: black;
-				color: var(--acn1);
-			}
-			.gambar-gambar #budbread-crumb {
-				left: 0;
-    			top: -70px;
-			}
-		}
+        &[data-template="gambar"],
+        &[data-template="video"] {
+            display: flex;
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            .bud-comments h2 {
+                font-size: 1.8em;
+            }
+            #budshares {
+                #st-1 {
+                    width: 60%;
+                }
+                #budshort {
+                    width: 40%;
+                }
+            }
+            .gambar-gambar {
+                width: 550px;
+                border-radius: var(--bor);
+                .blowimg {
+                    margin: 0;
+                    overflow: hidden;
+                    background: var(--col1);
+                    img {
+                        width: 550px;
+                    }
+                }
+                #budbread-crumb {
+                    left: var(--pad25);
+                }
+                h1.post-title.entry-title {
+                    padding: var(--pad15) var(--pad25) 0;
+                    background: var(--col1);
+                    font-size: 2.5em;
+                }
+                .post-infohead {
+                    padding: var(--pad15) var(--pad25) var(--pad25);
+                    background: var(--col1);
+                    border-radius: 0 0 var(--bor) var(--bor);
+                }
+            }
+            .informasi-gambar {
+                width: 435px;
+                margin-left: 15px;
+                background: var(--col1);
+                border-radius: var(--bor);
+                .narasi-gambar {
+                    padding: var(--pad25);
+                }
+                .post-body {
+                    padding: 0 50px 0 0;
+                }
+                #budkategori {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                .author-profile .prodesc {
+                    width: 350px;
+                    margin: 0;
+                    padding: 15px 0;
+                    height: auto;
+                }
+                .author-profile .prodelink > span:first-child {
+                    display: block;
+                    margin-bottom: 15px;
+                }
+            }
+            &[data-orientasi="landscape"] {
+                flex-direction: column;
+                .gambar-gambar {
+                    width: 1000px;
+                    img {
+                        width: 1000px;
+                    }
+                }
+                .informasi-gambar {
+                    margin: 15px 0;
+                    width: 1000px;
+                    display: flex;
+                    background: none;
+                    .narasi-gambar {
+                        width: 550px;
+                        background: var(--col1);
+                        border-radius: var(--bor);
+                    }
+                    .komentar-gambar {
+                        width: 435px;
+                        margin-left: 15px;
+                        border-radius: var(--bor);
+                    }
+                    .bud-comments {
+                        padding: 25px;
+                        background: var(--col1);
+                        border-radius: var(--bor);
+                    }
+                }
+            }
+            .post-footer {
+                margin-bottom: 0;
+            }
+        }
+        &[data-template="video"] {
+            margin-top: 80px;
+            #video-place {
+                margin: 0;
+                height: 562.5px;
+                border-radius: var(--bor) var(--bor) 0 0;
+                overflow: hidden;
+                background: black;
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .loading {
+                width: 100%;
+                height: 562.5px;
+                line-height: 562.5px;
+                text-align: center;
+                font-size: 48pt;
+                background: black;
+                color: var(--acn1);
+            }
+            .gambar-gambar #budbread-crumb {
+                left: 0;
+                top: -70px;
+            }
+        }
     }
-	&.post-static_page {
-		border-radius: var(--bor);
-		h1.post-title.entry-title {
-			padding: 50px 100px 0;
-		}
-		.post-body {
-			padding: 0 300px 0 100px;
-		}
-	}
+    &.post-static_page {
+        border-radius: var(--bor);
+        h1.post-title.entry-title {
+            padding: 50px 100px 0;
+        }
+        .post-body {
+            padding: 0 300px 0 100px;
+        }
+    }
 }
 
 .laman-kategori {
-	.blog-posts.hfeed {
-		background: var(--col1);
-		padding: 25px;
-		border-radius: @bor_atas;
-		&.bud-nonext {
-			margin-bottom: 50px;
-			border-radius: var(--bor);
-		}
-	}
+    .blog-posts.hfeed {
+        background: var(--col1);
+        padding: 25px;
+        border-radius: @bor_atas;
+        &.bud-nonext {
+            margin-bottom: 50px;
+            border-radius: var(--bor);
+        }
+    }
 }
 
-#bud-label, #bud-pencarian, #bud-arsip {
-	.blog-posts.hfeed {
-		background: var(--col1);
-		padding: 25px 35px;
-	}
-	article .postaright {
-		width: calc(100% - 200px);
-		padding: 15px 25px;
-		height: 200px;
-	}
-	.post-filter-message {
-		margin-bottom: 0;
-		border-radius: var(--bor) var(--bor) 0 0;
-		&.no-result {
-			border-radius: var(--bor);
-		}
-	}
+#bud-label,
+#bud-pencarian,
+#bud-arsip {
+    .blog-posts.hfeed {
+        background: var(--col1);
+        padding: 25px 35px;
+    }
+    article .postaright {
+        width: calc(100% - 200px);
+        padding: 15px 25px;
+        height: 200px;
+    }
+    .post-filter-message {
+        margin-bottom: 0;
+        border-radius: var(--bor) var(--bor) 0 0;
+        &.no-result {
+            border-radius: var(--bor);
+        }
+    }
 }
 
 .postmark {
@@ -1327,28 +1336,29 @@ article {
     text-align: center;
     border-radius: 0 0 var(--bor) 0;
     color: var(--col1);
-	z-index: 2;
-	.tandagori {
-		width: 50px;
-	}
-	span.tandarasi {
-		color: var(--col8);
-		font-size: 0.75em;
-		> span {
-			margin-right: -0.15em;
-			&:last-child {
-				padding-right: 15px;
-			}
-		}
-		&:first-child {
-			padding-left: 15px;
-		}
-	}
-	[data-kategori=video] &, [data-kategori=gambar] & {
-		& span.tandarasi {
-			min-width: 55px;
-		}
-	}
+    z-index: 2;
+    .tandagori {
+        width: 50px;
+    }
+    span.tandarasi {
+        color: var(--col8);
+        font-size: 0.75em;
+        > span {
+            margin-right: -0.15em;
+            &:last-child {
+                padding-right: 15px;
+            }
+        }
+        &:first-child {
+            padding-left: 15px;
+        }
+    }
+    [data-kategori="video"] &,
+    [data-kategori="gambar"] & {
+        & span.tandarasi {
+            min-width: 55px;
+        }
+    }
     a {
         display: block;
         color: var(--col8);
@@ -1363,28 +1373,29 @@ article {
 .post {
     figure {
         position: relative;
-		&.spec {
-			margin: 15px 0 0;
-			&.kanan, &.kiri {
-				width: 300px;
-			}
-			&.kanan {
-				margin-left: 15px;
-			}
-			&.kiri {
-				margin-right: 15px;
-			}
-			figcaption {
-				position: relative;
-				margin: 5px 0;
-				right: auto;
-				padding-top: 5px;
-				width: auto;
-			}
-			&.luas {
-				margin: 15px -300px 15px -100px;
-			}
-		}
+        &.spec {
+            margin: 15px 0 0;
+            &.kanan,
+            &.kiri {
+                width: 300px;
+            }
+            &.kanan {
+                margin-left: 15px;
+            }
+            &.kiri {
+                margin-right: 15px;
+            }
+            figcaption {
+                position: relative;
+                margin: 5px 0;
+                right: auto;
+                padding-top: 5px;
+                width: auto;
+            }
+            &.luas {
+                margin: 15px -300px 15px -100px;
+            }
+        }
     }
     img {
         border-radius: var(--bor);
@@ -1401,10 +1412,10 @@ article {
     }
     li {
         line-height: 2em;
-		&::marker {
-			font-weight: 700;
-			color: var(--col8);
-		}
+        &::marker {
+            font-weight: 700;
+            color: var(--col8);
+        }
     }
     code {
         background: var(--col3);
@@ -1444,19 +1455,19 @@ article {
     th {
         border-bottom: 5px solid var(--col3);
         text-align: left;
-		font-weight: 700;
-		color: var(--col8);
+        font-weight: 700;
+        color: var(--col8);
     }
     td {
         border-bottom: 3px solid var(--col2);
     }
     blockquote {
         margin-left: 25px;
-		color: var(--col7);
-		line-height: 2.4em;
-		position: relative;
-		padding-left: 25px;
-		border-left: 5px solid var(--col3);
+        color: var(--col7);
+        line-height: 2.4em;
+        position: relative;
+        padding-left: 25px;
+        border-left: 5px solid var(--col3);
         &::before {
             font: var(--fa-font-solid);
             content: "\f10d";
@@ -1467,19 +1478,21 @@ article {
             float: left;
         }
     }
-	.postacol-1, .postacol-2, .postacol-3 {
-		margin-right: -150px;
-		column-gap: 25px;
-	}
-	.postacol-1 {
-		column-count: 1;
-	}
-	.postacol-2 {
-		column-count: 2;
-	}
-	.postacol-3 {
-		column-count: 3;
-	}
+    .postacol-1,
+    .postacol-2,
+    .postacol-3 {
+        margin-right: -150px;
+        column-gap: 25px;
+    }
+    .postacol-1 {
+        column-count: 1;
+    }
+    .postacol-2 {
+        column-count: 2;
+    }
+    .postacol-3 {
+        column-count: 3;
+    }
     hr {
         border-top: 5px solid var(--col3);
     }
@@ -1567,14 +1580,14 @@ article {
     font-size: 12pt;
     padding-right: 0 !important;
     border-radius: var(--bor) 0 0 0;
-	overflow: hidden;
+    overflow: hidden;
     a {
         display: block;
     }
-	&:hover a {
-		background: var(--acn1);
-		color: var(--col1);
-	}
+    &:hover a {
+        background: var(--acn1);
+        color: var(--col1);
+    }
     .postarama.multi-post & {
         line-height: 120px;
     }
@@ -1600,9 +1613,9 @@ article {
         padding-left: 10px;
         font-size: 9pt;
     }
-	#budpendekan {
-		font-size: 8pt;
-	}
+    #budpendekan {
+        font-size: 8pt;
+    }
 }
 #bud-lampiran {
     margin: 0 0 20px;
@@ -1670,7 +1683,7 @@ article {
     ul {
         padding: 0;
         list-style: none;
-		margin: 0;
+        margin: 0;
         li {
             height: 100px;
             width: 100%;
@@ -1705,27 +1718,28 @@ article {
         margin-bottom: 10px;
     }
 }
-[data-template=gambar], [data-template=video] {
-	#posnya-relatedan {
-		ul li {
-			width: 25%;
-			float: left;
-			background: none;
-			border-radius: 0;
-			&:first-child {
-				border-radius: @bor_kiri;
-			}
-			&:last-child {
-				border-radius: @bor_kanan;
-			}
-			img {
-				border-radius: 0;
-			}
-		}
-		.relasum {
-			display: none;
-		}
-	} 
+[data-template="gambar"],
+[data-template="video"] {
+    #posnya-relatedan {
+        ul li {
+            width: 25%;
+            float: left;
+            background: none;
+            border-radius: 0;
+            &:first-child {
+                border-radius: @bor_kiri;
+            }
+            &:last-child {
+                border-radius: @bor_kanan;
+            }
+            img {
+                border-radius: 0;
+            }
+        }
+        .relasum {
+            display: none;
+        }
+    }
 }
 .author-profile {
     margin: -25px;
@@ -1749,14 +1763,14 @@ article {
     }
     .prodesc {
         width: 750px;
-		margin: 0;
-		padding: 0 25px;
-		height: 150px;
-		display: flex;
-		flex-direction: column;
-		align-content: flex-start;
-		justify-content: center;
-		align-items: stretch;
+        margin: 0;
+        padding: 0 25px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: stretch;
     }
     .prodename {
         font-size: 1.5em;
@@ -1794,7 +1808,7 @@ article {
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
-	overflow: hidden;
+    overflow: hidden;
     text-align: center;
     span {
         font-size: 32pt;
@@ -1802,52 +1816,53 @@ article {
         color: var(--col8);
         display: block;
         background: var(--col3);
-		&:hover {
-			background: var(--col2);
-		}
-		&.info {
-			margin: 0;
-			font-size: 1.2em;
-			text-align: left;
-			border-radius: 0 0 var(--bor);
-			color: var(--acn2);
-		}
-		.bud-single & {
-			&#blog-pager-newer-link, &#blog-pager-older-link {
-				position: fixed;
-				z-index: 9999;
-				top: calc(50vh - 50px);
-				height: 100px;
-				line-height: 50px;
-				width: 100px;
-				text-align: center;
-				font-size: 16pt;
-			}
-			&#blog-pager-older-link {
-				right: -25px;
-				border-radius: var(--bor) 0 0 var(--bor);
-				&:hover {
-					right: 0;
-					background: var(--col4);
-				}
-			}
-			&#blog-pager-newer-link {
-				left: -25px;
-				border-radius: 0 var(--bor) var(--bor) 0;
-				&:hover {
-					left: 0;
-					background: var(--col4);
-				}
-			}
-			&#blog-home-link {
-				display: none;
-			}
-		}
+        &:hover {
+            background: var(--col2);
+        }
+        &.info {
+            margin: 0;
+            font-size: 1.2em;
+            text-align: left;
+            border-radius: 0 0 var(--bor);
+            color: var(--acn2);
+        }
+        .bud-single & {
+            &#blog-pager-newer-link,
+            &#blog-pager-older-link {
+                position: fixed;
+                z-index: 9999;
+                top: calc(50vh - 50px);
+                height: 100px;
+                line-height: 50px;
+                width: 100px;
+                text-align: center;
+                font-size: 16pt;
+            }
+            &#blog-pager-older-link {
+                right: -25px;
+                border-radius: var(--bor) 0 0 var(--bor);
+                &:hover {
+                    right: 0;
+                    background: var(--col4);
+                }
+            }
+            &#blog-pager-newer-link {
+                left: -25px;
+                border-radius: 0 var(--bor) var(--bor) 0;
+                &:hover {
+                    left: 0;
+                    background: var(--col4);
+                }
+            }
+            &#blog-home-link {
+                display: none;
+            }
+        }
         a {
             display: block;
             width: 100%;
             height: 100%;
-        	padding: 25px;
+            padding: 25px;
         }
     }
 }
@@ -1888,10 +1903,10 @@ article {
             background: var(--col3);
             border-radius: var(--bor);
             font-size: 10pt;
-			&:hover {
-				background: var(--acn2);
-				color: var(--col1);
-			}
+            &:hover {
+                background: var(--acn2);
+                color: var(--col1);
+            }
         }
         input:checked + label.icon-radio-input {
             color: var(--col1);
@@ -1934,9 +1949,9 @@ article {
     height: 50px;
     border-radius: @bor_atas;
     overflow: hidden;
-	img {
-		border-radius: 0;
-	}
+    img {
+        border-radius: 0;
+    }
 }
 .repcom {
     width: 50px;
@@ -1952,7 +1967,7 @@ article {
     color: var(--col5);
     &.replied {
         color: var(--acn2);
-		cursor: pointer;
+        cursor: pointer;
     }
     .bigger {
         font-size: 18pt;
@@ -2009,7 +2024,7 @@ article {
         color: var(--col6);
         padding: 15px;
         margin: 0;
-		word-break: break-word;
+        word-break: break-word;
     }
     &ment-footer {
         background: var(--col3);
@@ -2201,87 +2216,90 @@ each(range(8), {
 }
 article {
     &.post-item {
-		&[data-template=gambar], &[data-template=video] {
-			.bud-comments {
-				padding: 0 25px;
-			}
-			.comment-avatar {
-				border-radius: @bor_kiri;
-			}
-			.is-replied > div > div {
-				> .comment-header {
-					border-radius: 0 var(--bor) 0 0;
-				}
-				> .comment-footer {
-					border-radius: 0 0 var(--bor) 0;
-				}
-			}
-			.comment {
-				flex-direction: column;
-			}
-			.comimg {
-				width: 150px;
-				z-index: 8;
-				display: flex;
-				flex-direction: row;
-				margin-bottom: 10px;
-			}
-			.repcom {
-				width: 100px;
-				height: 50px;
-				border-radius: 0 var(--bor) var(--bor) 0;
-				overflow: hidden;
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				align-content: center;
-				justify-content: space-evenly;
-				align-items: center;
-			}
-			.replies {
-				padding-left: 10px;
-			}
-			.comcon {
-				width: 385px;
-				.is-replied > & {
-					width: 385px;
-					margin-bottom: 0;
-				}
-				each(range(8), {
+        &[data-template="gambar"],
+        &[data-template="video"] {
+            .bud-comments {
+                padding: 0 25px;
+            }
+            .comment-avatar {
+                border-radius: @bor_kiri;
+            }
+            .is-replied > div > div {
+                > .comment-header {
+                    border-radius: 0 var(--bor) 0 0;
+                }
+                > .comment-footer {
+                    border-radius: 0 0 var(--bor) 0;
+                }
+            }
+            .comment {
+                flex-direction: column;
+            }
+            .comimg {
+                width: 150px;
+                z-index: 8;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 10px;
+            }
+            .repcom {
+                width: 100px;
+                height: 50px;
+                border-radius: 0 var(--bor) var(--bor) 0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            .replies {
+                padding-left: 10px;
+            }
+            .comcon {
+                width: 385px;
+                .is-replied > & {
+                    width: 385px;
+                    margin-bottom: 0;
+                }
+                each(range(8), {
 				  .replies@{value} .comcon, .replies@{value} .comcon .comup {
 					width: (385px - (@value * 10px));
 				  }
 				});
-			}
-			.comup {
-				padding: 0 0 15px 0;
-			}
-			.right.comcon::before {
-				content: none;
-			}
-			.is-replied > .right.comcon::before {
-				width: 0px;
-				height: calc(100% - 15px);
-				border-left: 5px solid var(--col5);
-				content: "";
-				position: absolute;
-				left: 0;
-				top: 0;
-				z-index: 99;
-			}
-			[data-level="2"], [data-level="4"], [data-level="6"], [data-level="8"] {
-				&.is-replied > .right.comcon::before {
-					border-left-color: var(--col3);
-				}
-			}
-			.is-replied > .comcon {
-				margin-bottom: 0;
-			}
-			.replies .comment:last-child::after {
-				content: none;
-			}
-			
-		}
+            }
+            .comup {
+                padding: 0 0 15px 0;
+            }
+            .right.comcon::before {
+                content: none;
+            }
+            .is-replied > .right.comcon::before {
+                width: 0px;
+                height: calc(100% - 15px);
+                border-left: 5px solid var(--col5);
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 99;
+            }
+            [data-level="2"],
+            [data-level="4"],
+            [data-level="6"],
+            [data-level="8"] {
+                &.is-replied > .right.comcon::before {
+                    border-left-color: var(--col3);
+                }
+            }
+            .is-replied > .comcon {
+                margin-bottom: 0;
+            }
+            .replies .comment:last-child::after {
+                content: none;
+            }
+        }
     }
 }
 #footer-wrapper {
@@ -2289,43 +2307,43 @@ article {
     padding: 25px;
     border-radius: var(--bor);
     font-size: 10pt;
-	overflow: hidden;
+    overflow: hidden;
     .right {
         text-align: right;
     }
-	#bud-footer {
-		width: calc(100% + 50px)!important;
-		margin: -25px -25px 15px;
-		padding: 25px 35px;
-		background: var(--col2);
-		.widget-content {
-			display: flex;
-			flex-direction: row-reverse;
-			align-content: flex-start;
-			justify-content: flex-end;
-			align-items: flex-start;
-			margin: 25px 0 0;
-			flex-wrap: wrap;
-			span.label-size a {
-				background: var(--col3);
-				padding: 10px 15px;
-				border-radius: var(--bor2);
-				margin: 0 15px 15px 0;
-				display: inline-block;
-				&:hover {
-					background: var(--acn1);
-					color: var(--col1);
-				}
-			}
-			span.label-count {
-				padding: 5px 10px;
-				margin-left: 5px;
-				border-radius: var(--bor2);
-				color: var(--col8);
-				font-weight: 700;
-			}
-		}
-	}
+    #bud-footer {
+        width: calc(100% + 50px) !important;
+        margin: -25px -25px 15px;
+        padding: 25px 35px;
+        background: var(--col2);
+        .widget-content {
+            display: flex;
+            flex-direction: row-reverse;
+            align-content: flex-start;
+            justify-content: flex-end;
+            align-items: flex-start;
+            margin: 25px 0 0;
+            flex-wrap: wrap;
+            span.label-size a {
+                background: var(--col3);
+                padding: 10px 15px;
+                border-radius: var(--bor2);
+                margin: 0 15px 15px 0;
+                display: inline-block;
+                &:hover {
+                    background: var(--acn1);
+                    color: var(--col1);
+                }
+            }
+            span.label-count {
+                padding: 5px 10px;
+                margin-left: 5px;
+                border-radius: var(--bor2);
+                color: var(--col8);
+                font-weight: 700;
+            }
+        }
+    }
 }
 #to-top {
     position: fixed;
@@ -2336,1107 +2354,1147 @@ article {
     color: var(--col1);
     font-size: 24pt;
     border-radius: var(--bor);
-	z-index: 9999;
-	&:hover {
-		bottom: 35px;
-		background: var(--acn2);
-	}
+    z-index: 9999;
+    &:hover {
+        bottom: 35px;
+        background: var(--acn2);
+    }
 }
 @media screen and (max-width: 1010px) {
     #outer-wrapper {
         width: var(--wl);
     }
-	#bud-arsip {
-		#main-wrapper {
-			flex-direction: column;
-		}
-		#bud-aside {
-			width: 100%;
-			margin-right: 0;
-			margin-bottom: 30px;
-			#BlogArchive1 {
-				padding: 25px;
-				background: var(--col2);
-				border-radius: var(--bor);
-				list-style: none;
-				h1 {
-					font-size: 2.5em;
-					color: var(--acn1);
-				}
-				.badan-arsip {
-					margin-top: 25px;
-					ul {
-						margin: 0;
-						li {
-							&[data-level="1"] {
-								display: flex;
-								flex-direction: row;
-								flex-wrap: wrap;
-								align-content: flex-start;
-								justify-content: flex-start;
-								align-items: flex-start;
-								border-bottom: 5px solid var(--col3);
-								padding-bottom: 15px;
-								margin-right: 0;
-								> a {
-									width: 30%;
-								}
-								&:last-child {
-									border-bottom: 0;
-									padding-bottom: 0;
-								}
-								> ul {
-									display: flex;
-									flex-direction: row;
-									flex-wrap: wrap;
-									align-content: flex-start;
-									justify-content: flex-start;
-									align-items: flex-start;
-									width: 70%;
-									margin: 0;
-									padding-left: 25px;
-								}
-								li {
-									margin-right: 15px;
-								}
-							}
-						}
-						ul {
-							margin-left: 0;
-						}
-					}
-				}
-			}
-		}
-		#bud-main {
-			width: 100%;
-		}
-	}
-	.laman-kategori {
-		 #main-wrapper {
-			flex-direction: column;
-		}
-		.budterbaru {
-			display: block;
-		}
-		#Label1, #FeaturedPost1, #PopularPosts1 {
-			width: 100%;
-			padding-right: 0;
-		}
-		#Label1 {
-			#master-note {
-				padding: 25px;
-				margin-bottom: 30px;
-				background: var(--col2);
-				border-radius: var(--bor);
-				position: relative;
-			}
-			.btn-group.lin-ver {
-				flex-direction: row;
-				align-items: center;
-				a {
-					margin-bottom: 0;
-					border-radius: 0;
-					width: 33.333%;
-					text-align: center;
-					&:first-child {
-						border-radius: @bor_kiri;
-					}
-					&:last-child {
-						border-radius: @bor_kanan;
-					}
-				}
-			}
-		}
-		#FeaturedPost1 article h4, #PopularPosts1 article h4 {
-			margin-bottom: 0;
-		}
-		#FeaturedPost1 {
-			article {
-				flex-direction: row;
-				height: 160px;
-				margin-bottom: 10px;
-				.budsorot-img {
-					margin-bottom: 0;
-					width: 240px;
-					height: 160px;
-					img {
-						height: 100%;
-						border-radius: 0;
-					}
-				}
-				.budsorot-desc {
-					width: calc(100% - 240px);
-    				padding: 15px 25px;
-				}
-			}
-		} 
-		#PopularPosts1 {
-			> div > div {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				align-content: flex-start;
-				justify-content: space-between;
-				align-items: flex-start;
-				border-radius: var(--bor);
-				margin-bottom: 25px;
-			}
-			article {
-				padding: 0;
-				width: 396px;
-				border-radius: var(--bor);
-				margin-bottom: 10px;
-				height: 50px;
-				font-size: 0.8em;
-				display: flex;
-				border-radius: var(--bor);
-				overflow: hidden;
-				.budsorot-img {
-					margin: 0;
-					width: 50px;
-					height: 50px;
-					img {
-						height: 100%;
-						border-radius: 0;
-					}
-				}
-				.budsorot-desc {
-					width: 100%;
-					padding: 15px;
-				}
-			}
-		}
-		#Blog1 {
-			width: 100%;
-		}
-		article {
-			&.multi-post {
-				&.postarama {
-					.postaright {
-						width: 450px;
-						height: 350px;
-					}
-				}
-				.postaright {
-					width: 550px;
-				}
-			}
-		}
-	}
-	article {
-		&.post-static_page {
-			h1.post-title.entry-title {
-				padding: 50px 0;
-			}
-			.post-body {
-				padding: 0 200px 0 0;
-			}
-		}
-		&.post-item, &[id*="bud-laman-"] {
-			.post-body {
-				padding: 0 200px 0 0;
-			}
-		}
-		&.post-item {
-			&.single-post {
-				h1.post-title.entry-title {
-					padding: 0;
-				}
-				.post-infohead {
-					padding: 15px 0 25px;
-				}
-				.author-profile .prodesc {
-					width: 550px;
-				}
-			} 
-			each(range(8), {
+    #bud-arsip {
+        #main-wrapper {
+            flex-direction: column;
+        }
+        #bud-aside {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+            #BlogArchive1 {
+                padding: 25px;
+                background: var(--col2);
+                border-radius: var(--bor);
+                list-style: none;
+                h1 {
+                    font-size: 2.5em;
+                    color: var(--acn1);
+                }
+                .badan-arsip {
+                    margin-top: 25px;
+                    ul {
+                        margin: 0;
+                        li {
+                            &[data-level="1"] {
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                align-content: flex-start;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                border-bottom: 5px solid var(--col3);
+                                padding-bottom: 15px;
+                                margin-right: 0;
+                                > a {
+                                    width: 30%;
+                                }
+                                &:last-child {
+                                    border-bottom: 0;
+                                    padding-bottom: 0;
+                                }
+                                > ul {
+                                    display: flex;
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    align-content: flex-start;
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+                                    width: 70%;
+                                    margin: 0;
+                                    padding-left: 25px;
+                                }
+                                li {
+                                    margin-right: 15px;
+                                }
+                            }
+                        }
+                        ul {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        #bud-main {
+            width: 100%;
+        }
+    }
+    .laman-kategori {
+        #main-wrapper {
+            flex-direction: column;
+        }
+        .budterbaru {
+            display: block;
+        }
+        #Label1,
+        #FeaturedPost1,
+        #PopularPosts1 {
+            width: 100%;
+            padding-right: 0;
+        }
+        #Label1 {
+            #master-note {
+                padding: 25px;
+                margin-bottom: 30px;
+                background: var(--col2);
+                border-radius: var(--bor);
+                position: relative;
+            }
+            .btn-group.lin-ver {
+                flex-direction: row;
+                align-items: center;
+                a {
+                    margin-bottom: 0;
+                    border-radius: 0;
+                    width: 33.333%;
+                    text-align: center;
+                    &:first-child {
+                        border-radius: @bor_kiri;
+                    }
+                    &:last-child {
+                        border-radius: @bor_kanan;
+                    }
+                }
+            }
+        }
+        #FeaturedPost1 article h4,
+        #PopularPosts1 article h4 {
+            margin-bottom: 0;
+        }
+        #FeaturedPost1 {
+            article {
+                flex-direction: row;
+                height: 160px;
+                margin-bottom: 10px;
+                .budsorot-img {
+                    margin-bottom: 0;
+                    width: 240px;
+                    height: 160px;
+                    img {
+                        height: 100%;
+                        border-radius: 0;
+                    }
+                }
+                .budsorot-desc {
+                    width: calc(100% - 240px);
+                    padding: 15px 25px;
+                }
+            }
+        }
+        #PopularPosts1 {
+            > div > div {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                justify-content: space-between;
+                align-items: flex-start;
+                border-radius: var(--bor);
+                margin-bottom: 25px;
+            }
+            article {
+                padding: 0;
+                width: 396px;
+                border-radius: var(--bor);
+                margin-bottom: 10px;
+                height: 50px;
+                font-size: 0.8em;
+                display: flex;
+                border-radius: var(--bor);
+                overflow: hidden;
+                .budsorot-img {
+                    margin: 0;
+                    width: 50px;
+                    height: 50px;
+                    img {
+                        height: 100%;
+                        border-radius: 0;
+                    }
+                }
+                .budsorot-desc {
+                    width: 100%;
+                    padding: 15px;
+                }
+            }
+        }
+        #Blog1 {
+            width: 100%;
+        }
+        article {
+            &.multi-post {
+                &.postarama {
+                    .postaright {
+                        width: 450px;
+                        height: 350px;
+                    }
+                }
+                .postaright {
+                    width: 550px;
+                }
+            }
+        }
+    }
+    article {
+        &.post-static_page {
+            h1.post-title.entry-title {
+                padding: 50px 0;
+            }
+            .post-body {
+                padding: 0 200px 0 0;
+            }
+        }
+        &.post-item,
+        &[id*="bud-laman-"] {
+            .post-body {
+                padding: 0 200px 0 0;
+            }
+        }
+        &.post-item {
+            &.single-post {
+                h1.post-title.entry-title {
+                    padding: 0;
+                }
+                .post-infohead {
+                    padding: 15px 0 25px;
+                }
+                .author-profile .prodesc {
+                    width: 550px;
+                }
+            }
+            each(range(8), {
 			  .replies@{value} .comcon, .replies@{value} .comcon .comup {
 				width: (700px - (@value * 50px));
 			  }
 			});
-			&[data-template=gambar], &[data-template=video] {
-				flex-direction: column;
-				.gambar-gambar {
-					width: 100%;
-					#video-place, .loading {
-						height: calc(9/16 * 800px);
-					}
-					.blowimg img {
-						width: 100%;
-					}
-				}
-				.informasi-gambar {
-					width: 100%;
-					margin-left: 0;
-					margin-top: 15px;
-					.post-body {
-						padding: 0 200px 0 0;
-					}
-					#posnya-relatedan ul li {
-						width: 110px;
-					}
-					.author-profile .prodesc {
-						width: 550px;
-						padding: 0 15px;
-					}
-				}
-				[data-level="2"], [data-level="4"], [data-level="6"], [data-level="8"] {
-					&.is-replied > .right.comcon::before {
-						border-left-color: var(--col5);
-					}
-				}
-				&[data-orientasi=landscape] {
-					.gambar-gambar, .informasi-gambar {
-						width: 100%;
-					}
-					.informasi-gambar {
-						flex-direction: column;
-						.narasi-gambar {
-							width: 100%;
-						}
-						.komentar-gambar {
-							width: 100%;
-							margin-left: 0;
-							margin-top: 15px;
-						}
-					}
-				}
-				.comment {
-					flex-direction: row;
-				}
-				.replies {
-					padding-left: 0;
-					.repcom::before {
-						content: "";
-						width: 20px;
-						position: absolute;
-						left: -30px;
-						border-bottom: 5px solid var(--col5);
-						top: -25px;
-					}
-					.comment:last-child::after {
-						content: "";
-						position: absolute;
-						width: 10px;
-						height: calc(100% - 30px);
-						background: var(--col1);
-						top: 30px;
-						left: -33px;
-						z-index: 99;
-					}
-				}
-				.comimg {
-					width: 50px;
-					flex-direction: column;
-				}
-				.comment-avatar {
-					border-radius: @bor_atas;
-				}
-				.repcom {
-					width: 50px;
-					height: 70px;
-					border-radius: @bor_bawah;
-					display: block;
-					overflow: inherit;
-				}
-				.comup {
-					padding: 0 0 15px 10px;
-				}
-				.comcon {
-					width: 700px;
-					each(range(8), {
+            &[data-template="gambar"],
+            &[data-template="video"] {
+                flex-direction: column;
+                .gambar-gambar {
+                    width: 100%;
+                    #video-place,
+                    .loading {
+                        height: calc(9 / 16 * 800px);
+                    }
+                    .blowimg img {
+                        width: 100%;
+                    }
+                }
+                .informasi-gambar {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-top: 15px;
+                    .post-body {
+                        padding: 0 200px 0 0;
+                    }
+                    #posnya-relatedan ul li {
+                        width: 110px;
+                    }
+                    .author-profile .prodesc {
+                        width: 550px;
+                        padding: 0 15px;
+                    }
+                }
+                [data-level="2"],
+                [data-level="4"],
+                [data-level="6"],
+                [data-level="8"] {
+                    &.is-replied > .right.comcon::before {
+                        border-left-color: var(--col5);
+                    }
+                }
+                &[data-orientasi="landscape"] {
+                    .gambar-gambar,
+                    .informasi-gambar {
+                        width: 100%;
+                    }
+                    .informasi-gambar {
+                        flex-direction: column;
+                        .narasi-gambar {
+                            width: 100%;
+                        }
+                        .komentar-gambar {
+                            width: 100%;
+                            margin-left: 0;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+                .comment {
+                    flex-direction: row;
+                }
+                .replies {
+                    padding-left: 0;
+                    .repcom::before {
+                        content: "";
+                        width: 20px;
+                        position: absolute;
+                        left: -30px;
+                        border-bottom: 5px solid var(--col5);
+                        top: -25px;
+                    }
+                    .comment:last-child::after {
+                        content: "";
+                        position: absolute;
+                        width: 10px;
+                        height: calc(100% - 30px);
+                        background: var(--col1);
+                        top: 30px;
+                        left: -33px;
+                        z-index: 99;
+                    }
+                }
+                .comimg {
+                    width: 50px;
+                    flex-direction: column;
+                }
+                .comment-avatar {
+                    border-radius: @bor_atas;
+                }
+                .repcom {
+                    width: 50px;
+                    height: 70px;
+                    border-radius: @bor_bawah;
+                    display: block;
+                    overflow: inherit;
+                }
+                .comup {
+                    padding: 0 0 15px 10px;
+                }
+                .comcon {
+                    width: 700px;
+                    each(range(8), {
 					  .replies@{value} .comcon, .replies@{value} .comcon .comup {
 						width: (700px - (@value * 50px));
 					  }
 					});
-				}
-				.is-replied {
-					> .right.comcon::before {
-						height: calc(100% - 135px);
-						left: -30px;
-						top: 120px;
-					}
-					> div > div {
-						> .comment-header {
-							border-radius: @bor_atas;
-						}
-						> .comment-footer {
-							border-radius: @bor_bawah;
-						}
-					} 
-				} 
-			}
-		}
-		&.post {
-			figure{
-				&.spec.luas {
-					margin: 15px -200px 15px 0px;
-				}
-			}
-		}
-	}
+                }
+                .is-replied {
+                    > .right.comcon::before {
+                        height: calc(100% - 135px);
+                        left: -30px;
+                        top: 120px;
+                    }
+                    > div > div {
+                        > .comment-header {
+                            border-radius: @bor_atas;
+                        }
+                        > .comment-footer {
+                            border-radius: @bor_bawah;
+                        }
+                    }
+                }
+            }
+        }
+        &.post {
+            figure {
+                &.spec.luas {
+                    margin: 15px -200px 15px 0px;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 810px) {
     #outer-wrapper {
         width: var(--ws);
     }
-	.laman-kategori {
-		#FeaturedPost1 {
-			article {
-				.budsorot-img {
-					width: 160px;
-					height: 160px;
-					overflow: hidden;
-					img {
-						height: 100%;
-						margin-left: -25%;
-					}
-				}
-				.budsorot-desc {
-					width: calc(100% - 160px);
-					padding: 15px 25px;
-					p {
-						margin-top: 5px;
-					}
-				}
-			}
-		}
-		#PopularPosts1 {
-			article {
-				width: 296px;
-			}
-		}
-	}
-	article {
-		&.post-static_page {
-			.post-body {
-				padding: 0;
-			}
-		}
-		&.post-item, &[id*="bud-laman-"] { 
-			.post-body {
-				padding: 0;
-			}
-		}
-		&.post-item {
-			&.single-post {
-				&[data-template] {
-					#video-place, .loading {
-						height: calc(9/16 * 600px);
-					}
-				} 
-				#posnya-relatedan .relasum {
-					width: 400px;
-					height: 100px;
-					display: flex;
-					flex-direction: row;
-					flex-wrap: wrap;
-					align-content: center;
-					justify-content: flex-start;
-					align-items: baseline;
-					font-size: 14pt;
-					.summary {
-						display: none;
-					}
-				}
-				.author-profile .prodesc {
-					width: 350px;
-					height: auto;
-					.prodelink > span:first-child {
-						margin-bottom: 15px;
-					}
-				}
-				.comimg {
-					width: 30px;
-					.comment-avatar {
-						width: 30px;
-						height: 30px;
-						img {
-							width: 30px;
-						}
-					}
-				}
-				.repcom {
-					width: 30px;
-					height: 70px;
-				}
-				.comcon {
-					width: 520px;
-					each(range(8), {
+    .laman-kategori {
+        #FeaturedPost1 {
+            article {
+                .budsorot-img {
+                    width: 160px;
+                    height: 160px;
+                    overflow: hidden;
+                    img {
+                        height: 100%;
+                        margin-left: -25%;
+                    }
+                }
+                .budsorot-desc {
+                    width: calc(100% - 160px);
+                    padding: 15px 25px;
+                    p {
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+        #PopularPosts1 {
+            article {
+                width: 296px;
+            }
+        }
+    }
+    article {
+        &.post-static_page {
+            .post-body {
+                padding: 0;
+            }
+        }
+        &.post-item,
+        &[id*="bud-laman-"] {
+            .post-body {
+                padding: 0;
+            }
+        }
+        &.post-item {
+            &.single-post {
+                &[data-template] {
+                    #video-place,
+                    .loading {
+                        height: calc(9 / 16 * 600px);
+                    }
+                }
+                #posnya-relatedan .relasum {
+                    width: 400px;
+                    height: 100px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    justify-content: flex-start;
+                    align-items: baseline;
+                    font-size: 14pt;
+                    .summary {
+                        display: none;
+                    }
+                }
+                .author-profile .prodesc {
+                    width: 350px;
+                    height: auto;
+                    .prodelink > span:first-child {
+                        margin-bottom: 15px;
+                    }
+                }
+                .comimg {
+                    width: 30px;
+                    .comment-avatar {
+                        width: 30px;
+                        height: 30px;
+                        img {
+                            width: 30px;
+                        }
+                    }
+                }
+                .repcom {
+                    width: 30px;
+                    height: 70px;
+                }
+                .comcon {
+                    width: 520px;
+                    each(range(8), {
 					  .replies@{value} .comcon, .replies@{value} .comcon .comup {
 						width: (520px - (@value * 30px));
 					  }
 					});
-				}
-				.is-replied .right.comcon::before {
-					content: none;
-				}
-				.is-replied > .right.comcon::before {
-					content: "";
-					height: calc(100% - 135px);
-					left: -17.5px;
-					top: 100px;
-				}
-				.replies {
-					.comment:last-child::after {
-						content: "";
-						position: absolute;
-						width: 10px;
-						height: calc(100% - 17.5px);
-						background: var(--col1);
-						top: 17.5px;
-						left: -23px;
-						z-index: 99;
-					}
-					.repcom::before {
-						content: "";
-						width: 15px;
-						position: absolute;
-						left: -15px;
-						border-bottom: 5px solid var(--col5);
-						top: -17.5px;
-					}
-				} 
-			}
-		}
-		.laman-kategori &, & {
-			&.multi-post {
-				height: 370px;
-				background: var(--col2);
-				margin-bottom: 25px;
-				border-radius: var(--bor2);
-				overflow: hidden;
-				.postaleft {
-					width: 550px;
-					height: 200px;
-					img {
-						height: auto;
-						width: 100%;
-						margin-top: -25%;
-					}
-				}
-				.postaright {
-					width: 550px;
-					height: 170px;
-				}
-				&.postarama {
-					height: 620px;
-					.postaleft {
-						width: 600px;
-						height: 350px;
-					}
-					.postaright {
-						width: 600px;
-						height: 270px;
-						font-size: 10.2pt;
-					}
-				}
-			}
-		}
-		#bud-label &, #bud-pencarian &, #bud-arsip & {
-			&.multi-post .postaright {
-				width: 100%;
-				height: 170px;
-			}
-		} 
-		&.post {
-			figure{
-				&.spec.luas {
-					margin: 15px 0 15px 0;
-				}
-				figcaption {
-					position: relative;
-					margin: 5px 0;
-					right: auto;
-					padding-top: 5px;
-					width: auto;
-				}
-			}
-			.postacol-1, .postacol-2, .postacol-3 {
-				margin-right: 0;
-				column-gap: 15px;
-			}
-			.postacol-3 {
-				column-count: 2;
-			}
-		}
-	}
-	#footer-wrapper > div {
-		width: 100%;
-		text-align: left!important;
-	}
+                }
+                .is-replied .right.comcon::before {
+                    content: none;
+                }
+                .is-replied > .right.comcon::before {
+                    content: "";
+                    height: calc(100% - 135px);
+                    left: -17.5px;
+                    top: 100px;
+                }
+                .replies {
+                    .comment:last-child::after {
+                        content: "";
+                        position: absolute;
+                        width: 10px;
+                        height: calc(100% - 17.5px);
+                        background: var(--col1);
+                        top: 17.5px;
+                        left: -23px;
+                        z-index: 99;
+                    }
+                    .repcom::before {
+                        content: "";
+                        width: 15px;
+                        position: absolute;
+                        left: -15px;
+                        border-bottom: 5px solid var(--col5);
+                        top: -17.5px;
+                    }
+                }
+            }
+        }
+        .laman-kategori &,
+        & {
+            &.multi-post {
+                height: 370px;
+                background: var(--col2);
+                margin-bottom: 25px;
+                border-radius: var(--bor2);
+                overflow: hidden;
+                .postaleft {
+                    width: 550px;
+                    height: 200px;
+                    img {
+                        height: auto;
+                        width: 100%;
+                        margin-top: -25%;
+                    }
+                }
+                .postaright {
+                    width: 550px;
+                    height: 170px;
+                }
+                &.postarama {
+                    height: 620px;
+                    .postaleft {
+                        width: 600px;
+                        height: 350px;
+                    }
+                    .postaright {
+                        width: 600px;
+                        height: 270px;
+                        font-size: 10.2pt;
+                    }
+                }
+            }
+        }
+        #bud-label &,
+        #bud-pencarian &,
+        #bud-arsip & {
+            &.multi-post .postaright {
+                width: 100%;
+                height: 170px;
+            }
+        }
+        &.post {
+            figure {
+                &.spec.luas {
+                    margin: 15px 0 15px 0;
+                }
+                figcaption {
+                    position: relative;
+                    margin: 5px 0;
+                    right: auto;
+                    padding-top: 5px;
+                    width: auto;
+                }
+            }
+            .postacol-1,
+            .postacol-2,
+            .postacol-3 {
+                margin-right: 0;
+                column-gap: 15px;
+            }
+            .postacol-3 {
+                column-count: 2;
+            }
+        }
+    }
+    #footer-wrapper > div {
+        width: 100%;
+        text-align: left !important;
+    }
 }
 
 @media screen and (max-width: 610px) {
-	body {
-		font-size: 10pt;
-	}
+    body {
+        font-size: 10pt;
+    }
     #outer-wrapper {
         width: var(--wxs);
     }
-	#navbar > * {
-		width: 100%;
-	}
-	#bud-home {
-		 #content-wrapper {
-			padding: 35px;
-		}
-		#index-wrapper {
-			width: 100%;
-			h1 {
-				font-size: 2.6em;
-			}
-		}
-	}
-	#bud-arsip {
-		#bud-aside {
-			#BlogArchive1 {
-				.badan-arsip {
-					ul {
-						li {
-							&[data-level="1"] {
-								> a {
-									width: 45%;
-								}
-								> ul {
-									width: 55%;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	.laman-kategori {
-		#FeaturedPost1 {
-			article {
-				height: 100px;
-				.budsorot-img {
-					width: 100px;
-					height: 100px;
-					img {
-						height: 100%;
-						margin-left: -25%;
-					}
-				}
-				.budsorot-desc {
-					width: calc(100% - 100px);
-					display: flex;
-					align-content: center;
-					align-items: center;
-					flex-wrap: wrap;
-					h4 {
-						padding: 10px 0;
-					}
-					p {
-						display: none;
-					}
-				}
-			}
-		}
-		#PopularPosts1 {
-			article {
-				width: 400px;
-			}
-		}
-	}
-	span.bud-search-input {
-		width: calc(8/12 * 100%);
-	}
-	span.bud-search-search-button, span.bud-search-filter {
-		width: calc(2/12 * 100%);
-	}
-	article {
-		&.post-item {
-			&.single-post {
-				&[data-template] {
-					#video-place, .loading {
-						height: calc(9/16 * 400px);
-					}
-					.post-infohead > span {
-						display: block;
-						padding: 10px 0;
-					}
-					#posnya-relatedan ul li {
-						width: 25%;
-						border-radius: 0;
-						&:first-child {
-							border-radius: @bor_kiri;
-						}
-						&:last-child {
-							border-radius: @bor_kanan;
-						}
-						img {
-							border-radius: 0;
-						}
-					}
-					.author-profile .prodesc {
-						width: 300px;
-						padding: 15px 15px 0;
-					}
-					.comimg {
-						width: 150px;
-						.comment-avatar {
-							border-radius: @bor_kiri;
-							width: 50px;
-							height: 50px;
-							img {
-								width: 50px;
-							}
-						}
-					}
-				} 
-				.is-replied > div > div {
-					> .comment-header {
-						border-radius: 0 var(--bor) 0 0;
-					}
-					> .comment-footer {
-						border-radius: 0 0 var(--bor) 0;
-					}
-				}
-				.comment {
-					flex-direction: column;
-				}
-				.comimg {
-					width: 150px;
-					z-index: 8;
-					display: flex;
-					flex-direction: row;
-					margin-bottom: 10px;
-				}
-				.repcom {
-					width: 100px;
-					height: 50px;
-					border-radius: 0 var(--bor) var(--bor) 0;
-					overflow: hidden;
-					display: flex;
-					flex-direction: row;
-					flex-wrap: wrap;
-					align-content: center;
-					justify-content: space-evenly;
-					align-items: center;
-				}
-				.replies {
-					padding-left: 10px;
-				}
-				.comcon {
-					width: 350px;
-					.is-replied > & {
-						width: 385px;
-						margin-bottom: 0;
-					}
-					each(range(8), {
+    #navbar > * {
+        width: 100%;
+    }
+    #bud-home {
+        #content-wrapper {
+            padding: 35px;
+        }
+        #index-wrapper {
+            width: 100%;
+            h1 {
+                font-size: 2.6em;
+            }
+        }
+    }
+    #bud-arsip {
+        #bud-aside {
+            #BlogArchive1 {
+                .badan-arsip {
+                    ul {
+                        li {
+                            &[data-level="1"] {
+                                > a {
+                                    width: 45%;
+                                }
+                                > ul {
+                                    width: 55%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .laman-kategori {
+        #FeaturedPost1 {
+            article {
+                height: 100px;
+                .budsorot-img {
+                    width: 100px;
+                    height: 100px;
+                    img {
+                        height: 100%;
+                        margin-left: -25%;
+                    }
+                }
+                .budsorot-desc {
+                    width: calc(100% - 100px);
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    h4 {
+                        padding: 10px 0;
+                    }
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+        #PopularPosts1 {
+            article {
+                width: 400px;
+            }
+        }
+    }
+    span.bud-search-input {
+        width: calc(8 / 12 * 100%);
+    }
+    span.bud-search-search-button,
+    span.bud-search-filter {
+        width: calc(2 / 12 * 100%);
+    }
+    article {
+        &.post-item {
+            &.single-post {
+                &[data-template] {
+                    #video-place,
+                    .loading {
+                        height: calc(9 / 16 * 400px);
+                    }
+                    .post-infohead > span {
+                        display: block;
+                        padding: 10px 0;
+                    }
+                    #posnya-relatedan ul li {
+                        width: 25%;
+                        border-radius: 0;
+                        &:first-child {
+                            border-radius: @bor_kiri;
+                        }
+                        &:last-child {
+                            border-radius: @bor_kanan;
+                        }
+                        img {
+                            border-radius: 0;
+                        }
+                    }
+                    .author-profile .prodesc {
+                        width: 300px;
+                        padding: 15px 15px 0;
+                    }
+                    .comimg {
+                        width: 150px;
+                        .comment-avatar {
+                            border-radius: @bor_kiri;
+                            width: 50px;
+                            height: 50px;
+                            img {
+                                width: 50px;
+                            }
+                        }
+                    }
+                }
+                .is-replied > div > div {
+                    > .comment-header {
+                        border-radius: 0 var(--bor) 0 0;
+                    }
+                    > .comment-footer {
+                        border-radius: 0 0 var(--bor) 0;
+                    }
+                }
+                .comment {
+                    flex-direction: column;
+                }
+                .comimg {
+                    width: 150px;
+                    z-index: 8;
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 10px;
+                }
+                .repcom {
+                    width: 100px;
+                    height: 50px;
+                    border-radius: 0 var(--bor) var(--bor) 0;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    justify-content: space-evenly;
+                    align-items: center;
+                }
+                .replies {
+                    padding-left: 10px;
+                }
+                .comcon {
+                    width: 350px;
+                    .is-replied > & {
+                        width: 385px;
+                        margin-bottom: 0;
+                    }
+                    each(range(8), {
 					  .replies@{value} .comcon, .replies@{value} .comcon .comup {
 						width: (350px - (@value * 10px));
 					  }
 					});
-				}
-				.comup {
-					padding: 0 0 15px 0;
-				}
-				.right.comcon::before {
-					content: none;
-				}
-				.is-replied > .right.comcon::before {
-					width: 0px;
-					height: calc(100% - 15px);
-					border-left: 5px solid var(--col5);
-					content: "";
-					position: absolute;
-					left: 0;
-					top: 0;
-					z-index: 99;
-				}
-				[data-level="2"], [data-level="4"], [data-level="6"], [data-level="8"] {
-					&.is-replied > .right.comcon::before {
-						border-left-color: var(--col3);
-					}
-				}
-				.is-replied > .comcon {
-					margin-bottom: 0;
-				}
-				.replies .comment:last-child::after {
-					content: none;
-				}
-			}
-			&[data-template=gambar], &[data-template=video] {
-				.informasi-gambar .post-body {
-					padding: 0;
-				}
-			} 
-		}
-		.laman-kategori &, & {
-			&.multi-post {
-				height: 450px;
-				.postaleft {
-					width: 350px;
-    				height: 150px;
-					img {
-						height: auto;
-						width: 100%;
-						margin-top: -25%;
-					}
-				}
-				.postaright {
-					width: 350px;
-    				height: 300px;
-					h2.post-title {
-						font-size: 1.2em;
-					}
-					.post-footer {
-						font-size: 10pt;
-						line-height: 45px;
-						position: absolute;
-						width: 100%;
-						bottom: 90px;
-						left: 0;
-						height: 45px;
-						.multinfo {
-							padding: 0 25px;
-							width: 75%;
-							> span {
-								display: block;
-								line-height: 42px;
-							}
-						}
-						.jump-link {
-							width: 25%;
-							height: 140px;
-							line-height: 130px;
-						}
-					}
-				}
-				&.postarama {
-					height: 620px;
-					.postaleft {
-						width: 400px;
-    					height: 270px;
-					}
-					.postaright {
-						width: 400px;
-						height: 350px;
-						font-size: 11pt;
-					}
-					.post-footer {
-						height: 120px;
-						line-height: 20px;
-						bottom: 20px;
-					}
-				}
-			}
-		}
-		#bud-label &, #bud-pencarian &, #bud-arsip & {
-			&.multi-post .postaright {
-				width: 100%;
-				height: 220px;
-				.post-footer {
-					bottom: 0;
-				}
-			}
-		} 
-		&.post {
-			figure, figure.spec {
-				width: 100%!important;
-			}
-			.postacol-2, .postacol-3 {
-				column-count: 1;
-			}
-		}
-	}
-	#bud-label, #bud-pencarian, #bud-arsip {
-		.post-filter-message {
-			display: flex;
-			flex-direction: column;
-			> div, > div a {
-				width: 100%;
-			}
-		}
-	} 
-	.laman-kategori #Label1 .btn-group.lin-ver a {
-		padding: 10px 15px;
-	}
+                }
+                .comup {
+                    padding: 0 0 15px 0;
+                }
+                .right.comcon::before {
+                    content: none;
+                }
+                .is-replied > .right.comcon::before {
+                    width: 0px;
+                    height: calc(100% - 15px);
+                    border-left: 5px solid var(--col5);
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 99;
+                }
+                [data-level="2"],
+                [data-level="4"],
+                [data-level="6"],
+                [data-level="8"] {
+                    &.is-replied > .right.comcon::before {
+                        border-left-color: var(--col3);
+                    }
+                }
+                .is-replied > .comcon {
+                    margin-bottom: 0;
+                }
+                .replies .comment:last-child::after {
+                    content: none;
+                }
+                #blog-pager span {
+                    a {
+                        padding: 0;
+                    }
+                    &#blog-pager-newer-link,
+                    &#blog-pager-older-link {
+                        top: auto;
+                        bottom: 0;
+                        height: 50px;
+                        padding: 0;
+                        font-size: 18pt;
+                        line-height: 50px;
+                        border-radius: 0;
+                        text-align: center;
+                        width: 80px;
+                    }
+                    &#blog-pager-older-link {
+                        right: 0;
+                        border-radius: 0;
+                    }
+                    &#blog-pager-newer-link {
+                        left: 0;
+                        border-radius: 0;
+                    }
+                }
+            }
+            &[data-template="gambar"],
+            &[data-template="video"] {
+                .informasi-gambar .post-body {
+                    padding: 0;
+                }
+            }
+        }
+        .laman-kategori &,
+        & {
+            &.multi-post {
+                height: 450px;
+                .postaleft {
+                    width: 350px;
+                    height: 150px;
+                    img {
+                        height: auto;
+                        width: 100%;
+                        margin-top: -25%;
+                    }
+                }
+                .postaright {
+                    width: 350px;
+                    height: 300px;
+                    h2.post-title {
+                        font-size: 1.2em;
+                    }
+                    .post-footer {
+                        font-size: 10pt;
+                        line-height: 45px;
+                        position: absolute;
+                        width: 100%;
+                        bottom: 90px;
+                        left: 0;
+                        height: 45px;
+                        .multinfo {
+                            padding: 0 25px;
+                            width: 75%;
+                            > span {
+                                display: block;
+                                line-height: 42px;
+                            }
+                        }
+                        .jump-link {
+                            width: 25%;
+                            height: 140px;
+                            line-height: 130px;
+                        }
+                    }
+                }
+                &.postarama {
+                    height: 620px;
+                    .postaleft {
+                        width: 400px;
+                        height: 270px;
+                    }
+                    .postaright {
+                        width: 400px;
+                        height: 350px;
+                        font-size: 11pt;
+                    }
+                    .post-footer {
+                        height: 120px;
+                        line-height: 20px;
+                        bottom: 20px;
+                    }
+                }
+            }
+        }
+        #bud-label &,
+        #bud-pencarian &,
+        #bud-arsip & {
+            &.multi-post .postaright {
+                width: 100%;
+                height: 220px;
+                .post-footer {
+                    bottom: 0;
+                }
+            }
+        }
+        &.post {
+            figure,
+            figure.spec {
+                width: 100% !important;
+            }
+            .postacol-2,
+            .postacol-3 {
+                column-count: 1;
+            }
+        }
+    }
+    #bud-label,
+    #bud-pencarian,
+    #bud-arsip {
+        .post-filter-message {
+            display: flex;
+            flex-direction: column;
+            > div,
+            > div a {
+                width: 100%;
+            }
+        }
+    }
+    #to-top {
+        position: fixed;
+        right: 80px;
+        bottom: 0;
+        padding: 0;
+        background: var(--col4);
+        color: var(--acn2);
+        font-size: 24pt;
+        border-radius: 0;
+        z-index: 9999;
+        left: 80px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        &:hover {
+            bottom: 0;
+            background: var(--col5);
+        }
+        #bud-laman & {
+            left: 0;
+            right: 0;
+        }
+    }
+    .laman-kategori #Label1 .btn-group.lin-ver a {
+        padding: 10px 15px;
+    }
 }
 
-
 @media screen and (max-width: 410px) {
-	body {
-		font-size: 9pt;
-	}
+    body {
+        font-size: 9pt;
+    }
     #outer-wrapper {
         width: var(--wxxs);
     }
-	#above-wrapper {
-		padding: 15px;
-		margin-bottom: 15px;
-	}
-	#budsearch {
-		margin: 5px -15px -15px;
-		overflow: hidden;
-		.bud-searchform span {
-			height: 50px;
-		}
-		.bud-search-filter label {
-			line-height: 50px;
-		}
-		.belabel + label {
-			padding: 15px 5px;
-		}
-	}
-	.laman-kategori {
-		#Label1 {
-			#master-note {
-				padding: 15px;
-				margin-bottom: 15px;
-				background: var(--col2);
-				border-radius: var(--bor);
-				position: relative;
-			}
-			.btn-group.lin-ver a {
-				padding: 5px 10px;
-			}
-		} 
-		#PopularPosts1 {
-			> div > div {
-				margin-bottom: 5px;
-			}
-			article {
-				width: 300px;
-			}
-		}
-		.blog-posts.hfeed {
-			padding: 15px;
-		}
-		article{
-			.postaright {
-				padding: 15px;
-			}
-			&.multi-post{
-				&.postarama {
-					height: 580px;
-					margin: -15px -15px 15px;
-				}
-			}
-			.laman-kategori &, & {
-				&.multi-post{
-					height: 400px;
-					&.postarama {
-						.postaleft {
-							width: 300px;
-							height: 270px;
-							img {
-								margin-top: 0;
-							}
-						}
-						.postaright {
-							width: 300px;
-							font-size: 10pt;
-							.post-footer {
-								height: 120px;
-								line-height: 20px;
-								bottom: 20px;
-							}
-						}
-					} 
-					.postaleft {
-						width: 270px;
-						height: 150px;
-						.postmark {
-							position: absolute;
-							font-size: 10pt;
-							line-height: 30px;
-							height: 30px;
-							span.tandagori {
-								width: 30px;
-							}
-							span.tandarasi {
-								min-width: 45px;
-							}
-						}
-						img {
-							margin-top: -15%;
-						}
-					}
-					.postaright {
-						width: 270px;
-						.post-footer {
-							font-size: 9pt;
-							.multinfo {
-								padding: 0 15px;
-								> span {
-									line-height: 30px;
-								}
-							}
-							.jump-link {
-								height: 100px;
-								line-height: 90px;
-								span {
-									display: none;
-								}
-							}
-						} 
-					}
-				}
-			}
-		}
-	}
-	.bud-single {
-		#above-wrapper {
-		  margin-bottom: 65px;
-		}
-		article {
-			&.post-item {
-				&[data-template=gambar], &[data-template=video], &[data-template=jurnal] {
-					padding: 0;
-					&.single-post {
-						h1.post-title.entry-title {
-						  font-size: 2.5em;
-						}
-						.post-infohead > span {
-						  padding: 5px 0;
-						}
-						#posnya-relatedan ul li {
-						  display: inline-block;
-						}
-						.author-profile {
-							margin: 0 -15px -15px;
-							padding: 15px;
-							.prodesc {
-								width: 240px;
-								padding: 15px 5px 15px;
-							}
-						}
-						.post-footer {
-							padding: 15px;
-						}
-						#budbread-crumb {
-						  padding: 15px 10px;
-						  top: -60px;
-						  left: 0;
-						  right: 0;
-						  font-size: 8pt;
-							[class*="fa-"] {
-							  margin: 0 3px;
-							}
-						}
-						#budshares {
-							margin: -15px -15px 10px;
-							> * {
-							  width: 100%;
-							}
-							#st-1, #budshort {
-								width: 100%!important;
-							}
-							#budshort {
-								border-radius: 0;
-							}
-							#st-1 .st-btnst-last {
-							  border-radius: 0 var(--bor) 0 0 !important;
-							}
-						} 
-						#budshort {
-						  border-radius: 0;
-						}
-						#budkategori {
-						  display: block;
-						  margin-bottom: 10px;
-						}
-						.informasi-gambar {
-							.bud-comments, .narasi-gambar {
-								padding: 15px;
-							}
-						}  
-					} 
-					
-				}
-				&[data-template=jurnal] {
-					padding: 15px;
-					.blowimg {
-						margin: -15px 0 10px -15px;
-						width: calc(100% + 30px);
-						img {
-							border-radius: var(--bor) var(--bor) 0 0;
-							width: 100%;
-						}
-					}
-				}
-				.comimg .comment-avatar {
-					width: 50px!important;
-				}
-				.comcon {
-				  width: 270px;
-					each(range(8), {
+    #above-wrapper {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    #budsearch {
+        margin: 5px -15px -15px;
+        overflow: hidden;
+        .bud-searchform span {
+            height: 50px;
+        }
+        .bud-search-filter label {
+            line-height: 50px;
+        }
+        .belabel + label {
+            padding: 15px 5px;
+        }
+    }
+    .laman-kategori {
+        #Label1 {
+            #master-note {
+                padding: 15px;
+                margin-bottom: 15px;
+                background: var(--col2);
+                border-radius: var(--bor);
+                position: relative;
+            }
+            .btn-group.lin-ver a {
+                padding: 5px 10px;
+            }
+        }
+        #PopularPosts1 {
+            > div > div {
+                margin-bottom: 5px;
+            }
+            article {
+                width: 300px;
+            }
+        }
+        .blog-posts.hfeed {
+            padding: 15px;
+        }
+        article {
+            .postaright {
+                padding: 15px;
+            }
+            &.multi-post {
+                &.postarama {
+                    height: 580px;
+                    margin: -15px -15px 15px;
+                }
+            }
+            .laman-kategori &,
+            & {
+                &.multi-post {
+                    height: 400px;
+                    &.postarama {
+                        .postaleft {
+                            width: 300px;
+                            height: 270px;
+                            img {
+                                margin-top: 0;
+                            }
+                        }
+                        .postaright {
+                            width: 300px;
+                            font-size: 10pt;
+                            .post-footer {
+                                height: 120px;
+                                line-height: 20px;
+                                bottom: 20px;
+                            }
+                        }
+                    }
+                    .postaleft {
+                        width: 270px;
+                        height: 150px;
+                        .postmark {
+                            position: absolute;
+                            font-size: 10pt;
+                            line-height: 30px;
+                            height: 30px;
+                            span.tandagori {
+                                width: 30px;
+                            }
+                            span.tandarasi {
+                                min-width: 45px;
+                            }
+                        }
+                        img {
+                            margin-top: -15%;
+                        }
+                    }
+                    .postaright {
+                        width: 270px;
+                        .post-footer {
+                            font-size: 9pt;
+                            .multinfo {
+                                padding: 0 15px;
+                                > span {
+                                    line-height: 30px;
+                                }
+                            }
+                            .jump-link {
+                                height: 100px;
+                                line-height: 90px;
+                                span {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bud-single {
+        #above-wrapper {
+            margin-bottom: 65px;
+        }
+        article {
+            &.post-item {
+                &[data-template="gambar"],
+                &[data-template="video"],
+                &[data-template="jurnal"] {
+                    padding: 0;
+                    &.single-post {
+                        h1.post-title.entry-title {
+                            font-size: 2.5em;
+                        }
+                        .post-infohead > span {
+                            padding: 5px 0;
+                        }
+                        #posnya-relatedan ul li {
+                            display: inline-block;
+                        }
+                        .author-profile {
+                            margin: 0 -15px -15px;
+                            padding: 15px;
+                            .prodesc {
+                                width: 240px;
+                                padding: 15px 5px 15px;
+                            }
+                        }
+                        .post-footer {
+                            padding: 15px;
+                        }
+                        #budbread-crumb {
+                            padding: 15px 10px;
+                            top: -60px;
+                            left: 0;
+                            right: 0;
+                            font-size: 8pt;
+                            [class*="fa-"] {
+                                margin: 0 3px;
+                            }
+                        }
+                        #budshares {
+                            margin: -15px -15px 10px;
+                            > * {
+                                width: 100%;
+                            }
+                            #st-1,
+                            #budshort {
+                                width: 100% !important;
+                            }
+                            #budshort {
+                                border-radius: 0;
+                            }
+                            #st-1 .st-btnst-last {
+                                border-radius: 0 var(--bor) 0 0 !important;
+                            }
+                        }
+                        #budshort {
+                            border-radius: 0;
+                        }
+                        #budkategori {
+                            display: block;
+                            margin-bottom: 10px;
+                        }
+                        .informasi-gambar {
+                            .bud-comments,
+                            .narasi-gambar {
+                                padding: 15px;
+                            }
+                        }
+                    }
+                }
+                &[data-template="jurnal"] {
+                    padding: 15px;
+                    .blowimg {
+                        margin: -15px 0 10px -15px;
+                        width: calc(100% + 30px);
+                        img {
+                            border-radius: var(--bor) var(--bor) 0 0;
+                            width: 100%;
+                        }
+                    }
+                }
+                .comimg .comment-avatar {
+                    width: 50px !important;
+                }
+                .comcon {
+                    width: 270px;
+                    each(range(8), {
 					  .replies@{value} .comcon, .replies@{value} .comcon .comup {
 						width: (270px - (@value * 10px));
 					  }
 					});
-				} 
-			}
-			.smallhid {
-			  display: none;
-			}
-		}
-		#blog-pager span {
-			a {
-			  padding: 0;
-			}
-			&#blog-pager-newer-link, &#blog-pager-older-link {
-				top: auto;
-				bottom: 0;
-			  height: 50px;
-			  padding: 0;
-			  font-size: 18pt;
-			  line-height: 50px;
-			  border-radius: 0;
-			  text-align: center;
-			  width: 80px;
-			}
-			&#blog-pager-older-link {
-			  right: 0;
-			  border-radius: 0;
-			}
-			&#blog-pager-newer-link {
-			  left: 0;
-			  border-radius: 0;
-			}
-		}
-		
-		#to-top {
-		  position: fixed;
-		  right: 80px;
-		  bottom: 0;
-		  padding: 0;
-		  background: var(--col4);
-		  color: var(--acn2);
-		  font-size: 24pt;
-		  border-radius: 0;
-		  z-index: 9999;
-		  left: 80px;
-		  height: 50px;
-		  line-height: 50px;
-		  text-align: center;
-			&:hover {
-			  bottom: 0;
-				background: var(--col5);
-			}
-		}
-	}
-	#bud-label, #bud-pencarian, #bud-arsip {
-		.blog-posts.hfeed {
-			padding: 15px;
-		}
-		article .postaright {
-			padding: 15px;
-		}
-	} 
-	#footer-wrapper {
-		padding: 15px;
-		font-size: 8pt;
-		#bud-footer {
-			width: calc(100% + 30px) !important;
-			margin: -15px -15px 5px;
-			padding: 15px;
-		}
-	}
+                }
+            }
+            .smallhid {
+                display: none;
+            }
+        }
+    }
+    #bud-label,
+    #bud-pencarian,
+    #bud-arsip {
+        .blog-posts.hfeed {
+            padding: 15px;
+        }
+        article .postaright {
+            padding: 15px;
+        }
+    }
+    #footer-wrapper {
+        padding: 15px;
+        font-size: 8pt;
+        #bud-footer {
+            width: calc(100% + 30px) !important;
+            margin: -15px -15px 5px;
+            padding: 15px;
+        }
+    }
 }

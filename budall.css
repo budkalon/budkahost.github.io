@@ -802,7 +802,7 @@ span.spacing {
 }
 .laman-kategori #FeaturedPost1 article .budsorot-img a::before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   top: 0;
   left: 0;
@@ -846,7 +846,7 @@ span.spacing {
 }
 .laman-kategori #PopularPosts1 article .budsorot-img::before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   top: 0;
   left: 0;
@@ -1078,7 +1078,7 @@ article .postaleft {
 }
 article .postaleft > a:before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   top: 0;
   left: 0;
@@ -1184,146 +1184,146 @@ article.post-item .post-footer {
   border-radius: var(--bor);
 }
 article.post-item .post-footer hr {
-  border: 0!important;
+  border: 0 !important;
 }
-article.post-item[data-template=gambar],
-article.post-item[data-template=video] {
+article.post-item[data-template="gambar"],
+article.post-item[data-template="video"] {
   display: flex;
   padding: 0;
   background: none;
   border-radius: 0;
 }
-article.post-item[data-template=gambar] .bud-comments h2,
-article.post-item[data-template=video] .bud-comments h2 {
+article.post-item[data-template="gambar"] .bud-comments h2,
+article.post-item[data-template="video"] .bud-comments h2 {
   font-size: 1.8em;
 }
-article.post-item[data-template=gambar] #budshares #st-1,
-article.post-item[data-template=video] #budshares #st-1 {
+article.post-item[data-template="gambar"] #budshares #st-1,
+article.post-item[data-template="video"] #budshares #st-1 {
   width: 60%;
 }
-article.post-item[data-template=gambar] #budshares #budshort,
-article.post-item[data-template=video] #budshares #budshort {
+article.post-item[data-template="gambar"] #budshares #budshort,
+article.post-item[data-template="video"] #budshares #budshort {
   width: 40%;
 }
-article.post-item[data-template=gambar] .gambar-gambar,
-article.post-item[data-template=video] .gambar-gambar {
+article.post-item[data-template="gambar"] .gambar-gambar,
+article.post-item[data-template="video"] .gambar-gambar {
   width: 550px;
   border-radius: var(--bor);
 }
-article.post-item[data-template=gambar] .gambar-gambar .blowimg,
-article.post-item[data-template=video] .gambar-gambar .blowimg {
+article.post-item[data-template="gambar"] .gambar-gambar .blowimg,
+article.post-item[data-template="video"] .gambar-gambar .blowimg {
   margin: 0;
   overflow: hidden;
   background: var(--col1);
 }
-article.post-item[data-template=gambar] .gambar-gambar .blowimg img,
-article.post-item[data-template=video] .gambar-gambar .blowimg img {
+article.post-item[data-template="gambar"] .gambar-gambar .blowimg img,
+article.post-item[data-template="video"] .gambar-gambar .blowimg img {
   width: 550px;
 }
-article.post-item[data-template=gambar] .gambar-gambar #budbread-crumb,
-article.post-item[data-template=video] .gambar-gambar #budbread-crumb {
+article.post-item[data-template="gambar"] .gambar-gambar #budbread-crumb,
+article.post-item[data-template="video"] .gambar-gambar #budbread-crumb {
   left: var(--pad25);
 }
-article.post-item[data-template=gambar] .gambar-gambar h1.post-title.entry-title,
-article.post-item[data-template=video] .gambar-gambar h1.post-title.entry-title {
+article.post-item[data-template="gambar"] .gambar-gambar h1.post-title.entry-title,
+article.post-item[data-template="video"] .gambar-gambar h1.post-title.entry-title {
   padding: var(--pad15) var(--pad25) 0;
   background: var(--col1);
   font-size: 2.5em;
 }
-article.post-item[data-template=gambar] .gambar-gambar .post-infohead,
-article.post-item[data-template=video] .gambar-gambar .post-infohead {
+article.post-item[data-template="gambar"] .gambar-gambar .post-infohead,
+article.post-item[data-template="video"] .gambar-gambar .post-infohead {
   padding: var(--pad15) var(--pad25) var(--pad25);
   background: var(--col1);
   border-radius: 0 0 var(--bor) var(--bor);
 }
-article.post-item[data-template=gambar] .informasi-gambar,
-article.post-item[data-template=video] .informasi-gambar {
+article.post-item[data-template="gambar"] .informasi-gambar,
+article.post-item[data-template="video"] .informasi-gambar {
   width: 435px;
   margin-left: 15px;
   background: var(--col1);
   border-radius: var(--bor);
 }
-article.post-item[data-template=gambar] .informasi-gambar .narasi-gambar,
-article.post-item[data-template=video] .informasi-gambar .narasi-gambar {
+article.post-item[data-template="gambar"] .informasi-gambar .narasi-gambar,
+article.post-item[data-template="video"] .informasi-gambar .narasi-gambar {
   padding: var(--pad25);
 }
-article.post-item[data-template=gambar] .informasi-gambar .post-body,
-article.post-item[data-template=video] .informasi-gambar .post-body {
+article.post-item[data-template="gambar"] .informasi-gambar .post-body,
+article.post-item[data-template="video"] .informasi-gambar .post-body {
   padding: 0 50px 0 0;
 }
-article.post-item[data-template=gambar] .informasi-gambar #budkategori,
-article.post-item[data-template=video] .informasi-gambar #budkategori {
+article.post-item[data-template="gambar"] .informasi-gambar #budkategori,
+article.post-item[data-template="video"] .informasi-gambar #budkategori {
   display: block;
   margin-bottom: 10px;
 }
-article.post-item[data-template=gambar] .informasi-gambar .author-profile .prodesc,
-article.post-item[data-template=video] .informasi-gambar .author-profile .prodesc {
+article.post-item[data-template="gambar"] .informasi-gambar .author-profile .prodesc,
+article.post-item[data-template="video"] .informasi-gambar .author-profile .prodesc {
   width: 350px;
   margin: 0;
   padding: 15px 0;
   height: auto;
 }
-article.post-item[data-template=gambar] .informasi-gambar .author-profile .prodelink > span:first-child,
-article.post-item[data-template=video] .informasi-gambar .author-profile .prodelink > span:first-child {
+article.post-item[data-template="gambar"] .informasi-gambar .author-profile .prodelink > span:first-child,
+article.post-item[data-template="video"] .informasi-gambar .author-profile .prodelink > span:first-child {
   display: block;
   margin-bottom: 15px;
 }
-article.post-item[data-template=gambar][data-orientasi=landscape],
-article.post-item[data-template=video][data-orientasi=landscape] {
+article.post-item[data-template="gambar"][data-orientasi="landscape"],
+article.post-item[data-template="video"][data-orientasi="landscape"] {
   flex-direction: column;
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .gambar-gambar,
-article.post-item[data-template=video][data-orientasi=landscape] .gambar-gambar {
+article.post-item[data-template="gambar"][data-orientasi="landscape"] .gambar-gambar,
+article.post-item[data-template="video"][data-orientasi="landscape"] .gambar-gambar {
   width: 1000px;
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .gambar-gambar img,
-article.post-item[data-template=video][data-orientasi=landscape] .gambar-gambar img {
+article.post-item[data-template="gambar"][data-orientasi="landscape"] .gambar-gambar img,
+article.post-item[data-template="video"][data-orientasi="landscape"] .gambar-gambar img {
   width: 1000px;
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar,
-article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar {
+article.post-item[data-template="gambar"][data-orientasi="landscape"] .informasi-gambar,
+article.post-item[data-template="video"][data-orientasi="landscape"] .informasi-gambar {
   margin: 15px 0;
   width: 1000px;
   display: flex;
   background: none;
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .narasi-gambar,
-article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar .narasi-gambar {
+article.post-item[data-template="gambar"][data-orientasi="landscape"] .informasi-gambar .narasi-gambar,
+article.post-item[data-template="video"][data-orientasi="landscape"] .informasi-gambar .narasi-gambar {
   width: 550px;
   background: var(--col1);
   border-radius: var(--bor);
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .komentar-gambar,
-article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar .komentar-gambar {
+article.post-item[data-template="gambar"][data-orientasi="landscape"] .informasi-gambar .komentar-gambar,
+article.post-item[data-template="video"][data-orientasi="landscape"] .informasi-gambar .komentar-gambar {
   width: 435px;
   margin-left: 15px;
   border-radius: var(--bor);
 }
-article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .bud-comments,
-article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar .bud-comments {
+article.post-item[data-template="gambar"][data-orientasi="landscape"] .informasi-gambar .bud-comments,
+article.post-item[data-template="video"][data-orientasi="landscape"] .informasi-gambar .bud-comments {
   padding: 25px;
   background: var(--col1);
   border-radius: var(--bor);
 }
-article.post-item[data-template=gambar] .post-footer,
-article.post-item[data-template=video] .post-footer {
+article.post-item[data-template="gambar"] .post-footer,
+article.post-item[data-template="video"] .post-footer {
   margin-bottom: 0;
 }
-article.post-item[data-template=video] {
+article.post-item[data-template="video"] {
   margin-top: 80px;
 }
-article.post-item[data-template=video] #video-place {
+article.post-item[data-template="video"] #video-place {
   margin: 0;
   height: 562.5px;
   border-radius: var(--bor) var(--bor) 0 0;
   overflow: hidden;
   background: black;
 }
-article.post-item[data-template=video] #video-place iframe {
+article.post-item[data-template="video"] #video-place iframe {
   width: 100%;
   height: 100%;
 }
-article.post-item[data-template=video] .loading {
+article.post-item[data-template="video"] .loading {
   width: 100%;
   height: 562.5px;
   line-height: 562.5px;
@@ -1332,7 +1332,7 @@ article.post-item[data-template=video] .loading {
   background: black;
   color: var(--acn1);
 }
-article.post-item[data-template=video] .gambar-gambar #budbread-crumb {
+article.post-item[data-template="video"] .gambar-gambar #budbread-crumb {
   left: 0;
   top: -70px;
 }
@@ -1409,8 +1409,8 @@ article.post-static_page .post-body {
 .postmark span.tandarasi:first-child {
   padding-left: 15px;
 }
-[data-kategori=video] .postmark span.tandarasi,
-[data-kategori=gambar] .postmark span.tandarasi {
+[data-kategori="video"] .postmark span.tandarasi,
+[data-kategori="gambar"] .postmark span.tandarasi {
   min-width: 55px;
 }
 .postmark a {
@@ -1761,27 +1761,27 @@ article.post-static_page .post-body {
   font-weight: 700;
   margin-bottom: 10px;
 }
-[data-template=gambar] #posnya-relatedan ul li,
-[data-template=video] #posnya-relatedan ul li {
+[data-template="gambar"] #posnya-relatedan ul li,
+[data-template="video"] #posnya-relatedan ul li {
   width: 25%;
   float: left;
   background: none;
   border-radius: 0;
 }
-[data-template=gambar] #posnya-relatedan ul li:first-child,
-[data-template=video] #posnya-relatedan ul li:first-child {
+[data-template="gambar"] #posnya-relatedan ul li:first-child,
+[data-template="video"] #posnya-relatedan ul li:first-child {
   border-radius: var(--bor) 0 0 var(--bor);
 }
-[data-template=gambar] #posnya-relatedan ul li:last-child,
-[data-template=video] #posnya-relatedan ul li:last-child {
+[data-template="gambar"] #posnya-relatedan ul li:last-child,
+[data-template="video"] #posnya-relatedan ul li:last-child {
   border-radius: 0 var(--bor) var(--bor) 0;
 }
-[data-template=gambar] #posnya-relatedan ul li img,
-[data-template=video] #posnya-relatedan ul li img {
+[data-template="gambar"] #posnya-relatedan ul li img,
+[data-template="video"] #posnya-relatedan ul li img {
   border-radius: 0;
 }
-[data-template=gambar] #posnya-relatedan .relasum,
-[data-template=video] #posnya-relatedan .relasum {
+[data-template="gambar"] #posnya-relatedan .relasum,
+[data-template="video"] #posnya-relatedan .relasum {
   display: none;
 }
 .author-profile {
@@ -2264,36 +2264,36 @@ article.post-static_page .post-body {
   top: 165px;
   background: var(--col8);
 }
-article.post-item[data-template=gambar] .bud-comments,
-article.post-item[data-template=video] .bud-comments {
+article.post-item[data-template="gambar"] .bud-comments,
+article.post-item[data-template="video"] .bud-comments {
   padding: 0 25px;
 }
-article.post-item[data-template=gambar] .comment-avatar,
-article.post-item[data-template=video] .comment-avatar {
+article.post-item[data-template="gambar"] .comment-avatar,
+article.post-item[data-template="video"] .comment-avatar {
   border-radius: var(--bor) 0 0 var(--bor);
 }
-article.post-item[data-template=gambar] .is-replied > div > div > .comment-header,
-article.post-item[data-template=video] .is-replied > div > div > .comment-header {
+article.post-item[data-template="gambar"] .is-replied > div > div > .comment-header,
+article.post-item[data-template="video"] .is-replied > div > div > .comment-header {
   border-radius: 0 var(--bor) 0 0;
 }
-article.post-item[data-template=gambar] .is-replied > div > div > .comment-footer,
-article.post-item[data-template=video] .is-replied > div > div > .comment-footer {
+article.post-item[data-template="gambar"] .is-replied > div > div > .comment-footer,
+article.post-item[data-template="video"] .is-replied > div > div > .comment-footer {
   border-radius: 0 0 var(--bor) 0;
 }
-article.post-item[data-template=gambar] .comment,
-article.post-item[data-template=video] .comment {
+article.post-item[data-template="gambar"] .comment,
+article.post-item[data-template="video"] .comment {
   flex-direction: column;
 }
-article.post-item[data-template=gambar] .comimg,
-article.post-item[data-template=video] .comimg {
+article.post-item[data-template="gambar"] .comimg,
+article.post-item[data-template="video"] .comimg {
   width: 150px;
   z-index: 8;
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
 }
-article.post-item[data-template=gambar] .repcom,
-article.post-item[data-template=video] .repcom {
+article.post-item[data-template="gambar"] .repcom,
+article.post-item[data-template="video"] .repcom {
   width: 100px;
   height: 50px;
   border-radius: 0 var(--bor) var(--bor) 0;
@@ -2305,77 +2305,77 @@ article.post-item[data-template=video] .repcom {
   justify-content: space-evenly;
   align-items: center;
 }
-article.post-item[data-template=gambar] .replies,
-article.post-item[data-template=video] .replies {
+article.post-item[data-template="gambar"] .replies,
+article.post-item[data-template="video"] .replies {
   padding-left: 10px;
 }
-article.post-item[data-template=gambar] .comcon,
-article.post-item[data-template=video] .comcon {
+article.post-item[data-template="gambar"] .comcon,
+article.post-item[data-template="video"] .comcon {
   width: 385px;
 }
-.is-replied > article.post-item[data-template=gambar] .comcon,
-.is-replied > article.post-item[data-template=video] .comcon {
+.is-replied > article.post-item[data-template="gambar"] .comcon,
+.is-replied > article.post-item[data-template="video"] .comcon {
   width: 385px;
   margin-bottom: 0;
 }
-article.post-item[data-template=gambar] .comcon .replies1 .comcon,
-article.post-item[data-template=video] .comcon .replies1 .comcon,
-article.post-item[data-template=gambar] .comcon .replies1 .comcon .comup,
-article.post-item[data-template=video] .comcon .replies1 .comcon .comup {
+article.post-item[data-template="gambar"] .comcon .replies1 .comcon,
+article.post-item[data-template="video"] .comcon .replies1 .comcon,
+article.post-item[data-template="gambar"] .comcon .replies1 .comcon .comup,
+article.post-item[data-template="video"] .comcon .replies1 .comcon .comup {
   width: 375px;
 }
-article.post-item[data-template=gambar] .comcon .replies2 .comcon,
-article.post-item[data-template=video] .comcon .replies2 .comcon,
-article.post-item[data-template=gambar] .comcon .replies2 .comcon .comup,
-article.post-item[data-template=video] .comcon .replies2 .comcon .comup {
+article.post-item[data-template="gambar"] .comcon .replies2 .comcon,
+article.post-item[data-template="video"] .comcon .replies2 .comcon,
+article.post-item[data-template="gambar"] .comcon .replies2 .comcon .comup,
+article.post-item[data-template="video"] .comcon .replies2 .comcon .comup {
   width: 365px;
 }
-article.post-item[data-template=gambar] .comcon .replies3 .comcon,
-article.post-item[data-template=video] .comcon .replies3 .comcon,
-article.post-item[data-template=gambar] .comcon .replies3 .comcon .comup,
-article.post-item[data-template=video] .comcon .replies3 .comcon .comup {
+article.post-item[data-template="gambar"] .comcon .replies3 .comcon,
+article.post-item[data-template="video"] .comcon .replies3 .comcon,
+article.post-item[data-template="gambar"] .comcon .replies3 .comcon .comup,
+article.post-item[data-template="video"] .comcon .replies3 .comcon .comup {
   width: 355px;
 }
-article.post-item[data-template=gambar] .comcon .replies4 .comcon,
-article.post-item[data-template=video] .comcon .replies4 .comcon,
-article.post-item[data-template=gambar] .comcon .replies4 .comcon .comup,
-article.post-item[data-template=video] .comcon .replies4 .comcon .comup {
+article.post-item[data-template="gambar"] .comcon .replies4 .comcon,
+article.post-item[data-template="video"] .comcon .replies4 .comcon,
+article.post-item[data-template="gambar"] .comcon .replies4 .comcon .comup,
+article.post-item[data-template="video"] .comcon .replies4 .comcon .comup {
   width: 345px;
 }
-article.post-item[data-template=gambar] .comcon .replies5 .comcon,
-article.post-item[data-template=video] .comcon .replies5 .comcon,
-article.post-item[data-template=gambar] .comcon .replies5 .comcon .comup,
-article.post-item[data-template=video] .comcon .replies5 .comcon .comup {
+article.post-item[data-template="gambar"] .comcon .replies5 .comcon,
+article.post-item[data-template="video"] .comcon .replies5 .comcon,
+article.post-item[data-template="gambar"] .comcon .replies5 .comcon .comup,
+article.post-item[data-template="video"] .comcon .replies5 .comcon .comup {
   width: 335px;
 }
-article.post-item[data-template=gambar] .comcon .replies6 .comcon,
-article.post-item[data-template=video] .comcon .replies6 .comcon,
-article.post-item[data-template=gambar] .comcon .replies6 .comcon .comup,
-article.post-item[data-template=video] .comcon .replies6 .comcon .comup {
+article.post-item[data-template="gambar"] .comcon .replies6 .comcon,
+article.post-item[data-template="video"] .comcon .replies6 .comcon,
+article.post-item[data-template="gambar"] .comcon .replies6 .comcon .comup,
+article.post-item[data-template="video"] .comcon .replies6 .comcon .comup {
   width: 325px;
 }
-article.post-item[data-template=gambar] .comcon .replies7 .comcon,
-article.post-item[data-template=video] .comcon .replies7 .comcon,
-article.post-item[data-template=gambar] .comcon .replies7 .comcon .comup,
-article.post-item[data-template=video] .comcon .replies7 .comcon .comup {
+article.post-item[data-template="gambar"] .comcon .replies7 .comcon,
+article.post-item[data-template="video"] .comcon .replies7 .comcon,
+article.post-item[data-template="gambar"] .comcon .replies7 .comcon .comup,
+article.post-item[data-template="video"] .comcon .replies7 .comcon .comup {
   width: 315px;
 }
-article.post-item[data-template=gambar] .comcon .replies8 .comcon,
-article.post-item[data-template=video] .comcon .replies8 .comcon,
-article.post-item[data-template=gambar] .comcon .replies8 .comcon .comup,
-article.post-item[data-template=video] .comcon .replies8 .comcon .comup {
+article.post-item[data-template="gambar"] .comcon .replies8 .comcon,
+article.post-item[data-template="video"] .comcon .replies8 .comcon,
+article.post-item[data-template="gambar"] .comcon .replies8 .comcon .comup,
+article.post-item[data-template="video"] .comcon .replies8 .comcon .comup {
   width: 305px;
 }
-article.post-item[data-template=gambar] .comup,
-article.post-item[data-template=video] .comup {
+article.post-item[data-template="gambar"] .comup,
+article.post-item[data-template="video"] .comup {
   padding: 0 0 15px 0;
 }
-article.post-item[data-template=gambar] .right.comcon::before,
-article.post-item[data-template=video] .right.comcon::before {
+article.post-item[data-template="gambar"] .right.comcon::before,
+article.post-item[data-template="video"] .right.comcon::before {
   content: none;
 }
-article.post-item[data-template=gambar] .is-replied > .right.comcon::before,
-article.post-item[data-template=video] .is-replied > .right.comcon::before {
+article.post-item[data-template="gambar"] .is-replied > .right.comcon::before,
+article.post-item[data-template="video"] .is-replied > .right.comcon::before {
   width: 0px;
   height: calc(100% - 15px);
   border-left: 5px solid var(--col5);
@@ -2385,22 +2385,22 @@ article.post-item[data-template=video] .is-replied > .right.comcon::before {
   top: 0;
   z-index: 99;
 }
-article.post-item[data-template=gambar] [data-level="2"].is-replied > .right.comcon::before,
-article.post-item[data-template=video] [data-level="2"].is-replied > .right.comcon::before,
-article.post-item[data-template=gambar] [data-level="4"].is-replied > .right.comcon::before,
-article.post-item[data-template=video] [data-level="4"].is-replied > .right.comcon::before,
-article.post-item[data-template=gambar] [data-level="6"].is-replied > .right.comcon::before,
-article.post-item[data-template=video] [data-level="6"].is-replied > .right.comcon::before,
-article.post-item[data-template=gambar] [data-level="8"].is-replied > .right.comcon::before,
-article.post-item[data-template=video] [data-level="8"].is-replied > .right.comcon::before {
+article.post-item[data-template="gambar"] [data-level="2"].is-replied > .right.comcon::before,
+article.post-item[data-template="video"] [data-level="2"].is-replied > .right.comcon::before,
+article.post-item[data-template="gambar"] [data-level="4"].is-replied > .right.comcon::before,
+article.post-item[data-template="video"] [data-level="4"].is-replied > .right.comcon::before,
+article.post-item[data-template="gambar"] [data-level="6"].is-replied > .right.comcon::before,
+article.post-item[data-template="video"] [data-level="6"].is-replied > .right.comcon::before,
+article.post-item[data-template="gambar"] [data-level="8"].is-replied > .right.comcon::before,
+article.post-item[data-template="video"] [data-level="8"].is-replied > .right.comcon::before {
   border-left-color: var(--col3);
 }
-article.post-item[data-template=gambar] .is-replied > .comcon,
-article.post-item[data-template=video] .is-replied > .comcon {
+article.post-item[data-template="gambar"] .is-replied > .comcon,
+article.post-item[data-template="video"] .is-replied > .comcon {
   margin-bottom: 0;
 }
-article.post-item[data-template=gambar] .replies .comment:last-child::after,
-article.post-item[data-template=video] .replies .comment:last-child::after {
+article.post-item[data-template="gambar"] .replies .comment:last-child::after,
+article.post-item[data-template="video"] .replies .comment:last-child::after {
   content: none;
 }
 #footer-wrapper {
@@ -2678,83 +2678,83 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   article.post-item .replies8 .comcon .comup {
     width: 300px;
   }
-  article.post-item[data-template=gambar],
-  article.post-item[data-template=video] {
+  article.post-item[data-template="gambar"],
+  article.post-item[data-template="video"] {
     flex-direction: column;
   }
-  article.post-item[data-template=gambar] .gambar-gambar,
-  article.post-item[data-template=video] .gambar-gambar {
+  article.post-item[data-template="gambar"] .gambar-gambar,
+  article.post-item[data-template="video"] .gambar-gambar {
     width: 100%;
   }
-  article.post-item[data-template=gambar] .gambar-gambar #video-place,
-  article.post-item[data-template=video] .gambar-gambar #video-place,
-  article.post-item[data-template=gambar] .gambar-gambar .loading,
-  article.post-item[data-template=video] .gambar-gambar .loading {
-    height: calc(9/16 * 800px);
+  article.post-item[data-template="gambar"] .gambar-gambar #video-place,
+  article.post-item[data-template="video"] .gambar-gambar #video-place,
+  article.post-item[data-template="gambar"] .gambar-gambar .loading,
+  article.post-item[data-template="video"] .gambar-gambar .loading {
+    height: calc(9 / 16 * 800px);
   }
-  article.post-item[data-template=gambar] .gambar-gambar .blowimg img,
-  article.post-item[data-template=video] .gambar-gambar .blowimg img {
+  article.post-item[data-template="gambar"] .gambar-gambar .blowimg img,
+  article.post-item[data-template="video"] .gambar-gambar .blowimg img {
     width: 100%;
   }
-  article.post-item[data-template=gambar] .informasi-gambar,
-  article.post-item[data-template=video] .informasi-gambar {
+  article.post-item[data-template="gambar"] .informasi-gambar,
+  article.post-item[data-template="video"] .informasi-gambar {
     width: 100%;
     margin-left: 0;
     margin-top: 15px;
   }
-  article.post-item[data-template=gambar] .informasi-gambar .post-body,
-  article.post-item[data-template=video] .informasi-gambar .post-body {
+  article.post-item[data-template="gambar"] .informasi-gambar .post-body,
+  article.post-item[data-template="video"] .informasi-gambar .post-body {
     padding: 0 200px 0 0;
   }
-  article.post-item[data-template=gambar] .informasi-gambar #posnya-relatedan ul li,
-  article.post-item[data-template=video] .informasi-gambar #posnya-relatedan ul li {
+  article.post-item[data-template="gambar"] .informasi-gambar #posnya-relatedan ul li,
+  article.post-item[data-template="video"] .informasi-gambar #posnya-relatedan ul li {
     width: 110px;
   }
-  article.post-item[data-template=gambar] .informasi-gambar .author-profile .prodesc,
-  article.post-item[data-template=video] .informasi-gambar .author-profile .prodesc {
+  article.post-item[data-template="gambar"] .informasi-gambar .author-profile .prodesc,
+  article.post-item[data-template="video"] .informasi-gambar .author-profile .prodesc {
     width: 550px;
     padding: 0 15px;
   }
-  article.post-item[data-template=gambar] [data-level="2"].is-replied > .right.comcon::before,
-  article.post-item[data-template=video] [data-level="2"].is-replied > .right.comcon::before,
-  article.post-item[data-template=gambar] [data-level="4"].is-replied > .right.comcon::before,
-  article.post-item[data-template=video] [data-level="4"].is-replied > .right.comcon::before,
-  article.post-item[data-template=gambar] [data-level="6"].is-replied > .right.comcon::before,
-  article.post-item[data-template=video] [data-level="6"].is-replied > .right.comcon::before,
-  article.post-item[data-template=gambar] [data-level="8"].is-replied > .right.comcon::before,
-  article.post-item[data-template=video] [data-level="8"].is-replied > .right.comcon::before {
+  article.post-item[data-template="gambar"] [data-level="2"].is-replied > .right.comcon::before,
+  article.post-item[data-template="video"] [data-level="2"].is-replied > .right.comcon::before,
+  article.post-item[data-template="gambar"] [data-level="4"].is-replied > .right.comcon::before,
+  article.post-item[data-template="video"] [data-level="4"].is-replied > .right.comcon::before,
+  article.post-item[data-template="gambar"] [data-level="6"].is-replied > .right.comcon::before,
+  article.post-item[data-template="video"] [data-level="6"].is-replied > .right.comcon::before,
+  article.post-item[data-template="gambar"] [data-level="8"].is-replied > .right.comcon::before,
+  article.post-item[data-template="video"] [data-level="8"].is-replied > .right.comcon::before {
     border-left-color: var(--col5);
   }
-  article.post-item[data-template=gambar][data-orientasi=landscape] .gambar-gambar,
-  article.post-item[data-template=video][data-orientasi=landscape] .gambar-gambar,
-  article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar,
-  article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar {
+  article.post-item[data-template="gambar"][data-orientasi="landscape"] .gambar-gambar,
+  article.post-item[data-template="video"][data-orientasi="landscape"] .gambar-gambar,
+  article.post-item[data-template="gambar"][data-orientasi="landscape"] .informasi-gambar,
+  article.post-item[data-template="video"][data-orientasi="landscape"] .informasi-gambar {
     width: 100%;
   }
-  article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar,
-  article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar {
+  article.post-item[data-template="gambar"][data-orientasi="landscape"] .informasi-gambar,
+  article.post-item[data-template="video"][data-orientasi="landscape"] .informasi-gambar {
     flex-direction: column;
   }
-  article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .narasi-gambar,
-  article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar .narasi-gambar {
+  article.post-item[data-template="gambar"][data-orientasi="landscape"] .informasi-gambar .narasi-gambar,
+  article.post-item[data-template="video"][data-orientasi="landscape"] .informasi-gambar .narasi-gambar {
     width: 100%;
   }
-  article.post-item[data-template=gambar][data-orientasi=landscape] .informasi-gambar .komentar-gambar,
-  article.post-item[data-template=video][data-orientasi=landscape] .informasi-gambar .komentar-gambar {
+  article.post-item[data-template="gambar"][data-orientasi="landscape"] .informasi-gambar .komentar-gambar,
+  article.post-item[data-template="video"][data-orientasi="landscape"] .informasi-gambar .komentar-gambar {
     width: 100%;
     margin-left: 0;
     margin-top: 15px;
   }
-  article.post-item[data-template=gambar] .comment,
-  article.post-item[data-template=video] .comment {
+  article.post-item[data-template="gambar"] .comment,
+  article.post-item[data-template="video"] .comment {
     flex-direction: row;
   }
-  article.post-item[data-template=gambar] .replies,
-  article.post-item[data-template=video] .replies {
+  article.post-item[data-template="gambar"] .replies,
+  article.post-item[data-template="video"] .replies {
     padding-left: 0;
   }
-  article.post-item[data-template=gambar] .replies .repcom::before,
-  article.post-item[data-template=video] .replies .repcom::before {
+  article.post-item[data-template="gambar"] .replies .repcom::before,
+  article.post-item[data-template="video"] .replies .repcom::before {
     content: "";
     width: 20px;
     position: absolute;
@@ -2762,8 +2762,8 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     border-bottom: 5px solid var(--col5);
     top: -25px;
   }
-  article.post-item[data-template=gambar] .replies .comment:last-child::after,
-  article.post-item[data-template=video] .replies .comment:last-child::after {
+  article.post-item[data-template="gambar"] .replies .comment:last-child::after,
+  article.post-item[data-template="video"] .replies .comment:last-child::after {
     content: "";
     position: absolute;
     width: 10px;
@@ -2773,91 +2773,91 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     left: -33px;
     z-index: 99;
   }
-  article.post-item[data-template=gambar] .comimg,
-  article.post-item[data-template=video] .comimg {
+  article.post-item[data-template="gambar"] .comimg,
+  article.post-item[data-template="video"] .comimg {
     width: 50px;
     flex-direction: column;
   }
-  article.post-item[data-template=gambar] .comment-avatar,
-  article.post-item[data-template=video] .comment-avatar {
+  article.post-item[data-template="gambar"] .comment-avatar,
+  article.post-item[data-template="video"] .comment-avatar {
     border-radius: var(--bor) var(--bor) 0 0;
   }
-  article.post-item[data-template=gambar] .repcom,
-  article.post-item[data-template=video] .repcom {
+  article.post-item[data-template="gambar"] .repcom,
+  article.post-item[data-template="video"] .repcom {
     width: 50px;
     height: 70px;
     border-radius: 0 0 var(--bor) var(--bor);
     display: block;
     overflow: inherit;
   }
-  article.post-item[data-template=gambar] .comup,
-  article.post-item[data-template=video] .comup {
+  article.post-item[data-template="gambar"] .comup,
+  article.post-item[data-template="video"] .comup {
     padding: 0 0 15px 10px;
   }
-  article.post-item[data-template=gambar] .comcon,
-  article.post-item[data-template=video] .comcon {
+  article.post-item[data-template="gambar"] .comcon,
+  article.post-item[data-template="video"] .comcon {
     width: 700px;
   }
-  article.post-item[data-template=gambar] .comcon .replies1 .comcon,
-  article.post-item[data-template=video] .comcon .replies1 .comcon,
-  article.post-item[data-template=gambar] .comcon .replies1 .comcon .comup,
-  article.post-item[data-template=video] .comcon .replies1 .comcon .comup {
+  article.post-item[data-template="gambar"] .comcon .replies1 .comcon,
+  article.post-item[data-template="video"] .comcon .replies1 .comcon,
+  article.post-item[data-template="gambar"] .comcon .replies1 .comcon .comup,
+  article.post-item[data-template="video"] .comcon .replies1 .comcon .comup {
     width: 650px;
   }
-  article.post-item[data-template=gambar] .comcon .replies2 .comcon,
-  article.post-item[data-template=video] .comcon .replies2 .comcon,
-  article.post-item[data-template=gambar] .comcon .replies2 .comcon .comup,
-  article.post-item[data-template=video] .comcon .replies2 .comcon .comup {
+  article.post-item[data-template="gambar"] .comcon .replies2 .comcon,
+  article.post-item[data-template="video"] .comcon .replies2 .comcon,
+  article.post-item[data-template="gambar"] .comcon .replies2 .comcon .comup,
+  article.post-item[data-template="video"] .comcon .replies2 .comcon .comup {
     width: 600px;
   }
-  article.post-item[data-template=gambar] .comcon .replies3 .comcon,
-  article.post-item[data-template=video] .comcon .replies3 .comcon,
-  article.post-item[data-template=gambar] .comcon .replies3 .comcon .comup,
-  article.post-item[data-template=video] .comcon .replies3 .comcon .comup {
+  article.post-item[data-template="gambar"] .comcon .replies3 .comcon,
+  article.post-item[data-template="video"] .comcon .replies3 .comcon,
+  article.post-item[data-template="gambar"] .comcon .replies3 .comcon .comup,
+  article.post-item[data-template="video"] .comcon .replies3 .comcon .comup {
     width: 550px;
   }
-  article.post-item[data-template=gambar] .comcon .replies4 .comcon,
-  article.post-item[data-template=video] .comcon .replies4 .comcon,
-  article.post-item[data-template=gambar] .comcon .replies4 .comcon .comup,
-  article.post-item[data-template=video] .comcon .replies4 .comcon .comup {
+  article.post-item[data-template="gambar"] .comcon .replies4 .comcon,
+  article.post-item[data-template="video"] .comcon .replies4 .comcon,
+  article.post-item[data-template="gambar"] .comcon .replies4 .comcon .comup,
+  article.post-item[data-template="video"] .comcon .replies4 .comcon .comup {
     width: 500px;
   }
-  article.post-item[data-template=gambar] .comcon .replies5 .comcon,
-  article.post-item[data-template=video] .comcon .replies5 .comcon,
-  article.post-item[data-template=gambar] .comcon .replies5 .comcon .comup,
-  article.post-item[data-template=video] .comcon .replies5 .comcon .comup {
+  article.post-item[data-template="gambar"] .comcon .replies5 .comcon,
+  article.post-item[data-template="video"] .comcon .replies5 .comcon,
+  article.post-item[data-template="gambar"] .comcon .replies5 .comcon .comup,
+  article.post-item[data-template="video"] .comcon .replies5 .comcon .comup {
     width: 450px;
   }
-  article.post-item[data-template=gambar] .comcon .replies6 .comcon,
-  article.post-item[data-template=video] .comcon .replies6 .comcon,
-  article.post-item[data-template=gambar] .comcon .replies6 .comcon .comup,
-  article.post-item[data-template=video] .comcon .replies6 .comcon .comup {
+  article.post-item[data-template="gambar"] .comcon .replies6 .comcon,
+  article.post-item[data-template="video"] .comcon .replies6 .comcon,
+  article.post-item[data-template="gambar"] .comcon .replies6 .comcon .comup,
+  article.post-item[data-template="video"] .comcon .replies6 .comcon .comup {
     width: 400px;
   }
-  article.post-item[data-template=gambar] .comcon .replies7 .comcon,
-  article.post-item[data-template=video] .comcon .replies7 .comcon,
-  article.post-item[data-template=gambar] .comcon .replies7 .comcon .comup,
-  article.post-item[data-template=video] .comcon .replies7 .comcon .comup {
+  article.post-item[data-template="gambar"] .comcon .replies7 .comcon,
+  article.post-item[data-template="video"] .comcon .replies7 .comcon,
+  article.post-item[data-template="gambar"] .comcon .replies7 .comcon .comup,
+  article.post-item[data-template="video"] .comcon .replies7 .comcon .comup {
     width: 350px;
   }
-  article.post-item[data-template=gambar] .comcon .replies8 .comcon,
-  article.post-item[data-template=video] .comcon .replies8 .comcon,
-  article.post-item[data-template=gambar] .comcon .replies8 .comcon .comup,
-  article.post-item[data-template=video] .comcon .replies8 .comcon .comup {
+  article.post-item[data-template="gambar"] .comcon .replies8 .comcon,
+  article.post-item[data-template="video"] .comcon .replies8 .comcon,
+  article.post-item[data-template="gambar"] .comcon .replies8 .comcon .comup,
+  article.post-item[data-template="video"] .comcon .replies8 .comcon .comup {
     width: 300px;
   }
-  article.post-item[data-template=gambar] .is-replied > .right.comcon::before,
-  article.post-item[data-template=video] .is-replied > .right.comcon::before {
+  article.post-item[data-template="gambar"] .is-replied > .right.comcon::before,
+  article.post-item[data-template="video"] .is-replied > .right.comcon::before {
     height: calc(100% - 135px);
     left: -30px;
     top: 120px;
   }
-  article.post-item[data-template=gambar] .is-replied > div > div > .comment-header,
-  article.post-item[data-template=video] .is-replied > div > div > .comment-header {
+  article.post-item[data-template="gambar"] .is-replied > div > div > .comment-header,
+  article.post-item[data-template="video"] .is-replied > div > div > .comment-header {
     border-radius: var(--bor) var(--bor) 0 0;
   }
-  article.post-item[data-template=gambar] .is-replied > div > div > .comment-footer,
-  article.post-item[data-template=video] .is-replied > div > div > .comment-footer {
+  article.post-item[data-template="gambar"] .is-replied > div > div > .comment-footer,
+  article.post-item[data-template="video"] .is-replied > div > div > .comment-footer {
     border-radius: 0 0 var(--bor) var(--bor);
   }
   article.post figure.spec.luas {
@@ -2896,7 +2896,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   article.post-item.single-post[data-template] #video-place,
   article.post-item.single-post[data-template] .loading {
-    height: calc(9/16 * 600px);
+    height: calc(9 / 16 * 600px);
   }
   article.post-item.single-post #posnya-relatedan .relasum {
     width: 400px;
@@ -3061,7 +3061,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   #footer-wrapper > div {
     width: 100%;
-    text-align: left!important;
+    text-align: left !important;
   }
 }
 @media screen and (max-width: 610px) {
@@ -3117,15 +3117,15 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     width: 400px;
   }
   span.bud-search-input {
-    width: calc(8/12 * 100%);
+    width: calc(8 / 12 * 100%);
   }
   span.bud-search-search-button,
   span.bud-search-filter {
-    width: calc(2/12 * 100%);
+    width: calc(2 / 12 * 100%);
   }
   article.post-item.single-post[data-template] #video-place,
   article.post-item.single-post[data-template] .loading {
-    height: calc(9/16 * 400px);
+    height: calc(9 / 16 * 400px);
   }
   article.post-item.single-post[data-template] .post-infohead > span {
     display: block;
@@ -3257,8 +3257,31 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   article.post-item.single-post .replies .comment:last-child::after {
     content: none;
   }
-  article.post-item[data-template=gambar] .informasi-gambar .post-body,
-  article.post-item[data-template=video] .informasi-gambar .post-body {
+  article.post-item.single-post #blog-pager span a {
+    padding: 0;
+  }
+  article.post-item.single-post #blog-pager span#blog-pager-newer-link,
+  article.post-item.single-post #blog-pager span#blog-pager-older-link {
+    top: auto;
+    bottom: 0;
+    height: 50px;
+    padding: 0;
+    font-size: 18pt;
+    line-height: 50px;
+    border-radius: 0;
+    text-align: center;
+    width: 80px;
+  }
+  article.post-item.single-post #blog-pager span#blog-pager-older-link {
+    right: 0;
+    border-radius: 0;
+  }
+  article.post-item.single-post #blog-pager span#blog-pager-newer-link {
+    left: 0;
+    border-radius: 0;
+  }
+  article.post-item[data-template="gambar"] .informasi-gambar .post-body,
+  article.post-item[data-template="video"] .informasi-gambar .post-body {
     padding: 0;
   }
   .laman-kategori article.multi-post,
@@ -3345,7 +3368,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   article.post figure,
   article.post figure.spec {
-    width: 100%!important;
+    width: 100% !important;
   }
   article.post .postacol-2,
   article.post .postacol-3 {
@@ -3364,6 +3387,29 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   #bud-pencarian .post-filter-message > div a,
   #bud-arsip .post-filter-message > div a {
     width: 100%;
+  }
+  #to-top {
+    position: fixed;
+    right: 80px;
+    bottom: 0;
+    padding: 0;
+    background: var(--col4);
+    color: var(--acn2);
+    font-size: 24pt;
+    border-radius: 0;
+    z-index: 9999;
+    left: 80px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  #to-top:hover {
+    bottom: 0;
+    background: var(--col5);
+  }
+  #bud-laman #to-top {
+    left: 0;
+    right: 0;
   }
   .laman-kategori #Label1 .btn-group.lin-ver a {
     padding: 10px 15px;
@@ -3495,117 +3541,117 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   .bud-single #above-wrapper {
     margin-bottom: 65px;
   }
-  .bud-single article.post-item[data-template=gambar],
-  .bud-single article.post-item[data-template=video],
-  .bud-single article.post-item[data-template=jurnal] {
+  .bud-single article.post-item[data-template="gambar"],
+  .bud-single article.post-item[data-template="video"],
+  .bud-single article.post-item[data-template="jurnal"] {
     padding: 0;
   }
-  .bud-single article.post-item[data-template=gambar].single-post h1.post-title.entry-title,
-  .bud-single article.post-item[data-template=video].single-post h1.post-title.entry-title,
-  .bud-single article.post-item[data-template=jurnal].single-post h1.post-title.entry-title {
+  .bud-single article.post-item[data-template="gambar"].single-post h1.post-title.entry-title,
+  .bud-single article.post-item[data-template="video"].single-post h1.post-title.entry-title,
+  .bud-single article.post-item[data-template="jurnal"].single-post h1.post-title.entry-title {
     font-size: 2.5em;
   }
-  .bud-single article.post-item[data-template=gambar].single-post .post-infohead > span,
-  .bud-single article.post-item[data-template=video].single-post .post-infohead > span,
-  .bud-single article.post-item[data-template=jurnal].single-post .post-infohead > span {
+  .bud-single article.post-item[data-template="gambar"].single-post .post-infohead > span,
+  .bud-single article.post-item[data-template="video"].single-post .post-infohead > span,
+  .bud-single article.post-item[data-template="jurnal"].single-post .post-infohead > span {
     padding: 5px 0;
   }
-  .bud-single article.post-item[data-template=gambar].single-post #posnya-relatedan ul li,
-  .bud-single article.post-item[data-template=video].single-post #posnya-relatedan ul li,
-  .bud-single article.post-item[data-template=jurnal].single-post #posnya-relatedan ul li {
+  .bud-single article.post-item[data-template="gambar"].single-post #posnya-relatedan ul li,
+  .bud-single article.post-item[data-template="video"].single-post #posnya-relatedan ul li,
+  .bud-single article.post-item[data-template="jurnal"].single-post #posnya-relatedan ul li {
     display: inline-block;
   }
-  .bud-single article.post-item[data-template=gambar].single-post .author-profile,
-  .bud-single article.post-item[data-template=video].single-post .author-profile,
-  .bud-single article.post-item[data-template=jurnal].single-post .author-profile {
+  .bud-single article.post-item[data-template="gambar"].single-post .author-profile,
+  .bud-single article.post-item[data-template="video"].single-post .author-profile,
+  .bud-single article.post-item[data-template="jurnal"].single-post .author-profile {
     margin: 0 -15px -15px;
     padding: 15px;
   }
-  .bud-single article.post-item[data-template=gambar].single-post .author-profile .prodesc,
-  .bud-single article.post-item[data-template=video].single-post .author-profile .prodesc,
-  .bud-single article.post-item[data-template=jurnal].single-post .author-profile .prodesc {
+  .bud-single article.post-item[data-template="gambar"].single-post .author-profile .prodesc,
+  .bud-single article.post-item[data-template="video"].single-post .author-profile .prodesc,
+  .bud-single article.post-item[data-template="jurnal"].single-post .author-profile .prodesc {
     width: 240px;
     padding: 15px 5px 15px;
   }
-  .bud-single article.post-item[data-template=gambar].single-post .post-footer,
-  .bud-single article.post-item[data-template=video].single-post .post-footer,
-  .bud-single article.post-item[data-template=jurnal].single-post .post-footer {
+  .bud-single article.post-item[data-template="gambar"].single-post .post-footer,
+  .bud-single article.post-item[data-template="video"].single-post .post-footer,
+  .bud-single article.post-item[data-template="jurnal"].single-post .post-footer {
     padding: 15px;
   }
-  .bud-single article.post-item[data-template=gambar].single-post #budbread-crumb,
-  .bud-single article.post-item[data-template=video].single-post #budbread-crumb,
-  .bud-single article.post-item[data-template=jurnal].single-post #budbread-crumb {
+  .bud-single article.post-item[data-template="gambar"].single-post #budbread-crumb,
+  .bud-single article.post-item[data-template="video"].single-post #budbread-crumb,
+  .bud-single article.post-item[data-template="jurnal"].single-post #budbread-crumb {
     padding: 15px 10px;
     top: -60px;
     left: 0;
     right: 0;
     font-size: 8pt;
   }
-  .bud-single article.post-item[data-template=gambar].single-post #budbread-crumb [class*="fa-"],
-  .bud-single article.post-item[data-template=video].single-post #budbread-crumb [class*="fa-"],
-  .bud-single article.post-item[data-template=jurnal].single-post #budbread-crumb [class*="fa-"] {
+  .bud-single article.post-item[data-template="gambar"].single-post #budbread-crumb [class*="fa-"],
+  .bud-single article.post-item[data-template="video"].single-post #budbread-crumb [class*="fa-"],
+  .bud-single article.post-item[data-template="jurnal"].single-post #budbread-crumb [class*="fa-"] {
     margin: 0 3px;
   }
-  .bud-single article.post-item[data-template=gambar].single-post #budshares,
-  .bud-single article.post-item[data-template=video].single-post #budshares,
-  .bud-single article.post-item[data-template=jurnal].single-post #budshares {
+  .bud-single article.post-item[data-template="gambar"].single-post #budshares,
+  .bud-single article.post-item[data-template="video"].single-post #budshares,
+  .bud-single article.post-item[data-template="jurnal"].single-post #budshares {
     margin: -15px -15px 10px;
   }
-  .bud-single article.post-item[data-template=gambar].single-post #budshares > *,
-  .bud-single article.post-item[data-template=video].single-post #budshares > *,
-  .bud-single article.post-item[data-template=jurnal].single-post #budshares > * {
+  .bud-single article.post-item[data-template="gambar"].single-post #budshares > *,
+  .bud-single article.post-item[data-template="video"].single-post #budshares > *,
+  .bud-single article.post-item[data-template="jurnal"].single-post #budshares > * {
     width: 100%;
   }
-  .bud-single article.post-item[data-template=gambar].single-post #budshares #st-1,
-  .bud-single article.post-item[data-template=video].single-post #budshares #st-1,
-  .bud-single article.post-item[data-template=jurnal].single-post #budshares #st-1,
-  .bud-single article.post-item[data-template=gambar].single-post #budshares #budshort,
-  .bud-single article.post-item[data-template=video].single-post #budshares #budshort,
-  .bud-single article.post-item[data-template=jurnal].single-post #budshares #budshort {
-    width: 100%!important;
+  .bud-single article.post-item[data-template="gambar"].single-post #budshares #st-1,
+  .bud-single article.post-item[data-template="video"].single-post #budshares #st-1,
+  .bud-single article.post-item[data-template="jurnal"].single-post #budshares #st-1,
+  .bud-single article.post-item[data-template="gambar"].single-post #budshares #budshort,
+  .bud-single article.post-item[data-template="video"].single-post #budshares #budshort,
+  .bud-single article.post-item[data-template="jurnal"].single-post #budshares #budshort {
+    width: 100% !important;
   }
-  .bud-single article.post-item[data-template=gambar].single-post #budshares #budshort,
-  .bud-single article.post-item[data-template=video].single-post #budshares #budshort,
-  .bud-single article.post-item[data-template=jurnal].single-post #budshares #budshort {
+  .bud-single article.post-item[data-template="gambar"].single-post #budshares #budshort,
+  .bud-single article.post-item[data-template="video"].single-post #budshares #budshort,
+  .bud-single article.post-item[data-template="jurnal"].single-post #budshares #budshort {
     border-radius: 0;
   }
-  .bud-single article.post-item[data-template=gambar].single-post #budshares #st-1 .st-btnst-last,
-  .bud-single article.post-item[data-template=video].single-post #budshares #st-1 .st-btnst-last,
-  .bud-single article.post-item[data-template=jurnal].single-post #budshares #st-1 .st-btnst-last {
+  .bud-single article.post-item[data-template="gambar"].single-post #budshares #st-1 .st-btnst-last,
+  .bud-single article.post-item[data-template="video"].single-post #budshares #st-1 .st-btnst-last,
+  .bud-single article.post-item[data-template="jurnal"].single-post #budshares #st-1 .st-btnst-last {
     border-radius: 0 var(--bor) 0 0 !important;
   }
-  .bud-single article.post-item[data-template=gambar].single-post #budshort,
-  .bud-single article.post-item[data-template=video].single-post #budshort,
-  .bud-single article.post-item[data-template=jurnal].single-post #budshort {
+  .bud-single article.post-item[data-template="gambar"].single-post #budshort,
+  .bud-single article.post-item[data-template="video"].single-post #budshort,
+  .bud-single article.post-item[data-template="jurnal"].single-post #budshort {
     border-radius: 0;
   }
-  .bud-single article.post-item[data-template=gambar].single-post #budkategori,
-  .bud-single article.post-item[data-template=video].single-post #budkategori,
-  .bud-single article.post-item[data-template=jurnal].single-post #budkategori {
+  .bud-single article.post-item[data-template="gambar"].single-post #budkategori,
+  .bud-single article.post-item[data-template="video"].single-post #budkategori,
+  .bud-single article.post-item[data-template="jurnal"].single-post #budkategori {
     display: block;
     margin-bottom: 10px;
   }
-  .bud-single article.post-item[data-template=gambar].single-post .informasi-gambar .bud-comments,
-  .bud-single article.post-item[data-template=video].single-post .informasi-gambar .bud-comments,
-  .bud-single article.post-item[data-template=jurnal].single-post .informasi-gambar .bud-comments,
-  .bud-single article.post-item[data-template=gambar].single-post .informasi-gambar .narasi-gambar,
-  .bud-single article.post-item[data-template=video].single-post .informasi-gambar .narasi-gambar,
-  .bud-single article.post-item[data-template=jurnal].single-post .informasi-gambar .narasi-gambar {
+  .bud-single article.post-item[data-template="gambar"].single-post .informasi-gambar .bud-comments,
+  .bud-single article.post-item[data-template="video"].single-post .informasi-gambar .bud-comments,
+  .bud-single article.post-item[data-template="jurnal"].single-post .informasi-gambar .bud-comments,
+  .bud-single article.post-item[data-template="gambar"].single-post .informasi-gambar .narasi-gambar,
+  .bud-single article.post-item[data-template="video"].single-post .informasi-gambar .narasi-gambar,
+  .bud-single article.post-item[data-template="jurnal"].single-post .informasi-gambar .narasi-gambar {
     padding: 15px;
   }
-  .bud-single article.post-item[data-template=jurnal] {
+  .bud-single article.post-item[data-template="jurnal"] {
     padding: 15px;
   }
-  .bud-single article.post-item[data-template=jurnal] .blowimg {
+  .bud-single article.post-item[data-template="jurnal"] .blowimg {
     margin: -15px 0 10px -15px;
     width: calc(100% + 30px);
   }
-  .bud-single article.post-item[data-template=jurnal] .blowimg img {
+  .bud-single article.post-item[data-template="jurnal"] .blowimg img {
     border-radius: var(--bor) var(--bor) 0 0;
     width: 100%;
   }
   .bud-single article.post-item .comimg .comment-avatar {
-    width: 50px!important;
+    width: 50px !important;
   }
   .bud-single article.post-item .comcon {
     width: 270px;
@@ -3644,48 +3690,6 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   .bud-single article .smallhid {
     display: none;
-  }
-  .bud-single #blog-pager span a {
-    padding: 0;
-  }
-  .bud-single #blog-pager span#blog-pager-newer-link,
-  .bud-single #blog-pager span#blog-pager-older-link {
-    top: auto;
-    bottom: 0;
-    height: 50px;
-    padding: 0;
-    font-size: 18pt;
-    line-height: 50px;
-    border-radius: 0;
-    text-align: center;
-    width: 80px;
-  }
-  .bud-single #blog-pager span#blog-pager-older-link {
-    right: 0;
-    border-radius: 0;
-  }
-  .bud-single #blog-pager span#blog-pager-newer-link {
-    left: 0;
-    border-radius: 0;
-  }
-  .bud-single #to-top {
-    position: fixed;
-    right: 80px;
-    bottom: 0;
-    padding: 0;
-    background: var(--col4);
-    color: var(--acn2);
-    font-size: 24pt;
-    border-radius: 0;
-    z-index: 9999;
-    left: 80px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-  }
-  .bud-single #to-top:hover {
-    bottom: 0;
-    background: var(--col5);
   }
   #bud-label .blog-posts.hfeed,
   #bud-pencarian .blog-posts.hfeed,
