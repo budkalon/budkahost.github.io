@@ -1043,14 +1043,14 @@ span.spacing {
   background: var(--col3);
   border-radius: var(--bor);
 }
-#master-note span.label-size a {
+#master-note a.label-name {
   background: var(--col3);
   padding: 10px 15px;
   border-radius: var(--bor2);
   margin: 0 15px 15px 0;
   display: inline-block;
 }
-#master-note span.label-size a:hover {
+#master-note a.label-name:hover {
   background: var(--acn1);
   color: var(--col1);
 }
@@ -1076,6 +1076,10 @@ span.spacing {
 #master-note .btn-group.lin-ver a {
   margin-bottom: var(--pad15);
   border-radius: var(--bor);
+}
+#master-note .btn-group.lin-ver a .label-count {
+  float: right;
+  font-weight: 700;
 }
 article {
   position: relative;
@@ -1189,7 +1193,7 @@ article.post-item .blowimg {
 }
 article.post-item .blowimg img {
   border-radius: var(--bor) var(--bor) 0 0;
-  width: calc(100% + 50px);
+  width: calc(100% + 25px);
 }
 article.post-item.single-post h1.post-title.entry-title {
   padding: 0 100px;
@@ -2330,6 +2334,25 @@ article.post-item[data-template="gambar"] .replies,
 article.post-item[data-template="video"] .replies {
   padding-left: 10px;
 }
+article.post-item[data-template="gambar"] .hiddenrep,
+article.post-item[data-template="video"] .hiddenrep {
+  padding: 10px 25px;
+  margin: 0;
+  border-radius: 0 0 var(--bor) var(--bor);
+  margin-top: -15px;
+  color: var(--acn1);
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+article.post-item[data-template="gambar"] .hiddenrep::after,
+article.post-item[data-template="video"] .hiddenrep::after,
+article.post-item[data-template="gambar"] .hiddenrep::before,
+article.post-item[data-template="video"] .hiddenrep::before {
+  content: none;
+}
 article.post-item[data-template="gambar"] .comcon,
 article.post-item[data-template="video"] .comcon {
   width: 385px;
@@ -3005,7 +3028,7 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
     height: calc(100% - 17.5px);
     background: var(--col1);
     top: 17.5px;
-    left: -23px;
+    left: -20px;
     z-index: 99;
   }
   article.post-item.single-post .replies .repcom::before {
@@ -3210,6 +3233,22 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   }
   article.post-item.single-post .replies {
     padding-left: 10px;
+  }
+  article.post-item.single-post .hiddenrep {
+    padding: 10px 25px;
+    margin: 0;
+    border-radius: 0 0 var(--bor) var(--bor);
+    margin-top: -15px;
+    color: var(--acn1);
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  article.post-item.single-post .hiddenrep::after,
+  article.post-item.single-post .hiddenrep::before {
+    content: none;
   }
   article.post-item.single-post .comcon {
     width: 350px;
