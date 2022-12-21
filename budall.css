@@ -1168,7 +1168,7 @@ article.post-item .blowimg {
 }
 article.post-item .blowimg img {
   border-radius: var(--bor) var(--bor) 0 0;
-  width: 100%;
+  width: calc(100% + 50px);
 }
 article.post-item.single-post h1.post-title.entry-title {
   padding: 0 100px;
@@ -1182,6 +1182,9 @@ article.post-item .post-footer {
   padding: var(--pad25);
   margin: 40px 0;
   border-radius: var(--bor);
+}
+article.post-item .post-footer hr {
+  border: 0!important;
 }
 article.post-item[data-template=gambar],
 article.post-item[data-template=video] {
@@ -3553,6 +3556,19 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   .bud-single article.post-item[data-template=jurnal].single-post #budshares > * {
     width: 100%;
   }
+  .bud-single article.post-item[data-template=gambar].single-post #budshares #st-1,
+  .bud-single article.post-item[data-template=video].single-post #budshares #st-1,
+  .bud-single article.post-item[data-template=jurnal].single-post #budshares #st-1,
+  .bud-single article.post-item[data-template=gambar].single-post #budshares #budshort,
+  .bud-single article.post-item[data-template=video].single-post #budshares #budshort,
+  .bud-single article.post-item[data-template=jurnal].single-post #budshares #budshort {
+    width: 100%!important;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post #budshares #budshort,
+  .bud-single article.post-item[data-template=video].single-post #budshares #budshort,
+  .bud-single article.post-item[data-template=jurnal].single-post #budshares #budshort {
+    border-radius: 0;
+  }
   .bud-single article.post-item[data-template=gambar].single-post #budshares #st-1 .st-btnst-last,
   .bud-single article.post-item[data-template=video].single-post #budshares #st-1 .st-btnst-last,
   .bud-single article.post-item[data-template=jurnal].single-post #budshares #st-1 .st-btnst-last {
@@ -3568,6 +3584,14 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   .bud-single article.post-item[data-template=jurnal].single-post #budkategori {
     display: block;
     margin-bottom: 10px;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post .informasi-gambar .bud-comments,
+  .bud-single article.post-item[data-template=video].single-post .informasi-gambar .bud-comments,
+  .bud-single article.post-item[data-template=jurnal].single-post .informasi-gambar .bud-comments,
+  .bud-single article.post-item[data-template=gambar].single-post .informasi-gambar .narasi-gambar,
+  .bud-single article.post-item[data-template=video].single-post .informasi-gambar .narasi-gambar,
+  .bud-single article.post-item[data-template=jurnal].single-post .informasi-gambar .narasi-gambar {
+    padding: 15px;
   }
   .bud-single article.post-item[data-template=jurnal] {
     padding: 15px;
@@ -3626,7 +3650,8 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   }
   .bud-single #blog-pager span#blog-pager-newer-link,
   .bud-single #blog-pager span#blog-pager-older-link {
-    top: calc(100vh - 50px);
+    top: auto;
+    bottom: 0;
     height: 50px;
     padding: 0;
     font-size: 18pt;

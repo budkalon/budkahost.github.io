@@ -1122,7 +1122,7 @@ article {
             margin: calc(var(--pad25) * -1) 0 var(--pad10) calc(var(--pad25) * -1);
             img {
                 border-radius: @bor_atas;
-				width: 100%;
+				width: calc(100% + 50px);
             }
         }
 		&.single-post {
@@ -1139,6 +1139,9 @@ article {
             padding: var(--pad25);
             margin: 40px 0;
             border-radius: var(--bor);
+			hr {
+				border: 0!important;
+			}
         }
 		&[data-template=gambar], &[data-template=video] {
 			display: flex;
@@ -3322,6 +3325,12 @@ article {
 							> * {
 							  width: 100%;
 							}
+							#st-1, #budshort {
+								width: 100%!important;
+							}
+							#budshort {
+								border-radius: 0;
+							}
 							#st-1 .st-btnst-last {
 							  border-radius: 0 var(--bor) 0 0 !important;
 							}
@@ -3332,7 +3341,12 @@ article {
 						#budkategori {
 						  display: block;
 						  margin-bottom: 10px;
-						}	
+						}
+						.informasi-gambar {
+							.bud-comments, .narasi-gambar {
+								padding: 15px;
+							}
+						}  
 					} 
 					
 				}
@@ -3368,7 +3382,8 @@ article {
 			  padding: 0;
 			}
 			&#blog-pager-newer-link, &#blog-pager-older-link {
-				top: calc(100vh - 50px);
+				top: auto;
+				bottom: 0;
 			  height: 50px;
 			  padding: 0;
 			  font-size: 18pt;
