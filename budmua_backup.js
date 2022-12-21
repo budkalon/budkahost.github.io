@@ -53,10 +53,6 @@ function replyTo(id) {
 function onSubmit(token) {
 	$('#budkontak-form').submit();
 }
-const ispost = $('#ispost').val(),
-	iskategori = $('#iskategori').val(),
-	pumanjang = $('#papanjang').val(),
-	panjudul = $('#panjangjud').val();
 var al = {
 	'kt': {
 		'ps': $('#ispost').val(),
