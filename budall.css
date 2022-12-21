@@ -1043,6 +1043,27 @@ span.spacing {
   background: var(--col3);
   border-radius: var(--bor);
 }
+#master-note span.label-size a {
+  background: var(--col3);
+  padding: 10px 15px;
+  border-radius: var(--bor2);
+  margin: 0 15px 15px 0;
+  display: inline-block;
+}
+#master-note span.label-size a:hover {
+  background: var(--acn1);
+  color: var(--col1);
+}
+#master-note span.label-count {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: var(--bor2);
+  color: var(--col8);
+  font-weight: 700;
+}
+#master-note h5 {
+  margin-bottom: 15px;
+}
 #master-note h1 {
   font-size: 2.5em;
   color: var(--acn1);
