@@ -1055,7 +1055,7 @@ span.spacing {
   color: var(--col1);
 }
 #master-note span.label-count {
-  padding: 5px 10px;
+  padding: 0 10px;
   margin-left: 5px;
   border-radius: var(--bor2);
   color: var(--col8);
@@ -2967,7 +2967,7 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
     width: 30px;
   }
   article.post-item.single-post .comimg .comment-avatar {
-    width: 30px;
+    width: 30px!important;
     height: 30px;
   }
   article.post-item.single-post .comimg .comment-avatar img {
@@ -3197,7 +3197,7 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   }
   article.post-item.single-post[data-template] .comimg .comment-avatar {
     border-radius: var(--bor) 0 0 var(--bor);
-    width: 50px;
+    width: 50px!important;
     height: 50px;
   }
   article.post-item.single-post[data-template] .comimg .comment-avatar img {
@@ -3343,6 +3343,34 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   article.post-item[data-template="gambar"] .informasi-gambar .post-body,
   article.post-item[data-template="video"] .informasi-gambar .post-body {
     padding: 0;
+  }
+  article.post-item[data-template="gambar"] #blog-pager span a,
+  article.post-item[data-template="video"] #blog-pager span a {
+    padding: 0;
+  }
+  article.post-item[data-template="gambar"] #blog-pager span#blog-pager-newer-link,
+  article.post-item[data-template="video"] #blog-pager span#blog-pager-newer-link,
+  article.post-item[data-template="gambar"] #blog-pager span#blog-pager-older-link,
+  article.post-item[data-template="video"] #blog-pager span#blog-pager-older-link {
+    top: auto;
+    bottom: 0;
+    height: 50px;
+    padding: 0;
+    font-size: 18pt;
+    line-height: 50px;
+    border-radius: 0;
+    text-align: center;
+    width: 80px;
+  }
+  article.post-item[data-template="gambar"] #blog-pager span#blog-pager-older-link,
+  article.post-item[data-template="video"] #blog-pager span#blog-pager-older-link {
+    right: 0;
+    border-radius: 0;
+  }
+  article.post-item[data-template="gambar"] #blog-pager span#blog-pager-newer-link,
+  article.post-item[data-template="video"] #blog-pager span#blog-pager-newer-link {
+    left: 0;
+    border-radius: 0;
   }
   .laman-kategori article.multi-post,
   article.multi-post {
