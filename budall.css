@@ -3492,6 +3492,83 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
   .bud-single #above-wrapper {
     margin-bottom: 65px;
   }
+  .bud-single article.post-item[data-template=gambar],
+  .bud-single article.post-item[data-template=video],
+  .bud-single article.post-item[data-template=jurnal] {
+    padding: 0;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post h1.post-title.entry-title,
+  .bud-single article.post-item[data-template=video].single-post h1.post-title.entry-title,
+  .bud-single article.post-item[data-template=jurnal].single-post h1.post-title.entry-title {
+    font-size: 2.5em;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post .post-infohead > span,
+  .bud-single article.post-item[data-template=video].single-post .post-infohead > span,
+  .bud-single article.post-item[data-template=jurnal].single-post .post-infohead > span {
+    padding: 5px 0;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post #posnya-relatedan ul li,
+  .bud-single article.post-item[data-template=video].single-post #posnya-relatedan ul li,
+  .bud-single article.post-item[data-template=jurnal].single-post #posnya-relatedan ul li {
+    display: inline-block;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post .author-profile,
+  .bud-single article.post-item[data-template=video].single-post .author-profile,
+  .bud-single article.post-item[data-template=jurnal].single-post .author-profile {
+    margin: 0 -15px -15px;
+    padding: 15px;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post .author-profile .prodesc,
+  .bud-single article.post-item[data-template=video].single-post .author-profile .prodesc,
+  .bud-single article.post-item[data-template=jurnal].single-post .author-profile .prodesc {
+    width: 240px;
+    padding: 15px 5px 15px;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post .post-footer,
+  .bud-single article.post-item[data-template=video].single-post .post-footer,
+  .bud-single article.post-item[data-template=jurnal].single-post .post-footer {
+    padding: 15px;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post #budbread-crumb,
+  .bud-single article.post-item[data-template=video].single-post #budbread-crumb,
+  .bud-single article.post-item[data-template=jurnal].single-post #budbread-crumb {
+    padding: 15px 10px;
+    top: -60px;
+    left: 0;
+    right: 0;
+    font-size: 8pt;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post #budbread-crumb [class*="fa-"],
+  .bud-single article.post-item[data-template=video].single-post #budbread-crumb [class*="fa-"],
+  .bud-single article.post-item[data-template=jurnal].single-post #budbread-crumb [class*="fa-"] {
+    margin: 0 3px;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post #budshares,
+  .bud-single article.post-item[data-template=video].single-post #budshares,
+  .bud-single article.post-item[data-template=jurnal].single-post #budshares {
+    margin: -15px -15px 10px;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post #budshares > *,
+  .bud-single article.post-item[data-template=video].single-post #budshares > *,
+  .bud-single article.post-item[data-template=jurnal].single-post #budshares > * {
+    width: 100%;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post #budshares #st-1 .st-btnst-last,
+  .bud-single article.post-item[data-template=video].single-post #budshares #st-1 .st-btnst-last,
+  .bud-single article.post-item[data-template=jurnal].single-post #budshares #st-1 .st-btnst-last {
+    border-radius: 0 var(--bor) 0 0 !important;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post #budshort,
+  .bud-single article.post-item[data-template=video].single-post #budshort,
+  .bud-single article.post-item[data-template=jurnal].single-post #budshort {
+    border-radius: 0;
+  }
+  .bud-single article.post-item[data-template=gambar].single-post #budkategori,
+  .bud-single article.post-item[data-template=video].single-post #budkategori,
+  .bud-single article.post-item[data-template=jurnal].single-post #budkategori {
+    display: block;
+    margin-bottom: 10px;
+  }
   .bud-single article.post-item[data-template=jurnal] {
     padding: 15px;
   }
@@ -3503,53 +3580,7 @@ article.post-item[data-template=video] .replies .comment:last-child::after {
     border-radius: var(--bor) var(--bor) 0 0;
     width: 100%;
   }
-  .bud-single article.post-item[data-template=jurnal].single-post h1.post-title.entry-title {
-    font-size: 2.5em;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post .post-infohead > span {
-    padding: 5px 0;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post #posnya-relatedan ul li {
-    display: inline-block;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post .author-profile {
-    margin: 0 -15px -15px;
-    padding: 15px;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post .author-profile .prodesc {
-    width: 240px;
-    padding: 15px 5px 15px;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post .post-footer {
-    padding: 15px;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post #budbread-crumb {
-    padding: 15px 10px;
-    top: -60px;
-    left: 0;
-    right: 0;
-    font-size: 8pt;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post #budbread-crumb [class*="fa-"] {
-    margin: 0 3px;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post #budshares {
-    margin: -15px -15px 10px;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post #budshares > * {
-    width: 100%;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post #budshares #st-1 .st-btnst-last {
-    border-radius: 0 var(--bor) 0 0 !important;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post #budshort {
-    border-radius: 0;
-  }
-  .bud-single article.post-item[data-template=jurnal].single-post #budkategori {
-    display: block;
-    margin-bottom: 10px;
-  }
-  .bud-single article.post-item .comimg .comment-avatar img {
+  .bud-single article.post-item .comimg .comment-avatar {
     width: 50px!important;
   }
   .bud-single article.post-item .comcon {

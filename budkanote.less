@@ -3284,16 +3284,8 @@ article {
 		}
 		article {
 			&.post-item {
-				&[data-template=jurnal] {
-					padding: 15px;
-					.blowimg {
-						margin: -15px 0 10px -15px;
-						width: calc(100% + 30px);
-						img {
-							border-radius: var(--bor) var(--bor) 0 0;
-							width: 100%;
-						}
-					}
+				&[data-template=gambar], &[data-template=video], &[data-template=jurnal] {
+					padding: 0;
 					&.single-post {
 						h1.post-title.entry-title {
 						  font-size: 2.5em;
@@ -3342,9 +3334,18 @@ article {
 						  margin-bottom: 10px;
 						}	
 					} 
-				}
-				&[data-template=gambar], &[data-template=video] {
 					
+				}
+				&[data-template=jurnal] {
+					padding: 15px;
+					.blowimg {
+						margin: -15px 0 10px -15px;
+						width: calc(100% + 30px);
+						img {
+							border-radius: var(--bor) var(--bor) 0 0;
+							width: 100%;
+						}
+					}
 				}
 				.comimg .comment-avatar {
 					width: 50px!important;
