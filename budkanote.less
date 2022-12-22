@@ -356,19 +356,6 @@ h6,
 h7 {
     font-size: 1em;
 }
-h2, h3, h4, h5, h6, h7, h8 {
-	&::after {
-		content: '#'attr(id);
-		font-size: 0.5em;
-		margin-left: 10px;
-		color: var(--col4);
-		visibility: hidden;
-		text-transform: lowercase;
-	}
-	&:hover::after {
-		visibility: visible;
-	}
-}
 .clear,
 .cl {
     display: block;
@@ -1409,6 +1396,21 @@ article {
     }
 }
 .post {
+	&.single-post {
+		h2, h3, h4, h5, h6, h7, h8 {
+			&::after {
+				content: '#'attr(id);
+				font-size: 0.5em;
+				margin-left: 10px;
+				color: var(--col4);
+				visibility: hidden;
+				text-transform: lowercase;
+			}
+			&:hover::after {
+				visibility: visible;
+			}
+		}
+	}
     figure {
         position: relative;
         &.spec {
@@ -2980,6 +2982,7 @@ article {
     body {
         font-size: 10pt;
     }
+	
     #outer-wrapper {
         width: var(--wxs);
     }
@@ -3367,6 +3370,28 @@ article {
     .laman-kategori #Label1 .btn-group.lin-ver a {
         padding: 10px 15px;
     }
+	.bud-single #blog-pager span {
+	  	&#blog-pager-newer-link,
+		&#blog-pager-older-link {
+			top: auto;
+			bottom: 0;
+			height: 50px;
+			padding: 0;
+			font-size: 18pt;
+			line-height: 50px;
+			border-radius: 0;
+			text-align: center;
+			width: 80px;
+		}
+		&#blog-pager-older-link {
+			right: 0;
+			border-radius: 0;
+		}
+		&#blog-pager-newer-link {
+			left: 0;
+			border-radius: 0;
+		}
+	}
 }
 
 @media screen and (max-width: 410px) {
