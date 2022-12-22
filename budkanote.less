@@ -356,6 +356,19 @@ h6,
 h7 {
     font-size: 1em;
 }
+h2, h3, h4, h5, h6, h7, h8 {
+	&::after {
+		content: '#'attr(id);
+		font-size: 0.5em;
+		margin-left: 10px;
+		color: var(--col4);
+		visibility: hidden;
+		text-transform: lowercase;
+	}
+	&:hover::after {
+		visibility: visible;
+	}
+}
 .clear,
 .cl {
     display: block;
@@ -2496,7 +2509,7 @@ article {
                 flex-direction: row;
                 align-items: center;
                 a {
-                    margin-bottom: 0;
+                    margin: 0;
                     border-radius: 0;
                     width: 33.333%;
                     text-align: center;
@@ -2506,6 +2519,16 @@ article {
                     &:last-child {
                         border-radius: @bor_kanan;
                     }
+					.label-count {
+						float: none;
+						font-size: 0.8em;
+						&::before {
+							content: '()';
+						}
+						&::after {
+							content: ')';
+						}
+					}
                 }
             }
         }
@@ -2828,6 +2851,15 @@ article {
                         }
                     }
                 }
+				.hiddenrep::after {
+					content: "";
+					width: 27.5px;
+					height: 5px;
+					background: var(--col5);
+					position: absolute;
+					left: -27.5px;
+					top: 26px;
+				}
                 .repcom {
                     width: 30px;
                     height: 70px;
@@ -3028,7 +3060,7 @@ article {
     article {
         &.post-item {
             &.single-post {
-                &[data-template] {
+                &[data-template="jurnal"], &[data-template="gambar"], &[data-template="video"] {
                     #video-place,
                     .loading {
                         height: calc(9 / 16 * 400px);
@@ -3065,6 +3097,31 @@ article {
                             }
                         }
                     }
+					#blog-pager span {
+						a {
+							padding: 0;
+						}
+						&#blog-pager-newer-link,
+						&#blog-pager-older-link {
+							top: auto;
+							bottom: 0;
+							height: 50px;
+							padding: 0;
+							font-size: 18pt;
+							line-height: 50px;
+							border-radius: 0;
+							text-align: center;
+							width: 80px;
+						}
+						&#blog-pager-older-link {
+							right: 0;
+							border-radius: 0;
+						}
+						&#blog-pager-newer-link {
+							left: 0;
+							border-radius: 0;
+						}
+					}
                 }
                 .is-replied > div > div {
                     > .comment-header {
@@ -3155,31 +3212,6 @@ article {
                 }
                 .replies .comment:last-child::after {
                     content: none;
-                }
-                #blog-pager span {
-                    a {
-                        padding: 0;
-                    }
-                    &#blog-pager-newer-link,
-                    &#blog-pager-older-link {
-                        top: auto;
-                        bottom: 0;
-                        height: 50px;
-                        padding: 0;
-                        font-size: 18pt;
-                        line-height: 50px;
-                        border-radius: 0;
-                        text-align: center;
-                        width: 80px;
-                    }
-                    &#blog-pager-older-link {
-                        right: 0;
-                        border-radius: 0;
-                    }
-                    &#blog-pager-newer-link {
-                        left: 0;
-                        border-radius: 0;
-                    }
                 }
             }
             &[data-template="gambar"],
@@ -3311,7 +3343,7 @@ article {
     }
     #to-top {
         position: fixed;
-        right: 80px;
+        right: 0;
         bottom: 0;
         padding: 0;
         background: var(--col4);
@@ -3319,7 +3351,7 @@ article {
         font-size: 24pt;
         border-radius: 0;
         z-index: 9999;
-        left: 80px;
+        left: 0;
         height: 50px;
         line-height: 50px;
         text-align: center;
@@ -3327,9 +3359,9 @@ article {
             bottom: 0;
             background: var(--col5);
         }
-        #bud-laman & {
-            left: 0;
-            right: 0;
+        #bud-pos & {
+            left: 80px;
+            right: 80px;
         }
     }
     .laman-kategori #Label1 .btn-group.lin-ver a {
@@ -3541,6 +3573,9 @@ article {
                             width: 100%;
                         }
                     }
+					span.tandarasi {
+						width: 0;
+					}
                 }
                 .comimg .comment-avatar {
                     width: 50px !important;
