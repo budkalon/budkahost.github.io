@@ -1446,6 +1446,86 @@ article.post-static_page .post-body {
 [id*="bud-laman-"] .post-body {
   padding: 0 300px 0 100px;
 }
+.post.single-post .post-body h2,
+.post.single-post .post-body h3,
+.post.single-post .post-body h4,
+.post.single-post .post-body h5,
+.post.single-post .post-body h6,
+.post.single-post .post-body h7,
+.post.single-post .post-body h8 {
+  position: relative;
+}
+.post.single-post .post-body h2::after,
+.post.single-post .post-body h3::after,
+.post.single-post .post-body h4::after,
+.post.single-post .post-body h5::after,
+.post.single-post .post-body h6::after,
+.post.single-post .post-body h7::after,
+.post.single-post .post-body h8::after {
+  content: '#' attr(id);
+  font-size: 0.5em;
+  margin-left: 10px;
+  color: var(--col4);
+  visibility: hidden;
+  text-transform: lowercase;
+  position: absolute;
+}
+.post.single-post .post-body h2:hover::after,
+.post.single-post .post-body h3:hover::after,
+.post.single-post .post-body h4:hover::after,
+.post.single-post .post-body h5:hover::after,
+.post.single-post .post-body h6:hover::after,
+.post.single-post .post-body h7:hover::after,
+.post.single-post .post-body h8:hover::after {
+  visibility: visible;
+}
+.post a[name=more] {
+  display: block;
+  width: 100%;
+  border-bottom: 5px solid var(--col3);
+  margin: 25px 0;
+}
+.post #toc-con {
+  display: inline-block;
+  background: var(--col2);
+  border-radius: var(--bor);
+  padding: 25px;
+  float: left;
+  margin: 15px 15px 15px 0;
+  width: 50%;
+}
+.post #toc-con ol {
+  margin: 0;
+  list-style: none;
+  padding-left: 25px;
+  position: relative;
+}
+.post #toc-con ol::before {
+  content: '';
+  height: 100%;
+  border-left: 3px solid var(--col4);
+  position: absolute;
+  left: 10px;
+}
+.post #toc-con ol li {
+  position: relative;
+}
+.post #toc-con ol li::before {
+  content: '';
+  width: 7.5px;
+  border-top: 3px solid var(--col4);
+  position: absolute;
+  left: -12px;
+  top: 0.8em;
+}
+.post #toc-con ol li:last-child::after {
+  content: '';
+  height: calc(0.8em + 3px);
+  border-left: 5px solid var(--col2);
+  position: absolute;
+  left: -15px;
+  top: calc(0.8em + 3px);
+}
 .post figure {
   position: relative;
 }
@@ -1791,7 +1871,6 @@ article.post-static_page .post-body {
   width: 25%;
   float: left;
   background: none;
-
   border-radius: 0;
 }
 [data-template="gambar"] #posnya-relatedan ul li:first-child,
@@ -2184,7 +2263,6 @@ article.post-static_page .post-body {
   margin: 25px 0;
   border-radius: var(--bor);
 }
-
 .comment-body .comh1,
 .comment-body .comh2,
 .comment-body .comh3 {
@@ -2597,7 +2675,7 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
     align-items: center;
   }
   .laman-kategori #Label1 .btn-group.lin-ver a {
-    margin-bottom: 0;
+    margin: 0;
     border-radius: 0;
     width: 33.333%;
     text-align: center;
@@ -2607,6 +2685,16 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   }
   .laman-kategori #Label1 .btn-group.lin-ver a:last-child {
     border-radius: 0 var(--bor) var(--bor) 0;
+  }
+  .laman-kategori #Label1 .btn-group.lin-ver a .label-count {
+    float: none;
+    font-size: 0.8em;
+  }
+  .laman-kategori #Label1 .btn-group.lin-ver a .label-count::before {
+    content: '()';
+  }
+  .laman-kategori #Label1 .btn-group.lin-ver a .label-count::after {
+    content: ')';
   }
   .laman-kategori #FeaturedPost1 article h4,
   .laman-kategori #PopularPosts1 article h4 {
@@ -2975,6 +3063,15 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   article.post-item.single-post .comimg .comment-avatar img {
     width: 30px;
   }
+  article.post-item.single-post .hiddenrep::after {
+    content: "";
+    width: 27.5px;
+    height: 5px;
+    background: var(--col5);
+    position: absolute;
+    left: -27.5px;
+    top: 26px;
+  }
   article.post-item.single-post .repcom {
     width: 30px;
     height: 70px;
@@ -3169,41 +3266,96 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   span.bud-search-filter {
     width: calc(2 / 12 * 100%);
   }
-  article.post-item.single-post[data-template] #video-place,
-  article.post-item.single-post[data-template] .loading {
+  article.post-item.single-post[data-template="jurnal"] #video-place,
+  article.post-item.single-post[data-template="gambar"] #video-place,
+  article.post-item.single-post[data-template="video"] #video-place,
+  article.post-item.single-post[data-template="jurnal"] .loading,
+  article.post-item.single-post[data-template="gambar"] .loading,
+  article.post-item.single-post[data-template="video"] .loading {
     height: calc(9 / 16 * 400px);
   }
-  article.post-item.single-post[data-template] .post-infohead > span {
+  article.post-item.single-post[data-template="jurnal"] .post-infohead > span,
+  article.post-item.single-post[data-template="gambar"] .post-infohead > span,
+  article.post-item.single-post[data-template="video"] .post-infohead > span {
     display: block;
     padding: 10px 0;
   }
-  article.post-item.single-post[data-template] #posnya-relatedan ul li {
+  article.post-item.single-post[data-template="jurnal"] #posnya-relatedan ul li,
+  article.post-item.single-post[data-template="gambar"] #posnya-relatedan ul li,
+  article.post-item.single-post[data-template="video"] #posnya-relatedan ul li {
     width: 25%;
     border-radius: 0;
   }
-  article.post-item.single-post[data-template] #posnya-relatedan ul li:first-child {
+  article.post-item.single-post[data-template="jurnal"] #posnya-relatedan ul li:first-child,
+  article.post-item.single-post[data-template="gambar"] #posnya-relatedan ul li:first-child,
+  article.post-item.single-post[data-template="video"] #posnya-relatedan ul li:first-child {
     border-radius: var(--bor) 0 0 var(--bor);
   }
-  article.post-item.single-post[data-template] #posnya-relatedan ul li:last-child {
+  article.post-item.single-post[data-template="jurnal"] #posnya-relatedan ul li:last-child,
+  article.post-item.single-post[data-template="gambar"] #posnya-relatedan ul li:last-child,
+  article.post-item.single-post[data-template="video"] #posnya-relatedan ul li:last-child {
     border-radius: 0 var(--bor) var(--bor) 0;
   }
-  article.post-item.single-post[data-template] #posnya-relatedan ul li img {
+  article.post-item.single-post[data-template="jurnal"] #posnya-relatedan ul li img,
+  article.post-item.single-post[data-template="gambar"] #posnya-relatedan ul li img,
+  article.post-item.single-post[data-template="video"] #posnya-relatedan ul li img {
     border-radius: 0;
   }
-  article.post-item.single-post[data-template] .author-profile .prodesc {
+  article.post-item.single-post[data-template="jurnal"] .author-profile .prodesc,
+  article.post-item.single-post[data-template="gambar"] .author-profile .prodesc,
+  article.post-item.single-post[data-template="video"] .author-profile .prodesc {
     width: 300px;
     padding: 15px 15px 0;
   }
-  article.post-item.single-post[data-template] .comimg {
+  article.post-item.single-post[data-template="jurnal"] .comimg,
+  article.post-item.single-post[data-template="gambar"] .comimg,
+  article.post-item.single-post[data-template="video"] .comimg {
     width: 150px;
   }
-  article.post-item.single-post[data-template] .comimg .comment-avatar {
+  article.post-item.single-post[data-template="jurnal"] .comimg .comment-avatar,
+  article.post-item.single-post[data-template="gambar"] .comimg .comment-avatar,
+  article.post-item.single-post[data-template="video"] .comimg .comment-avatar {
     border-radius: var(--bor) 0 0 var(--bor);
     width: 50px!important;
     height: 50px;
   }
-  article.post-item.single-post[data-template] .comimg .comment-avatar img {
+  article.post-item.single-post[data-template="jurnal"] .comimg .comment-avatar img,
+  article.post-item.single-post[data-template="gambar"] .comimg .comment-avatar img,
+  article.post-item.single-post[data-template="video"] .comimg .comment-avatar img {
     width: 50px;
+  }
+  article.post-item.single-post[data-template="jurnal"] #blog-pager span a,
+  article.post-item.single-post[data-template="gambar"] #blog-pager span a,
+  article.post-item.single-post[data-template="video"] #blog-pager span a {
+    padding: 0;
+  }
+  article.post-item.single-post[data-template="jurnal"] #blog-pager span#blog-pager-newer-link,
+  article.post-item.single-post[data-template="gambar"] #blog-pager span#blog-pager-newer-link,
+  article.post-item.single-post[data-template="video"] #blog-pager span#blog-pager-newer-link,
+  article.post-item.single-post[data-template="jurnal"] #blog-pager span#blog-pager-older-link,
+  article.post-item.single-post[data-template="gambar"] #blog-pager span#blog-pager-older-link,
+  article.post-item.single-post[data-template="video"] #blog-pager span#blog-pager-older-link {
+    top: auto;
+    bottom: 0;
+    height: 50px;
+    padding: 0;
+    font-size: 18pt;
+    line-height: 50px;
+    border-radius: 0;
+    text-align: center;
+    width: 80px;
+  }
+  article.post-item.single-post[data-template="jurnal"] #blog-pager span#blog-pager-older-link,
+  article.post-item.single-post[data-template="gambar"] #blog-pager span#blog-pager-older-link,
+  article.post-item.single-post[data-template="video"] #blog-pager span#blog-pager-older-link {
+    right: 0;
+    border-radius: 0;
+  }
+  article.post-item.single-post[data-template="jurnal"] #blog-pager span#blog-pager-newer-link,
+  article.post-item.single-post[data-template="gambar"] #blog-pager span#blog-pager-newer-link,
+  article.post-item.single-post[data-template="video"] #blog-pager span#blog-pager-newer-link {
+    left: 0;
+    border-radius: 0;
   }
   article.post-item.single-post .is-replied > div > div > .comment-header {
     border-radius: 0 var(--bor) 0 0;
@@ -3318,29 +3470,6 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   }
   article.post-item.single-post .replies .comment:last-child::after {
     content: none;
-  }
-  article.post-item.single-post #blog-pager span a {
-    padding: 0;
-  }
-  article.post-item.single-post #blog-pager span#blog-pager-newer-link,
-  article.post-item.single-post #blog-pager span#blog-pager-older-link {
-    top: auto;
-    bottom: 0;
-    height: 50px;
-    padding: 0;
-    font-size: 18pt;
-    line-height: 50px;
-    border-radius: 0;
-    text-align: center;
-    width: 80px;
-  }
-  article.post-item.single-post #blog-pager span#blog-pager-older-link {
-    right: 0;
-    border-radius: 0;
-  }
-  article.post-item.single-post #blog-pager span#blog-pager-newer-link {
-    left: 0;
-    border-radius: 0;
   }
   article.post-item[data-template="gambar"] .informasi-gambar .post-body,
   article.post-item[data-template="video"] .informasi-gambar .post-body {
@@ -3480,7 +3609,7 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   }
   #to-top {
     position: fixed;
-    right: 80px;
+    right: 0;
     bottom: 0;
     padding: 0;
     background: var(--col4);
@@ -3488,7 +3617,7 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
     font-size: 24pt;
     border-radius: 0;
     z-index: 9999;
-    left: 80px;
+    left: 0;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -3497,12 +3626,35 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
     bottom: 0;
     background: var(--col5);
   }
-  #bud-laman #to-top {
-    left: 0;
-    right: 0;
+  #bud-pos #to-top {
+    left: 80px;
+    right: 80px;
   }
   .laman-kategori #Label1 .btn-group.lin-ver a {
     padding: 10px 15px;
+  }
+  .bud-single #blog-pager span a {
+    padding: 0;
+  }
+  .bud-single #blog-pager span#blog-pager-newer-link,
+  .bud-single #blog-pager span#blog-pager-older-link {
+    top: auto;
+    bottom: 0;
+    height: 50px;
+    padding: 0;
+    font-size: 18pt;
+    line-height: 50px;
+    border-radius: 0;
+    text-align: center;
+    width: 80px;
+  }
+  .bud-single #blog-pager span#blog-pager-older-link {
+    right: 0;
+    border-radius: 0;
+  }
+  .bud-single #blog-pager span#blog-pager-newer-link {
+    left: 0;
+    border-radius: 0;
   }
 }
 @media screen and (max-width: 410px) {
@@ -3739,6 +3891,9 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   .bud-single article.post-item[data-template="jurnal"] .blowimg img {
     border-radius: var(--bor) var(--bor) 0 0;
     width: 100%;
+  }
+  .bud-single article.post-item[data-template="jurnal"] span.tandarasi {
+    width: 0;
   }
   .bud-single article.post-item .comimg .comment-avatar {
     width: 50px !important;
