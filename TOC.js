@@ -1,27 +1,18 @@
-$(document).ready(function() {                                                                          
-    $(tocList).empty();                                                            
-    
-    var prevH2Item = null;                                                            
-    var prevH2List = null;                                                            
-    
-    var index = 0;                                                                    
-    $("h2, h3").each(function() {                                                     
-    
-        //insert an anchor to jump to, from the TOC link.            
-        var anchor = "<a name='" + index + "'></a>";                 
-        $(this).before(anchor);                                     
-        
-        var li     = "<li><a href='#" + index + "'>" + $(this).text() + "</a></li>"; 
-        
-        if( $(this).is("h2") ){                                     
-            prevH2List = $("<ul></ul>");                
-            prevH2Item = $(li);                                     
-            prevH2Item.append(prevH2List);                          
-            prevH2Item.appendTo("#tocList");                        
-        } else {                                                    
-            prevH2List.append(li);                                  
-        }                                                           
-        index++;                                                    
-    });                                                             
-    
-}); 
+$(document).ready(function() {
+	var itemh2 = $('<span></span>'),
+		listh2 = $('<span></span>');
+	$('.post-body').prepend('<ol id="tocList"></ol>');
+	$(".post-body h2, .post-body h3").each(function(index) {
+		var umidi = this.id ? $(this).attr('id') : 't_' + (index + 1),
+			li = "<li><a href='#" + umidi + "'>" + $(this).text() + "</a></li>";
+		$(this).attr('id', umidi);
+		if ($(this).is("h2")) {
+			listh2 = $("<ol></ol>");
+			itemh2 = $(li);
+			itemh2.append(listh2);
+			itemh2.appendTo("#tocList");
+		} else {
+			listh2.append(li);
+		}
+	});
+});

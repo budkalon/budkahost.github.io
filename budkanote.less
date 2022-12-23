@@ -1396,7 +1396,7 @@ article {
     }
 }
 .post {
-	&.single-post {
+	&.single-post .post-body {
 		h2, h3, h4, h5, h6, h7, h8 {
 			&::after {
 				content: '#'attr(id);
@@ -1408,6 +1408,55 @@ article {
 			}
 			&:hover::after {
 				visibility: visible;
+			}
+		}
+	}
+	a[name=more] {
+		display: block;
+		width: 100%;
+		border-bottom: 5px solid var(--col3);
+		margin: 25px 0;
+	}
+	#toc-con {
+		display: inline-block;
+		background: var(--col2);
+		border-radius: var(--bor);
+		padding: 25px;
+		float: left;
+		margin: 15px 15px 15px 0;
+		width: 50%;
+		ol {
+			margin: 0;
+			list-style: none;
+			padding-left: 25px;
+			position: relative;
+			&#tocList{
+				&::before {
+					content: '';
+					height: 100%;
+					border-left: 3px solid var(--col4);
+					position: absolute;
+					left: 10px;
+				}
+				li {
+					position: relative;
+					&::before {
+						content: '';
+						width: 7.5px;
+						border-top: 3px solid var(--col4);
+						position: absolute;
+						left: -12px;
+						top: 0.8em;
+					}
+					&:last-child::after {
+						content: '';
+						height: calc(0.8em + 3px);
+						border-left: 5px solid var(--col2);
+						position: absolute;
+						left: -15px;
+						top: calc(0.8em + 3px);
+					}
+				}
 			}
 		}
 	}
@@ -3371,6 +3420,9 @@ article {
         padding: 10px 15px;
     }
 	.bud-single #blog-pager span {
+		a {
+			padding: 0;
+		}
 	  	&#blog-pager-newer-link,
 		&#blog-pager-older-link {
 			top: auto;

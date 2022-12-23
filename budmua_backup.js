@@ -383,6 +383,7 @@ $(function() {
 					var skkr = $(this).html().replace(/\[tawut\](.*?)\[\/tawut\]/ig, "<em>$1<\/em>");
 					skkr = skkr.replace(/\[toref\](.*?)\[\/toref\]/ig, "<em>$1<\/em>");
 					skkr = skkr.replace(/\_\_(.*?)\_\_/ig, "<strong>$1<\/strong>");
+					skkr = skkr.replace(/\*\*(.*?)\*\*/ig, "<em>$1<\/em>");
 					skkr = skkr.replace(/\[img\](.*?)\[\/img\]/ig, "<span style='text-align:center;'><a data-allow='true' href='$1' class='allow' target='_blank' rel='nofollow'><img title='Gambar referensi' class='cm-image' src='$1' alt='Memuat...' \/><\/a><\/span>");
 					skkr = skkr.replace(/\[youtube\](.*?)\[\/youtube\]/ig, "<span class='cm-youtube'><iframe frameborder='0' allow='autoplay; encrypted-media' allowfullscreen src='http://www.youtube.com/embed/$1'><\/iframe><\/span>");
 					skkr = skkr.replace(/\/((w|s|h)[0-9]+\-(c|p|cc)|(w|s|h)[0-9]+(|\-(c|p|cc)))/ig, ("/s" + al.cmn.imgsz + "-c"));
