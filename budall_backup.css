@@ -1484,12 +1484,24 @@ article.post-static_page .post-body {
 }
 .post.single-post .post-body h2.fcsd,
 .post.single-post .post-body h3.fcsd,
-.post.single-post .post-body h4.fcsd {
+.post.single-post .post-body h4.fcsd,
+.post.single-post .post-body h2:target,
+.post.single-post .post-body h3:target,
+.post.single-post .post-body h4:target,
+.post.single-post .post-body h2:focus,
+.post.single-post .post-body h3:focus,
+.post.single-post .post-body h4:focus {
   color: var(--acn2);
 }
 .post.single-post .post-body h2.fcsd span,
 .post.single-post .post-body h3.fcsd span,
-.post.single-post .post-body h4.fcsd span {
+.post.single-post .post-body h4.fcsd span,
+.post.single-post .post-body h2:target span,
+.post.single-post .post-body h3:target span,
+.post.single-post .post-body h4:target span,
+.post.single-post .post-body h2:focus span,
+.post.single-post .post-body h3:focus span,
+.post.single-post .post-body h4:focus span {
   visibility: visible;
 }
 .post p {
@@ -1541,7 +1553,7 @@ article.post-static_page .post-body {
   left: -12px;
   top: 0.8em;
 }
-.post #toc-con ol li:last-child ol::after {
+.post #toc-con ol li:last-child::after {
   content: '';
   height: calc(0.8em + 3px);
   border-left: 5px solid var(--col2);
