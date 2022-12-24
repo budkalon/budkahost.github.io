@@ -1460,30 +1460,6 @@ article.post-static_page .post-body {
   color: var(--col7);
   text-transform: none;
 }
-.post.single-post .post-body h2::after,
-.post.single-post .post-body h3::after,
-.post.single-post .post-body h4::after,
-.post.single-post .post-body h5::after,
-.post.single-post .post-body h6::after,
-.post.single-post .post-body h7::after,
-.post.single-post .post-body h8::after {
-  content: '#';
-  font-size: 0.5em;
-  margin-left: 10px;
-  color: var(--col4);
-  visibility: hidden;
-  text-transform: lowercase;
-  position: absolute;
-}
-.post.single-post .post-body h2:hover::after,
-.post.single-post .post-body h3:hover::after,
-.post.single-post .post-body h4:hover::after,
-.post.single-post .post-body h5:hover::after,
-.post.single-post .post-body h6:hover::after,
-.post.single-post .post-body h7:hover::after,
-.post.single-post .post-body h8:hover::after {
-  visibility: visible;
-}
 .post.single-post .post-body h2 {
   font-size: 2em;
   margin-top: 15px;
@@ -1499,6 +1475,22 @@ article.post-static_page .post-body {
 .post.single-post .post-body h3::before {
   counter-increment: h3counter;
   content: counter(h2counter) "." counter(h3counter) ". ";
+}
+.post.single-post .post-body h2 span,
+.post.single-post .post-body h3 span,
+.post.single-post .post-body h4 span {
+  margin-left: 10px;
+  visibility: hidden;
+}
+.post.single-post .post-body h2.fcsd,
+.post.single-post .post-body h3.fcsd,
+.post.single-post .post-body h4.fcsd {
+  color: var(--acn2);
+}
+.post.single-post .post-body h2.fcsd span,
+.post.single-post .post-body h3.fcsd span,
+.post.single-post .post-body h4.fcsd span {
+  visibility: visible;
 }
 .post p {
   margin: 0 0 1.5em;
@@ -1520,6 +1512,10 @@ article.post-static_page .post-body {
   width: 50%;
   position: relative;
   z-index: 99;
+}
+.post #toc-con a.fcsd {
+  color: var(--acn1);
+  text-decoration: underline;
 }
 .post #toc-con ol {
   margin: 0;

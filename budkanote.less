@@ -1404,18 +1404,6 @@ article {
 			font-size: 1.2em;
 			color: var(--col7);
 			text-transform: none;
-			&::after {
-				content: '#';
-				font-size: 0.5em;
-				margin-left: 10px;
-				color: var(--col4);
-				visibility: hidden;
-				text-transform: lowercase;
-				position: absolute;
-			}
-			&:hover::after {
-				visibility: visible;
-			}
 		}
 		h2 {
 			font-size: 2em;
@@ -1432,6 +1420,18 @@ article {
 				counter-increment: h3counter;
 				content: counter(h2counter) "." counter(h3counter) ". ";
 			}
+		}
+		h2, h3, h4 {
+			span {
+				margin-left: 10px;
+    			visibility: hidden;
+			}
+			&.fcsd {
+				color: var(--acn2);
+				span {
+					visibility: visible;
+				}
+			} 
 		}
 	}
 	p {
@@ -1454,6 +1454,10 @@ article {
 		width: 50%;
 		position: relative;
 		z-index: 99;
+		a.fcsd {
+			color: var(--acn1);
+			text-decoration: underline;
+		}
 		ol {
 			margin: 0;
 			list-style: none;

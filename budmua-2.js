@@ -184,7 +184,7 @@ if (al.kt.ps == "true") {
 				jar = '#' + $(this).attr('id');
 			animate_scroll(tar, 70);
 			$(tar).addClass('fcsd');
-			if ($(this).is("a")) {
+			if ($(this).parent().is("li")) {
 				$('.toclink').not($(tar)).removeClass('fcsd');
 			} else {
 				$('.toclink').not($(tar)).parent().parent().removeClass('fcsd');
