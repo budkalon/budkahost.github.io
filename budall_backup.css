@@ -1483,9 +1483,6 @@ article.post-static_page .post-body {
   margin-left: 10px;
   visibility: hidden;
 }
-.post.single-post .post-body h2.fcsd,
-.post.single-post .post-body h3.fcsd,
-.post.single-post .post-body h4.fcsd,
 .post.single-post .post-body h2:target,
 .post.single-post .post-body h3:target,
 .post.single-post .post-body h4:target,
@@ -1494,9 +1491,6 @@ article.post-static_page .post-body {
 .post.single-post .post-body h4:focus {
   color: var(--acn2);
 }
-.post.single-post .post-body h2.fcsd span,
-.post.single-post .post-body h3.fcsd span,
-.post.single-post .post-body h4.fcsd span,
 .post.single-post .post-body h2:target span,
 .post.single-post .post-body h3:target span,
 .post.single-post .post-body h4:target span,
