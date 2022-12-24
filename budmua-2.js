@@ -184,7 +184,11 @@ if (al.kt.ps == "true") {
 				jar = '#' + $(this).attr('id');
 			animate_scroll(tar, 70);
 			$(tar).addClass('fcsd');
-			$('a.toclink').not($(tar)).parent().parent().removeClass('fcsd');
+			if ($(this).is("a")) {
+				$('.toclink').not($(tar)).removeClass('fcsd');
+			} else {
+				$('.toclink').not($(tar)).parent().parent().removeClass('fcsd');
+			}
 		});
 		//FOOTNOTE
 		var sdrl = $('<ol id="' + al.ps.fID + '"></ol>');
