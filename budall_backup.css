@@ -1201,6 +1201,7 @@ article.post-item.single-post h1.post-title.entry-title {
 article.post-item h1.post-title.entry-title {
   color: var(--acn1);
   text-transform: capitalize;
+  font-size: 3.8em;
 }
 article.post-item .post-footer {
   background: var(--col2);
@@ -1454,6 +1455,10 @@ article.post-static_page .post-body {
 .post.single-post .post-body h7,
 .post.single-post .post-body h8 {
   position: relative;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: var(--col7);
+  text-transform: none;
 }
 .post.single-post .post-body h2::after,
 .post.single-post .post-body h3::after,
@@ -1462,7 +1467,7 @@ article.post-static_page .post-body {
 .post.single-post .post-body h6::after,
 .post.single-post .post-body h7::after,
 .post.single-post .post-body h8::after {
-  content: '#' attr(id);
+  content: '#';
   font-size: 0.5em;
   margin-left: 10px;
   color: var(--col4);
@@ -1479,6 +1484,26 @@ article.post-static_page .post-body {
 .post.single-post .post-body h8:hover::after {
   visibility: visible;
 }
+.post.single-post .post-body h2 {
+  font-size: 2em;
+  margin-top: 15px;
+  counter-reset: h3counter;
+}
+.post.single-post .post-body h2::before {
+  counter-increment: h2counter;
+  content: counter(h2counter) ". ";
+}
+.post.single-post .post-body h3 {
+  counter-reset: h4counter;
+}
+.post.single-post .post-body h3::before {
+  counter-increment: h3counter;
+  content: counter(h2counter) "." counter(h3counter) ". ";
+}
+.post p {
+  margin: 0 0 1.5em;
+  line-height: 2em;
+}
 .post a[name=more] {
   display: block;
   width: 100%;
@@ -1489,10 +1514,12 @@ article.post-static_page .post-body {
   display: inline-block;
   background: var(--col2);
   border-radius: var(--bor);
-  padding: 25px;
+  padding: 25px 15px;
   float: left;
-  margin: 15px 15px 15px 0;
+  margin: 10px 15px 10px 0;
   width: 50%;
+  position: relative;
+  z-index: 99;
 }
 .post #toc-con ol {
   margin: 0;
@@ -1518,7 +1545,7 @@ article.post-static_page .post-body {
   left: -12px;
   top: 0.8em;
 }
-.post #toc-con ol li:last-child::after {
+.post #toc-con ol:last-child li::after {
   content: '';
   height: calc(0.8em + 3px);
   border-left: 5px solid var(--col2);
@@ -1548,6 +1575,9 @@ article.post-static_page .post-body {
   right: auto;
   padding-top: 5px;
   width: auto;
+  font-size: 0.8em;
+  line-height: 1.75em;
+  color: var(--col5);
 }
 .post figure.spec.luas {
   margin: 15px -300px 15px -100px;
@@ -1557,13 +1587,15 @@ article.post-static_page .post-body {
 }
 .post figcaption {
   margin: 0;
-  font-size: 10pt;
   position: absolute;
   right: -200px;
   bottom: 5px;
   width: 190px;
   padding: 0 25px 0 0;
   border-radius: var(--bor);
+  font-size: 0.8em;
+  line-height: 1.75em;
+  color: var(--col5);
 }
 .post li {
   line-height: 2em;
@@ -3592,6 +3624,9 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   article.post .postacol-2,
   article.post .postacol-3 {
     column-count: 1;
+  }
+  article.post .post #toc-con {
+    width: 100%;
   }
   #bud-label .post-filter-message,
   #bud-pencarian .post-filter-message,

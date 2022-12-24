@@ -1164,6 +1164,7 @@ article {
         h1.post-title.entry-title {
             color: var(--acn1);
             text-transform: capitalize;
+			font-size: 3.8em;
         }
         .post-footer {
             background: var(--col2);
@@ -1399,8 +1400,12 @@ article {
 	&.single-post .post-body {
 		h2, h3, h4, h5, h6, h7, h8 {
 			position: relative;
+			font-weight: bold;
+			font-size: 1.2em;
+			color: var(--col7);
+			text-transform: none;
 			&::after {
-				content: '#'attr(id);
+				content: '#';
 				font-size: 0.5em;
 				margin-left: 10px;
 				color: var(--col4);
@@ -1412,6 +1417,26 @@ article {
 				visibility: visible;
 			}
 		}
+		h2 {
+			font-size: 2em;
+			margin-top: 15px;
+			counter-reset: h3counter;
+			&::before {
+				counter-increment: h2counter;
+				content: counter(h2counter) ". ";
+			}
+		}
+		h3 {
+			counter-reset: h4counter;
+			&::before {
+				counter-increment: h3counter;
+				content: counter(h2counter) "." counter(h3counter) ". ";
+			}
+		}
+	}
+	p {
+		margin: 0 0 1.5em;
+		line-height: 2em;
 	}
 	a[name=more] {
 		display: block;
@@ -1423,10 +1448,12 @@ article {
 		display: inline-block;
 		background: var(--col2);
 		border-radius: var(--bor);
-		padding: 25px;
+		padding: 25px 15px;
 		float: left;
-		margin: 15px 15px 15px 0;
+		margin: 10px 15px 10px 0;
 		width: 50%;
+		position: relative;
+		z-index: 99;
 		ol {
 			margin: 0;
 			list-style: none;
@@ -1449,14 +1476,14 @@ article {
 					left: -12px;
 					top: 0.8em;
 				}
-				&:last-child::after {
-					content: '';
-					height: calc(0.8em + 3px);
-					border-left: 5px solid var(--col2);
-					position: absolute;
-					left: -15px;
-					top: calc(0.8em + 3px);
-				}
+			}
+			&:last-child li::after {
+				content: '';
+				height: calc(0.8em + 3px);
+				border-left: 5px solid var(--col2);
+				position: absolute;
+				left: -15px;
+				top: calc(0.8em + 3px);
 			}
 		}
 	}
@@ -1480,6 +1507,9 @@ article {
                 right: auto;
                 padding-top: 5px;
                 width: auto;
+				font-size: 0.8em;
+				line-height: 1.75em;
+				color: var(--col5);
             }
             &.luas {
                 margin: 15px -300px 15px -100px;
@@ -1490,15 +1520,17 @@ article {
         border-radius: var(--bor);
     }
     figcaption {
-        margin: 0;
-        font-size: 10pt;
-        position: absolute;
-        right: -200px;
-        bottom: 5px;
-        width: 190px;
-        padding: 0 25px 0 0;
-        border-radius: var(--bor);
-    }
+		margin: 0;
+		position: absolute;
+		right: -200px;
+		bottom: 5px;
+		width: 190px;
+		padding: 0 25px 0 0;
+		border-radius: var(--bor);
+		font-size: 0.8em;
+		line-height: 1.75em;
+		color: var(--col5);
+	}
     li {
         line-height: 2em;
         &::marker {
@@ -3379,6 +3411,9 @@ article {
             .postacol-3 {
                 column-count: 1;
             }
+			.post #toc-con {
+				width: 100%;
+			}
         }
     }
     #bud-label,

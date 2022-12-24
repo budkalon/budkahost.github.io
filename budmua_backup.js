@@ -159,6 +159,33 @@ if (al.kt.ps == "true") {
 		} else {
 			al.ps.tc.html(al.ps.wrd[4]);
 		}
+		//TOC
+		var itemh2 = $('<span></span>'),
+			listh2 = $('<span></span>');
+		$('a[name=more]').after('<div id="toc-con"><ol id="tocList"></ol></div>');
+		$(".post-body h2, .post-body h3").each(function(index) {
+			var umidi = this.id ? $(this).attr('id') : 't_' + (index + 1),
+				li = '<li><a class="toclink" id="r_' + (index + 1) + '" href="#' + umidi + '">' + $(this).text() + '</a></li>';
+			$(this).attr('id', umidi);
+			$(this).after('<span><a class="toclink" href="#r_' + (index + 1) + '">#</a></span>');
+			if ($(this).is("h2")) {
+				listh2 = $("<ol></ol>");
+				itemh2 = $(li);
+				itemh2.append(listh2);
+				itemh2.appendTo("#tocList");
+			} else {
+				listh2.append(li);
+			}
+		});
+		$('#tocList li > ol:empty').remove();
+		$('#tocList').before('<strong>Daftar Isi</strong>');
+		$('a.toclink').on('click', function() {
+			var tar = $(this).attr('href'),
+				jar = '#' + $(this).attr('id');
+			animate_scroll(tar, 110);
+			$(tar).addClass('fcsd');
+			$('a.toclink').not($(tar)).removeClass('fcsd');
+		});
 		//FOOTNOTE
 		var sdrl = $('<ol id="' + al.ps.fID + '"></ol>');
 		al.ps.pb.append(sdrl);
@@ -178,7 +205,6 @@ if (al.kt.ps == "true") {
 			animate_scroll(tar, 110);
 			$(tar).addClass('infoc');
 			$('a.' + al.ps.clc).not($(tar)).removeClass('infoc');
-			//			console.log(jar + ' => ' + tar);
 		});
 		if ($('#' + al.ps.fID).is(':empty')) {
 			$('#' + al.ps.fID).prev().remove();
@@ -258,6 +284,7 @@ $(function() {
 		.not('[href="#0"]')
 		.not('.allow')
 		.not('.footklik')
+		.not('.toclink')
 		.click(function(event) {
 			if (
 				location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
