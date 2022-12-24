@@ -1545,7 +1545,7 @@ article.post-static_page .post-body {
   left: -12px;
   top: 0.8em;
 }
-.post #toc-con ol:last-child li::after {
+.post #toc-con ol li:last-child ol::after {
   content: '';
   height: calc(0.8em + 3px);
   border-left: 5px solid var(--col2);
@@ -3625,7 +3625,7 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   article.post .postacol-3 {
     column-count: 1;
   }
-  article.post .post #toc-con {
+  article.post #toc-con {
     width: 100%;
   }
   #bud-label .post-filter-message,

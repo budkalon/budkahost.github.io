@@ -1476,14 +1476,14 @@ article {
 					left: -12px;
 					top: 0.8em;
 				}
-			}
-			&:last-child li::after {
-				content: '';
-				height: calc(0.8em + 3px);
-				border-left: 5px solid var(--col2);
-				position: absolute;
-				left: -15px;
-				top: calc(0.8em + 3px);
+				&:last-child ol::after {
+					content: '';
+					height: calc(0.8em + 3px);
+					border-left: 5px solid var(--col2);
+					position: absolute;
+					left: -15px;
+					top: calc(0.8em + 3px);
+				}
 			}
 		}
 	}
@@ -3411,7 +3411,7 @@ article {
             .postacol-3 {
                 column-count: 1;
             }
-			.post #toc-con {
+			#toc-con {
 				width: 100%;
 			}
         }

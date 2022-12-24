@@ -167,7 +167,7 @@ if (al.kt.ps == "true") {
 			var umidi = this.id ? $(this).attr('id') : 't_' + (index + 1),
 				li = '<li><a class="toclink" id="r_' + (index + 1) + '" href="#' + umidi + '">' + $(this).text() + '</a></li>';
 			$(this).attr('id', umidi);
-			$(this).after('<span><a class="toclink" href="#r_' + (index + 1) + '">#</a></span>');
+			$(this).append('<span><a class="toclink" href="#r_' + (index + 1) + '">#</a></span>');
 			if ($(this).is("h2")) {
 				listh2 = $("<ol></ol>");
 				itemh2 = $(li);
@@ -182,9 +182,9 @@ if (al.kt.ps == "true") {
 		$('a.toclink').on('click', function() {
 			var tar = $(this).attr('href'),
 				jar = '#' + $(this).attr('id');
-			animate_scroll(tar, 110);
+			animate_scroll(tar, 70);
 			$(tar).addClass('fcsd');
-			$('a.toclink').not($(tar)).removeClass('fcsd');
+			$('a.toclink').not($(tar)).parent().parent().removeClass('fcsd');
 		});
 		//FOOTNOTE
 		var sdrl = $('<ol id="' + al.ps.fID + '"></ol>');
@@ -202,7 +202,7 @@ if (al.kt.ps == "true") {
 		$('a.' + al.ps.clc).on('click', function() {
 			var tar = $(this).attr('href'),
 				jar = '#' + $(this).attr('id');
-			animate_scroll(tar, 110);
+			animate_scroll(tar, 70);
 			$(tar).addClass('infoc');
 			$('a.' + al.ps.clc).not($(tar)).removeClass('infoc');
 		});
