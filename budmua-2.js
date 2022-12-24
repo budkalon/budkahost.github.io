@@ -160,36 +160,38 @@ if (al.kt.ps == "true") {
 			al.ps.tc.html(al.ps.wrd[4]);
 		}
 		//TOC
-		var itemh2 = $('<span></span>'),
-			listh2 = $('<span></span>');
-		$('a[name=more]').after('<div id="toc-con"><ol id="tocList"></ol></div>');
-		$(".post-body h2, .post-body h3").each(function(index) {
-			var umidi = this.id ? $(this).attr('id') : 't_' + (index + 1),
-				li = '<li><a class="toclink" id="r_' + (index + 1) + '" href="#' + umidi + '">' + $(this).text() + '</a></li>';
-			$(this).attr('id', umidi);
-			$(this).append('<span><a class="toclink" href="#r_' + (index + 1) + '">#</a></span>');
-			if ($(this).is("h2")) {
-				listh2 = $("<ol></ol>");
-				itemh2 = $(li);
-				itemh2.append(listh2);
-				itemh2.appendTo("#tocList");
-			} else {
-				listh2.append(li);
-			}
-		});
-		$('#tocList li > ol:empty').remove();
-		$('#tocList').before('<strong>Daftar Isi</strong>');
-		$('a.toclink').on('click', function() {
-			var tar = $(this).attr('href'),
-				jar = '#' + $(this).attr('id');
-			animate_scroll(tar, 70);
-			$(tar).addClass('fcsd');
-			if ($(this).parent().is("li")) {
-				$('.toclink').not($(tar)).removeClass('fcsd');
-			} else {
-				$('.toclink').not($(tar)).parent().parent().removeClass('fcsd');
-			}
-		});
+		if ($('.post-body').find('h2').length) {
+			var itemh2 = $('<span></span>'),
+				listh2 = $('<span></span>');
+			$('a[name=more]').after('<div id="toc-con"><ol id="tocList"></ol></div>');
+			$(".post-body h2, .post-body h3").each(function(index) {
+				var umidi = this.id ? $(this).attr('id') : 't_' + (index + 1),
+					li = '<li><a class="toclink" id="r_' + (index + 1) + '" href="#' + umidi + '">' + $(this).text() + '</a></li>';
+				$(this).attr('id', umidi);
+				$(this).append('<span><a class="toclink" href="#r_' + (index + 1) + '">#</a></span>');
+				if ($(this).is("h2")) {
+					listh2 = $("<ol></ol>");
+					itemh2 = $(li);
+					itemh2.append(listh2);
+					itemh2.appendTo("#tocList");
+				} else {
+					listh2.append(li);
+				}
+			});
+			$('#tocList li > ol:empty').remove();
+			$('#tocList').before('<strong>Daftar Isi</strong>');
+			$('a.toclink').on('click', function() {
+				var tar = $(this).attr('href'),
+					jar = '#' + $(this).attr('id');
+				animate_scroll(tar, 70);
+				$(tar).addClass('fcsd');
+				if ($(this).is("a")) {
+					$('.toclink').not($(tar)).removeClass('fcsd');
+				} else {
+					$('.toclink').not($(tar)).parent().parent().removeClass('fcsd');
+				}
+			});
+		}
 		//FOOTNOTE
 		var sdrl = $('<ol id="' + al.ps.fID + '"></ol>');
 		al.ps.pb.append(sdrl);
