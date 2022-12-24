@@ -166,9 +166,9 @@ if (al.kt.ps == "true") {
 			$('a[name=more]').after('<div id="toc-con"><ol id="tocList"></ol></div>');
 			$(".post-body h2, .post-body h3").each(function(index) {
 				var umidi = this.id ? $(this).attr('id') : 't_' + (index + 1),
-					li = '<li><a class="toclink" id="r_' + (index + 1) + '" href="#' + umidi + '">' + $(this).text() + '</a></li>';
+					li = '<li><a title="ke tajuk" class="toclink" id="r_' + (index + 1) + '" href="#' + umidi + '">' + $(this).text() + '</a></li>';
 				$(this).attr('id', umidi);
-				$(this).append('<span><a class="toclink" href="#r_' + (index + 1) + '">#</a></span>');
+				$(this).append('<span><a title="ke daftar isi" class="toclink" href="#r_' + (index + 1) + '">#</a></span>');
 				if ($(this).is("h2")) {
 					listh2 = $("<ol></ol>");
 					itemh2 = $(li);
