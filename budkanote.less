@@ -1007,50 +1007,6 @@ span.spacing {
 			}
 			#bertopik {
 				margin: 25px -25px -25px -25px;
-				.baris-label {
-					margin: 0;
-					list-style: none;
-					display: flex;
-					flex-direction: row;
-					flex-wrap: wrap;
-					align-content: flex-end;
-					justify-content: space-between;
-					align-items: center;
-					overflow: hidden;
-					li {
-						flex-grow: 1;
-						text-align: center;
-						a {
-							display: block;
-							padding: 15px;
-							background: var(--col3);
-							position: relative;
-						}
-						&.selected a {
-							background: var(--col2);
-    						font-weight: 700;
-							&::before, &::after {
-								content: '';
-								width: 20px;
-								height: var(--bor);
-								background: var(--col3);
-								position: absolute;
-								z-index: 1;
-								top: 0;
-							}
-							&::before {
-								left: -20px;
-								border-radius: 0 var(--bor) 0;
-    							filter: drop-shadow(10px 0px 0px var(--col2));
-							}
-							&::after {
-								right: -20px;
-								border-radius: var(--bor) 0 0;
-    							filter: drop-shadow(-10px 0px 0px var(--col2));
-							}
-						}
-					}
-				}
 			}
 		}
 		&.subkategorian {
@@ -1059,6 +1015,50 @@ span.spacing {
 			align-content: center;
 			justify-content: flex-start;
 			align-items: center;
+		}
+		.baris-label {
+			margin: 0;
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-content: flex-end;
+			justify-content: space-between;
+			align-items: center;
+			overflow: hidden;
+			li {
+				flex-grow: 1;
+				text-align: center;
+				a {
+					display: block;
+					padding: 15px;
+					background: var(--col3);
+					position: relative;
+				}
+				&.selected a {
+					background: var(--col2);
+					font-weight: 700;
+					&::before, &::after {
+						content: '';
+						width: 20px;
+						height: var(--bor);
+						background: var(--col3);
+						position: absolute;
+						z-index: 1;
+						top: 0;
+					}
+					&::before {
+						left: -20px;
+						border-radius: 0 var(--bor) 0;
+						filter: drop-shadow(10px 0px 0px var(--col2));
+					}
+					&::after {
+						right: -20px;
+						border-radius: var(--bor) 0 0;
+						filter: drop-shadow(-10px 0px 0px var(--col2));
+					}
+				}
+			}
 		}
 		.label-breadcrumb {
 			position: absolute;

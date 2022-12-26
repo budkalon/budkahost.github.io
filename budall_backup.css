@@ -1053,7 +1053,14 @@ span.spacing {
 #master-note.senarai-label.topikan #bertopik {
   margin: 25px -25px -25px -25px;
 }
-#master-note.senarai-label.topikan #bertopik .baris-label {
+#master-note.senarai-label.subkategorian {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+#master-note.senarai-label .baris-label {
   margin: 0;
   list-style: none;
   display: flex;
@@ -1064,22 +1071,22 @@ span.spacing {
   align-items: center;
   overflow: hidden;
 }
-#master-note.senarai-label.topikan #bertopik .baris-label li {
+#master-note.senarai-label .baris-label li {
   flex-grow: 1;
   text-align: center;
 }
-#master-note.senarai-label.topikan #bertopik .baris-label li a {
+#master-note.senarai-label .baris-label li a {
   display: block;
   padding: 15px;
   background: var(--col3);
   position: relative;
 }
-#master-note.senarai-label.topikan #bertopik .baris-label li.selected a {
+#master-note.senarai-label .baris-label li.selected a {
   background: var(--col2);
   font-weight: 700;
 }
-#master-note.senarai-label.topikan #bertopik .baris-label li.selected a::before,
-#master-note.senarai-label.topikan #bertopik .baris-label li.selected a::after {
+#master-note.senarai-label .baris-label li.selected a::before,
+#master-note.senarai-label .baris-label li.selected a::after {
   content: '';
   width: 20px;
   height: var(--bor);
@@ -1088,22 +1095,15 @@ span.spacing {
   z-index: 1;
   top: 0;
 }
-#master-note.senarai-label.topikan #bertopik .baris-label li.selected a::before {
+#master-note.senarai-label .baris-label li.selected a::before {
   left: -20px;
   border-radius: 0 var(--bor) 0;
   filter: drop-shadow(10px 0px 0px var(--col2));
 }
-#master-note.senarai-label.topikan #bertopik .baris-label li.selected a::after {
+#master-note.senarai-label .baris-label li.selected a::after {
   right: -20px;
   border-radius: var(--bor) 0 0;
   filter: drop-shadow(-10px 0px 0px var(--col2));
-}
-#master-note.senarai-label.subkategorian {
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: flex-start;
-  align-items: center;
 }
 #master-note.senarai-label .label-breadcrumb {
   position: absolute;
