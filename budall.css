@@ -1060,51 +1060,6 @@ span.spacing {
   justify-content: flex-start;
   align-items: center;
 }
-#master-note.senarai-label .baris-label {
-  margin: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-}
-#master-note.senarai-label .baris-label li {
-  flex-grow: 1;
-  text-align: center;
-}
-#master-note.senarai-label .baris-label li a {
-  display: block;
-  padding: 15px;
-  background: var(--col3);
-  position: relative;
-}
-#master-note.senarai-label .baris-label li.selected a {
-  background: var(--col2);
-  font-weight: 700;
-}
-#master-note.senarai-label .baris-label li.selected a::before,
-#master-note.senarai-label .baris-label li.selected a::after {
-  content: '';
-  width: 20px;
-  height: var(--bor);
-  background: var(--col3);
-  position: absolute;
-  z-index: 1;
-  top: 0;
-}
-#master-note.senarai-label .baris-label li.selected a::before {
-  left: -20px;
-  border-radius: 0 var(--bor) 0;
-  filter: drop-shadow(10px 0px 0px var(--col2));
-}
-#master-note.senarai-label .baris-label li.selected a::after {
-  right: -20px;
-  border-radius: var(--bor) 0 0;
-  filter: drop-shadow(-10px 0px 0px var(--col2));
-}
 #master-note.senarai-label .label-breadcrumb {
   position: absolute;
   top: -25px;
@@ -1162,6 +1117,72 @@ span.spacing {
 #master-note .btn-group.lin-ver a .label-count {
   float: right;
   font-weight: 700;
+}
+#master-note .pagination-kat {
+  margin: 15px -25px -25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0 0 var(--bor) var(--bor);
+  overflow: hidden;
+}
+#master-note .pagination-kat a {
+  flex-grow: 1;
+  text-align: center;
+  padding: 15px 25px;
+  background: var(--col3);
+}
+#master-note .pagination-kat a::hover {
+  color: var(--col1);
+  background: var(--acn1);
+}
+.baris-label {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.baris-label li {
+  flex-grow: 1;
+  text-align: center;
+}
+.baris-label li a {
+  display: block;
+  padding: 15px;
+  background: var(--col3);
+  position: relative;
+}
+.baris-label li.selected a {
+  background: var(--col2);
+  font-weight: 700;
+}
+.baris-label li.selected a::before,
+.baris-label li.selected a::after {
+  content: '';
+  width: 20px;
+  height: var(--bor);
+  background: var(--col3);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+.baris-label li.selected a::before {
+  left: -20px;
+  border-radius: 0 var(--bor) 0;
+  filter: drop-shadow(10px 0px 0px var(--col2));
+}
+.baris-label li.selected a::after {
+  right: -20px;
+  border-radius: var(--bor) 0 0;
+  filter: drop-shadow(-10px 0px 0px var(--col2));
 }
 article {
   position: relative;

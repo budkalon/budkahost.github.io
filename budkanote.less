@@ -1119,6 +1119,27 @@ span.spacing {
 			}
         }
     }
+	.pagination-kat {
+		margin: 15px -25px -25px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: flex-end;
+		justify-content: flex-start;
+		align-items: center;
+		border-radius: 0 0 var(--bor) var(--bor);
+		overflow: hidden;
+		a {
+			flex-grow: 1;
+			text-align: center;
+			padding: 15px 25px;
+			background: var(--col3);
+			&::hover {
+				color: var(--col1);
+				background: var(--acn1);
+			}
+		}
+	}
 }
 
 article {
