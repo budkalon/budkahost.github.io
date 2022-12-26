@@ -2636,9 +2636,9 @@ article {
         background: var(--col2);
         .labelan-container {
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: row;
             align-content: flex-start;
-            justify-content: flex-end;
+            justify-content: flex-start;
             align-items: flex-start;
             margin: 25px 0 0;
             flex-wrap: wrap;
@@ -2648,7 +2648,7 @@ article {
                 border-radius: var(--bor2);
                 margin: 0 15px 15px 0;
                 display: inline-block;
-                &:hover {
+                &:hover, &.selected {
                     background: var(--acn1);
                     color: var(--col1);
                 }
