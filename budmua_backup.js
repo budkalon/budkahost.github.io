@@ -59,6 +59,7 @@ var al = {
 		'kt': $('#iskategori').val(),
 		'png': $('#papanjang').val(),
 		'pnj': $('#panjangjud').val(),
+		'lbl': $('#jumlabel').val(),
 		'pk': $('#budpendekan')
 	},
 	'gl': {
