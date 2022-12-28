@@ -1570,6 +1570,8 @@ article.post-static_page .post-body {
 .post-item .post-body,
 [id*="bud-laman-"] .post-body {
   padding: 0 300px 0 100px;
+}
+.post {
   counter-reset: h2counter;
 }
 .post.single-post .post-body h2,
