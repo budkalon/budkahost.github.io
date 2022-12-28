@@ -1301,8 +1301,15 @@ article {
                 #st-1 {
                     width: 60%;
                 }
-				.share-plus li {
-					width: 50%;
+				.share-plus {
+					ul {
+						height: auto;
+						li {
+							width: 50%;
+						}
+					} 
+				}
+				.share-awal {
 					a[data-platform] {
 						padding: 0 10px;
 						display: flex;
@@ -1907,7 +1914,7 @@ ul.budshrr-line {
 		align-content: center;
 		justify-content: space-between;
 		align-items: center;
-		height: 50px;
+		height: auto;
 		color: var(--acn1)!important;
 		a[data-platform] {
 			padding: 0 10px;
@@ -2056,6 +2063,7 @@ ul.budshrr-line {
             border-radius: var(--bor);
             margin-bottom: 15px;
             background: var(--col3);
+			display: inline-block;
             > a > div {
                 display: inline-block;
                 float: left;
@@ -3389,7 +3397,7 @@ article {
             &.single-post {
                 &[data-template="jurnal"], &[data-template="gambar"], &[data-template="video"] {
 					margin-top: 80px;
-					.gambar-gambar #budbread-crumb {
+					#budbread-crumb {
 						left: 0;
 						margin-bottom: 0;
 						top: -70px;
@@ -3407,6 +3415,7 @@ article {
                         display: block;
                         padding: 10px 0;
                     }
+						
                     #posnya-relatedan ul li {
                         width: 25%;
                         border-radius: 0;
@@ -3883,6 +3892,9 @@ article {
                         .post-infohead > span {
                             padding: 5px 0;
                         }
+						span.post-labels {
+							display: block;
+						}
                         #posnya-relatedan ul li {
                             display: inline-block;
                         }

@@ -1340,12 +1340,16 @@ article.post-item[data-template="gambar"] #budshares #st-1,
 article.post-item[data-template="video"] #budshares #st-1 {
   width: 60%;
 }
-article.post-item[data-template="gambar"] #budshares .share-plus li,
-article.post-item[data-template="video"] #budshares .share-plus li {
+article.post-item[data-template="gambar"] #budshares .share-plus ul,
+article.post-item[data-template="video"] #budshares .share-plus ul {
+  height: auto;
+}
+article.post-item[data-template="gambar"] #budshares .share-plus ul li,
+article.post-item[data-template="video"] #budshares .share-plus ul li {
   width: 50%;
 }
-article.post-item[data-template="gambar"] #budshares .share-plus li a[data-platform],
-article.post-item[data-template="video"] #budshares .share-plus li a[data-platform] {
+article.post-item[data-template="gambar"] #budshares .share-awal a[data-platform],
+article.post-item[data-template="video"] #budshares .share-awal a[data-platform] {
   padding: 0 10px;
   display: flex;
   flex-direction: row;
@@ -1356,8 +1360,8 @@ article.post-item[data-template="video"] #budshares .share-plus li a[data-platfo
   border-radius: var(--bor2);
   height: 45px;
 }
-article.post-item[data-template="gambar"] #budshares .share-plus li a[data-platform]::after,
-article.post-item[data-template="video"] #budshares .share-plus li a[data-platform]::after {
+article.post-item[data-template="gambar"] #budshares .share-awal a[data-platform]::after,
+article.post-item[data-template="video"] #budshares .share-awal a[data-platform]::after {
   content: none;
 }
 article.post-item[data-template="gambar"] .gambar-gambar,
@@ -1972,7 +1976,7 @@ ul.budshrr-line li h4 {
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: auto;
   color: var(--acn1) !important;
 }
 .share-plus ul a[data-platform] {
@@ -2117,6 +2121,7 @@ ul.budshrr-line li h4 {
   border-radius: var(--bor);
   margin-bottom: 15px;
   background: var(--col3);
+  display: inline-block;
 }
 #posnya-relatedan ul li > a > div {
   display: inline-block;
@@ -3547,18 +3552,18 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   article.post-item.single-post[data-template="video"] {
     margin-top: 80px;
   }
-  article.post-item.single-post[data-template="jurnal"] .gambar-gambar #budbread-crumb,
-  article.post-item.single-post[data-template="gambar"] .gambar-gambar #budbread-crumb,
-  article.post-item.single-post[data-template="video"] .gambar-gambar #budbread-crumb {
+  article.post-item.single-post[data-template="jurnal"] #budbread-crumb,
+  article.post-item.single-post[data-template="gambar"] #budbread-crumb,
+  article.post-item.single-post[data-template="video"] #budbread-crumb {
     left: 0;
     margin-bottom: 0;
     top: -70px;
     width: 100%;
     font-size: 9pt;
   }
-  article.post-item.single-post[data-template="jurnal"] .gambar-gambar #budbread-crumb [class*=fa-],
-  article.post-item.single-post[data-template="gambar"] .gambar-gambar #budbread-crumb [class*=fa-],
-  article.post-item.single-post[data-template="video"] .gambar-gambar #budbread-crumb [class*=fa-] {
+  article.post-item.single-post[data-template="jurnal"] #budbread-crumb [class*=fa-],
+  article.post-item.single-post[data-template="gambar"] #budbread-crumb [class*=fa-],
+  article.post-item.single-post[data-template="video"] #budbread-crumb [class*=fa-] {
     margin: 0 5px;
   }
   article.post-item.single-post[data-template="jurnal"] #video-place,
@@ -4104,6 +4109,11 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   .bud-single article.post-item[data-template="video"].single-post .post-infohead > span,
   .bud-single article.post-item[data-template="jurnal"].single-post .post-infohead > span {
     padding: 5px 0;
+  }
+  .bud-single article.post-item[data-template="gambar"].single-post span.post-labels,
+  .bud-single article.post-item[data-template="video"].single-post span.post-labels,
+  .bud-single article.post-item[data-template="jurnal"].single-post span.post-labels {
+    display: block;
   }
   .bud-single article.post-item[data-template="gambar"].single-post #posnya-relatedan ul li,
   .bud-single article.post-item[data-template="video"].single-post #posnya-relatedan ul li,
