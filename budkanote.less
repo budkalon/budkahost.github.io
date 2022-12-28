@@ -1490,10 +1490,10 @@ article {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 14pt;
-    line-height: 50px;
-    background: var(--acn1);
-    height: 50px;
+    font-size: 12pt;
+    line-height: 40px;
+    background: var(--col3);
+    height: 40px;
     width: auto;
     display: flex;
     text-align: center;
@@ -1501,30 +1501,15 @@ article {
     color: var(--col1);
     z-index: 2;
     .tandagori {
-        width: 50px;
+        width: 40px;
     }
-    span.tandarasi {
-        color: var(--col8);
+    span.tandarasi a {
+        display: block;
         font-size: 0.75em;
-        > span {
-            margin-right: -0.15em;
-            &:last-child {
-                padding-right: 15px;
-            }
-        }
+		padding-right: 15px;
         &:first-child {
             padding-left: 15px;
         }
-    }
-    [data-kategori="video"] &,
-    [data-kategori="gambar"] & {
-        & span.tandarasi {
-            min-width: 55px;
-        }
-    }
-    a {
-        display: block;
-        color: var(--col8);
     }
 }
 .post-body {
@@ -2838,6 +2823,12 @@ article {
                 background: var(--col2);
                 border-radius: var(--bor);
                 position: relative;
+				span.label-count {
+					padding: 0px;
+					margin-left: 0;
+					border-radius: var(--bor2);
+					color: var(--col8);
+					font-weight: 700;
             }
             .btn-group.lin-ver {
                 flex-direction: row;
@@ -2857,7 +2848,7 @@ article {
 						float: none;
 						font-size: 0.8em;
 						&::before {
-							content: '()';
+							content: '(';
 						}
 						&::after {
 							content: ')';
@@ -3415,7 +3406,16 @@ article {
                         display: block;
                         padding: 10px 0;
                     }
-						
+					ul.budshrr-line {
+						padding: 10px 25px;
+					}
+					.sharePreview .preview {
+						flex-direction: column;
+					}
+					.prevshr {
+						width: auto;
+						height: 150px;
+					}
                     #posnya-relatedan ul li {
                         width: 25%;
                         border-radius: 0;
@@ -3895,6 +3895,21 @@ article {
 						span.post-labels {
 							display: block;
 						}
+						ul.budshrr-line {
+							padding: 15px;
+							li h4 {
+								display: none;
+							}
+						}
+						.share-plus {
+							padding: 0;
+							border-radius: var(--bor);
+							height: 0;
+							overflow: hidden;
+						}
+						#budshort .jendul::after {
+							content: none;
+						}
                         #posnya-relatedan ul li {
                             display: inline-block;
                         }
@@ -3911,7 +3926,7 @@ article {
                         }
                         #budbread-crumb {
                             padding: 15px 10px;
-                            top: -60px;
+                            top: -70px;
                             left: 0;
                             right: 0;
                             font-size: 8pt;
@@ -3928,15 +3943,9 @@ article {
                             #budshort {
                                 width: 100% !important;
                             }
-                            #budshort {
-                                border-radius: 0;
-                            }
                             #st-1 .st-btnst-last {
                                 border-radius: 0 var(--bor) 0 0 !important;
                             }
-                        }
-                        #budshort {
-                            border-radius: 0;
                         }
                         #budkategori {
                             display: block;
