@@ -1,0 +1,198 @@
+<div class='post-thumbnail blowimg'>
+	<b:with value='data:post.thumbnailUrl ?: data:tekpos.noImg' var='postImage'>
+		<b:if cond='data:post.labels any (l => l.name == "jurnal")'>
+			<b:include data='{
+							 image: data:postImage, 
+							 imageSizes: [1000, 800, 600, 400], 
+							 imageRatio: "5:2",           
+							 sourceSizes:           
+								 "(min-width: 1010px) 1000px,  
+								 (min-width: 810px) 800px,  
+								 (min-width: 610px) 600px,  
+								 (min-width: 410px) 400px,    
+								 800px",                     
+							 enhancedSourceset: data:postImage, 
+							 imageClass: "budthumb",         
+							 altText: (data:blog.metaDescription ?: data:post.title) 
+							 }' name='responsiveImage'/>
+		<b:elseif cond='data:post.labels any (l => l.name == "gambar")'/>
+			<a expr:href='resizeImage(data:postImage,1600)' expr:title='data:post.title' target='_blank'>
+				<b:if cond='data:post.labels any (l => l.name == "1:2")'>
+					<b:include data='{
+									 image: data:postImage, 
+									 imageSizes: [800, 600, 400], 
+									 imageRatio: "1:2",  
+									 sourceSizes:    
+										 "(min-width: 810px) 800px, 
+										 (min-width: 610px) 600px, 
+										 (min-width: 410px) 400px, 
+										 800px", 
+									 enhancedSourceset: data:postImage,
+									 imageClass: "budthumb", 
+									 altText: (data:blog.metaDescription ?: data:post.title) 
+									 }' name='responsiveImage'/>
+				<b:elseif cond='data:post.labels any (l => l.name == "1:4")'/>
+					<b:include data='{ 
+									 image: data:postImage, 
+									 imageSizes: [800, 600, 400], 
+									 imageRatio: "1:4",  
+									 sourceSizes:  
+										 "(min-width: 810px) 800px, 
+										 (min-width: 610px) 600px, 
+										 (min-width: 410px) 400px, 
+										 800px",                
+									 enhancedSourceset: data:postImage,
+									 imageClass: "budthumb",  
+									 altText: (data:blog.metaDescription ?: data:post.title) 
+									 }' name='responsiveImage'/>
+				<b:elseif cond='data:post.labels any (l => l.name == "3:4")'/>
+					<b:include data='{    
+									 image: data:postImage,        
+									 imageSizes: [800, 600, 400], 
+									 imageRatio: "3:4", 
+									 sourceSizes:   
+										 "(min-width: 810px) 800px,  
+										 (min-width: 610px) 600px, 
+										 (min-width: 410px) 400px,  
+										 800px",
+									 enhancedSourceset: data:postImage, 
+									 imageClass: "budthumb", 
+									 altText: (data:blog.metaDescription ?: data:post.title)   
+									 }' name='responsiveImage'/>
+				<b:elseif cond='data:post.labels any (l => l.name == "4:5")'/>
+					<b:include data='{ 
+									 image: data:postImage,     
+									 imageSizes: [800, 600, 400], 
+									 imageRatio: "4:5",  
+									 sourceSizes:  
+										 "(min-width: 810px) 800px,  
+										 (min-width: 610px) 600px, 
+										 (min-width: 410px) 400px,    
+										 800px", 
+									 enhancedSourceset: data:postImage, 
+									 imageClass: "budthumb",  
+									 altText: (data:blog.metaDescription ?: data:post.title)    
+									 }' name='responsiveImage'/>
+				<b:elseif cond='data:post.labels any (l => l.name == "9:16")'/>
+					<b:include data='{          
+									 image: data:postImage,            
+									 imageSizes: [800, 600, 400], 
+									 imageRatio: "9:16", 
+									 sourceSizes:     
+										 "(min-width: 810px) 800px, 
+										 (min-width: 610px) 600px,  
+										 (min-width: 410px) 400px,   
+										 800px", 
+									 enhancedSourceset: data:postImage,                           
+									 imageClass: "budthumb", 
+									 altText: (data:blog.metaDescription ?: data:post.title)    
+									 }' name='responsiveImage'/>
+				<b:elseif cond='data:post.labels any (l => l.name == "1:1")'/>
+					<b:include data='{  
+									 image: data:postImage,   
+									 imageSizes: [800, 600, 400],  
+									 imageRatio: "1:1",   
+									 sourceSizes:      
+										 "(min-width: 810px) 800px,   
+										 (min-width: 610px) 600px,  
+										 (min-width: 410px) 400px,   
+										 800px", 
+									 enhancedSourceset: data:postImage,   
+									 imageClass: "budthumb", 
+									 altText: (data:blog.metaDescription ?: data:post.title)       
+									 }' name='responsiveImage'/>
+				<b:elseif cond='data:post.labels any (l => l.name == "16:9")'/>
+					<b:include data='{     
+									 image: data:postImage,              
+									 imageSizes: [1000, 800, 600, 400],      
+									 imageRatio: "16:9",   
+									 sourceSizes:              
+										 "(min-width: 1010px) 1000px,   
+										 (min-width: 810px) 800px,  
+										 (min-width: 610px) 600px, 
+										 (min-width: 410px) 400px,    
+										 800px",    
+									 enhancedSourceset: data:postImage,  
+									 imageClass: "budthumb",   
+									 altText: (data:blog.metaDescription ?: data:post.title) 
+									 }' name='responsiveImage'/>
+				<b:elseif cond='data:post.labels any (l => l.name == "2:1")'/>
+					<b:include data='{         
+									 image: data:postImage,   
+									 imageSizes: [1000, 800, 600, 400],  
+									 imageRatio: "2:1",    
+									 sourceSizes: 
+										 "(min-width: 1010px) 1000px,  
+										 (min-width: 810px) 800px,   
+										 (min-width: 610px) 600px, 
+										 (min-width: 410px) 400px,   
+										 800px",   
+									 enhancedSourceset: data:postImage,   
+									 imageClass: "budthumb", 
+									 altText: (data:blog.metaDescription ?: data:post.title)  
+									 }' name='responsiveImage'/>
+				<b:elseif cond='data:post.labels any (l => l.name == "4:1")'/>
+					<b:include data='{      
+									 image: data:postImage,                         
+									 imageSizes: [1000, 800, 600, 400],  
+									 imageRatio: "4:1",   
+									 sourceSizes:                           
+										 "(min-width: 1010px) 1000px,             
+										 (min-width: 810px) 800px,   
+										 (min-width: 610px) 600px,                             
+										 (min-width: 410px) 400px,      
+										 800px",   
+									 enhancedSourceset: data:postImage,             
+									 imageClass: "budthumb",     
+									 altText: (data:blog.metaDescription ?: data:post.title)  
+									 }' name='responsiveImage'/>
+					<b:elseif cond='data:post.labels any (l => l.name == "4:3")'/>
+					<b:include data='{        
+									 image: data:postImage,                          
+									 imageSizes: [1000, 800, 600, 400], 
+									 imageRatio: "4:3", 
+									 sourceSizes:                           
+										 "(min-width: 1010px) 1000px,    
+										 (min-width: 810px) 800px,  
+										 (min-width: 610px) 600px,                        
+										 (min-width: 410px) 400px,  
+										 800px", 
+									 enhancedSourceset: data:postImage,      
+									 imageClass: "budthumb",     
+									 altText: (data:blog.metaDescription ?: data:post.title)   
+									 }' name='responsiveImage'/>
+				<b:elseif cond='data:post.labels any (l => l.name == "5:4")'/>
+					<b:include data='{    
+									 image: data:postImage,                          
+									 imageSizes: [1000, 800, 600, 400],  
+									 imageRatio: "5:4", 
+									 sourceSizes:                          
+										 "(min-width: 1010px) 1000px,  
+										 (min-width: 810px) 800px,  
+										 (min-width: 610px) 600px,                         
+										 (min-width: 410px) 400px,                  
+										 800px",  
+									 enhancedSourceset: data:postImage,     
+									 imageClass: "budthumb",   
+									 altText: (data:blog.metaDescription ?: data:post.title)    
+									 }' name='responsiveImage'/>
+				<b:else/>
+					<b:include data='{      
+									 image: data:postImage,                  
+									 imageSizes: [1000, 800, 600, 400], 
+									 imageRatio: "4:1", 
+									 sourceSizes:                 
+										 "(min-width: 1010px) 1000px,    
+										 (min-width: 810px) 800px,  
+										 (min-width: 610px) 600px,      
+										 (min-width: 410px) 400px, 
+										 800px",  
+									 enhancedSourceset: data:postImage,  
+									 imageClass: "budthumb",  
+									 altText: (data:blog.metaDescription ?: data:post.title)  
+									 }' name='responsiveImage'/>
+				</b:if>
+			</a>
+		</b:if>
+	</b:with>
+</div>
