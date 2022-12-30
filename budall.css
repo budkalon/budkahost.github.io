@@ -2136,13 +2136,22 @@ ul.budshrr-line li h4 {
 #posnya-relatedan .relaimg {
   width: 100px;
   height: 100px;
+  position: relative;
+}
+#posnya-relatedan .relaimg::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(34, 42, 53, 0.67);
   mix-blend-mode: color;
+  z-index: 2;
 }
 #posnya-relatedan .relaimg img {
   filter: brightness(0.75) grayscale(0.5);
 }
-#posnya-relatedan .relaimg:hover {
+#posnya-relatedan .relaimg:hover::before {
   background: transparent;
 }
 #posnya-relatedan .relaimg:hover img {
