@@ -798,7 +798,7 @@ span.spacing {
 .laman-kategori #FeaturedPost1 article .budsorot-img img {
   height: 100%;
   border-radius: 0;
-  filter: brightness(0.5) grayscale(0.5);
+  filter: brightness(0.75) grayscale(0.5);
 }
 .laman-kategori #FeaturedPost1 article .budsorot-img a::before {
   position: absolute;
@@ -2136,6 +2136,17 @@ ul.budshrr-line li h4 {
 #posnya-relatedan .relaimg {
   width: 100px;
   height: 100px;
+  background: rgba(34, 42, 53, 0.67);
+  mix-blend-mode: color;
+}
+#posnya-relatedan .relaimg img {
+  filter: brightness(0.75) grayscale(0.5);
+}
+#posnya-relatedan .relaimg:hover {
+  background: transparent;
+}
+#posnya-relatedan .relaimg:hover img {
+  filter: brightness(1) grayscale(0);
 }
 #posnya-relatedan .relasum {
   width: 600px;
@@ -2167,6 +2178,10 @@ ul.budshrr-line li h4 {
 [data-template="gambar"] #posnya-relatedan ul li:last-child,
 [data-template="video"] #posnya-relatedan ul li:last-child {
   border-radius: 0 var(--bor) var(--bor) 0;
+}
+[data-template="gambar"] #posnya-relatedan ul li:only-child,
+[data-template="video"] #posnya-relatedan ul li:only-child {
+  border-radius: var(--bor);
 }
 [data-template="gambar"] #posnya-relatedan ul li img,
 [data-template="video"] #posnya-relatedan ul li img {
@@ -3078,7 +3093,7 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
     padding: 15px 0 25px;
   }
   article.post-item.single-post .btn-group.extlink {
-    padding: 0 100px 25px 0;
+    padding: 0 200px 25px 0;
   }
   article.post-item.single-post .author-profile .prodesc {
     width: 550px;

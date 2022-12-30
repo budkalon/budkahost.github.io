@@ -738,7 +738,7 @@ span.spacing {
                 img {
                     height: 100%;
                     border-radius: 0;
-                    filter: brightness(0.5) grayscale(0.5);
+                    filter: brightness(0.75) grayscale(0.5);
                 }
                 a::before {
                     position: absolute;
@@ -2072,6 +2072,17 @@ ul.budshrr-line {
     .relaimg {
         width: 100px;
         height: 100px;
+		background: rgba(34, 42, 53, 0.67);
+    	mix-blend-mode: color;
+		img {
+			filter: brightness(0.75) grayscale(0.5);
+		}
+		&:hover {
+			background: transparent;
+			img {
+				filter: brightness(1) grayscale(0);
+			}
+		}
     }
     .relasum {
         width: 600px;
@@ -2103,6 +2114,9 @@ ul.budshrr-line {
             }
             &:last-child {
                 border-radius: @bor_kanan;
+            }
+            &:only-child {
+                border-radius: var(--bor);
             }
             img {
                 border-radius: 0;
@@ -2979,7 +2993,7 @@ article {
                     padding: 15px 0 25px;
                 }
 				.btn-group.extlink {
-					padding: 0 100px 25px 0;
+					padding: 0 200px 25px 0;
 				}
                 .author-profile .prodesc {
                     width: 550px;
