@@ -1315,6 +1315,15 @@ article.post-item h1.post-title.entry-title {
   text-transform: capitalize;
   font-size: 3.8em;
 }
+article.post-item .btn-group.extlink {
+  padding: 0 300px 25px 100px;
+}
+article.post-item .btn-group.extlink a {
+  width: 100%;
+  padding: 25px;
+  font-size: 1.2em;
+  text-align: center;
+}
 article.post-item .post-footer {
   background: var(--col2);
   padding: var(--pad25);
@@ -1331,6 +1340,10 @@ article.post-item[data-template="video"] {
   padding: 0;
   background: none;
   border-radius: 0;
+}
+article.post-item[data-template="gambar"] .btn-group.extlink,
+article.post-item[data-template="video"] .btn-group.extlink {
+  padding: 0 0 25px;
 }
 article.post-item[data-template="gambar"] .bud-comments h2,
 article.post-item[data-template="video"] .bud-comments h2 {
@@ -1567,75 +1580,75 @@ article.post-static_page .post-body {
 .postmark span.tandarasi a:first-child {
   padding-left: 15px;
 }
+.post-body {
+  counter-reset: h2counter labelimg;
+}
 .post-item .post-body,
 [id*="bud-laman-"] .post-body {
   padding: 0 300px 0 100px;
 }
-.post {
-  counter-reset: h2counter;
-}
-.post.single-post .post-body h2,
-.post.single-post .post-body h3,
-.post.single-post .post-body h4,
-.post.single-post .post-body h5,
-.post.single-post .post-body h6,
-.post.single-post .post-body h7,
-.post.single-post .post-body h8 {
+.single-post .post-body h2,
+.single-post .post-body h3,
+.single-post .post-body h4,
+.single-post .post-body h5,
+.single-post .post-body h6,
+.single-post .post-body h7,
+.single-post .post-body h8 {
   position: relative;
   font-weight: bold;
   font-size: 1.2em;
   color: var(--col7);
   text-transform: none;
 }
-.post.single-post .post-body h2 {
+.single-post .post-body h2 {
   font-size: 2em;
   margin-top: 15px;
   counter-reset: h3counter;
 }
-.post.single-post .post-body h2::before {
+.single-post .post-body h2::before {
   counter-increment: h2counter;
   content: counter(h2counter) ". ";
 }
-.post.single-post .post-body h3 {
+.single-post .post-body h3 {
   counter-reset: h4counter;
 }
-.post.single-post .post-body h3::before {
+.single-post .post-body h3::before {
   counter-increment: h3counter;
   content: counter(h2counter) "." counter(h3counter) ". ";
 }
-.post.single-post .post-body h2 span,
-.post.single-post .post-body h3 span,
-.post.single-post .post-body h4 span {
+.single-post .post-body h2 span,
+.single-post .post-body h3 span,
+.single-post .post-body h4 span {
   margin-left: 10px;
   visibility: hidden;
 }
-.post.single-post .post-body h2:target,
-.post.single-post .post-body h3:target,
-.post.single-post .post-body h4:target,
-.post.single-post .post-body h2:focus,
-.post.single-post .post-body h3:focus,
-.post.single-post .post-body h4:focus {
+.single-post .post-body h2:target,
+.single-post .post-body h3:target,
+.single-post .post-body h4:target,
+.single-post .post-body h2:focus,
+.single-post .post-body h3:focus,
+.single-post .post-body h4:focus {
   color: var(--acn2);
 }
-.post.single-post .post-body h2:target span,
-.post.single-post .post-body h3:target span,
-.post.single-post .post-body h4:target span,
-.post.single-post .post-body h2:focus span,
-.post.single-post .post-body h3:focus span,
-.post.single-post .post-body h4:focus span {
+.single-post .post-body h2:target span,
+.single-post .post-body h3:target span,
+.single-post .post-body h4:target span,
+.single-post .post-body h2:focus span,
+.single-post .post-body h3:focus span,
+.single-post .post-body h4:focus span {
   visibility: visible;
 }
-.post p {
+.post-body p {
   margin: 0 0 1.5em;
   line-height: 2em;
 }
-.post a[name=more] {
+.post-body a[name=more] {
   display: block;
   width: 100%;
   border-bottom: 5px solid var(--col3);
   margin: 25px 0;
 }
-.post #toc-con {
+.post-body #toc-con {
   display: inline-block;
   background: var(--col2);
   border-radius: var(--bor);
@@ -1646,27 +1659,27 @@ article.post-static_page .post-body {
   position: relative;
   z-index: 99;
 }
-.post #toc-con a.fcsd {
+.post-body #toc-con a.fcsd {
   color: var(--acn1);
   text-decoration: underline;
 }
-.post #toc-con ol {
+.post-body #toc-con ol {
   margin: 0;
   list-style: none;
   padding-left: 25px;
   position: relative;
 }
-.post #toc-con ol::before {
+.post-body #toc-con ol::before {
   content: '';
   height: 100%;
   border-left: 3px solid var(--col4);
   position: absolute;
   left: 10px;
 }
-.post #toc-con ol li {
+.post-body #toc-con ol li {
   position: relative;
 }
-.post #toc-con ol li::before {
+.post-body #toc-con ol li::before {
   content: '';
   width: 7.5px;
   border-top: 3px solid var(--col4);
@@ -1674,7 +1687,7 @@ article.post-static_page .post-body {
   left: -12px;
   top: 0.8em;
 }
-.post #toc-con ol li:last-child::after {
+.post-body #toc-con ol li:last-child::after {
   content: '';
   height: 100%;
   border-left: 5px solid var(--col2);
@@ -1682,23 +1695,23 @@ article.post-static_page .post-body {
   left: -15px;
   top: calc(0.8em + 3px);
 }
-.post figure {
+.post-body figure {
   position: relative;
 }
-.post figure.spec {
+.post-body figure.spec {
   margin: 15px 0 0;
 }
-.post figure.spec.kanan,
-.post figure.spec.kiri {
+.post-body figure.spec.kanan,
+.post-body figure.spec.kiri {
   width: 300px;
 }
-.post figure.spec.kanan {
+.post-body figure.spec.kanan {
   margin-left: 15px;
 }
-.post figure.spec.kiri {
+.post-body figure.spec.kiri {
   margin-right: 15px;
 }
-.post figure.spec figcaption {
+.post-body figure.spec figcaption {
   position: relative;
   margin: 5px 0;
   right: auto;
@@ -1708,13 +1721,13 @@ article.post-static_page .post-body {
   line-height: 1.75em;
   color: var(--col5);
 }
-.post figure.spec.luas {
+.post-body figure.spec.luas {
   margin: 15px -300px 15px -100px;
 }
-.post img {
+.post-body img {
   border-radius: var(--bor);
 }
-.post figcaption {
+.post-body figcaption {
   margin: 0;
   position: absolute;
   right: -200px;
@@ -1726,21 +1739,25 @@ article.post-static_page .post-body {
   line-height: 1.75em;
   color: var(--col5);
 }
-.post li {
+.post-body figcaption::before {
+  counter-increment: labelimg;
+  content: "Gambar-" counter(labelimg) ". ";
+}
+.post-body li {
   line-height: 2em;
 }
-.post li::marker {
+.post-body li::marker {
   font-weight: 700;
   color: var(--col8);
 }
-.post code {
+.post-body code {
   background: var(--col3);
   color: var(--col7);
   padding: 2px 5px;
   border-radius: var(--bor2);
   font-family: monospace;
 }
-.post pre {
+.post-body pre {
   overflow: auto;
   word-break: break-word;
   background: var(--col2);
@@ -1749,35 +1766,35 @@ article.post-static_page .post-body {
   color: var(--col7);
   font-family: monospace;
 }
-.post pre code {
+.post-body pre code {
   background: none;
 }
-.post strong {
+.post-body strong {
   font-weight: 700;
   color: var(--col7);
 }
-.post mark {
+.post-body mark {
   background: #715c10;
   color: var(--col8);
 }
-.post table caption {
+.post-body table caption {
   text-align: left;
   font-size: 10pt;
 }
-.post th,
-.post td {
+.post-body th,
+.post-body td {
   padding: 10px 15px;
 }
-.post th {
+.post-body th {
   border-bottom: 5px solid var(--col3);
   text-align: left;
   font-weight: 700;
   color: var(--col8);
 }
-.post td {
+.post-body td {
   border-bottom: 3px solid var(--col2);
 }
-.post blockquote {
+.post-body blockquote {
   margin-left: 25px;
   color: var(--col7);
   line-height: 2.4em;
@@ -1785,7 +1802,7 @@ article.post-static_page .post-body {
   padding-left: 25px;
   border-left: 5px solid var(--col3);
 }
-.post blockquote::before {
+.post-body blockquote::before {
   font: var(--fa-font-solid);
   content: "\f10d";
   width: 80px;
@@ -1794,30 +1811,30 @@ article.post-static_page .post-body {
   font-size: 28pt;
   float: left;
 }
-.post .postacol-1,
-.post .postacol-2,
-.post .postacol-3 {
+.post-body .postacol-1,
+.post-body .postacol-2,
+.post-body .postacol-3 {
   margin-right: -150px;
   column-gap: 25px;
 }
-.post .postacol-1 {
+.post-body .postacol-1 {
   column-count: 1;
 }
-.post .postacol-2 {
+.post-body .postacol-2 {
   column-count: 2;
 }
-.post .postacol-3 {
+.post-body .postacol-3 {
   column-count: 3;
 }
-.post hr {
+.post-body hr {
   border-top: 5px solid var(--col3);
 }
-.post h2,
-.post h3,
-.post h4,
-.post h5,
-.post h6,
-.post h7 {
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5,
+.post-body h6,
+.post-body h7 {
   font-weight: bold;
 }
 #budbread-crumb {
@@ -2138,6 +2155,7 @@ ul.budshrr-line li h4 {
 [data-template="gambar"] #posnya-relatedan ul li,
 [data-template="video"] #posnya-relatedan ul li {
   width: 25%;
+  max-width: 100px;
   float: left;
   background: none;
   border-radius: 0;
@@ -2303,6 +2321,11 @@ ul.budshrr-line li h4 {
 #budkontak-form input,
 #budkontak-form textarea {
   width: 100%;
+  border-bottom: 2px solid var(--col4);
+}
+#budkontak-form input[type=sumbit] {
+  background: var(--col3);
+  border-radius: var(--bor);
 }
 #budkontak-form .kon-sub {
   display: flex;
@@ -3054,6 +3077,9 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   article.post-item.single-post .post-infohead {
     padding: 15px 0 25px;
   }
+  article.post-item.single-post .btn-group.extlink {
+    padding: 0 100px 25px 0;
+  }
   article.post-item.single-post .author-profile .prodesc {
     width: 550px;
   }
@@ -3106,6 +3132,10 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   article.post-item[data-template="gambar"] .gambar-gambar .blowimg img,
   article.post-item[data-template="video"] .gambar-gambar .blowimg img {
     width: 100%;
+  }
+  article.post-item[data-template="gambar"] .gambar-gambar .btn-group.extlink,
+  article.post-item[data-template="video"] .gambar-gambar .btn-group.extlink {
+    padding: 0 0 25px;
   }
   article.post-item[data-template="gambar"] .informasi-gambar,
   article.post-item[data-template="video"] .informasi-gambar {
@@ -3308,6 +3338,9 @@ article.post-item[data-template="video"] .replies .comment:last-child::after {
   article.post-item.single-post[data-template] #video-place,
   article.post-item.single-post[data-template] .loading {
     height: calc(9 / 16 * 600px);
+  }
+  article.post-item.single-post[data-template] .btn-group.extlink {
+    padding: 0 0 25px;
   }
   article.post-item.single-post #posnya-relatedan .relasum {
     width: 400px;

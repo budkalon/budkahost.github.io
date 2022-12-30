@@ -1278,6 +1278,15 @@ article {
             text-transform: capitalize;
 			font-size: 3.8em;
         }
+		.btn-group.extlink {
+			padding: 0 300px 25px 100px;
+			a {
+				width: 100%;
+				padding: 25px;
+				font-size: 1.2em;
+				text-align: center;
+			}
+		}
         .post-footer {
             background: var(--col2);
             padding: var(--pad25);
@@ -1294,6 +1303,9 @@ article {
             padding: 0;
             background: none;
             border-radius: 0;
+			.btn-group.extlink {
+				padding: 0 0 25px;
+			}
             .bud-comments h2 {
                 font-size: 1.8em;
             }
@@ -1517,10 +1529,8 @@ article {
     [id*="bud-laman-"] & {
         padding: 0 300px 0 100px;
     }
-}
-.post {
-	counter-reset: h2counter;
-	&.single-post .post-body {
+	counter-reset: h2counter labelimg;
+	.single-post & {
 		h2, h3, h4, h5, h6, h7, h8 {
 			position: relative;
 			font-weight: bold;
@@ -1657,6 +1667,10 @@ article {
 		font-size: 0.8em;
 		line-height: 1.75em;
 		color: var(--col5);
+		&::before {
+			counter-increment: labelimg;
+			content: "Gambar-" counter(labelimg) ". ";
+		}
 	}
     li {
         line-height: 2em;
@@ -2080,6 +2094,7 @@ ul.budshrr-line {
     #posnya-relatedan {
         ul li {
             width: 25%;
+			max-width: 100px;
             float: left;
             background: none;
             border-radius: 0;
@@ -2247,7 +2262,12 @@ ul.budshrr-line {
     input,
     textarea {
         width: 100%;
+		border-bottom: 2px solid var(--col4);
     }
+	input[type=sumbit] {
+		background: var(--col3);
+		border-radius: var(--bor);
+	}
     .kon-sub {
         display: flex;
         flex-direction: row;
@@ -2958,6 +2978,9 @@ article {
                 .post-infohead {
                     padding: 15px 0 25px;
                 }
+				.btn-group.extlink {
+					padding: 0 100px 25px 0;
+				}
                 .author-profile .prodesc {
                     width: 550px;
                 }
@@ -2979,6 +3002,9 @@ article {
                     .blowimg img {
                         width: 100%;
                     }
+					.btn-group.extlink {
+						padding: 0 0 25px;
+					}
                 }
                 .informasi-gambar {
                     width: 100%;
@@ -3145,6 +3171,9 @@ article {
                     .loading {
                         height: calc(9 / 16 * 600px);
                     }
+					.btn-group.extlink {
+						padding: 0 0 25px;
+					}
                 }
                 #posnya-relatedan .relasum {
                     width: 400px;
